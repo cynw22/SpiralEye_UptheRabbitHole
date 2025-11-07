@@ -29,6 +29,7 @@ public class SwitchObject : MonoBehaviour
     public void switchPOV()
     {
         sisterPOV = !sisterPOV;
+        Debug.Log("Perspective switched to " + sisterPOV);
     }
 
     public void switchPOV(bool POV)
