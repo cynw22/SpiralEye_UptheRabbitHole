@@ -17,6 +17,6 @@ public class SwitchTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        spriteRenderer.sprite = (switchManager.sisterPOV == false ? aliceSprite : constanceSprite);
+        spriteRenderer.sprite = switchManager.sisterPOV == false ? aliceSprite : constanceSprite;
     }
 }

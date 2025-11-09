@@ -3,10 +3,12 @@ using UnityEngine;
 public class PuzzleControl1 : MonoBehaviour
 {
     // PUZZLE #1 - WORD SCRAMBLE CHEST
+    [Header("Word Scramble Chest")]
     public bool chestIsOpen;
     public string chestPasscode;
 
     // PUZZLE #2 - DRINK ME BOTTLES
+    [Header("Drink-Me Bottles")]
     public int numBottles;
     public int numSafeBottles;
     public bool[] bottleLocations;
