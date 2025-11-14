@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SwitchTest : MonoBehaviour
+public class SwitchObject : MonoBehaviour
 {
     public SwitchManager switchManager;
     public Sprite aliceSprite;
