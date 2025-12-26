@@ -5,7 +5,7 @@ public class PuzzleControl1 : MonoBehaviour
     // PUZZLE #1 - WORD SCRAMBLE CHEST
     [Header("Word Scramble Chest")]
     public bool chestIsOpen;
-    public string chestPasscode;
+    [SerializeField] private string chestPasscode;
 
     // PUZZLE #2 - DRINK ME BOTTLES
     [Header("Drink-Me Bottles")]

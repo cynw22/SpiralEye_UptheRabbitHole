@@ -6,25 +6,24 @@ using UnityEngine.UI;
 public class CookieChest : MonoBehaviour
 {
     public PuzzleControl1 puzzleControl;
+
+    private SpriteRenderer spriteRenderer;
     public Sprite closeSprite;
     public Sprite openSprite;
-    public GameObject chestInput;
 
-    private Image image;
+    public LetterCycler[] letters;
 
-    public bool isOpen;
+    public bool isOpen = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        chestInput.GetComponent<Text>();
-        image = GetComponent<Image>();
-        isOpen = false;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        image.sprite = isOpen == false ? closeSprite : openSprite;
+        spriteRenderer.sprite = isOpen == false ? closeSprite : openSprite;
     }
 }
