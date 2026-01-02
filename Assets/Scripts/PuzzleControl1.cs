@@ -5,7 +5,7 @@ public class PuzzleControl1 : MonoBehaviour
     // PUZZLE #1 - WORD SCRAMBLE CHEST
     [Header("Word Scramble Chest")]
     public bool chestIsOpen;
-    [SerializeField] private string chestPasscode;
+    [SerializeField] public Sprite[] passcodeLetters;
 
     // PUZZLE #2 - DRINK ME BOTTLES
     [Header("Drink-Me Bottles")]
@@ -19,7 +19,6 @@ public class PuzzleControl1 : MonoBehaviour
     {
         // PUZZLE #1 - WORD SCRAMBLE PUZZLE
         chestIsOpen = false;
-        chestPasscode = "SPIRE";
 
         // PUZZLE #2 - DRINK ME BOTTLES
         numBottles = 9;
@@ -33,10 +32,7 @@ public class PuzzleControl1 : MonoBehaviour
     // take player's attempted passcode, compare to chest passcode. if same, open chest
     public bool tryPasscode(string passcode)
     {
-        if (chestPasscode.Equals(passcode))
-        {
-            chestIsOpen = true;
-        }
+        
 
         return chestIsOpen;
     }

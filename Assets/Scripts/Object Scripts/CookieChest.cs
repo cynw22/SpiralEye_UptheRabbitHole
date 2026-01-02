@@ -13,17 +13,33 @@ public class CookieChest : MonoBehaviour
 
     public LetterCycler[] letters;
 
-    public bool isOpen = false;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnMouseDown()
     {
-        spriteRenderer.sprite = isOpen == false ? closeSprite : openSprite;
+        checkPassword();
+    }
+
+    public void checkPassword()
+    {
+        int correctLetters = 0;
+        for (int i = 0; i < letters.Length; i++)
+        {
+            if (letters[i].spriteRenderer.sprite == puzzleControl.passcodeLetters[i])
+            {
+                correctLetters++;
+                Debug.Log("correct letters: " + correctLetters);
+            }
+        }
+
+        if (correctLetters == 5)
+        {
+            puzzleControl.chestIsOpen = true;
+            spriteRenderer.sprite = openSprite;
+        }
     }
 }

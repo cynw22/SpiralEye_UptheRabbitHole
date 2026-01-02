@@ -4,7 +4,7 @@ public class LetterCycler : MonoBehaviour
 {
     public int currLetter = 0;
     
-    private SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
     public Sprite[] sprites;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
