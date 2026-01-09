@@ -21,20 +21,11 @@ public class PuzzleControl1 : MonoBehaviour
         chestIsOpen = false;
 
         // PUZZLE #2 - DRINK ME BOTTLES
-        numBottles = 9;
-        numSafeBottles = 4;
+        numBottles = 12;
+        numSafeBottles = 5;
         bottleLocations = new bool[numBottles];
         safeBottleLocationIndex = new int[numSafeBottles];
         setSafeBottleLocations();
-    }
-
-    // PUZZLE #1 - WORD SCRAMBLE CHEST
-    // take player's attempted passcode, compare to chest passcode. if same, open chest
-    public bool tryPasscode(string passcode)
-    {
-        
-
-        return chestIsOpen;
     }
 
     // PUZZLE #2 - DRINK ME BOTTLES
@@ -43,7 +34,24 @@ public class PuzzleControl1 : MonoBehaviour
     {
         for (int i = 0; i < safeBottleLocationIndex.Length; i++)
         {
+            // generate random bottle location
+            int bottleLocation = Random.Range(0, numBottles);
 
+            // if there are previous entries in safeBottleLocationIndex, check bottle location against previous locations
+            if (i > 0)
+            {
+                for (int j = 0; j < i; j++)
+                {
+                    if (bottleLocation == safeBottleLocationIndex[j])
+                    {
+                        // if generated bottle location matches any previous locations, regenerate
+                        i--;
+                        break;
+                    }
+                }
+            }
+            safeBottleLocationIndex[i] = bottleLocation;
+            Debug.Log("Bottle location: " + safeBottleLocationIndex[i]);
         }
     }
 }
