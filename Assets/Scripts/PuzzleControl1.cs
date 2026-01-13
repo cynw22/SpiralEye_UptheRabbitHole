@@ -13,6 +13,7 @@ public class PuzzleControl1 : MonoBehaviour
     public int numSafeBottles;
     public bool[] bottleLocations;
     public int[] safeBottleLocationIndex;
+    public bool allBottlesFound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,6 +22,7 @@ public class PuzzleControl1 : MonoBehaviour
         chestIsOpen = false;
 
         // PUZZLE #2 - DRINK ME BOTTLES
+        allBottlesFound = false;
         numBottles = 12;
         numSafeBottles = 5;
         bottleLocations = new bool[numBottles];

@@ -9,6 +9,9 @@ public class Popup : MonoBehaviour
 
     private Collider2D col;
 
+    public SwitchManager switchManager;
+    [SerializeField] public bool isConstancePOV;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,7 +34,7 @@ public class Popup : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (!popupObj.activeSelf)
+        if (!popupObj.activeSelf && switchManager.sisterPOV == isConstancePOV)
         {
             popupObj.SetActive(true);
             popupBg.SetActive(true);
