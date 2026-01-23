@@ -24,6 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5402007523096397617}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -20, y: -1, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
@@ -31,7 +32,6 @@ Transform:
   m_Children:
   - {fileID: 5402007523534094245}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5402007523096397619
 MonoBehaviour:
@@ -48,7 +48,7 @@ MonoBehaviour:
   characterState: 0
   spriteRenderer: {fileID: 0}
   spriteImages:
-  - {fileID: 21300000, guid: c205566fe4559214bbd63c9d15dd14a0, type: 3}
+  - {fileID: 3589627876233816458, guid: 71060bee8a264304eaa7c4898f21ca9a, type: 3}
   - {fileID: 21300000, guid: 95782e16a80c6704783cac1ea875cbc3, type: 3}
 --- !u!1 &5402007523534094242
 GameObject:
@@ -74,13 +74,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5402007523534094242}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5402007523096397616}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5402007523534094244
 SpriteRenderer:
@@ -99,6 +99,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
