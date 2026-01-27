@@ -18,5 +18,16 @@ public class EventManagerScript : MonoBehaviour
         SceneManager.LoadScene("CreditsScene");
     
     }
-        
+    
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
+    public void MenuButton()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+
 }
