@@ -15,6 +15,12 @@ public class PuzzleControl1 : MonoBehaviour
     public int[] safeBottleLocationIndex;
     public bool allBottlesFound;
 
+    // PUZZLE #3 - KEY
+    [Header("Key")]
+    public int[] buttonOrder;
+    private int numButtons;
+    public bool keyFound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -28,6 +34,11 @@ public class PuzzleControl1 : MonoBehaviour
         bottleLocations = new bool[numBottles];
         safeBottleLocationIndex = new int[numSafeBottles];
         setSafeBottleLocations();
+
+        // PUZZLE #3 - KEY
+        keyFound = false;
+        numButtons = 5;
+        buttonOrder = new int[numButtons];
     }
 
     // PUZZLE #2 - DRINK ME BOTTLES
@@ -54,6 +65,20 @@ public class PuzzleControl1 : MonoBehaviour
             }
             safeBottleLocationIndex[i] = bottleLocation;
             Debug.Log("Bottle location: " + safeBottleLocationIndex[i]);
+        }
+    }
+
+    // PUZZLE #3 - KEY
+    // determine the order of buttons to be pressed to open key box
+    public void setButtonOrder()
+    {
+        for (int i = 0; i < numButtons; i++) { buttonOrder[i] = Random.Range(0, 1); }
+
+        // lazy way of making sure not all buttons are the same, make sure the last two buttons are different from each other
+        switch(buttonOrder[^2])
+        {
+            case 0: buttonOrder[^1] = 1; break;
+            case 1: buttonOrder[^1] = 0; break;
         }
     }
 }
