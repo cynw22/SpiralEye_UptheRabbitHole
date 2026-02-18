@@ -4,8 +4,8 @@ using UnityEngine.SceneManagement;
 public class SwitchManager : MonoBehaviour
 {
     // POV switching
-    static bool ALICE = false;
-    static bool CONSTANCE = true;
+    public static bool ALICE = false;
+    public static bool CONSTANCE = true;
     [SerializeField] public bool sisterPOV;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
