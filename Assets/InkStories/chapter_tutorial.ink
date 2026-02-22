@@ -1,8 +1,9 @@
 === tutorial_chapter === 
-
+#noskip_start
 //Have Constance character slowly open her eyes, write the tags here when you figure out how to do that lol
 
 #speaker: Constance
+#mood: Constance : ClosedEyes
 Owww. My head… That fall was crazy. Why did you have to go chasing after something?
 
 #speaker: Constance
@@ -12,6 +13,7 @@ Alice? Did you hear me?
 ...............
 
 #speaker: Constance
+#mood: Constance : OpenEyes
 Alice? What's going on, where are you?
 
 #speaker: Narrator
@@ -50,9 +52,8 @@ To who?
 #speaker: Alice
 To me.
 
-//Maybe have Constance squint her eyes here?
-
 #speaker: Constance
+#mood: Constance : ClosedEyes
 Nevermind that, tell me where we are.
  
 #speaker: Alice
@@ -85,8 +86,7 @@ Bottle?
 #speaker: Alice
 Yeahhh, it looks silly. Look even the writing looks weird. It looks like Aunty Vicky’s Christmas cards.
 
-//Could have Constance squint here again
-
+#mood: Constance : ClosedEyes
 #speaker: Constance
 First, that’s a very rude thing to say. Second, there is no bottle, its just a glass table. 
 
@@ -113,7 +113,7 @@ Alright fine have it your way. I know better than to argue a silly point with yo
 #speaker: Alice
 MEANIE!!!
 
-#speaker: narrator
+#speaker: Narrator
 The girls fall into silence...
 
 #speaker: Alice
@@ -197,7 +197,7 @@ Huh? What chest?
 #speaker: Alice
 OHHH SIS LOOK IT’S A DOOR! 
 
-#:speaker: Constance
+#speaker: Constance
 Alice please one thing at a time.
 
 //Prompt player to click on the door
@@ -212,5 +212,7 @@ Bummer. I think we need to find a key.
 Alright, let’s look around the room and see if there’s something we can use to get out. 
 
 (Relationship value: {C_Alice}) //REMOVE AFTER TESTING
+
+#noskip_end
 
 -> DONE

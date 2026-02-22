@@ -34,6 +34,16 @@ public class SoundFXManager : MonoBehaviour
         PlaySound(clips[index], volume);
     }
 
+    public bool IsPlaying()
+    {
+        return soundFxObject.isPlaying;
+    }
+
+    public void Stop()
+    {
+        soundFxObject.Stop();
+    }
+
     // Start looping a clip
     public void PlayLoop(AudioClip clip)
     {

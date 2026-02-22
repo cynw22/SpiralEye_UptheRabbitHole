@@ -34,7 +34,7 @@ public class CharacterDialogueUI
     public List<MoodSprite> moods;
 
     [Header("Typing")]
-    public float typingSpeed = 0.03f;
+    public float typingSpeed = 0.02f;
 }
 #endregion
 
@@ -92,47 +92,68 @@ public class DialogueManager : MonoBehaviour
         ContinueStory();
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            if (story.currentChoices.Count > 0)
-                return;
-
-            if (isTyping)
-                FinishTyping();
-            else
-                ContinueStory();
-        }
+    void Update() { 
+        if (Input.GetKeyDown(KeyCode.Return)) 
+        { 
+            if (isTyping) 
+            { 
+                FinishTyping(); 
+                return; 
+            } 
+            
+            if (story.currentChoices.Count > 0) 
+            { 
+                DisplayChoices(); 
+                return; 
+            } 
+            
+            ContinueStory(); 
+        } 
     }
 
     //Check tags to see if text is allowed to be skipped or not, controls how much of the story should flow and if there are any tags stopping the flow
-    void ContinueStory()
+    void ContinueStory() 
     {
         if (!story.canContinue)
-            return;
-
-        string text = story.Continue().Trim();
-
-        HandleTags(story.currentTags);
-
-        if (isSkipping)
         {
-            skippedLines.Add(text);
-
-            if (story.currentChoices.Count > 0)
-            {
-                isSkipping = false;
-                ShowSkipSummary();
-                DisplayChoices();
-                return;
-            }
-
-            ContinueStory();
+            Debug.Log("End of story reached.");
+            CloseAllDialogueBoxes(); // deactivate all dialogue boxes
+            choicePanel.SetActive(false); // also hide choices
             return;
         }
 
-        StartTyping(text);
+        string text = story.Continue().Trim(); 
+        
+        HandleTags(story.currentTags);
+
+        //Stops blank tags from populating the boxes
+        if (string.IsNullOrEmpty(text))
+        {
+            // No text to display, skip creating dialogue box
+            if (story.currentChoices.Count > 0)
+            {
+                DisplayChoices();
+            }
+            return;
+        }
+
+        //Skip logic
+        if (isSkipping) 
+        { 
+            skippedLines.Add(text); 
+            
+            if (story.currentChoices.Count > 0) 
+            { 
+                isSkipping = false; 
+                ShowSkipSummary(); 
+                DisplayChoices(); 
+                return; 
+            } 
+            ContinueStory(); 
+            return; 
+        } 
+        
+        StartTyping(text); 
     }
 
     //Master list of all tags currently in the ink file (DOUBLE CHECK THIS LATER MIGHT UPDATE WITH MORE DO NOT FORGET)
@@ -196,51 +217,53 @@ public class DialogueManager : MonoBehaviour
     //Coroutine used to create the type writer effect for the line
     IEnumerator TypeLine(string line)
     {
-        isTyping = true;
-        currentCharacter.dialogueText.text = "";
-
-        foreach (char letter in line)
-        {
-            currentCharacter.dialogueText.text += letter;
-
-            if (!char.IsWhiteSpace(letter) && typingSounds.Length > 0)
-                soundFXManager.PlayRandomSound(typingSounds, 0.4f);
-
-            yield return new WaitForSeconds(currentCharacter.typingSpeed);
+        isTyping = true; 
+        currentCharacter.dialogueText.text = ""; 
+        
+        for (int i = 0; i < line.Length; i++) 
+        { 
+            currentCharacter.dialogueText.text += line[i]; 
+            
+            if (!char.IsWhiteSpace(line[i]) && !soundFXManager.IsPlaying()) 
+            { 
+                soundFXManager.PlayRandomSound(typingSounds, 0.4f); 
+            } 
+            yield return 
+                new WaitForSeconds(currentCharacter.typingSpeed); 
         }
 
-        isTyping = false;
-        DisplayChoices();
+        isTyping = false; 
+
+        //DisplayChoices(); Commented out for testing might have to remove later depending on conflicts }
     }
 
     //initiate the line
     void StartTyping(string line)
     {
-        if (currentCharacter == null) return;
+    if (currentCharacter == null) return;
 
-        currentLine = line;
+    currentLine = line;
 
-        if (typingCoroutine != null)
-            StopCoroutine(typingCoroutine);
+    if (typingCoroutine != null)
+        StopCoroutine(typingCoroutine);
 
-        typingCoroutine = StartCoroutine(TypeLine(line));
+    typingCoroutine = StartCoroutine(TypeLine(line));
     }
 
     //destory line
     void FinishTyping()
     {
-        if (typingCoroutine != null)
-            StopCoroutine(typingCoroutine);
-
-        currentCharacter.dialogueText.text = currentLine;
-        isTyping = false;
-
-        DisplayChoices();
+        StopAllCoroutines(); 
+        currentCharacter.dialogueText.text = currentLine; 
+        isTyping = false; 
+        
+        soundFXManager.Stop(); // stop overlapping sounds
     }
 
     //check and display any player choices
     void DisplayChoices()
     {
+        // Clear old buttons
         foreach (Transform child in choiceContainer)
             Destroy(child.gameObject);
 
@@ -250,6 +273,11 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        // Hide all dialogue boxes before showing choices
+        foreach (var c in characters)
+            c.dialogueBoxRoot.SetActive(false);
+
+        // Show panel only when there are choices
         choicePanel.SetActive(true);
 
         foreach (Choice choice in story.currentChoices)
@@ -257,13 +285,26 @@ public class DialogueManager : MonoBehaviour
             Button button = Instantiate(choicePrefab, choiceContainer);
             button.GetComponentInChildren<TextMeshProUGUI>().text = choice.text;
 
-            int index = choice.index;
+            int choiceIndex = choice.index;
 
+            button.onClick.RemoveAllListeners();
             button.onClick.AddListener(() =>
             {
-                story.ChooseChoiceIndex(index);
+                story.ChooseChoiceIndex(choiceIndex);
+
+                choicePanel.SetActive(false); // Hide immediately after click
+
                 ContinueStory();
             });
+        }
+    }
+
+    // Deactivates all dialogue boxes
+    void CloseAllDialogueBoxes()
+    {
+        foreach (var c in characters)
+        {
+            c.dialogueBoxRoot.SetActive(false);
         }
     }
 
