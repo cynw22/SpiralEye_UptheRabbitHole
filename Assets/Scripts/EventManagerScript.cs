@@ -29,5 +29,23 @@ public class EventManagerScript : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
+    public void CatLevel() {
+
+        SceneManager.LoadScene("MeetCat");
+    }
+
+    public void MadHatterLevel()
+    {
+
+        SceneManager.LoadScene("MadHatter");
+    }
+
+    public void TutorialLevel() {
+        SceneManager.LoadScene("Tutorial");
+    }
+
+    public void LevelSelection() {
+        SceneManager.LoadScene("Levels");
+    }
 
 }
