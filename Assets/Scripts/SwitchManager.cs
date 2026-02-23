@@ -6,12 +6,14 @@ public class SwitchManager : MonoBehaviour
     // POV switching
     public static bool ALICE = false;
     public static bool CONSTANCE = true;
+    public bool allowSwitching;
     [SerializeField] public bool sisterPOV;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         sisterPOV = CONSTANCE;
+        allowSwitching = true;
     }
 
     // Update is called once per frame
@@ -28,13 +30,16 @@ public class SwitchManager : MonoBehaviour
 
     public void switchPOV()
     {
-        sisterPOV = !sisterPOV;
-        Debug.Log("Perspective switched to " + sisterPOV);
+        if (allowSwitching)
+        {
+            sisterPOV = !sisterPOV;
+            Debug.Log("Perspective switched to " + sisterPOV);
+        }
     }
 
     public void switchPOV(bool POV)
     {
-        if (sisterPOV != POV)
+        if (sisterPOV != POV && allowSwitching)
         {
             sisterPOV = POV;
         }
