@@ -96,7 +96,7 @@ What? No there isn’t.
 #speaker: Constance
 Alice I have eyes, there's nothing on the table.
 
-#spekaer: Alice
+#speaker: Alice
 Uhhhh no that's not true. Are you sure you didn’t hit your head on the way down?
 
 #speaker: Constance
