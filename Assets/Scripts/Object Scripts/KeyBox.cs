@@ -9,6 +9,8 @@ public class KeyBox : MonoBehaviour
     public int[] sequence;
     public int inputs = 0;
     [SerializeField] public GameObject[] checks;
+    [SerializeField] public GameObject eatMe;
+    [SerializeField] public GameObject drinkMe;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,6 +20,18 @@ public class KeyBox : MonoBehaviour
         for (int i = 0; i < checks.Length; i++)
         {
             checks[i].SetActive(false);
+        }
+
+        eatMe.SetActive(false);
+        drinkMe.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (puzzleControl.allBottlesFound && puzzleControl.chestIsOpen)
+        {
+            eatMe.SetActive(true);
+            drinkMe.SetActive(true);
         }
     }
 
