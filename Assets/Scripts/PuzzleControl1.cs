@@ -39,6 +39,7 @@ public class PuzzleControl1 : MonoBehaviour
         keyFound = false;
         numButtons = 5;
         buttonOrder = new int[numButtons];
+        setButtonOrder();
     }
 
     // PUZZLE #2 - DRINK ME BOTTLES

@@ -1,17 +1,19 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System;
 
 public class KeyBox : MonoBehaviour
 {
     [SerializeField] PuzzleControl1 puzzleControl;
 
-    public List<bool> sequence;
+    public int[] sequence;
+    public int inputs = 0;
     [SerializeField] public GameObject[] checks;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        sequence = new List<bool>();
+        sequence = new int[puzzleControl.numButtons];
 
         for (int i = 0; i < checks.Length; i++)
         {
@@ -19,15 +21,17 @@ public class KeyBox : MonoBehaviour
         }
     }
 
-    public void buttonPress(bool isDrinkMe)
+    public void buttonPress(int isDrinkMe)
     {
-        sequence.Add(isDrinkMe);
+        sequence[inputs] = isDrinkMe;
 
         // check if new button input matches the correct order of button presses
-        if (sequence.Count == puzzleControl.buttonOrder[sequence.Count])
+        if (sequence[inputs] == puzzleControl.buttonOrder[inputs])
         {
-            checks[sequence.Count].SetActive(true);
-            puzzleControl.keyFound = sequence.Count == puzzleControl.numButtons ? true : false;
+            Debug.Log(sequence[inputs]);
+            checks[inputs].SetActive(true);
+            inputs++;
+            puzzleControl.keyFound = inputs == puzzleControl.numButtons ? true : false;
         }
         // if wrong, reset all checkmarks and reset the input sequence
         else
@@ -36,7 +40,8 @@ public class KeyBox : MonoBehaviour
             {
                 checks[i].SetActive(false);
             }
-            sequence.Clear();
+            Array.Clear(sequence, 0, sequence.Length);
+            inputs = 0;
         }
     }
 }
