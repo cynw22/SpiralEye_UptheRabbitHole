@@ -2,15 +2,17 @@ using UnityEngine;
 
 public class PopupBackground : MonoBehaviour
 {
+    public GameObject background;
+
     private void Start()
     {
-        gameObject.SetActive(false);
+        background.SetActive(false);
     }
     public void OnMouseDown()
     {
         if (gameObject.activeSelf)
         {
-            gameObject.SetActive(false);
+            background.SetActive(false);
         }
     }
 }

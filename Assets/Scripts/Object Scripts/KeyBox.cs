@@ -28,11 +28,8 @@ public class KeyBox : MonoBehaviour
 
     private void Update()
     {
-        if (puzzleControl.allBottlesFound && puzzleControl.chestIsOpen)
-        {
-            eatMe.SetActive(true);
-            drinkMe.SetActive(true);
-        }
+        if (puzzleControl.chestIsOpen) { eatMe.SetActive(true); }
+        if (puzzleControl.allBottlesFound) { drinkMe.SetActive(true); }
     }
 
     public void buttonPress(int isDrinkMe)

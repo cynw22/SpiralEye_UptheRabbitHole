@@ -11,6 +11,7 @@ public class Popup : MonoBehaviour
 
     public SwitchManager switchManager;
     [SerializeField] public bool isConstancePOV;
+    [SerializeField] public bool isAlicePOV;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,7 +35,7 @@ public class Popup : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (!popupObj.activeSelf && switchManager.sisterPOV == isConstancePOV)
+        if (!popupObj.activeSelf && (switchManager.sisterPOV == isConstancePOV || switchManager.sisterPOV != isAlicePOV))
         {
             popupObj.SetActive(true);
             popupBg.SetActive(true);
