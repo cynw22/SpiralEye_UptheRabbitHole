@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SwitchPopup : MonoBehaviour
+public class SwitchUI : MonoBehaviour
 {
     public SwitchManager switchManager;
     public Sprite aliceSprite;
