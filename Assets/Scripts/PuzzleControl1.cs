@@ -48,6 +48,8 @@ public class PuzzleControl1 : MonoBehaviour
     {
         for (int i = 0; i < safeBottleLocationIndex.Length; i++)
         {
+            bool skip = false;
+
             // generate random bottle location
             int bottleLocation = Random.Range(0, numBottles);
 
@@ -59,13 +61,17 @@ public class PuzzleControl1 : MonoBehaviour
                     if (bottleLocation == safeBottleLocationIndex[j])
                     {
                         // if generated bottle location matches any previous locations, regenerate
+                        skip = true;
                         i--;
                         break;
                     }
                 }
             }
-            safeBottleLocationIndex[i] = bottleLocation;
-            Debug.Log("Bottle location: " + safeBottleLocationIndex[i]);
+
+            if (!skip) { safeBottleLocationIndex[i] = bottleLocation; }
+            
+            // Debug.Log("Bottle location: " + safeBottleLocationIndex[i]);
+            // Debug.Log("i = " + i);
         }
     }
 

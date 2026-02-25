@@ -30,6 +30,7 @@ public class DrinkMeBottles : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (switchManager.sisterPOV == true) { return; }
         if (isSafe)
         {
             bookshelf.numFoundBottles++;
