@@ -2000,6 +2000,7 @@ GameObject:
   - component: {fileID: 213948176}
   - component: {fileID: 213948175}
   - component: {fileID: 213948174}
+  - component: {fileID: 213948178}
   m_Layer: 5
   m_Name: PauseManager
   m_TagString: Untagged
@@ -2134,6 +2135,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 213948172}
   m_CullTransparentMesh: 1
+--- !u!114 &213948178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213948172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27bfa1dbd39b02d4583c37d40dcbd6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchManager: {fileID: 1492002331}
+  aliceSprite: {fileID: -4825681256527300140, guid: ead9272b2244e5c468f74f3beeaeebdc, type: 3}
+  constanceSprite: {fileID: 8891140915739170783, guid: ee963dd4bfbfcbd4ebdc1220b7f2723a, type: 3}
+  spriteRenderer: {fileID: 0}
 --- !u!1 &227773653
 GameObject:
   m_ObjectHideFlags: 0
@@ -5458,7 +5475,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.688, y: -3.7337, z: 0.07417837}
-  m_LocalScale: {x: 0.392416, y: 0.392416, z: 0.392416}
+  m_LocalScale: {x: 0.5033912, y: 0.5033912, z: 0.5033912}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 901092773}
@@ -14382,7 +14399,6 @@ GameObject:
   - component: {fileID: 1082977588}
   - component: {fileID: 1082977591}
   - component: {fileID: 1082977590}
-  - component: {fileID: 1082977589}
   m_Layer: 5
   m_Name: Pause Menu
   m_TagString: Untagged
@@ -14417,22 +14433,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -944}
   m_SizeDelta: {x: 1056.2681, y: 944.2215}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1082977589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1082977587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27bfa1dbd39b02d4583c37d40dcbd6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  switchManager: {fileID: 0}
-  aliceSprite: {fileID: 0}
-  constanceSprite: {fileID: 0}
-  spriteRenderer: {fileID: 0}
 --- !u!114 &1082977590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16073,7 +16073,7 @@ Transform:
   m_GameObject: {fileID: 1278743867}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.33, y: -3.47, z: 0.07417837}
+  m_LocalPosition: {x: -1.13, y: -3.61, z: 0.07417837}
   m_LocalScale: {x: 0.32, y: 0.32, z: 0.32}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -16601,6 +16601,7 @@ GameObject:
   - component: {fileID: 1325384349}
   - component: {fileID: 1325384348}
   - component: {fileID: 1325384346}
+  - component: {fileID: 1325384351}
   m_Layer: 5
   m_Name: HintSystem
   m_TagString: Untagged
@@ -16737,6 +16738,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325384344}
   m_CullTransparentMesh: 1
+--- !u!114 &1325384351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325384344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27bfa1dbd39b02d4583c37d40dcbd6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchManager: {fileID: 1492002331}
+  aliceSprite: {fileID: -3462381851227895847, guid: 200d7cf265628d64181f9d73b7d703ba, type: 3}
+  constanceSprite: {fileID: 3877913044851303507, guid: c85d54e7558f12549a43d7b7ddb42f22, type: 3}
+  spriteRenderer: {fileID: 0}
 --- !u!1 &1335747833
 GameObject:
   m_ObjectHideFlags: 0
@@ -18007,7 +18024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe7a99da17d4abe459e4b168ceae699a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allowSwitching: 0
+  allowSwitching: 1
   sisterPOV: 0
 --- !u!4 &1492002332
 Transform:
@@ -18336,11 +18353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchManager: {fileID: 1492002331}
   aliceSprite: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
-  alicePointerSprite: {fileID: 0}
-  aliceShapeSprite: {fileID: 0}
   constanceSprite: {fileID: 2275898209256684654, guid: 3dd30e7ebb3c2504a835ebd951562823, type: 3}
-  constancePointerSprite: {fileID: 0}
-  constanceShapeSprite: {fileID: 0}
 --- !u!114 &1535214537
 MonoBehaviour:
   m_ObjectHideFlags: 0
