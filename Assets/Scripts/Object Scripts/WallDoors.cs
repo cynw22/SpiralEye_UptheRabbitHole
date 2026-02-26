@@ -23,14 +23,7 @@ public class WallDoors : MonoBehaviour
     void Update()
     {
         spriteRenderer.sprite = switchManager.sisterPOV ? c_sprite : a_sprite;
-        if (!switchManager.sisterPOV) { item.SetActive(false); }
-        else { item.SetActive(true); }
-    }
-
-    private void OnMouseDown()
-    {
-        spriteRenderer.enabled = !spriteRenderer.enabled;
-        if (spriteRenderer.enabled && switchManager.sisterPOV)
+        if (switchManager.sisterPOV && spriteRenderer.enabled)
         {
             item.SetActive(true);
         }
@@ -38,5 +31,10 @@ public class WallDoors : MonoBehaviour
         {
             item.SetActive(false);
         }
+    }
+
+    private void OnMouseDown()
+    {
+        spriteRenderer.enabled = !spriteRenderer.enabled;
     }
 }

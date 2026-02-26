@@ -5,6 +5,7 @@ public class ExitDoor : MonoBehaviour
     public PuzzleControl1 puzzleControl;
     public SwitchManager switchManager;
     public Animator animator;
+    bool open = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,7 +15,7 @@ public class ExitDoor : MonoBehaviour
 
     private void Update()
     {
-        switch (puzzleControl.keyFound)
+        switch (open)
         {
             case true:
                 animator.Play(switchManager.sisterPOV == true ? "c_openDoor" : "a_openDoor");
@@ -27,7 +28,6 @@ public class ExitDoor : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log("level complete");
-        // TO-DO: trigger the end of the level for real
+        open = puzzleControl.keyFound ? true : false;
     }
 }

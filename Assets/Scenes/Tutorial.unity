@@ -1024,11 +1024,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.3379054, y: 0.6733589}
-      - {x: -1.074955, y: 0.218909}
-      - {x: -1.1059055, y: -2.768864}
-      - {x: 1.2410682, y: -2.8251803}
-      - {x: 1.1650634, y: 1.0298803}
+    - - {x: -0.7652042, y: 0.5024394}
+      - {x: -1.3099697, y: -0.10156521}
+      - {x: -1.3088725, y: -2.7474985}
+      - {x: 0.5360247, y: -2.761086}
+      - {x: 0.47070336, y: 0.4743917}
   m_UseDelaunayMesh: 0
 --- !u!1 &74394988
 GameObject:
@@ -22825,6 +22825,7 @@ GameObject:
   - component: {fileID: 2040459860}
   - component: {fileID: 2040459861}
   - component: {fileID: 2040459862}
+  - component: {fileID: 2040459863}
   m_Layer: 0
   m_Name: ExitDoor
   m_TagString: Untagged
@@ -22939,6 +22940,52 @@ MonoBehaviour:
   puzzleControl: {fileID: 39512866}
   switchManager: {fileID: 1492002331}
   animator: {fileID: 0}
+--- !u!61 &2040459863
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040459858}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.18, y: 6.29}
+    newSize: {x: 4.18, y: 6.29}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 4.18, y: 6.29}
+  m_EdgeRadius: 0
 --- !u!1 &2077269262
 GameObject:
   m_ObjectHideFlags: 0
