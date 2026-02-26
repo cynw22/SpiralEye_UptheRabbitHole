@@ -13,10 +13,13 @@ public class CookieChest : MonoBehaviour
 
     public LetterCycler[] letters;
 
+    [SerializeField] public GameObject cookies;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        cookies.SetActive(false);
     }
 
     private void OnMouseDown()
@@ -40,6 +43,7 @@ public class CookieChest : MonoBehaviour
         {
             puzzleControl.chestIsOpen = true;
             spriteRenderer.sprite = openSprite;
+            cookies.SetActive(true);
         }
     }
 }
