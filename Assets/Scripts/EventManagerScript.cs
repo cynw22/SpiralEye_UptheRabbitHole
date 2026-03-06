@@ -48,4 +48,9 @@ public class EventManagerScript : MonoBehaviour
         SceneManager.LoadScene("Levels");
     }
 
+    public void Controls()
+    {
+        SceneManager.LoadScene("Controls");
+    }
+
 }

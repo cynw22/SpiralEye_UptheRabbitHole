@@ -5218,7 +5218,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Main Menu
+  m_text: Controls
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2b37e06ad2e1a674da771e5970f2dd9d, type: 2}
   m_sharedMaterial: {fileID: -4288809829352773812, guid: 2b37e06ad2e1a674da771e5970f2dd9d, type: 2}
@@ -5985,6 +5985,7 @@ MonoBehaviour:
   - {fileID: 576590273}
   - {fileID: 674215891}
   - {fileID: 1972451255}
+  cookies: {fileID: 0}
 --- !u!61 &627694334
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12172,6 +12173,7 @@ GameObject:
   - component: {fileID: 840044811}
   - component: {fileID: 840044810}
   - component: {fileID: 840044809}
+  - component: {fileID: 840044813}
   m_Layer: 5
   m_Name: PauseManager
   m_TagString: Untagged
@@ -12306,6 +12308,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840044807}
   m_CullTransparentMesh: 1
+--- !u!114 &840044813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840044807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa3d79c8a6c24541ac48cdcbbb54b84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchManager: {fileID: 1492002331}
+  aliceSprite: {fileID: -4825681256527300140, guid: ead9272b2244e5c468f74f3beeaeebdc, type: 3}
+  constanceSprite: {fileID: 8891140915739170783, guid: ee963dd4bfbfcbd4ebdc1220b7f2723a, type: 3}
 --- !u!1 &877537362
 GameObject:
   m_ObjectHideFlags: 0
@@ -13249,6 +13266,7 @@ GameObject:
   - component: {fileID: 1027845415}
   - component: {fileID: 1027845414}
   - component: {fileID: 1027845413}
+  - component: {fileID: 1027845417}
   m_Layer: 5
   m_Name: HintSystem
   m_TagString: Untagged
@@ -13385,6 +13403,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1027845411}
   m_CullTransparentMesh: 1
+--- !u!114 &1027845417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027845411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa3d79c8a6c24541ac48cdcbbb54b84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchManager: {fileID: 1492002331}
+  aliceSprite: {fileID: -3462381851227895847, guid: 200d7cf265628d64181f9d73b7d703ba, type: 3}
+  constanceSprite: {fileID: 3877913044851303507, guid: c85d54e7558f12549a43d7b7ddb42f22, type: 3}
 --- !u!1 &1041805196
 GameObject:
   m_ObjectHideFlags: 0
@@ -14034,7 +14067,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exit
+  m_text: Main Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2b37e06ad2e1a674da771e5970f2dd9d, type: 2}
   m_sharedMaterial: {fileID: -4288809829352773812, guid: 2b37e06ad2e1a674da771e5970f2dd9d, type: 2}
@@ -15258,7 +15291,7 @@ GameObject:
   - component: {fileID: 1304063281}
   - component: {fileID: 1304063280}
   m_Layer: 5
-  m_Name: Main Menu Button
+  m_Name: Controls Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15330,7 +15363,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2012465479}
         m_TargetAssemblyTypeName: EventManagerScript, Assembly-CSharp
-        m_MethodName: MenuButton
+        m_MethodName: Controls
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15705,7 +15738,6 @@ GameObject:
   - component: {fileID: 1377919557}
   - component: {fileID: 1377919560}
   - component: {fileID: 1377919559}
-  - component: {fileID: 1377919558}
   m_Layer: 5
   m_Name: Pause Menu
   m_TagString: Untagged
@@ -15740,22 +15772,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -944}
   m_SizeDelta: {x: 1056.2681, y: 944.2215}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1377919558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1377919556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27bfa1dbd39b02d4583c37d40dcbd6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  switchManager: {fileID: 0}
-  aliceSprite: {fileID: 0}
-  constanceSprite: {fileID: 0}
-  spriteRenderer: {fileID: 0}
 --- !u!114 &1377919559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16873,7 +16889,7 @@ GameObject:
   - component: {fileID: 1535233002}
   - component: {fileID: 1535233001}
   m_Layer: 5
-  m_Name: Exit Button
+  m_Name: Main Menu Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16945,7 +16961,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2012465479}
         m_TargetAssemblyTypeName: EventManagerScript, Assembly-CSharp
-        m_MethodName: ExitGame
+        m_MethodName: MenuButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19929,7 +19945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfa3d79c8a6c24541ac48cdcbbb54b84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchManager: {fileID: 0}
+  switchManager: {fileID: 1492002331}
   aliceSprite: {fileID: -8275733849092608516, guid: 1bef025e31de93d4995358b2a97180d8, type: 3}
   constanceSprite: {fileID: -7524478954592986037, guid: 12012df055113ae44aba3fac0b17b18b, type: 3}
 --- !u!114 &2001776159
@@ -20599,7 +20615,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2770771547306327315, guid: 7814e9b26ef411c42a864dec560055e7, type: 3}
+  m_Sprite: {fileID: -2770771547306327315, guid: b898a6800c807b54fbd6050778981978, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
