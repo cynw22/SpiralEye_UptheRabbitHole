@@ -462,7 +462,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Credits
+  m_text: Exit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f054b46c0710ea94ea7443ff1dbe58bd, type: 2}
   m_sharedMaterial: {fileID: 3908959653227688014, guid: f054b46c0710ea94ea7443ff1dbe58bd, type: 2}
@@ -570,6 +570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe7a99da17d4abe459e4b168ceae699a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allowSwitching: 0
   sisterPOV: 0
 --- !u!4 &626575102
 Transform:
@@ -1674,7 +1675,7 @@ GameObject:
   - component: {fileID: 1904996461}
   - component: {fileID: 1904996460}
   m_Layer: 5
-  m_Name: CreditsButton
+  m_Name: Exit Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1746,7 +1747,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1442469552}
         m_TargetAssemblyTypeName: EventManagerScript, Assembly-CSharp
-        m_MethodName: CreditsPage
+        m_MethodName: ExitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

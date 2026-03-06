@@ -6640,7 +6640,7 @@ GameObject:
   - component: {fileID: 171533657}
   - component: {fileID: 171533656}
   m_Layer: 5
-  m_Name: Exit Button
+  m_Name: Main Menu Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6712,7 +6712,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2012465479}
         m_TargetAssemblyTypeName: EventManagerScript, Assembly-CSharp
-        m_MethodName: ExitGame
+        m_MethodName: MenuButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -28053,7 +28053,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exit
+  m_text: Main Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2b37e06ad2e1a674da771e5970f2dd9d, type: 2}
   m_sharedMaterial: {fileID: -4288809829352773812, guid: 2b37e06ad2e1a674da771e5970f2dd9d, type: 2}
@@ -29957,7 +29957,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Main Menu
+  m_text: Controls
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2b37e06ad2e1a674da771e5970f2dd9d, type: 2}
   m_sharedMaterial: {fileID: -4288809829352773812, guid: 2b37e06ad2e1a674da771e5970f2dd9d, type: 2}
@@ -31460,7 +31460,7 @@ GameObject:
   - component: {fileID: 1941858413}
   - component: {fileID: 1941858412}
   m_Layer: 5
-  m_Name: Main Menu Button
+  m_Name: Controls Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31532,7 +31532,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2012465479}
         m_TargetAssemblyTypeName: EventManagerScript, Assembly-CSharp
-        m_MethodName: MenuButton
+        m_MethodName: Controls
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
