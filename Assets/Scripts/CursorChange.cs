@@ -21,27 +21,34 @@ public class CursorChange : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     {
         image = GameObject.FindGameObjectWithTag("Cursor").GetComponent<Image>();
     }
+
+    void Update()
+    {
+        var switchControl = UserInput.instance.controls.Player.Switch;
+        if (switchControl.WasPressedThisFrame())
+        {
+            image.sprite = switchManager.sisterPOV == false ? aliceSprite : constanceSprite;
+        }
+    }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         image.sprite = switchManager.sisterPOV == false ? alicePoint : constancePoint;
-        Debug.Log("Hover Entered");
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         image.sprite = switchManager.sisterPOV == false ? aliceSprite : constanceSprite;
-        Debug.Log("Hover Exited");
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
         image.sprite = switchManager.sisterPOV == false ? aliceClick : constanceClick;
-        Debug.Log("Pointer Down");
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
         image.sprite = switchManager.sisterPOV == false ? aliceSprite : constanceSprite;
-        Debug.Log("Pointer Up");
+
     }
 }
