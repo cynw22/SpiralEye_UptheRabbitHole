@@ -34,7 +34,7 @@ public class Pause_Script : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if ((Input.GetKeyDown(KeyCode.Escape) || (Input.GetKeyDown(KeyCode.P))))
         {
             if (pauseMenu.active)
                 Resume();
