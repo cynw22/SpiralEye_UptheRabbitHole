@@ -164,16 +164,16 @@ public class RoseGardenScript : MonoBehaviour
 
         void Update()
         {
-            //if (Input.GetKeyDown(KeyCode.Space))
-            //{
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
             //    c_hintMenu.SetActive(false);
             //    a_hintMenu.SetActive(false);
 
-            //    if (isAlice == false)
-            //        isAlice = true;
-            //    else if (isAlice == true)
-            //        isAlice = false;
-            //}
+                if (isAlice == false)
+                    isAlice = true;
+                else if (isAlice == true)
+                    isAlice = false;
+            }
 
 
             //if (Input.GetKeyDown(KeyCode.H))
