@@ -29,6 +29,13 @@ public class EventManagerScript : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
+
+    public void QueenLevel()
+    {
+
+        SceneManager.LoadScene("FindTheRose");
+    }
+
     public void CatLevel() {
 
         SceneManager.LoadScene("MeetCat");
