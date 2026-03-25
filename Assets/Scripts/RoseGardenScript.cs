@@ -22,35 +22,97 @@ public class RoseGardenScript : MonoBehaviour
     [SerializeField] bool isAlice;
 
 
-    public void Background2() {
+    public void Background1Active()
+    {
+        background_1.SetActive(true);
+        background_2.SetActive(false);
+        background_6.SetActive(false);
+    }
+
+    public void Background2Active() {
         background_3.SetActive(false);
         background_4.SetActive(false);
         background_1.SetActive(false);
         background_2.SetActive(true);
     }
 
-
-    public void CheckActive()
+    public void Background3Active()
     {
-        //if (isAlice == true)
-        //{
-        //    c_hintMenu.SetActive(false);
-        //    if (a_hintMenu.active)
-        //        a_hintMenu.SetActive(false);
-        //    else
-        //        a_hintMenu.SetActive(true);
-        //}
-
-        //if (isAlice == false)
-        //{
-        //    a_hintMenu.SetActive(false);
-        //    if (c_hintMenu.active)
-        //        c_hintMenu.SetActive(false);
-        //    else
-        //        c_hintMenu.SetActive(true);
-        //}
-
+        background_3.SetActive(true);
+        background_2.SetActive(false);
     }
+
+    public void Background4Active()
+    {
+        background_4.SetActive(true);
+        background_2.SetActive(false);
+        background_5.SetActive(false);
+        background_10.SetActive(false); //new variable needs to be added here later ??
+    }
+
+    public void Background5Active()
+    {
+        background_5.SetActive(true);
+        background_4.SetActive(false);
+        background_6.SetActive(false);
+    }
+
+    public void Background6Active()
+    {
+        background_6.SetActive(true);
+        background_1.SetActive(false);
+        background_5.SetActive(false);
+        background_7.SetActive(false);
+    }
+
+    public void Background7Active()
+    {
+        background_7.SetActive(true);
+        background_6.SetActive(false);
+        background_8.SetActive(false);
+        background_9.SetActive(false);
+    }
+
+    public void Background8Active()
+    {
+        background_8.SetActive(true);
+        background_7.SetActive(false);
+    }
+
+    public void Background9Active()
+    {
+        background_9.SetActive(true);
+        background_7.SetActive(false);
+    }
+
+    //Hidden room
+    public void Background10Active()
+    {
+        background_10.SetActive(true);
+        background_4.SetActive(false);
+    }
+
+    //public void CheckActive()
+    //{
+    //    //if (isAlice == true)
+    //    //{
+    //    //    c_hintMenu.SetActive(false);
+    //    //    if (a_hintMenu.active)
+    //    //        a_hintMenu.SetActive(false);
+    //    //    else
+    //    //        a_hintMenu.SetActive(true);
+    //    //}
+
+    //    //if (isAlice == false)
+    //    //{
+    //    //    a_hintMenu.SetActive(false);
+    //    //    if (c_hintMenu.active)
+    //    //        c_hintMenu.SetActive(false);
+    //    //    else
+    //    //        c_hintMenu.SetActive(true);
+    //    //}
+
+    //}
 
     private void Start()
     {
