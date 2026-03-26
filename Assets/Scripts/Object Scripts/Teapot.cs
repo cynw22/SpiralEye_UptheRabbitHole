@@ -21,6 +21,21 @@ public class Teapot : MonoBehaviour
     public void AddIngredient(Ingredients ing)
     {
         addedIngredients.Add(ing);
+        switch (ing)
+        {
+            case Ingredients.PETALS:
+                spriteRenderer.sprite = mixing1;
+                break;
+            case Ingredients.GUMDROPS:
+                spriteRenderer.sprite = mixing2;
+                break;
+            case Ingredients.MILK:
+                spriteRenderer.sprite = mixing3;
+                break;
+            case Ingredients.BUBBLES:
+                spriteRenderer.sprite = mixing4;
+                break;
+        }
     }
 
     protected void ClearTeapot()
@@ -31,7 +46,6 @@ public class Teapot : MonoBehaviour
 
     public void SubmitTea()
     {
-
-        ClearTeapot();
+        teaControl.checkTea(addedIngredients);
     }
 }

@@ -16,6 +16,8 @@ public class TeaMakingControl : MonoBehaviour
     public List<Ingredients> simpleTea;
     public List<Ingredients> specialTea;
 
+    public int desiredTea = 0;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -56,6 +58,31 @@ public class TeaMakingControl : MonoBehaviour
         {
             conEnv.SetActive(false);
             aliceEnv.SetActive(true);
+        }
+    }
+
+    public void checkTea(List<Ingredients> submittedTea)
+    {
+        bool correctTea = false;
+
+        if (desiredTea == 0 && submittedTea.Count == floralTea.Count)
+        {
+            for (int i = 0; i < submittedTea.Count; i++)
+            {
+
+            }
+        }
+        else if (desiredTea == 1 && submittedTea.Count == roundTea.Count)
+        {
+            //
+        }
+        else if (desiredTea == 3 && submittedTea.Count == simpleTea.Count)
+        {
+            //
+        }
+        else if (desiredTea == 4 && submittedTea.Count == specialTea.Count)
+        {
+
         }
     }
 }
