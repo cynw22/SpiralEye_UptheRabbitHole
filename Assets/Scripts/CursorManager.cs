@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CursorManager : MonoBehaviour
 {
     public SwitchManager switchManager;
-    private Vector3 hotspot = new Vector3(0.0f, 0.0f, 0.0f);
+    private Vector3 hotspot = new Vector3(10.0f, 0.0f, 0.0f);
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
