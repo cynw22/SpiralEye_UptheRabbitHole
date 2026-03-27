@@ -48,12 +48,14 @@ public class WhiteRabbitRoomScript : MonoBehaviour
     }
     public void SetBackgroundThreeActive()
     {
+        if (isAlice) { 
         background_0.SetActive(false);
         background_1.SetActive(false);
         background_2.SetActive(false);
         background_3.SetActive(true);
+    
+        }
     }
-
 
     // Update is called once per frame
     void Update()
