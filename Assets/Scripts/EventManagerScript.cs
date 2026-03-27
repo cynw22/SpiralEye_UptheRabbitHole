@@ -60,4 +60,14 @@ public class EventManagerScript : MonoBehaviour
         SceneManager.LoadScene("Controls");
     }
 
+
+    public void tutDrinkMe() {
+        SceneManager.LoadScene("TalkingTutorial");
+    }
+
+    public void madLibs()
+    {
+        SceneManager.LoadScene("MeetCat"); // change later
+    }
+
 }
