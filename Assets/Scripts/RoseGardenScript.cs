@@ -19,6 +19,7 @@ public class RoseGardenScript : MonoBehaviour
     [SerializeField] GameObject background_8;
     [SerializeField] GameObject background_9;
     [SerializeField] GameObject background_10;
+    [SerializeField] GameObject background_11;
     [SerializeField] bool isAlice;
 
 
@@ -102,6 +103,7 @@ public class RoseGardenScript : MonoBehaviour
             {
                 background_8.SetActive(true);
                 background_7.SetActive(false);
+                background_11.SetActive(false);
             }
         }
 
@@ -114,7 +116,6 @@ public class RoseGardenScript : MonoBehaviour
             }
         }
 
-        //Hidden room
         public void Background10Active()
         {
             if (!isAlice)
@@ -124,29 +125,39 @@ public class RoseGardenScript : MonoBehaviour
             }
         }
 
-        //public void CheckActive()
-        //{
-        //    //if (isAlice == true)
-        //    //{
-        //    //    c_hintMenu.SetActive(false);
-        //    //    if (a_hintMenu.active)
-        //    //        a_hintMenu.SetActive(false);
-        //    //    else
-        //    //        a_hintMenu.SetActive(true);
-        //    //}
+    public void Background11Active()
+    {
+        if (!isAlice)
+        {
+            background_11.SetActive(true);
+            background_8.SetActive(false);
+        }
+    }
 
-        //    //if (isAlice == false)
-        //    //{
-        //    //    a_hintMenu.SetActive(false);
-        //    //    if (c_hintMenu.active)
-        //    //        c_hintMenu.SetActive(false);
-        //    //    else
-        //    //        c_hintMenu.SetActive(true);
-        //    //}
 
-        //}
+    //public void CheckActive()
+    //{
+    //    //if (isAlice == true)
+    //    //{
+    //    //    c_hintMenu.SetActive(false);
+    //    //    if (a_hintMenu.active)
+    //    //        a_hintMenu.SetActive(false);
+    //    //    else
+    //    //        a_hintMenu.SetActive(true);
+    //    //}
 
-        private void Start()
+    //    //if (isAlice == false)
+    //    //{
+    //    //    a_hintMenu.SetActive(false);
+    //    //    if (c_hintMenu.active)
+    //    //        c_hintMenu.SetActive(false);
+    //    //    else
+    //    //        c_hintMenu.SetActive(true);
+    //    //}
+
+    //}
+
+    private void Start()
         {
             isAlice = false;
             background_1.SetActive(true);
@@ -159,8 +170,9 @@ public class RoseGardenScript : MonoBehaviour
             background_8.SetActive(false);
             background_9.SetActive(false);
             background_10.SetActive(false);
+            background_11.SetActive(false);
 
-        }
+    }
 
         void Update()
         {
