@@ -2625,7 +2625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2890,7 +2890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378b98fa6fe42794d9c59f05c1f4a16e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 4900000, guid: 385a8f544e272ea44b5d8ceb846a6921, type: 3}
+  startingKnot: 
   characters:
   - characterName: Alice
     dialogueBoxRoot: {fileID: 0}
@@ -2916,6 +2916,7 @@ MonoBehaviour:
   skipSummaryPanel: {fileID: 0}
   skipSummaryText: {fileID: 0}
   skipButton: {fileID: 0}
+  backgroundController: {fileID: 0}
   soundFXManager: {fileID: 962274516}
   typingSounds:
   - {fileID: 8300000, guid: 6ac37a403a7864748a4af0674a88028b, type: 3}
