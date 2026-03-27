@@ -70,4 +70,19 @@ public class EventManagerScript : MonoBehaviour
         SceneManager.LoadScene("MeetCat"); // change later
     }
 
+    public void teaMiniGame()
+    {
+        SceneManager.LoadScene("MadHatterPuzzle"); 
+    }
+
+    public void WhiteRabbitHouseOutside()
+    {
+        SceneManager.LoadScene("WhiteRabbitHouse");
+    }
+
+    public void WhiteRabbitHouseInside()
+    {
+        SceneManager.LoadScene("WhiteRabbitHousePuzzle");
+    }
+
 }
