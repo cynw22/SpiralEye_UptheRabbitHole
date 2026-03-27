@@ -42,8 +42,11 @@ public class CharacterDialogueUI
 public class DialogueManager : MonoBehaviour
 {
     [Header("Ink")]
-    public TextAsset inkJSON; //the main json file for support
     private Story story; //the actual inky story instance
+
+    [Header("Ink Start")]
+    [Tooltip("Set the starting knot for this scene")]
+    public string startingKnot; // inspector-defined per scene
 
     [Header("Characters")]
     public List<CharacterDialogueUI> characters; //dictionary of all character that have speaking lines in the scene dialouge
@@ -72,9 +75,30 @@ public class DialogueManager : MonoBehaviour
     private Coroutine typingCoroutine;
     private List<string> skippedLines = new List<string>();
 
+    public static DialogueManager Instance { get; private set; }
+
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject); // prevent duplicates
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject); //make sure it doesn't destory the relationship tracker
+    }
+
+    public void StartDialogue(string knotName)
+    {
+        story.ChoosePathString(knotName);
+        ContinueStory();
+    }
+
     //Start inky file
     void Start()
     {
+        // Setup character lookup
         choicePanel.SetActive(false);
         lookup = new Dictionary<string, CharacterDialogueUI>();
 
@@ -84,76 +108,71 @@ public class DialogueManager : MonoBehaviour
             c.dialogueBoxRoot.SetActive(false);
         }
 
-        story = new Story(inkJSON.text);
+        // Use this to set the correct file for the level
+        story = StoryManager.Instance.story;
 
         if (skipButton != null)
             skipButton.onClick.AddListener(StartSkip);
 
+        // Start at the knot for this scene
+        if (!string.IsNullOrEmpty(startingKnot))
+            story.ChoosePathString(startingKnot);
         ContinueStory();
     }
 
-    void Update() { 
-        if (Input.GetKeyDown(KeyCode.Return)) 
-        { 
-            if (isTyping) 
-            { 
-                FinishTyping(); 
-                return; 
-            } 
-            
-            if (story.currentChoices.Count > 0) 
-            { 
-                DisplayChoices(); 
-                return; 
-            } 
-            
-            ContinueStory(); 
-        } 
-    }
-
-    //Check tags to see if text is allowed to be skipped or not, controls how much of the story should flow and if there are any tags stopping the flow
-    void ContinueStory() 
+    void Update()
     {
-        if (!story.canContinue)
+        if (Input.GetKeyDown(KeyCode.Return))
         {
-            Debug.Log("End of story reached.");
-            CloseAllDialogueBoxes(); // deactivate all dialogue boxes
-            choicePanel.SetActive(false); // also hide choices
-            return;
-        }
+            if (isTyping)
+            {
+                FinishTyping();
+                return;
+            }
 
-        string text = story.Continue().Trim(); 
-        
-        HandleTags(story.currentTags);
-
-        //Stops blank tags from populating the boxes
-        if (string.IsNullOrEmpty(text))
-        {
-            // No text to display, skip creating dialogue box
             if (story.currentChoices.Count > 0)
             {
                 DisplayChoices();
+                return;
             }
+
+            ContinueStory();
+        }
+    }
+
+    //Check tags to see if text is allowed to be skipped or not, controls how much of the story should flow and if there are any tags stopping the flow
+    void ContinueStory()
+    {
+        //Check if there is text to continue
+        if (story.canContinue)
+        {
+            string text = story.Continue().Trim();
+
+            // Handle tags from the current line
+            HandleTags(story.currentTags);
+
+            if (!string.IsNullOrEmpty(text))
+            {
+                StartTyping(text);
+                return;
+            }
+        }
+        else
+        {
+            // Story can't continue: still handle the last tags
+            HandleTags(story.currentTags);
+        }
+
+        // If there are choices
+        if (story.currentChoices.Count > 0)
+        {
+            DisplayChoices();
             return;
         }
 
-        //Skip logic
-        if (isSkipping) 
-        { 
-            skippedLines.Add(text); 
-            
-            if (story.currentChoices.Count > 0) 
-            { 
-                isSkipping = false; 
-                ShowSkipSummary(); 
-                DisplayChoices(); 
-                return; 
-            } 
-            ContinueStory(); 
-            return; 
-        } 
-        
-        StartTyping(text); 
+        // Otherwise, end of knot
+        CloseAllDialogueBoxes();
+        choicePanel.SetActive(false);
     }
 
     //Master list of all tags currently in the ink file (DOUBLE CHECK THIS LATER MIGHT UPDATE WITH MORE DO NOT FORGET)
@@ -173,7 +192,9 @@ public class DialogueManager : MonoBehaviour
             }
             else if (tag.StartsWith("ending:"))
             {
-                SceneManager.LoadScene(tag.Split(':')[1].Trim());
+                // Extract the name from the tag
+                string sceneName = tag.Split(':')[1].Trim();
+                SceneManager.LoadScene(sceneName);
             }
             else if (tag == "noskip_start")
             {
@@ -217,22 +238,22 @@ public class DialogueManager : MonoBehaviour
     //Coroutine used to create the type writer effect for the line
     IEnumerator TypeLine(string line)
     {
-        isTyping = true; 
-        currentCharacter.dialogueText.text = ""; 
-        
-        for (int i = 0; i < line.Length; i++) 
-        { 
-            currentCharacter.dialogueText.text += line[i]; 
-            
-            if (!char.IsWhiteSpace(line[i]) && !soundFXManager.IsPlaying()) 
-            { 
-                soundFXManager.PlayRandomSound(typingSounds, 0.4f); 
-            } 
-            yield return 
-                new WaitForSeconds(currentCharacter.typingSpeed); 
+        isTyping = true;
+        currentCharacter.dialogueText.text = "";
+
+        for (int i = 0; i < line.Length; i++)
+        {
+            currentCharacter.dialogueText.text += line[i];
+
+            if (!char.IsWhiteSpace(line[i]) && !soundFXManager.IsPlaying())
+            {
+                soundFXManager.PlayRandomSound(typingSounds, 0.4f);
+            }
+            yield return
+                new WaitForSeconds(currentCharacter.typingSpeed);
         }
 
-        isTyping = false; 
+        isTyping = false;
 
         //DisplayChoices(); Commented out for testing might have to remove later depending on conflicts }
     }
@@ -240,23 +261,23 @@ public class DialogueManager : MonoBehaviour
     //initiate the line
     void StartTyping(string line)
     {
-    if (currentCharacter == null) return;
+        if (currentCharacter == null) return;
 
-    currentLine = line;
+        currentLine = line;
 
-    if (typingCoroutine != null)
-        StopCoroutine(typingCoroutine);
+        if (typingCoroutine != null)
+            StopCoroutine(typingCoroutine);
 
-    typingCoroutine = StartCoroutine(TypeLine(line));
+        typingCoroutine = StartCoroutine(TypeLine(line));
     }
 
     //destory line
     void FinishTyping()
     {
-        StopAllCoroutines(); 
-        currentCharacter.dialogueText.text = currentLine; 
-        isTyping = false; 
-        
+        StopAllCoroutines();
+        currentCharacter.dialogueText.text = currentLine;
+        isTyping = false;
+
         soundFXManager.Stop(); // stop overlapping sounds
     }
 

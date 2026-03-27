@@ -1,218 +1,148 @@
-=== tutorial_chapter === 
+=== chapter_tutorial === 
 #noskip_start
 //Have Constance character slowly open her eyes, write the tags here when you figure out how to do that lol
 
 #speaker: Constance
 #mood: Constance : ClosedEyes
-Owww. My head… That fall was crazy. Why did you have to go chasing after something?
-
-#speaker: Constance
-Alice? Did you hear me?
+Ugh… Where am I…?
+Alice? Alice, are you here?
 
 #speaker: Narrator
-...............
+The silence answers Constance...
 
 #speaker: Constance
 #mood: Constance : OpenEyes
-Alice? What's going on, where are you?
+How far did I fall? And where’s Alice? I hope she isn’t hurt…? Alice? Alice!! Alice, answer me, where are you!?
 
 #speaker: Narrator
-................
-
-#speaker: Constance
-Oh god, Alice. ALICE??? Where are you? 
-
-#speaker: Constance
-PLEASE ANSWER ME WHERE ARE YOU?
+Silence.
 
 #speaker: Alice
-I’M HEREEEEEE.
+I’m here! I’m here, Con!
+
+//Add reaction or popup here if it works
 
 #speaker: Constance 
-Where? I don’t see you. 
+Oh, thank goodness, I thought I’d lost you. Come here so I can see you, please?
+
+#speaker: Tutorial
+Press the space bar to switch perspectives…
 
 #speaker: Alice
-I’M COMINNGGGG. HANG ONNNN.
+Haha, you’re such a worrywart, Con.
 
 #speaker: Constance
-Alice this isn’t funny, you’re scaring me.
-
-//Player is asked to switch perspective
-// Make Alice character pop up out of seemingly nowhere.
-
-#speaker: Constance
-ALICE. My god, please stop doing that.
+I’ll be the judge of that, thank you.
 
 #speaker: Alice
-But whyyyy. It’s funny.
+Oh my god, you don’t need to check me over for injuries, I’m fine! Who are you, Mom?
 
 #speaker: Constance
-To who?  
-
-#speaker: Alice
-To me.
+I’ll be just as grey as her within a year if you keep running off like you just did, that’s for sure.
 
 #speaker: Constance
-#mood: Constance : ClosedEyes
-Nevermind that, tell me where we are.
+//Add a mood tag here
+Speaking of running off…
  
 #speaker: Alice
-I don’t know. I followed the rabbit and now we’re here.
+Wuh oh.
 
 #speaker: Constance
-The rabbit. You followed a rabbit?
+Care to tell me where we are? And why?
 
 #speaker: Alice
-Yeah!!
+I saw a rabbit! Con, it had a vest on! And– and a pocketwatch! And so I followed it, of course. Now we’re at the bottom of a rabbit hole, I think. Isn’t it amazing?
 
 #speaker: Constance
-Why?
+A rabbit. A rabbit. You jumped down a rabbit hole, chasing a vest-wearing rabbit.
 
 #speaker: Alice
-Because.
-
-#speaker: Narrator
-...........
+…Yes?
 
 #speaker: Alice
-OHHHHH LOOK!!!
-
-#speaker: Alice
-Sissss, look, don’t you think that’s a funny looking bottle.
+Constance? Helloooo, Constance?
+…Did I break her?
 
 #speaker: Constance
-Bottle?
+…Okay. Sure. Alright. That makes no sense. I tripped on the rabbit hole chasing you across a field, cracked my skull open on a rock, and now I’m dead. Right?
 
 #speaker: Alice
-Yeahhh, it looks silly. Look even the writing looks weird. It looks like Aunty Vicky’s Christmas cards.
-
-#mood: Constance : ClosedEyes
-#speaker: Constance
-First, that’s a very rude thing to say. Second, there is no bottle, its just a glass table. 
+No, silly! We’re just in a huge, otherworldly lobby at the bottom of an unfathomably deep rabbit hole. Look, they even have refreshments, how nice!
 
 #speaker: Alice 
-What? No there isn’t.
+Ooh, mystery tea, my favourite! It’s even asking me to drink it!
+
+#speaker: Narrator
+Already enamoured with the world of Wonderland, Alice reaches enthusiastically for the bottle.
 
 #speaker: Constance
-Alice I have eyes, there's nothing on the table.
+Ohh, no you don’t. Alice, if you drink “mystery tea” again, I am disowning you. Put it down.
 
 #speaker: Alice
-Uhhhh no that's not true. Are you sure you didn’t hit your head on the way down?
+Okay but the last mystery tea incident was just riverwater, I was only sick for like a day. This is real mystery tea! The genuine article!
 
 #speaker: Constance
 //Have Constance squint again? 
-I feel perfectly fine. At least as fine as someone can be after falling down 100ft or so.
+I said put it down. You don’t know what’s in that, it could be poison for all you know.
 
 #speaker: Alice
-Okayyy, well I just see the pretty bottle.
-//Maybe have Alice do an eye roll?
+In Wonderland? Unlikely.
 
 #speaker: Constance 
-Alright fine have it your way. I know better than to argue a silly point with you. It never ends well.
-
-#speaker: Alice
-MEANIE!!!
+Wonder– what? Hey, wait, stop–!
 
 #speaker: Narrator
-The girls fall into silence...
-
-#speaker: Alice
-I’m gonna drink it.
-
-#speaker: Constance
-…What?
-
-#speaker: Alice
-The bottle. I’m gonna drink it.
-
-#speaker: Constance
-And why would you do that?
-
-#speaker: Alice
-It looks yummy.
-
-#speaker: Constance
-Alice, that is the dumbest thing I’ve heard all day. Why would you ever drink something out of an unmarked bottle???
-
-#speaker: Alice
-Because it looks yummy?
-
-#speaker: Constance
-ALICE! For god’s sake what is wrong with you, it could be poison for all you know, or anything else for that matter, you have no way of knowing-
+Alice gulps down the ‘Drink Me’ labelled bottle, looking entirely too self-satisfied.
 
 //Show Alice drinking the bottle by having it disapper and sound or something
 
-+ [Get upset with Alice for drinking the bottle]
++ [Scold Alice]
     ~ C_Alice -= 1
     # speaker: Constance
-    ALICE! What is wrong with you? Why would you do that???
+    Alice, no! Are you stupid!? Spit it out, now!
     
+    # speaker: Alice
+    Am I st–? Constance, you are such a jerk, I’m fine! Ugh, let go of me!
+    
+    # speaker: Constance
+    Hang on, I didn’t–!
+    …I didn’t mean it like that, I was just–
+
+    # speaker: Constance
+    …Whatever. She’s fine.
+    
+    #speaker: Narrator
+    A tension weighs in the air… The sisters’ relationship is damaged.
+
     ->after_choice 
 
-+ [Gently scold Alice for drinking the bottle]
++ [Check on Alice]
     ~ C_Alice += 1
     # speaker: Constance
-   Alice, oh my god why in the world would you drink that? What if it hurt you!
+    Alice– Alice, look at me. Do you feel well? Do you feel sick? Are you okay?
     
+    # speaker: Alice
+    Am I okay–? I’m– I’m good, Constance, don’t worry. See? Totally fine!
+    I don’t feel sick at all! I promise, okay?
+    
+    # speaker: Alice
+    I won’t do it again, alright? Don’t look so scared.
+    
+    # speaker: Constance
+    …Alright.
+    
+    #speaker: Narrator
+    A sense of relief fills the air. The sisters’ relationship improves.
     ->after_choice
 
 ===after_choice===
 #speaker: Alice
-Because I wanted to.
+Alright, enough of that! Let’s go explore!
 
 #speaker: Constance
-And you didn’t stop to think that could have been very dangerous.
-
-#speaker: Alice
-Nope.
-
-//Change sprite to Alice smiling
-#speaker: Alice
-Sooo, where are we going now?
-
-#speaker: Constance
-Alice, are you sure you’re okay?
-
-#speaker: Alice
-Sis stop worrying I’m fine. 
-
-#speaker: Alice
-Come on, let's go and check this place out. Maybe there’s a way to get out of here.
-
-#speaker: Constance
-Don’t think I don’t know what you are doing right now.
-
-#speaker: Alice
-Come onnnn, you were the one who said we needed to get out of here.
-
-#speaker: Alice
-Woahhhhh this place is huge. Everything looks like a mountain. 
-
-#speaker: Alice
-Even that chest over there looks massive! I wonder if it’s got treasure!
-
-#speaker: Constance
-Huh? What chest?
-
-#speaker: Alice
-OHHH SIS LOOK IT’S A DOOR! 
-
-#speaker: Constance
-Alice please one thing at a time.
-
-//Prompt player to click on the door
-
-#speaker: Constance
-It’s locked.
-
-#speaker: Alice
-Bummer. I think we need to find a key.
-
-#speaker: Constance
-Alright, let’s look around the room and see if there’s something we can use to get out. 
-
-(Relationship value: {C_Alice}) //REMOVE AFTER TESTING
-
+Don’t think I don’t know what you’re doing.
 #noskip_end
 
+#ending: Tutorial
 -> DONE
+
