@@ -82,7 +82,7 @@ public class EventManagerScript : MonoBehaviour
 
     public void WhiteRabbitHouseInside()
     {
-        SceneManager.LoadScene("WhiteRabbitHousePuzzle");
+        SceneManager.LoadScene("WhiteRabbitPuzzle");
     }
 
 }
