@@ -63,6 +63,9 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI skipSummaryText;
     public Button skipButton;
 
+    [Header("Background")]
+    public BackgroundController backgroundController;
+
     [Header("Sound")]
     public SoundFXManager soundFXManager;
     public AudioClip[] typingSounds;
@@ -203,6 +206,11 @@ public class DialogueManager : MonoBehaviour
             else if (tag == "noskip_end")
             {
                 skipLocked = false;
+            }
+            else if (tag == "alice_bg_empty")
+            {
+                if (backgroundController != null)
+                    backgroundController.SetAliceEmpty();
             }
         }
     }

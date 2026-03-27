@@ -1,8 +1,11 @@
 INCLUDE variables.ink
 INCLUDE chapter_tutorial.ink
+INCLUDE chapter_tutorial_V2.ink
 INCLUDE tutorial_puzzle_connect.ink
 INCLUDE MeetCatPuzzle.ink
 INCLUDE MeetCat.ink
+
+
 
 //INCLUDE PartyFight.ink
 //INCLUDE ChooseCat.ink
