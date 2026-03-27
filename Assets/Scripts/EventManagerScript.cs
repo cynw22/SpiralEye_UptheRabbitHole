@@ -85,4 +85,8 @@ public class EventManagerScript : MonoBehaviour
         SceneManager.LoadScene("WhiteRabbitPuzzle");
     }
 
+    public void TheGate() {
+        SceneManager.LoadScene("TheGate");
+    }
+
 }
