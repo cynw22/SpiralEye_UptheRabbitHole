@@ -20,15 +20,13 @@ public class CursorChange : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     void Start()
     {
         image = GameObject.FindGameObjectWithTag("Cursor").GetComponent<Image>();
+        image.sprite = constanceSprite;
     }
 
     void Update()
     {
         var switchControl = UserInput.instance.controls.Player.Switch;
-        if (switchControl.WasPressedThisFrame())
-        {
-            image.sprite = switchManager.sisterPOV == false ? aliceSprite : constanceSprite;
-        }
+        image.sprite = switchManager.sisterPOV == false ? aliceSprite : constanceSprite;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -49,6 +47,5 @@ public class CursorChange : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public void OnPointerUp(PointerEventData eventData)
     {
         image.sprite = switchManager.sisterPOV == false ? aliceSprite : constanceSprite;
-
     }
 }
