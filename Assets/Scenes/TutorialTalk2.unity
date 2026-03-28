@@ -14606,7 +14606,7 @@ GameObject:
   - component: {fileID: 1535214536}
   m_Layer: 5
   m_Name: CursorManager
-  m_TagString: Untagged
+  m_TagString: Cursor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15947,6 +15947,7 @@ GameObject:
   - component: {fileID: 1892271216}
   - component: {fileID: 1892271215}
   - component: {fileID: 1892271219}
+  - component: {fileID: 1892271220}
   m_Layer: 5
   m_Name: PauseManager
   m_TagString: Untagged
@@ -16096,6 +16097,25 @@ MonoBehaviour:
   switchManager: {fileID: 1492002331}
   aliceSprite: {fileID: -4825681256527300140, guid: ead9272b2244e5c468f74f3beeaeebdc, type: 3}
   constanceSprite: {fileID: 8891140915739170783, guid: ee963dd4bfbfcbd4ebdc1220b7f2723a, type: 3}
+--- !u!114 &1892271220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892271213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca8bfa6a3668224c8e9f6afb9ee93ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchManager: {fileID: 1492002331}
+  aliceSprite: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
+  alicePoint: {fileID: -832645264602151611, guid: 2c21b4f052e4c8c47a1c8ec25376e734, type: 3}
+  aliceClick: {fileID: -4194668869044252366, guid: 103001f469e807145b439213d5f38296, type: 3}
+  constanceSprite: {fileID: 2275898209256684654, guid: 3dd30e7ebb3c2504a835ebd951562823, type: 3}
+  constancePoint: {fileID: -4833394626526807451, guid: d64a0b472dd3d09418a3cd443deb1168, type: 3}
+  constanceClick: {fileID: -3810316324186850591, guid: f2b1e0d1e6f75b3438a18c88c3c7a785, type: 3}
 --- !u!1 &1924215568
 GameObject:
   m_ObjectHideFlags: 0
