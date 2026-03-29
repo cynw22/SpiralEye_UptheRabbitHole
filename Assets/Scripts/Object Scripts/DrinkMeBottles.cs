@@ -35,6 +35,7 @@ public class DrinkMeBottles : MonoBehaviour
         {
             bookshelf.numFoundBottles++;
             gameObject.SetActive(false);
+            Debug.Log("clicked");
         }
     }
 }

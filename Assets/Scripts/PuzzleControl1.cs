@@ -58,7 +58,7 @@ public class PuzzleControl1 : MonoBehaviour
             {
                 for (int j = 0; j < i; j++)
                 {
-                    if (bottleLocation == safeBottleLocationIndex[j])
+                    if (bottleLocation == safeBottleLocationIndex[j] || bottleLocation == 7)
                     {
                         // if generated bottle location matches any previous locations, regenerate
                         skip = true;

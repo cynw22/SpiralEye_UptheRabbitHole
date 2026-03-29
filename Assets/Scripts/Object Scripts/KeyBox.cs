@@ -5,6 +5,10 @@ using System;
 public class KeyBox : MonoBehaviour
 {
     [SerializeField] PuzzleControl1 puzzleControl;
+    [SerializeField] SwitchManager switchManager;
+
+    private SpriteRenderer spriteRenderer;
+    [SerializeField] public Sprite sprite1, sprite2;
 
     public int[] sequence;
     public int inputs = 0;
@@ -16,6 +20,8 @@ public class KeyBox : MonoBehaviour
     void Start()
     {
         sequence = new int[puzzleControl.numButtons];
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = sprite1;
 
         for (int i = 0; i < checks.Length; i++)
         {
@@ -43,6 +49,7 @@ public class KeyBox : MonoBehaviour
             checks[inputs].SetActive(true);
             inputs++;
             puzzleControl.keyFound = inputs == puzzleControl.numButtons ? true : false;
+            if (puzzleControl.keyFound) { spriteRenderer.sprite = sprite2; }
         }
         // if wrong, reset all checkmarks and reset the input sequence
         else
