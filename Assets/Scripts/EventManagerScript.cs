@@ -65,11 +65,6 @@ public class EventManagerScript : MonoBehaviour
         SceneManager.LoadScene("TalkingTutorial");
     }
 
-    public void madLibs()
-    {
-        SceneManager.LoadScene("MeetCat"); // change later
-    }
-
     public void teaMiniGame()
     {
         SceneManager.LoadScene("MadHatterPuzzle"); 
@@ -88,5 +83,32 @@ public class EventManagerScript : MonoBehaviour
     public void TheGate() {
         SceneManager.LoadScene("TheGate");
     }
+
+    //Endings
+    public void BadEndOne() {
+        SceneManager.LoadScene("Bad End One");
+    }
+    public void BadEndTwo()
+    {
+        SceneManager.LoadScene("Bad End Two");
+    }
+    public void BadEndThree()
+    {
+        SceneManager.LoadScene("Bad End Three");
+    }
+    public void BadEndFour()
+    {
+        SceneManager.LoadScene("Bad End Four");
+    }
+
+    public void BadEndFive()
+    {
+        SceneManager.LoadScene("Bad End Cat");
+    }
+    public void BadEndSix()
+    {
+        SceneManager.LoadScene("Bad End Queen");
+    }
+
 
 }
