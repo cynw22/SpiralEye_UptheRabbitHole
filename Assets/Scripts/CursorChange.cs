@@ -15,63 +15,40 @@ public class CursorChange : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     private Image image;
 
-    bool hovering;
-    bool mouseDown;
-
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         image = GameObject.FindGameObjectWithTag("Cursor").GetComponent<Image>();
         image.sprite = constanceSprite;
-        hovering = false;
-        mouseDown = false;
     }
 
     void Update()
     {
-        if (!hovering && !mouseDown)
+        var switchControl = UserInput.instance.controls.Player.Switch;
+        if (switchControl.WasPressedThisFrame())
         {
             image.sprite = switchManager.sisterPOV == false ? aliceSprite : constanceSprite;
-            Debug.Log("Mouse not down or hovering");
-        }
-
-        else if (hovering && !mouseDown)
-        {
-            image.sprite = switchManager.sisterPOV == false ? alicePoint : constancePoint;
-            Debug.Log("Mouse hovering");
-        }
-        
-        else if (hovering && mouseDown)
-        {
-            image.sprite = switchManager.sisterPOV == false ? aliceClick : constanceClick;
-            Debug.Log("Mouse down");
-        }
-
-        else if (!hovering && mouseDown)
-        {
-            image.sprite = switchManager.sisterPOV == false ? aliceSprite : constanceSprite;
-            Debug.Log("Clicking but not hovering");
         }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        hovering = true;
+        image.sprite = switchManager.sisterPOV == false ? alicePoint : constancePoint;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        hovering = false;
+        image.sprite = switchManager.sisterPOV == false ? aliceSprite : constanceSprite;
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        mouseDown = true;
+        image.sprite = switchManager.sisterPOV == false ? aliceClick : constanceClick;
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        mouseDown = false;
+        image.sprite = switchManager.sisterPOV == false ? aliceSprite : constanceSprite;
     }
 }
