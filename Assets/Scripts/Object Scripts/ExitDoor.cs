@@ -6,11 +6,13 @@ public class ExitDoor : MonoBehaviour
     public SwitchManager switchManager;
     public Animator animator;
     bool open = false;
+    [SerializeField] public GameObject popup;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         animator = GetComponent<Animator>();
+        popup.SetActive(false);
     }
 
     private void Update()
@@ -29,5 +31,8 @@ public class ExitDoor : MonoBehaviour
     private void OnMouseDown()
     {
         open = puzzleControl.keyFound ? true : false;
+        if (open == false) {
+            popup.SetActive(true);
+        }
     }
 }
