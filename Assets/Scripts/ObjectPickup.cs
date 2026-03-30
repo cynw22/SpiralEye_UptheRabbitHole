@@ -6,22 +6,24 @@ using Unity.VisualScripting;
 public class ObjectPickup : MonoBehaviour, IPointerDownHandler
 {
     public SwitchManager switchManager;
+    [SerializeField] public PuzzleControl2 puzzleManager;
 
-    public Sprite spritePickedUp;
-
-    private Image image;
+    // public Sprite spritePickedUp;
+    // private Image image;
 
     private bool beenClicked;
 
     public bool interactableWithAlice;
     public bool interactableWithConstance;
 
+    [SerializeField] ItemToFind item;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         beenClicked = false;
-        interactableWithAlice = true;
-        interactableWithConstance = false;
+        // interactableWithAlice = true;
+        // interactableWithConstance = false;
     }
 
     // Update is called once per frame
@@ -29,8 +31,9 @@ public class ObjectPickup : MonoBehaviour, IPointerDownHandler
     {
         if (beenClicked == true)
         {
-            image.sprite = spritePickedUp;
-            Debug.Log("Object Picked Up");
+            // image.sprite = spritePickedUp;
+            puzzleManager.findObject(item);
+            gameObject.SetActive(false);
         }
     }
 
@@ -42,6 +45,7 @@ public class ObjectPickup : MonoBehaviour, IPointerDownHandler
             if (interactableWithAlice == true)
             {
                 beenClicked = true;
+                Debug.Log(item + " Picked Up");
             }
 
             else if (interactableWithAlice == false)
@@ -56,6 +60,7 @@ public class ObjectPickup : MonoBehaviour, IPointerDownHandler
             if (interactableWithConstance == true)
             {
                 beenClicked = true;
+                Debug.Log(item + " Picked Up");
             }
 
             else if (interactableWithConstance == false)
