@@ -5,6 +5,7 @@ public class Bookshelf : MonoBehaviour
     [SerializeField] PuzzleControl1 puzzleControl;
     [SerializeField] DrinkMeBottles[] bottles;
     public int numFoundBottles = 0;
+    [SerializeField] public GameObject collected;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,6 +15,7 @@ public class Bookshelf : MonoBehaviour
             bottles[puzzleControl.safeBottleLocationIndex[i]].isSafe = true;
             Debug.Log("bottle " + bottles[puzzleControl.safeBottleLocationIndex[i]] + " set to safe");
         }
+        collected.SetActive(false);
     }
 
     private void Update()
@@ -22,6 +24,7 @@ public class Bookshelf : MonoBehaviour
         {
             puzzleControl.allBottlesFound = true;
             Debug.Log("all bottles found");
+            collected.SetActive(true);
         }
     }
 }
