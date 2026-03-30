@@ -9,6 +9,7 @@ public class Timer : MonoBehaviour
     public TextMeshProUGUI timeLeft;
     public float seconds;
     public float minutes;
+    [SerializeField] bool isCollected;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     void Start()
@@ -21,15 +22,16 @@ public class Timer : MonoBehaviour
     {
         time -= Time.deltaTime;
 
-        if (time <= 1) {
-            if (LevelNumber == 4) // 4 = White Rabbit House
-            {
-                SceneManager.LoadScene("ThePoster");
-            }
-            if (LevelNumber == 5) { // 5 = FindTheRose
-                SceneManager.LoadScene("FindTheRose"); //Change Later to Queens Court
-            }
-        }
+        //if ((time <= 1) && (!isCollected)) {
+        //    if (LevelNumber == 4) // 4 = White Rabbit House, Check if all the objects collected
+        //    {
+        //        SceneManager.LoadScene("ThePoster");
+        //    }
+        //    if (LevelNumber == 5) { // 5 = FindTheRose, Check if all the Roses Collected
+        //        SceneManager.LoadScene("FindTheRose"); //Change Later to Queens Court
+        //    }
+        //}
+
         minutes = time / 60;
         seconds = time % 60;
         if (seconds >= 10) { 
