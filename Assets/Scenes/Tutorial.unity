@@ -316,7 +316,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   background: {fileID: 2074531132}
-  door: {fileID: 0}
 --- !u!61 &20762001
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3103,7 +3102,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   background: {fileID: 2122193623}
-  door: {fileID: 0}
 --- !u!61 &271147080
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3252,7 +3250,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   background: {fileID: 2038596110}
-  door: {fileID: 0}
 --- !u!61 &279473213
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26530,7 +26527,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2038596111}
   - {fileID: 532719835}
   - {fileID: 1783993346}
   - {fileID: 372636771}
@@ -26590,7 +26586,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   background: {fileID: 616253582}
-  door: {fileID: 0}
 --- !u!61 &907014639
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31665,7 +31660,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   background: {fileID: 1073525590}
-  door: {fileID: 0}
 --- !u!61 &1430145135
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32131,6 +32125,7 @@ Transform:
   - {fileID: 43147776}
   - {fileID: 68926015}
   - {fileID: 627694331}
+  - {fileID: 2038596111}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1479042158
@@ -36353,7 +36348,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   background: {fileID: 1507605857}
-  door: {fileID: 2040459858}
 --- !u!1 &1990557755
 GameObject:
   m_ObjectHideFlags: 0
@@ -37609,7 +37603,7 @@ RectTransform:
   - {fileID: 279917985}
   - {fileID: 1588814210}
   - {fileID: 859528975}
-  m_Father: {fileID: 901092773}
+  m_Father: {fileID: 1475984035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -37809,6 +37803,8 @@ MonoBehaviour:
   switchManager: {fileID: 1492002331}
   animator: {fileID: 0}
   popup: {fileID: 2074531132}
+  popupBg: {fileID: 1507605857}
+  col: {fileID: 0}
 --- !u!61 &2040459863
 BoxCollider2D:
   m_ObjectHideFlags: 0

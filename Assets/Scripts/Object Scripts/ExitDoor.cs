@@ -8,11 +8,15 @@ public class ExitDoor : MonoBehaviour
     bool open = false;
     [SerializeField] public GameObject popup;
 
+    [SerializeField] public GameObject popupBg;
+    public Collider2D col;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         animator = GetComponent<Animator>();
         popup.SetActive(false);
+        col = GetComponent<Collider2D>();
     }
 
     private void Update()
@@ -26,6 +30,8 @@ public class ExitDoor : MonoBehaviour
                 animator.Play(switchManager.sisterPOV == true ? "c_closedDoor" : "a_closedDoor");
                 break;
         }
+
+        col.enabled = popupBg.activeSelf ? false : true;
     }
 
     private void OnMouseDown()
