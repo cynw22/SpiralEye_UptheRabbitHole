@@ -18,7 +18,7 @@ public class Timer : MonoBehaviour
     {
         seconds = 0;
         minutes = 0;
-        isCollected = PuzzleControl.allRosesFound;
+        isCollected = PuzzleControl.allObjectsFound;
         time = PuzzleControl.time;
         LevelNumber = PuzzleControl.levelNumber;
     }

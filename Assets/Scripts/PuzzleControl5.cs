@@ -16,7 +16,7 @@ public class PuzzleControl5 : MonoBehaviour
     public int numSafeRoses;
     public bool[] roseLocations;
     public int[] safeRoseLocationIndex;
-    public bool allRosesFound;
+    public bool allObjectsFound;
 
     // PUZZLE #3 - TIMER
     [Header("Timer")]
@@ -27,7 +27,7 @@ public class PuzzleControl5 : MonoBehaviour
     void Start()
     {
         // PUZZLE #2 - DRINK ME BOTTLES
-        allRosesFound = false;
+        allObjectsFound = false;
         numRoses = 11;
         numSafeRoses = 5;
         roseLocations = new bool[numRoses];
@@ -78,7 +78,7 @@ public class PuzzleControl5 : MonoBehaviour
     {
         time -= Time.deltaTime;
 
-        if ((time <= 1) && (!allRosesFound))
+        if ((time <= 1) && (!allObjectsFound))
         {    
                 SceneManager.LoadScene("FindTheRose"); //Change Later to Queens Court
         }
