@@ -5452,7 +5452,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 39512867}
-  - component: {fileID: 39512866}
+  - component: {fileID: 39512868}
   m_Layer: 0
   m_Name: PuzzleManager
   m_TagString: PuzzleManager
@@ -5460,33 +5460,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &39512866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 39512865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a37ae094b07738458c763e730eaa2c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chestIsOpen: 0
-  passcodeLetters:
-  - {fileID: -7734636680867374980, guid: c988a98adcf029a44803a6e96533199d, type: 3}
-  - {fileID: -4243150960148158609, guid: c988a98adcf029a44803a6e96533199d, type: 3}
-  - {fileID: 4960786064670890729, guid: c988a98adcf029a44803a6e96533199d, type: 3}
-  - {fileID: 1072034066292483253, guid: c988a98adcf029a44803a6e96533199d, type: 3}
-  - {fileID: -171062933042576281, guid: c988a98adcf029a44803a6e96533199d, type: 3}
-  numBottles: 0
-  numSafeBottles: 0
-  bottleLocations: 
-  safeBottleLocationIndex: 
-  allBottlesFound: 0
-  buttonOrder: 
-  numButtons: 0
-  keyFound: 0
 --- !u!4 &39512867
 Transform:
   m_ObjectHideFlags: 0
@@ -5502,6 +5475,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1109869948}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &39512868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39512865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14451ff924c551143b0048a945e528b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chestIsOpen: 0
+  passcodeLetters: []
+  numBottles: 0
+  numSafeBottles: 0
+  bottleLocations: 
+  safeBottleLocationIndex: 
+  allBottlesFound: 0
+  buttonOrder: 
+  numButtons: 0
+  keyFound: 0
+  background_0: {fileID: 1783993345}
+  background_1: {fileID: 1748973629}
+  background_2: {fileID: 1766095244}
+  background_3: {fileID: 463198240}
+  background_4: {fileID: 852123094}
+  background_5: {fileID: 649937102}
+  isAlice: 0
 --- !u!1 &43940046
 GameObject:
   m_ObjectHideFlags: 0
@@ -24871,7 +24873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6feaa797bf8177c439455d3039e63a9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzleControl: {fileID: 39512866}
+  puzzleControl: {fileID: 0}
   closeSprite: {fileID: -6909500390780079052, guid: eb44e9fec0a2add4b900517e1f7becc2, type: 3}
   openSprite: {fileID: -5070960038667444045, guid: 085ebc86ef3062e4db7cc9002b6dca8d, type: 3}
   letters:
