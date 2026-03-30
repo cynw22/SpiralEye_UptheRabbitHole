@@ -9,6 +9,7 @@ public class KeyBox : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
     [SerializeField] public Sprite sprite1, sprite2;
+    [SerializeField] public GameObject complete;
 
     public int[] sequence;
     public int inputs = 0;
@@ -30,6 +31,7 @@ public class KeyBox : MonoBehaviour
 
         eatMe.SetActive(false);
         drinkMe.SetActive(false);
+        complete.SetActive(false);
     }
 
     private void Update()
@@ -49,7 +51,7 @@ public class KeyBox : MonoBehaviour
             checks[inputs].SetActive(true);
             inputs++;
             puzzleControl.keyFound = inputs == puzzleControl.numButtons ? true : false;
-            if (puzzleControl.keyFound) { spriteRenderer.sprite = sprite2; }
+            if (puzzleControl.keyFound) { spriteRenderer.sprite = sprite2; complete.SetActive(true); }
         }
         // if wrong, reset all checkmarks and reset the input sequence
         else
