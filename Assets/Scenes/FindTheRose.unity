@@ -568,7 +568,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 39512867}
-  - component: {fileID: 39512866}
+  - component: {fileID: 39512868}
   m_Layer: 0
   m_Name: PuzzleManager
   m_TagString: PuzzleManager
@@ -576,33 +576,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &39512866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 39512865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a37ae094b07738458c763e730eaa2c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chestIsOpen: 0
-  passcodeLetters:
-  - {fileID: -7734636680867374980, guid: c988a98adcf029a44803a6e96533199d, type: 3}
-  - {fileID: -4243150960148158609, guid: c988a98adcf029a44803a6e96533199d, type: 3}
-  - {fileID: 4960786064670890729, guid: c988a98adcf029a44803a6e96533199d, type: 3}
-  - {fileID: 1072034066292483253, guid: c988a98adcf029a44803a6e96533199d, type: 3}
-  - {fileID: -171062933042576281, guid: c988a98adcf029a44803a6e96533199d, type: 3}
-  numBottles: 0
-  numSafeBottles: 0
-  bottleLocations: 
-  safeBottleLocationIndex: 
-  allBottlesFound: 0
-  buttonOrder: 
-  numButtons: 0
-  keyFound: 0
 --- !u!4 &39512867
 Transform:
   m_ObjectHideFlags: 0
@@ -618,6 +591,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1109869948}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &39512868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39512865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1adcb30d3f98b4897001a2f3553e61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numRoses: 11
+  numSafeRoses: 5
+  roseLocations: 
+  safeRoseLocationIndex: 
+  allRosesFound: 0
+  time: 300
 --- !u!1 &42157933
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,7 +865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c1189830ef9a0047a3dea92ef308149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzleControl: {fileID: 39512866}
+  puzzleControl: {fileID: 0}
   bottles:
   - {fileID: 112658076}
   - {fileID: 552384988}
@@ -6707,7 +6698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6feaa797bf8177c439455d3039e63a9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzleControl: {fileID: 39512866}
+  puzzleControl: {fileID: 0}
   closeSprite: {fileID: 6638579192812253822, guid: e25ca492d3cdfc143b8f9661ef474dd0, type: 3}
   openSprite: {fileID: -4773519080765387973, guid: 8f2847c791e9695448dbe00cc6b8425f, type: 3}
   letters:
@@ -7667,7 +7658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74934d193b39f674fbbf974aa0903386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzleControl: {fileID: 39512866}
+  puzzleControl: {fileID: 0}
   switchManager: {fileID: 0}
   sprite1: {fileID: 0}
   sprite2: {fileID: 0}
@@ -30139,6 +30130,7 @@ MonoBehaviour:
   timeLeft: {fileID: 1544746151}
   seconds: 0
   minutes: 0
+  isCollected: 0
 --- !u!114 &1544746151
 MonoBehaviour:
   m_ObjectHideFlags: 0

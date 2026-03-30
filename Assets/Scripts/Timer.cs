@@ -39,5 +39,9 @@ public class Timer : MonoBehaviour
         }
         else
             timeLeft.text = "Time Left: " + Mathf.Floor(minutes).ToString() +":0" + Mathf.Floor(seconds).ToString();
+
+        if (time <= 1) {
+            timeLeft.text = "Time Left: 0:00";
+        }
     }
 }
