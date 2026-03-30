@@ -38,7 +38,7 @@ public class Teapot : MonoBehaviour
         }
     }
 
-    protected void ClearTeapot()
+    public void ClearTeapot()
     {
         addedIngredients.Clear();
         spriteRenderer.sprite = emptyBase;
@@ -47,5 +47,6 @@ public class Teapot : MonoBehaviour
     public void SubmitTea()
     {
         teaControl.checkTea(addedIngredients);
+        ClearTeapot();
     }
 }

@@ -63,26 +63,52 @@ public class TeaMakingControl : MonoBehaviour
 
     public void checkTea(List<Ingredients> submittedTea)
     {
+        Debug.Log("checking...");
         bool correctTea = false;
 
         if (desiredTea == 0 && submittedTea.Count == floralTea.Count)
         {
             for (int i = 0; i < submittedTea.Count; i++)
             {
-
+                if (submittedTea[i] != floralTea[i]) {
+                    Debug.Log("wrong tea submission");
+                    break; }
+                correctTea = i == submittedTea.Count - 1 ? true : false;
+                Debug.Log("correct tea submission");
             }
         }
         else if (desiredTea == 1 && submittedTea.Count == roundTea.Count)
         {
-            //
+            for (int i = 0; i < submittedTea.Count; i++)
+            {
+                if (submittedTea[i] != roundTea[i]) { break; }
+                correctTea = i == submittedTea.Count - 1 ? true : false;
+            }
         }
-        else if (desiredTea == 3 && submittedTea.Count == simpleTea.Count)
+        else if (desiredTea == 2 && submittedTea.Count == simpleTea.Count)
         {
-            //
+            for (int i = 0; i < submittedTea.Count; i++)
+            {
+                if (submittedTea[i] != simpleTea[i]) { break; }
+                correctTea = i == submittedTea.Count - 1 ? true : false;
+            }
         }
-        else if (desiredTea == 4 && submittedTea.Count == specialTea.Count)
+        else if (desiredTea == 3 && submittedTea.Count == specialTea.Count)
         {
+            for (int i = 0; i < submittedTea.Count; i++)
+            {
+                if (submittedTea[i] != specialTea[i]) { break; }
+                correctTea = i == submittedTea.Count - 1 ? true : false;
+            }
+        }
+        else
+        {
+            Debug.Log("wrong amount of ingredients submitted");
+        }
 
+        if (correctTea)
+        {
+            desiredTea++;
         }
     }
 }
