@@ -21,6 +21,10 @@ public class Timer : MonoBehaviour
         time -= Time.deltaTime;
         minutes = time / 60;
         seconds = time % 60;
-        timeLeft.text = "Time Left: " + Mathf.Floor(minutes).ToString() + ":" + Mathf.Floor(seconds).ToString();
+        if (seconds >= 10) { 
+            timeLeft.text = "Time Left: " + Mathf.Floor(minutes).ToString() + ":" + Mathf.Floor(seconds).ToString();
+        }
+        else
+            timeLeft.text = "Time Left: " + Mathf.Floor(minutes).ToString() +":0" + Mathf.Floor(seconds).ToString();
     }
 }
