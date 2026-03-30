@@ -3,10 +3,13 @@ using UnityEngine;
 public class PopupBackground : MonoBehaviour
 {
     public GameObject background;
-
+    public GameObject button;
+    public bool isActive;
+    
     private void Start()
     {
         background.SetActive(false);
+        isActive = false;
     }
 
     public void OnMouseDown()
@@ -14,6 +17,7 @@ public class PopupBackground : MonoBehaviour
         if (gameObject.activeSelf)
         {
             background.SetActive(false);
+            isActive = true;
         }
     }
 }
