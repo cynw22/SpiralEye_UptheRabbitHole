@@ -9,20 +9,20 @@ using UnityEngine.InputSystem;
 public class WhiteRabbitRoomScript : MonoBehaviour
 {
     //Lobby
-    [SerializeField] GameObject background_0;
+    [SerializeField] public GameObject background_0;
  
     //Constance
-    [SerializeField] GameObject background_1;
-    [SerializeField] GameObject background_2;
+    [SerializeField] public GameObject background_1;
+    [SerializeField] public GameObject background_2;
    
     //Alice Secret Room
-    [SerializeField] GameObject background_3;
+    [SerializeField] public GameObject background_3;
 
     //Background1
-    [SerializeField] GameObject background_4;
+    [SerializeField] public GameObject background_4;
     
     //Background2
-    [SerializeField] GameObject background_5;
+    [SerializeField] public GameObject background_5;
 
 
     [SerializeField] bool isAlice;
