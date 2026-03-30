@@ -10,16 +10,22 @@ public class Timer : MonoBehaviour
     public float seconds;
     public float minutes;
     [SerializeField] bool isCollected;
+
+    PuzzleControl5 PuzzleControl;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     void Start()
     {
         seconds = 0;
         minutes = 0;
+        isCollected = PuzzleControl.allRosesFound;
+        time = PuzzleControl.time;
+        LevelNumber = PuzzleControl.levelNumber;
     }
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(time);
         time -= Time.deltaTime;
 
         //if ((time <= 1) && (!isCollected)) {

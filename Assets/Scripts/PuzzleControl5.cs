@@ -2,6 +2,11 @@ using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
+using System.Collections.Generic;
+using System.Net.NetworkInformation;
+using UnityEngine.InputSystem;
+
 
 public class PuzzleControl5 : MonoBehaviour
 {
@@ -15,7 +20,8 @@ public class PuzzleControl5 : MonoBehaviour
 
     // PUZZLE #3 - TIMER
     [Header("Timer")]
-    [SerializeField] float time;
+    [SerializeField] public float time;
+    public int levelNumber;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -30,6 +36,7 @@ public class PuzzleControl5 : MonoBehaviour
 
         // PUZZLE #3 - TIMER
         time = 300;
+        levelNumber = 5;
     }
 
     // PUZZLE #2 - DRINK ME BOTTLES

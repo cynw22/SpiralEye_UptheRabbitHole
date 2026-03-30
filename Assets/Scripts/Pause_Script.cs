@@ -11,6 +11,9 @@ public class Pause_Script : MonoBehaviour
 
     [SerializeField] GameObject pauseMenu;
 
+    void Start() {
+        Time.timeScale = 1.0f;
+    }
 
     public void Pause()
     {
