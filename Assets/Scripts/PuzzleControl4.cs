@@ -1,99 +1,60 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PuzzleControl4 : MonoBehaviour
 {
-    //// PUZZLE #1 - WORD SCRAMBLE CHEST
-    //[Header("Word Scramble Chest")]
-    //public bool chestIsOpen;
-    //[SerializeField] public Sprite[] passcodeLetters;
+    // PUZZLE #1 - SUITCASE PUZZLE
+    [Header("Word Scramble Suitcase")]
+    public bool suitcaseIsOpen;
+    [SerializeField] public Sprite[] passcodeLetters;
 
-    //// PUZZLE #2 - DRINK ME BOTTLES
-    //[Header("Drink-Me Bottles")]
-    //public int numBottles;
-    //public int numSafeBottles;
-    //public bool[] bottleLocations;
-    //public int[] safeBottleLocationIndex;
-    //public bool allBottlesFound;
+    // PUZZLE #2 - KEYS ALICE PUZZLE
+    [Header("Key")]
+    public int numKeys;
+    public bool allKeysFound;
 
-    //// PUZZLE #3 - KEY
-    //[Header("Key")]
-    //public int[] buttonOrder;
-    //public int numButtons;
-    //public bool keyFound;
+    // PUZZLE #3 - NEWSPAPER PUZZLE
+    [Header("Newspaper")]
+    public int numNews;
+    public bool allNewsFound;
 
-    //// Start is called once before the first execution of Update after the MonoBehaviour is created
-    //void Start()
-    //{
-    //    // PUZZLE #1 - WORD SCRAMBLE PUZZLE
-    //    chestIsOpen = false;
+    // PUZZLE #3 - TIMER
+    [Header("Timer")]
+    [SerializeField] public float time;
+    public int levelNumber;
 
-    //    // PUZZLE #2 - DRINK ME BOTTLES
-    //    allBottlesFound = false;
-    //    numBottles = 12;
-    //    numSafeBottles = 5;
-    //    bottleLocations = new bool[numBottles];
-    //    safeBottleLocationIndex = new int[numSafeBottles];
-    //    setSafeBottleLocations();
+    // PUZZLE #5 - EXIT CONSTRAINT
+    public bool allObjectsFound;
 
-    //    // PUZZLE #3 - KEY
-    //    keyFound = false;
-    //    numButtons = 5;
-    //    buttonOrder = new int[numButtons];
-    //    setButtonOrder();
-    //}
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        // PUZZLE #1 - WORD SCRAMBLE PUZZLE
+        suitcaseIsOpen = false;
 
-    //// PUZZLE #2 - DRINK ME BOTTLES
-    //// determine which locations will hold safe bottles
-    //public void setSafeBottleLocations()
-    //{
-    //    for (int i = 0; i < safeBottleLocationIndex.Length; i++)
-    //    {
-    //        bool skip = false;
+        //  PUZZLE #2 - Keys puzzle
+        allKeysFound = false;
+        numKeys = 3;
 
-    //        // generate random bottle location
-    //        int bottleLocation = Random.Range(0, numBottles);
+        //PUZZLE #3 - Newspaper puzzle
+        allNewsFound = false;
+        numNews = 3; //change later
 
-    //        // if there are previous entries in safeBottleLocationIndex, check bottle location against previous locations
-    //        if (i > 0)
-    //        {
-    //            for (int j = 0; j < i; j++)
-    //            {
-    //                if (bottleLocation == safeBottleLocationIndex[j])
-    //                {
-    //                    // if generated bottle location matches any previous locations, regenerate
-    //                    skip = true;
-    //                    i--;
-    //                    break;
-    //                }
-    //            }
-    //        }
+        // PUZZLE #4 - TIMER
+        time = 1800;
+        levelNumber = 4;
 
-    //        if (!skip) { safeBottleLocationIndex[i] = bottleLocation; }
-            
-    //        // Debug.Log("Bottle location: " + safeBottleLocationIndex[i]);
-    //        // Debug.Log("i = " + i);
-    //    }
-    //}
+        // PUZZLE #5 - EXIT CONSTRAINT
+        allObjectsFound = false;
+    }
 
-    //// PUZZLE #3 - KEY
-    //// determine the order of buttons to be pressed to open key box
-    //public void setButtonOrder()
-    //{
-    //    /*
-    //    for (int i = 0; i < numButtons; i++) { buttonOrder[i] = Random.Range(0, 1); }
+    public void Update()
+    {
+        time -= Time.deltaTime;
 
-    //    // lazy way of making sure not all buttons are the same, make sure the last two buttons are different from each other
-    //    switch(buttonOrder[^2])
-    //    {
-    //        case 0: buttonOrder[^1] = 1; break;
-    //        case 1: buttonOrder[^1] = 0; break;
-    //    }
-    //    */
-
-    //    buttonOrder[0] = 0;
-    //    buttonOrder[1] = 1;
-    //    buttonOrder[2] = 1;
-    //    buttonOrder[3] = 0;
-    //    buttonOrder[4] = 1;
-    //}
+        if ((time <= 1) && (!allObjectsFound))
+        {
+            SceneManager.LoadScene("WhiteRabbitPuzzle"); //Change Later to ThePoster
+        }
+    }
 }
