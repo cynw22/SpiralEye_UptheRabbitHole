@@ -128,6 +128,56 @@ public class PuzzleControl5 : MonoBehaviour
         {
             rose3P.Play();
         }
+
+        if (rose4.GetComponent<Button>().enabled == false)
+        {
+            rose4P.Play();
+        }
+
+        if (rose5.GetComponent<Button>().enabled == false)
+        {
+            rose5P.Play();
+        }
+
+        if (rose6.GetComponent<Button>().enabled == false)
+        {
+            rose6P.Play();
+        }
+
+        if (rose7.GetComponent<Button>().enabled == false)
+        {
+            rose7P.Play();
+        }
+
+        if (rose8.GetComponent<Button>().enabled == false)
+        {
+            rose8P.Play();
+        }
+
+        if (rose9.GetComponent<Button>().enabled == false)
+        {
+            rose9P.Play();
+        }
+
+        if (rose10.GetComponent<Button>().enabled == false)
+        {
+            rose10P.Play();
+        }
+
+        if (rose11.GetComponent<Button>().enabled == false)
+        {
+            rose11P.Play();
+        }
+
+        if (rose12.GetComponent<Button>().enabled == false)
+        {
+            rose12P.Play();
+        }
+
+        if (rose13.GetComponent<Button>().enabled == false)
+        {
+            rose13P.Play();
+        }
     }
 
     // PUZZLE #2 - DRINK ME BOTTLES
