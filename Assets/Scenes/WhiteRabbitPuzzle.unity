@@ -5500,6 +5500,7 @@ MonoBehaviour:
   allNewsFound: 0
   time: 0
   levelNumber: 0
+  allObjectsFound: 0
 --- !u!1 &40847325
 GameObject:
   m_ObjectHideFlags: 0
@@ -6519,7 +6520,6 @@ Transform:
   - {fileID: 800052505}
   - {fileID: 62581899}
   - {fileID: 1985104484}
-  - {fileID: 706892525}
   m_Father: {fileID: 929297938}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &235768552
@@ -8214,7 +8214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &361898789
 Transform:
   m_ObjectHideFlags: 0
@@ -15510,12 +15510,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 706892524}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00000021598, y: -9.61, z: 0}
-  m_LocalScale: {x: 0.66766, y: 0.66766, z: 0.66766}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -9.610001, z: 0}
+  m_LocalScale: {x: 0.7077195, y: 0.66765994, z: 0.66766}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 205843815}
+  m_Father: {fileID: 929297938}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &706892526
 SpriteRenderer:
@@ -22894,7 +22894,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &904404194
 Transform:
   m_ObjectHideFlags: 0
@@ -23259,6 +23259,7 @@ Transform:
   m_LocalScale: {x: 0.024, y: 0.030133335, z: 0.024}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 706892525}
   - {fileID: 205843815}
   m_Father: {fileID: 1092115530}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31833,7 +31834,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1766095245
 Transform:
   m_ObjectHideFlags: 0
@@ -33976,12 +33977,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3e7364be35c68d4fa874aac2de837df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 300
-  LevelNumber: 5
+  time: 1800
+  LevelNumber: 4
   timeLeft: {fileID: 1944352535}
   seconds: 0
   minutes: 0
   isCollected: 0
+  PuzzleControl5: {fileID: 0}
+  PuzzleControl4: {fileID: 39512868}
 --- !u!114 &1944352535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34002,7 +34005,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3000
+  m_text: 1800
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7e9775119c7b7be469eddee3bc9b04b4, type: 2}
   m_sharedMaterial: {fileID: 1171323613274334254, guid: 7e9775119c7b7be469eddee3bc9b04b4, type: 2}

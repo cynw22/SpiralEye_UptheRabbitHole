@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PuzzleControl4 : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class PuzzleControl4 : MonoBehaviour
     [SerializeField] public float time;
     public int levelNumber;
 
+    // PUZZLE #5 - EXIT CONSTRAINT
+    public bool allObjectsFound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -37,10 +40,21 @@ public class PuzzleControl4 : MonoBehaviour
         allNewsFound = false;
         numNews = 3; //change later
 
-        // PUZZLE #3 - TIMER
+        // PUZZLE #4 - TIMER
         time = 1800;
         levelNumber = 4;
+
+        // PUZZLE #5 - EXIT CONSTRAINT
+        allObjectsFound = false;
     }
 
+    public void Update()
+    {
+        time -= Time.deltaTime;
 
+        if ((time <= 1) && (!allObjectsFound))
+        {
+            SceneManager.LoadScene("WhiteRabbitPuzzle"); //Change Later to ThePoster
+        }
+    }
 }
