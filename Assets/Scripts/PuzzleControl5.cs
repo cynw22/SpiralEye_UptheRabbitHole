@@ -6,6 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 
 public class PuzzleControl5 : MonoBehaviour
@@ -13,6 +14,7 @@ public class PuzzleControl5 : MonoBehaviour
     // PUZZLE #2 - ALICE ROSES
     [Header("A_Roses")]
     public int numRoses;
+    int numRosesFound;
     public int numSafeRoses;
     public bool[] roseLocations;
     public int[] safeRoseLocationIndex;
@@ -29,6 +31,7 @@ public class PuzzleControl5 : MonoBehaviour
         // PUZZLE #2 - DRINK ME BOTTLES
         allObjectsFound = false;
         numRoses = 13;
+        numRosesFound = 0;
         numSafeRoses = 5;
         roseLocations = new bool[numRoses];
         safeRoseLocationIndex = new int[numSafeRoses];
@@ -37,6 +40,13 @@ public class PuzzleControl5 : MonoBehaviour
         // PUZZLE #3 - TIMER
         time = 300;
         levelNumber = 5;
+    }
+
+    public void roseButton_OnClick()
+    {
+        numRosesFound += 1;
+        GameObject roseFound = EventSystem.current.currentSelectedGameObject;
+        roseFound.SetActive(false);
     }
 
     // PUZZLE #2 - DRINK ME BOTTLES
@@ -81,6 +91,11 @@ public class PuzzleControl5 : MonoBehaviour
         if ((time <= 1) && (!allObjectsFound))
         {    
                 SceneManager.LoadScene("FindTheRose"); //Change Later to Queens Court
+        }
+
+        if (numRosesFound == numRoses)
+        {
+            allObjectsFound = true;
         }
     }
 }
