@@ -47,6 +47,7 @@ public class PuzzleControl5 : MonoBehaviour
         numRosesFound += 1;
         GameObject roseFound = EventSystem.current.currentSelectedGameObject;
         roseFound.SetActive(false);
+        Debug.Log("Roses Picked Up: " + numRosesFound);
     }
 
     // PUZZLE #2 - DRINK ME BOTTLES
