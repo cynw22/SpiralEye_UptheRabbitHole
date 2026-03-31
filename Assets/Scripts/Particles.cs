@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Particles : MonoBehaviour
 {
+    public SwitchManager switchManager;
     ParticleSystem rose1P;
     ParticleSystem rose2P;
     ParticleSystem rose3P;
@@ -37,19 +38,21 @@ public class Particles : MonoBehaviour
     // Update is called once per frame
     void OnEnable()
     {
-        rose1P.Play();
-        rose2P.Play();
-        rose3P.Play();
-        rose4P.Play();
-        rose5P.Play();
-        rose6P.Play();
-        rose7P.Play();
-        rose8P.Play();
-        rose9P.Play();
-        rose10P.Play();
-        rose11P.Play();
-        rose12P.Play();
-        rose13P.Play();
+        if (switchManager.sisterPOV == false) {
+            rose1P.Play();
+            rose2P.Play();
+            rose3P.Play();
+            rose4P.Play();
+            rose5P.Play();
+            rose6P.Play();
+            rose7P.Play();
+            rose8P.Play();
+            rose9P.Play();
+            rose10P.Play();
+            rose11P.Play();
+            rose12P.Play();
+            rose13P.Play();
+        }
     }
 
     void OnDisable()
