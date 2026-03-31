@@ -28,7 +28,7 @@ public class PuzzleControl5 : MonoBehaviour
     {
         // PUZZLE #2 - DRINK ME BOTTLES
         allObjectsFound = false;
-        numRoses = 11;
+        numRoses = 13;
         numSafeRoses = 5;
         roseLocations = new bool[numRoses];
         safeRoseLocationIndex = new int[numSafeRoses];

@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 14710742}
   m_Layer: 0
   m_Name: Rose
-  m_TagString: Untagged
+  m_TagString: Rose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -934,7 +934,7 @@ GameObject:
   - component: {fileID: 39816152}
   m_Layer: 0
   m_Name: Rose
-  m_TagString: Untagged
+  m_TagString: Rose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3235,7 +3235,7 @@ GameObject:
   - component: {fileID: 218391412}
   m_Layer: 0
   m_Name: Rose2
-  m_TagString: Untagged
+  m_TagString: Rose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3798,7 +3798,7 @@ GameObject:
   - component: {fileID: 256383189}
   m_Layer: 0
   m_Name: Rose2
-  m_TagString: Untagged
+  m_TagString: Rose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6597,7 +6597,7 @@ GameObject:
   - component: {fileID: 480064506}
   m_Layer: 0
   m_Name: Rose (1)
-  m_TagString: Untagged
+  m_TagString: Rose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8409,7 +8409,7 @@ GameObject:
   - component: {fileID: 595729442}
   m_Layer: 0
   m_Name: Rose
-  m_TagString: Untagged
+  m_TagString: Rose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16347,7 +16347,7 @@ GameObject:
   - component: {fileID: 800465124}
   m_Layer: 0
   m_Name: Rose
-  m_TagString: Untagged
+  m_TagString: Rose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27848,7 +27848,7 @@ GameObject:
   - component: {fileID: 914860822}
   m_Layer: 0
   m_Name: Rose
-  m_TagString: Untagged
+  m_TagString: Rose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28291,7 +28291,7 @@ GameObject:
   - component: {fileID: 974039878}
   m_Layer: 0
   m_Name: Rose
-  m_TagString: Untagged
+  m_TagString: Rose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29083,7 +29083,7 @@ GameObject:
   - component: {fileID: 1014561463}
   m_Layer: 0
   m_Name: Rose1
-  m_TagString: Untagged
+  m_TagString: Rose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29169,7 +29169,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1014561466}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 39512865}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1014561465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33170,7 +33182,7 @@ GameObject:
   - component: {fileID: 1305069437}
   m_Layer: 0
   m_Name: Rose
-  m_TagString: Untagged
+  m_TagString: Rose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33595,7 +33607,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3877913044851303507, guid: c85d54e7558f12549a43d7b7ddb42f22, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 26e925d9b9a9d804aa7f1ee83f061e82, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -33626,8 +33638,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   switchManager: {fileID: 1492002331}
-  aliceSprite: {fileID: -3462381851227895847, guid: 200d7cf265628d64181f9d73b7d703ba, type: 3}
-  constanceSprite: {fileID: 3877913044851303507, guid: c85d54e7558f12549a43d7b7ddb42f22, type: 3}
+  aliceSprite: {fileID: 21300000, guid: 26e925d9b9a9d804aa7f1ee83f061e82, type: 3}
+  constanceSprite: {fileID: 21300000, guid: 26e925d9b9a9d804aa7f1ee83f061e82, type: 3}
 --- !u!114 &1325384352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36322,6 +36334,8 @@ MonoBehaviour:
   seconds: 0
   minutes: 0
   isCollected: 0
+  PuzzleControl5: {fileID: 0}
+  PuzzleControl4: {fileID: 0}
 --- !u!114 &1544746151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36699,7 +36713,7 @@ GameObject:
   - component: {fileID: 1606984266}
   m_Layer: 0
   m_Name: Rose2
-  m_TagString: Untagged
+  m_TagString: Rose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37885,7 +37899,7 @@ GameObject:
   - component: {fileID: 1686129602}
   m_Layer: 0
   m_Name: Rose2
-  m_TagString: Untagged
+  m_TagString: Rose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
