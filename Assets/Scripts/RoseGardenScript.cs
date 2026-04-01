@@ -20,6 +20,7 @@ public class RoseGardenScript : MonoBehaviour
     [SerializeField] GameObject background_9;
     [SerializeField] GameObject background_10;
     [SerializeField] GameObject background_11;
+    [SerializeField] GameObject background_12; // pannel
     [SerializeField] bool isAlice;
 
 
@@ -131,7 +132,19 @@ public class RoseGardenScript : MonoBehaviour
         {
             background_11.SetActive(true);
             background_8.SetActive(false);
+            background_12.SetActive(false);
         }
+        else {
+            background_11.SetActive(true);
+            background_8.SetActive(false);
+            background_12.SetActive(false);
+        }
+    }
+
+    public void Background12Active()
+    {
+            background_11.SetActive(false);
+            background_12.SetActive(true);
     }
 
 
@@ -171,6 +184,7 @@ public class RoseGardenScript : MonoBehaviour
             background_9.SetActive(false);
             background_10.SetActive(false);
             background_11.SetActive(false);
+            background_12.SetActive(false);
 
     }
 

@@ -27,6 +27,8 @@ public class PuzzleControl5 : MonoBehaviour
     public GameObject exitButton;
     public ParticleSystem exitParticleFinished;
     public ParticleSystem exitParticleUnfinished;
+    RoseGardenScript sceneManager;
+    [SerializeField] GameObject panelExit;
 
     // ALL THE ROSES AND ROSE PARTICLES
     public GameObject rose1;
@@ -97,7 +99,9 @@ public class PuzzleControl5 : MonoBehaviour
 
         else if (numRosesFound < numRoses)
         {
+            panelExit.SetActive(true);
             exitParticleUnfinished.Play();
+            sceneManager.Background12Active();
         }
     }
 
