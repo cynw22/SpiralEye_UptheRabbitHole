@@ -39,9 +39,6 @@ public class PuzzleControl5 : MonoBehaviour
     public GameObject rose8;
     public GameObject rose9;
     public GameObject rose10;
-    public GameObject rose11;
-    public GameObject rose12;
-    public GameObject rose13;
 
     public ParticleSystem rose1P;
     public ParticleSystem rose2P;
@@ -53,9 +50,6 @@ public class PuzzleControl5 : MonoBehaviour
     public ParticleSystem rose8P;
     public ParticleSystem rose9P;
     public ParticleSystem rose10P;
-    public ParticleSystem rose11P;
-    public ParticleSystem rose12P;
-    public ParticleSystem rose13P;
     
 
     // PUZZLE #3 - TIMER
@@ -68,7 +62,7 @@ public class PuzzleControl5 : MonoBehaviour
     {
         // PUZZLE #2 - DRINK ME BOTTLES
         allObjectsFound = false;
-        numRoses = 13;
+        numRoses = 10;
         numRosesFound = 0;
         numSafeRoses = 5;
         roseLocations = new bool[numRoses];
@@ -96,12 +90,12 @@ public class PuzzleControl5 : MonoBehaviour
 
     public void exitButton_OnClick()
     {
-        if (numRosesFound >= 11)
+        if (numRosesFound >= numRoses)
         {
             SceneManager.LoadScene("GardenParty");
         }
 
-        else if (numRosesFound < 11)
+        else if (numRosesFound < numRoses)
         {
             exitParticleUnfinished.Play();
         }
@@ -160,20 +154,6 @@ public class PuzzleControl5 : MonoBehaviour
             rose10P.Play();
         }
 
-        if (rose11.GetComponent<Button>().enabled == false)
-        {
-            rose11P.Play();
-        }
-
-        if (rose12.GetComponent<Button>().enabled == false)
-        {
-            rose12P.Play();
-        }
-
-        if (rose13.GetComponent<Button>().enabled == false)
-        {
-            rose13P.Play();
-        }
     }
 
     // PUZZLE #2 - DRINK ME BOTTLES
@@ -330,40 +310,11 @@ public class PuzzleControl5 : MonoBehaviour
             {
                 rose10P.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
             }
-
-            if (rose11.GetComponent<Button>().enabled == false && switchManager.sisterPOV == false)
-            {
-                rose11P.Play();
-            }
-
-            else if (rose11.GetComponent<Button>().enabled == false && switchManager.sisterPOV == true)
-            {
-                rose11P.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
-            }
-
-            if (rose12.GetComponent<Button>().enabled == false && switchManager.sisterPOV == false)
-            {
-                rose12P.Play();
-            }
-
-            else if (rose12.GetComponent<Button>().enabled == false && switchManager.sisterPOV == true)
-            {
-                rose12P.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
-            }
-
-            if (rose13.GetComponent<Button>().enabled == false && switchManager.sisterPOV == false)
-            {
-                rose13P.Play();
-            }
-
-            else if (rose13.GetComponent<Button>().enabled == false && switchManager.sisterPOV == true)
-            {
-                rose13P.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
-            }
         }
 
-        if (numRosesFound >= 11)
+        if (numRosesFound >= numRoses)
         {
+            allObjectsFound = true;
             exitParticleFinished.Play();
             exitParticleUnfinished.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         }

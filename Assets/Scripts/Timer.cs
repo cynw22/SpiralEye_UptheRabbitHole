@@ -51,13 +51,13 @@ public class Timer : MonoBehaviour
         minutes = time / 60;
         seconds = time % 60;
         if (seconds >= 10) { 
-            timeLeft.text = "Time Left: " + Mathf.Floor(minutes).ToString() + ":" + Mathf.Floor(seconds).ToString();
+            timeLeft.text = "" + Mathf.Floor(minutes).ToString() + ":" + Mathf.Floor(seconds).ToString();
         }
         else
-            timeLeft.text = "Time Left: " + Mathf.Floor(minutes).ToString() +":0" + Mathf.Floor(seconds).ToString();
+            timeLeft.text = "" + Mathf.Floor(minutes).ToString() +":0" + Mathf.Floor(seconds).ToString();
 
         if (time <= 1) {
-            timeLeft.text = "Time Left: 0:00";
+            timeLeft.text = "0:00";
         }
     }
 }
