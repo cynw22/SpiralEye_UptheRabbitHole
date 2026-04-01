@@ -95,6 +95,7 @@ public class PuzzleControl5 : MonoBehaviour
         roseFound.GetComponent<Image>().enabled = false;
         roseFound.GetComponent<SwitchUI>().enabled = false;
         Debug.Log("Roses Picked Up: " + numRosesFound);
+        roseParticles();
     }
 
     public void exitButton_OnClick()
