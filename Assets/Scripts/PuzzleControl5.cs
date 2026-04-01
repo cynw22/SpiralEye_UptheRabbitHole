@@ -15,7 +15,7 @@ public class PuzzleControl5 : MonoBehaviour
     // PUZZLE #2 - ALICE ROSES
     [Header("A_Roses")]
     public int numRoses;
-    int numRosesFound;
+    public int numRosesFound;
     public int numSafeRoses;
     public bool[] roseLocations;
     public int[] safeRoseLocationIndex;
