@@ -189,16 +189,27 @@ public class DialogueManager : MonoBehaviour
             else if (tag == "noskip_start")
             {
                 skipLocked = true;
+                UpdateSkipButton(); // grey out skip button
             }
             else if (tag == "noskip_end")
             {
                 skipLocked = false;
+                UpdateSkipButton(); // re-enable skip button
             }
             else if (tag == "alice_bg_empty")
             {
                 if (backgroundController != null)
                     backgroundController.SetAliceEmpty();
             }
+        }
+    }
+
+    // Updates the skip button so it greys out if skipping is not allowed
+    private void UpdateSkipButton()
+    {
+        if (currentCharacter != null && currentCharacter.skipButton != null)
+        {
+            currentCharacter.skipButton.interactable = !skipLocked;
         }
     }
 
@@ -243,6 +254,9 @@ public class DialogueManager : MonoBehaviour
         {
             currentCharacter.skipButton.onClick.RemoveAllListeners();
             currentCharacter.skipButton.onClick.AddListener(StartSkip);
+
+            // Make sure the button starts with correct interactable state
+            UpdateSkipButton();
         }
     }
 
