@@ -928,6 +928,33 @@ MonoBehaviour:
   roseLocations: 
   safeRoseLocationIndex: 
   allObjectsFound: 0
+  switchManager: {fileID: 1492002331}
+  rose1: {fileID: 1014561461}
+  rose2: {fileID: 1606984264}
+  rose3: {fileID: 1305069435}
+  rose4: {fileID: 39816150}
+  rose5: {fileID: 14710740}
+  rose6: {fileID: 480064504}
+  rose7: {fileID: 595729440}
+  rose8: {fileID: 800465122}
+  rose9: {fileID: 256383187}
+  rose10: {fileID: 218391410}
+  rose11: {fileID: 1686129600}
+  rose12: {fileID: 914860820}
+  rose13: {fileID: 974039876}
+  rose1P: {fileID: 1097283068}
+  rose2P: {fileID: 947088567}
+  rose3P: {fileID: 961064158}
+  rose4P: {fileID: 856036727}
+  rose5P: {fileID: 283558481}
+  rose6P: {fileID: 2092778429}
+  rose7P: {fileID: 168091051}
+  rose8P: {fileID: 2017978166}
+  rose9P: {fileID: 603584974}
+  rose10P: {fileID: 1239521399}
+  rose11P: {fileID: 1549735866}
+  rose12P: {fileID: 646378345}
+  rose13P: {fileID: 1275135115}
   time: 300
   levelNumber: 0
 --- !u!1 &39816150
@@ -2826,7 +2853,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fd350d87295e004fb34c6984aac7021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchManager: {fileID: 1492002331}
+  roseP: {fileID: 168091051}
+  puzzle: {fileID: 0}
+  switchManager: {fileID: 0}
 --- !u!199 &168091050
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -9149,7 +9178,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fd350d87295e004fb34c6984aac7021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchManager: {fileID: 1492002331}
+  roseP: {fileID: 283558481}
+  puzzle: {fileID: 0}
+  switchManager: {fileID: 0}
 --- !u!199 &283558480
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -18137,27 +18168,31 @@ MonoBehaviour:
     dialogueBoxRoot: {fileID: 1496066651}
     dialogueText: {fileID: 1014121490}
     characterPfp: {fileID: 1469530909}
-    moods: []
     typingSpeed: 0
+    nextButton: {fileID: 0}
+    skipButton: {fileID: 0}
   - characterName: Constance
     dialogueBoxRoot: {fileID: 417890983}
     dialogueText: {fileID: 728793806}
     characterPfp: {fileID: 1286297694}
-    moods: []
     typingSpeed: 0
+    nextButton: {fileID: 0}
+    skipButton: {fileID: 0}
   - characterName: Narrator
     dialogueBoxRoot: {fileID: 599320096}
     dialogueText: {fileID: 8521945}
     characterPfp: {fileID: 1214062250}
-    moods: []
     typingSpeed: 0
+    nextButton: {fileID: 0}
+    skipButton: {fileID: 0}
   choicePanel: {fileID: 1924215568}
   choiceContainer: {fileID: 582090719}
   choicePrefab: {fileID: 2616949834509399884, guid: 5296a2fc07f21d149af77102434a880d, type: 3}
   skipSummaryPanel: {fileID: 0}
   skipSummaryText: {fileID: 0}
-  skipButton: {fileID: 0}
   backgroundController: {fileID: 0}
+  nextButton: {fileID: 0}
+  skipButton: {fileID: 0}
   soundFXManager: {fileID: 1708904267}
   typingSounds:
   - {fileID: 8300000, guid: 6ac37a403a7864748a4af0674a88028b, type: 3}
@@ -18416,7 +18451,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fd350d87295e004fb34c6984aac7021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchManager: {fileID: 1492002331}
+  roseP: {fileID: 603584974}
+  puzzle: {fileID: 0}
+  switchManager: {fileID: 0}
 --- !u!199 &603584973
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -23303,7 +23340,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fd350d87295e004fb34c6984aac7021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchManager: {fileID: 1492002331}
+  roseP: {fileID: 0}
+  puzzle: {fileID: 0}
+  switchManager: {fileID: 0}
 --- !u!199 &612263669
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -28908,7 +28947,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fd350d87295e004fb34c6984aac7021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchManager: {fileID: 1492002331}
+  roseP: {fileID: 646378345}
+  puzzle: {fileID: 0}
+  switchManager: {fileID: 0}
 --- !u!199 &646378344
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -33852,7 +33893,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fd350d87295e004fb34c6984aac7021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchManager: {fileID: 1492002331}
+  roseP: {fileID: 0}
+  puzzle: {fileID: 0}
+  switchManager: {fileID: 0}
 --- !u!199 &649546158
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -56166,7 +56209,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fd350d87295e004fb34c6984aac7021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchManager: {fileID: 1492002331}
+  roseP: {fileID: 856036727}
+  puzzle: {fileID: 0}
+  switchManager: {fileID: 0}
 --- !u!199 &856036726
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -62240,7 +62285,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fd350d87295e004fb34c6984aac7021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchManager: {fileID: 1492002331}
+  roseP: {fileID: 947088567}
+  puzzle: {fileID: 0}
+  switchManager: {fileID: 0}
 --- !u!199 &947088566
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -67091,7 +67138,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fd350d87295e004fb34c6984aac7021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchManager: {fileID: 1492002331}
+  roseP: {fileID: 961064158}
+  puzzle: {fileID: 0}
+  switchManager: {fileID: 0}
 --- !u!199 &961064157
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -74910,7 +74959,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 0
   useUnscaledTime: 0
@@ -79630,7 +79679,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fd350d87295e004fb34c6984aac7021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchManager: {fileID: 1492002331}
+  roseP: {fileID: 1097283068}
+  puzzle: {fileID: 0}
+  switchManager: {fileID: 0}
 --- !u!1 &1102217801
 GameObject:
   m_ObjectHideFlags: 0
@@ -81080,7 +81131,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fd350d87295e004fb34c6984aac7021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchManager: {fileID: 1492002331}
+  roseP: {fileID: 1239521399}
+  puzzle: {fileID: 0}
+  switchManager: {fileID: 0}
 --- !u!199 &1239521398
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -86067,7 +86120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fd350d87295e004fb34c6984aac7021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchManager: {fileID: 1492002331}
+  roseP: {fileID: 1275135115}
+  puzzle: {fileID: 0}
+  switchManager: {fileID: 0}
 --- !u!199 &1275135114
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -94940,7 +94995,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fd350d87295e004fb34c6984aac7021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchManager: {fileID: 1492002331}
+  roseP: {fileID: 1549735866}
+  puzzle: {fileID: 0}
+  switchManager: {fileID: 0}
 --- !u!199 &1549735865
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -105283,7 +105340,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fd350d87295e004fb34c6984aac7021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchManager: {fileID: 1492002331}
+  roseP: {fileID: 2017978166}
+  puzzle: {fileID: 0}
+  switchManager: {fileID: 0}
 --- !u!199 &2017978165
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -111071,7 +111130,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fd350d87295e004fb34c6984aac7021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchManager: {fileID: 1492002331}
+  roseP: {fileID: 2092778429}
+  puzzle: {fileID: 0}
+  switchManager: {fileID: 0}
 --- !u!199 &2092778428
 ParticleSystemRenderer:
   serializedVersion: 6
