@@ -7,7 +7,17 @@ public class PuzzleControl2 : MonoBehaviour
     public bool gumdrops, milk, flowers, boba, recipes, allItemsCollected = false;
 
     //User Feedback
-    [SerializeField] GameObject milkCollected;
+    [SerializeField] public GameObject gumdropsCollectedPopup;
+    [SerializeField] public GameObject milkCollectedPopup;
+    [SerializeField] public GameObject flowersCollectedPopup;
+    [SerializeField] public GameObject bobaCollectedPopup;
+    [SerializeField] public GameObject recipesCollectedPopup;
+
+    private bool milkPopupDone = false;
+    private bool gumdropsPopupDone = false;
+    private bool flowersPopupDone = false;
+    private bool bobaPopupDone = false;
+    private bool recipesPopupDone = false;
 
     //Books Popup
     GameObject booksNotTaken;
@@ -29,12 +39,12 @@ public class PuzzleControl2 : MonoBehaviour
     GameObject flowersEnvironment6;
     GameObject flowersEnvironment7;
     GameObject flowersEnvironment8;
-    
+
 
     void Start()
     {
         //User Feedback
-        milkCollected.SetActive(false);
+        //milkCollected.SetActive(false);
 
         //Environment Assigning Values
         booksNotTaken = GameObject.Find("TallBooks");
@@ -67,6 +77,19 @@ public class PuzzleControl2 : MonoBehaviour
         flowersEnvironment7.GetComponent<SpriteRenderer>().enabled = true;
         flowersEnvironment8 = GameObject.Find("f8");
         flowersEnvironment8.GetComponent<SpriteRenderer>().enabled = true;
+
+        //User feedback
+        gumdropsCollectedPopup.SetActive(false);
+        flowersCollectedPopup.SetActive(false);
+        bobaCollectedPopup.SetActive(false);
+        recipesCollectedPopup.SetActive(false);
+        milkCollectedPopup.SetActive(false);
+
+        milkPopupDone = false;
+        gumdropsPopupDone = false;
+        flowersPopupDone = false;
+        bobaPopupDone = false;
+        recipesPopupDone = false;
     }
 
     public void books_OnClick()
@@ -99,6 +122,7 @@ public class PuzzleControl2 : MonoBehaviour
     {
         if (gumdrops && milk && flowers && boba && recipes) { allItemsCollected = true; }
 
+        //Changing Background
         if (recipes) {
             books_OnClick();
             booksEnvironment();
@@ -107,7 +131,41 @@ public class PuzzleControl2 : MonoBehaviour
         if (flowers) {
             flowersCollected();
         }
+
+        //User Feedback
+        if (gumdrops && !gumdropsPopupDone)
+        {
+            gumdropsCollectedPopup.SetActive(true);
+            gumdropsPopupDone = true;
+        }
+        if (flowers && !flowersPopupDone)
+        {
+            flowersCollectedPopup.SetActive(true);
+            flowersPopupDone = true;
+        }
+        if (boba && !bobaPopupDone)
+        {
+            bobaCollectedPopup.SetActive(true);
+            bobaPopupDone = true;
+        }
+        if (recipes && !recipesPopupDone)
+        {
+            recipesCollectedPopup.SetActive(true);
+            recipesPopupDone = true;
+        }
+        if (milk && !milkPopupDone) {
+            milkCollectedPopup.SetActive(true);
+            milkPopupDone = true;
+        }
+
     }
+
+    public void CloseGumdrop() => gumdropsCollectedPopup.SetActive(false);
+    public void CloseMilk() => milkCollectedPopup.SetActive(false);
+    public void CloseFlowers() => flowersCollectedPopup.SetActive(false);
+    public void CloseBoba() => bobaCollectedPopup.SetActive(false);
+    public void CloseRecipes() => recipesCollectedPopup.SetActive(false);
+    
 
     public void findObject(ItemToFind item)
     {
