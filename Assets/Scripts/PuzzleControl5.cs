@@ -21,6 +21,12 @@ public class PuzzleControl5 : MonoBehaviour
     public int[] safeRoseLocationIndex;
     public bool allObjectsFound;
 
+    //EXIT BUTTON
+    GameObject exitButton;
+
+    ParticleSystem exitParticleFinished;
+    ParticleSystem exitParticleUnfinished;
+
     // ALL THE ROSES AND ROSE PARTICLES
     GameObject rose1;
     GameObject rose2;
@@ -68,6 +74,12 @@ public class PuzzleControl5 : MonoBehaviour
         safeRoseLocationIndex = new int[numSafeRoses];
         setSafeRoseLocations();
 
+        exitButton = GameObject.Find("ExitButton");
+        exitButton.GetComponent<Button>().enabled = false;
+
+        exitParticleFinished = GameObject.Find("ExitParticleFinished").GetComponent<ParticleSystem>();
+        exitParticleUnfinished = GameObject.Find("ExitParticleUnfinished").GetComponent<ParticleSystem>();
+
         rose1 = GameObject.Find("Rose1");
         rose2 = GameObject.Find("Rose2");
         rose3 = GameObject.Find("Rose3");
@@ -109,6 +121,20 @@ public class PuzzleControl5 : MonoBehaviour
         roseFound.GetComponent<Image>().enabled = false;
         roseFound.GetComponent<SwitchUI>().enabled = false;
         Debug.Log("Roses Picked Up: " + numRosesFound);
+    }
+
+    public void exitButton_OnClick()
+    {
+        if (numRosesFound >= 11)
+        {
+            exitButton.GetComponent<Button>().enabled = true;
+            exitParticleFinished.Play();
+        }
+
+        else if (numRosesFound < 11)
+        {
+            exitParticleUnfinished.Play();
+        }
     }
 
     public void roseParticles()
