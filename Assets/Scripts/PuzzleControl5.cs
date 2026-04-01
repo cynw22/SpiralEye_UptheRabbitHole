@@ -21,6 +21,8 @@ public class PuzzleControl5 : MonoBehaviour
     public int[] safeRoseLocationIndex;
     public bool allObjectsFound;
 
+    public SwitchManager switchManager;
+
     //EXIT BUTTON
     GameObject exitButton;
 
@@ -28,33 +30,33 @@ public class PuzzleControl5 : MonoBehaviour
     ParticleSystem exitParticleUnfinished;
 
     // ALL THE ROSES AND ROSE PARTICLES
-    GameObject rose1;
-    GameObject rose2;
-    GameObject rose3;
-    GameObject rose4;
-    GameObject rose5;
-    GameObject rose6;
-    GameObject rose7;
-    GameObject rose8;
-    GameObject rose9;
-    GameObject rose10;
-    GameObject rose11;
-    GameObject rose12;
-    GameObject rose13;
+    public GameObject rose1;
+    public GameObject rose2;
+    public GameObject rose3;
+    public GameObject rose4;
+    public GameObject rose5;
+    public GameObject rose6;
+    public GameObject rose7;
+    public GameObject rose8;
+    public GameObject rose9;
+    public GameObject rose10;
+    public GameObject rose11;
+    public GameObject rose12;
+    public GameObject rose13;
 
-    ParticleSystem rose1P;
-    ParticleSystem rose2P;
-    ParticleSystem rose3P;
-    ParticleSystem rose4P;
-    ParticleSystem rose5P;
-    ParticleSystem rose6P;
-    ParticleSystem rose7P;
-    ParticleSystem rose8P;
-    ParticleSystem rose9P;
-    ParticleSystem rose10P;
-    ParticleSystem rose11P;
-    ParticleSystem rose12P;
-    ParticleSystem rose13P;
+    public ParticleSystem rose1P;
+    public ParticleSystem rose2P;
+    public ParticleSystem rose3P;
+    public ParticleSystem rose4P;
+    public ParticleSystem rose5P;
+    public ParticleSystem rose6P;
+    public ParticleSystem rose7P;
+    public ParticleSystem rose8P;
+    public ParticleSystem rose9P;
+    public ParticleSystem rose10P;
+    public ParticleSystem rose11P;
+    public ParticleSystem rose12P;
+    public ParticleSystem rose13P;
     
 
     // PUZZLE #3 - TIMER
@@ -79,34 +81,6 @@ public class PuzzleControl5 : MonoBehaviour
 
         exitParticleFinished = GameObject.Find("ExitParticleFinished").GetComponent<ParticleSystem>();
         exitParticleUnfinished = GameObject.Find("ExitParticleUnfinished").GetComponent<ParticleSystem>();
-
-        rose1 = GameObject.Find("Rose1");
-        rose2 = GameObject.Find("Rose2");
-        rose3 = GameObject.Find("Rose3");
-        rose4 = GameObject.Find("Rose4");
-        rose5 = GameObject.Find("Rose5");
-        rose6 = GameObject.Find("Rose6");
-        rose7 = GameObject.Find("Rose7");
-        rose8 = GameObject.Find("Rose8");
-        rose9 = GameObject.Find("Rose9");
-        rose10 = GameObject.Find("Rose10");
-        rose11 = GameObject.Find("Rose11");
-        rose12 = GameObject.Find("Rose12");
-        rose13 = GameObject.Find("Rose13");
-
-        rose1P = GameObject.Find("Rose1Particle").GetComponent<ParticleSystem>();
-        rose2P = GameObject.Find("Rose2Particle").GetComponent<ParticleSystem>();
-        rose3P = GameObject.Find("Rose3Particle").GetComponent<ParticleSystem>();
-        rose4P = GameObject.Find("Rose4Particle").GetComponent<ParticleSystem>();
-        rose5P = GameObject.Find("Rose5Particle").GetComponent<ParticleSystem>();
-        rose6P = GameObject.Find("Rose6Particle").GetComponent<ParticleSystem>();
-        rose7P = GameObject.Find("Rose7Particle").GetComponent<ParticleSystem>();
-        rose8P = GameObject.Find("Rose8Particle").GetComponent<ParticleSystem>();
-        rose9P = GameObject.Find("Rose9Particle").GetComponent<ParticleSystem>();
-        rose10P = GameObject.Find("Rose10Particle").GetComponent<ParticleSystem>();
-        rose11P = GameObject.Find("Rose11Particle").GetComponent<ParticleSystem>();
-        rose12P = GameObject.Find("Rose12Particle").GetComponent<ParticleSystem>();
-        rose13P = GameObject.Find("Rose13Particle").GetComponent<ParticleSystem>();
 
         // PUZZLE #3 - TIMER
         time = 300;
@@ -140,22 +114,22 @@ public class PuzzleControl5 : MonoBehaviour
     public void roseParticles()
     {
         //very inefficient but I just want it to work
-        if (rose1.GetComponent<Button>().enabled == false)
+        if (rose1.GetComponent<Button>().enabled == false && switchManager.sisterPOV == false)
         {
             rose1P.Play();
         }
 
-        if (rose2.GetComponent<Button>().enabled == false)
+        if (rose2.GetComponent<Button>().enabled == false && switchManager.sisterPOV == false)
         {
             rose2P.Play();
         }
 
-        if (rose3.GetComponent<Button>().enabled == false)
+        if (rose3.GetComponent<Button>().enabled == false && switchManager.sisterPOV == false)
         {
             rose3P.Play();
         }
 
-        if (rose4.GetComponent<Button>().enabled == false)
+        if (rose4.GetComponent<Button>().enabled == false && switchManager.sisterPOV == false)
         {
             rose4P.Play();
         }
@@ -253,6 +227,143 @@ public class PuzzleControl5 : MonoBehaviour
         if (numRosesFound == numRoses)
         {
             allObjectsFound = true;
+        }
+    }
+
+    void LateUpdate()
+    {
+        var switchControl = UserInput.instance.controls.Player.Switch;
+        if (switchControl.WasPressedThisFrame())
+        {
+            if (rose1.GetComponent<Button>().enabled == false && switchManager.sisterPOV == false)
+            {
+                rose1P.Play();
+            }
+
+            else if (rose1.GetComponent<Button>().enabled == false && switchManager.sisterPOV == true)
+            {
+                rose1P.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            }
+
+            if (rose2.GetComponent<Button>().enabled == false && switchManager.sisterPOV == false)
+            {
+                rose2P.Play();
+            }
+
+            else if (rose2.GetComponent<Button>().enabled == false && switchManager.sisterPOV == true)
+            {
+                rose2P.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            }
+
+            if (rose3.GetComponent<Button>().enabled == false && switchManager.sisterPOV == false)
+            {
+                rose3P.Play();
+            }
+
+            else if (rose3.GetComponent<Button>().enabled == false && switchManager.sisterPOV == true)
+            {
+                rose3P.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            }
+
+            if (rose4.GetComponent<Button>().enabled == false && switchManager.sisterPOV == false)
+            {
+                rose4P.Play();
+            }
+
+            else if (rose4.GetComponent<Button>().enabled == false && switchManager.sisterPOV == true)
+            {
+                rose4P.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            }
+
+            if (rose5.GetComponent<Button>().enabled == false && switchManager.sisterPOV == false)
+            {
+                rose5P.Play();
+            }
+
+            else if (rose5.GetComponent<Button>().enabled == false && switchManager.sisterPOV == true)
+            {
+                rose5P.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            }
+
+            if (rose6.GetComponent<Button>().enabled == false && switchManager.sisterPOV == false)
+            {
+                rose6P.Play();
+            }
+
+            else if (rose6.GetComponent<Button>().enabled == false && switchManager.sisterPOV == true)
+            {
+                rose6P.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            }
+
+            if (rose7.GetComponent<Button>().enabled == false && switchManager.sisterPOV == false)
+            {
+                rose7P.Play();
+            }
+
+            else if (rose7.GetComponent<Button>().enabled == false && switchManager.sisterPOV == true)
+            {
+                rose7P.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            }
+
+            if (rose8.GetComponent<Button>().enabled == false && switchManager.sisterPOV == false)
+            {
+                rose8P.Play();
+            }
+
+            else if (rose8.GetComponent<Button>().enabled == false && switchManager.sisterPOV == true)
+            {
+                rose8P.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            }
+
+            if (rose9.GetComponent<Button>().enabled == false && switchManager.sisterPOV == false)
+            {
+                rose9P.Play();
+            }
+
+            else if (rose9.GetComponent<Button>().enabled == false && switchManager.sisterPOV == true)
+            {
+                rose9P.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            }
+
+            if (rose10.GetComponent<Button>().enabled == false && switchManager.sisterPOV == false)
+            {
+                rose10P.Play();
+            }
+
+            else if (rose10.GetComponent<Button>().enabled == false && switchManager.sisterPOV == true)
+            {
+                rose10P.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            }
+
+            if (rose11.GetComponent<Button>().enabled == false && switchManager.sisterPOV == false)
+            {
+                rose11P.Play();
+            }
+
+            else if (rose11.GetComponent<Button>().enabled == false && switchManager.sisterPOV == true)
+            {
+                rose11P.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            }
+
+            if (rose12.GetComponent<Button>().enabled == false && switchManager.sisterPOV == false)
+            {
+                rose12P.Play();
+            }
+
+            else if (rose12.GetComponent<Button>().enabled == false && switchManager.sisterPOV == true)
+            {
+                rose12P.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            }
+
+            if (rose13.GetComponent<Button>().enabled == false && switchManager.sisterPOV == false)
+            {
+                rose13P.Play();
+            }
+
+            else if (rose13.GetComponent<Button>().enabled == false && switchManager.sisterPOV == true)
+            {
+                rose13P.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            }
         }
     }
 }
