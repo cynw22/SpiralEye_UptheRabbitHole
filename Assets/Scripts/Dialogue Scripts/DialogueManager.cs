@@ -30,11 +30,12 @@ public class CharacterDialogueUI
     [Header("Border Character (Circled Image)")] //Do NOT confuse this with the mood sprite, this is the character PFP
     public Image characterPfp;
 
-    [Header("Mood Sprites")]
-    public List<MoodSprite> moods;
-
     [Header("Typing")]
     public float typingSpeed = 0.02f;
+
+    [Header("Controls")]
+    public Button nextButton;
+    public Button skipButton;
 }
 #endregion
 
@@ -61,10 +62,13 @@ public class DialogueManager : MonoBehaviour
     [Header("Skip UI")]
     public GameObject skipSummaryPanel;
     public TextMeshProUGUI skipSummaryText;
-    public Button skipButton;
 
     [Header("Background")]
     public BackgroundController backgroundController;
+
+    [Header("Controls")]
+    public Button nextButton;
+    public Button skipButton;
 
     [Header("Sound")]
     public SoundFXManager soundFXManager;
@@ -127,19 +131,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            if (isTyping)
-            {
-                FinishTyping();
-                return;
-            }
-
-            if (story.currentChoices.Count > 0)
-            {
-                DisplayChoices();
-                return;
-            }
-
-            ContinueStory();
+            OnNextPressed();
         }
     }
 
@@ -188,11 +180,6 @@ public class DialogueManager : MonoBehaviour
                 string speaker = tag.Split(':')[1].Trim();
                 ActivateCharacter(speaker);
             }
-            else if (tag.StartsWith("mood:"))
-            {
-                string mood = tag.Split(':')[1].Trim();
-                SetMood(mood);
-            }
             else if (tag.StartsWith("ending:"))
             {
                 // Extract the name from the tag
@@ -215,6 +202,24 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    //Used to control movement to the next dialogue box
+    public void OnNextPressed()
+    {
+        if (isTyping)
+        {
+            FinishTyping();
+            return;
+        }
+
+        if (story.currentChoices.Count > 0)
+        {
+            DisplayChoices();
+            return;
+        }
+
+        ContinueStory();
+    }
+
     //Check for the active character and display they're correct box, destory any remaining boxes in the scene
     void ActivateCharacter(string speaker)
     {
@@ -226,22 +231,21 @@ public class DialogueManager : MonoBehaviour
             currentCharacter = lookup[speaker];
             currentCharacter.dialogueBoxRoot.SetActive(true);
         }
-    }
 
-    //Create mood switching for the borders
-    void SetMood(string moodName)
-    {
-        if (currentCharacter == null) return;
-
-        foreach (var mood in currentCharacter.moods)
+        // Use button input to move forward instead of enter
+        if (currentCharacter.nextButton != null)
         {
-            if (mood.moodName == moodName)
-            {
-                currentCharacter.characterPfp.sprite = mood.sprite;
-                return;
-            }
+            currentCharacter.nextButton.onClick.RemoveAllListeners();
+            currentCharacter.nextButton.onClick.AddListener(OnNextPressed);
+        }
+
+        if (currentCharacter.skipButton != null)
+        {
+            currentCharacter.skipButton.onClick.RemoveAllListeners();
+            currentCharacter.skipButton.onClick.AddListener(StartSkip);
         }
     }
+
 
     //Coroutine used to create the type writer effect for the line
     IEnumerator TypeLine(string line)
