@@ -5647,7 +5647,11 @@ MonoBehaviour:
   boba: 0
   recipes: 0
   allItemsCollected: 0
-  milkCollected: {fileID: 1392574834}
+  gumdropsCollectedPopup: {fileID: 0}
+  milkCollectedPopup: {fileID: 1392574834}
+  flowersCollectedPopup: {fileID: 0}
+  bobaCollectedPopup: {fileID: 0}
+  recipesCollectedPopup: {fileID: 0}
 --- !u!1 &43940046
 GameObject:
   m_ObjectHideFlags: 0
@@ -15424,7 +15428,6 @@ GameObject:
   - component: {fileID: 850658432}
   - component: {fileID: 850658431}
   - component: {fileID: 850658433}
-  - component: {fileID: 850658434}
   m_Layer: 5
   m_Name: BackgroundImage
   m_TagString: Untagged
@@ -15535,21 +15538,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &850658434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 850658429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 802a6b2b0f0ae3a40a0aa064cf517ae7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleControl: {fileID: 0}
-  milkCollectedPopup: {fileID: 0}
-  closeButton: {fileID: 0}
 --- !u!1 &860933817
 GameObject:
   m_ObjectHideFlags: 0
@@ -20819,9 +20807,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1961416689}
-        m_TargetAssemblyTypeName: UserFeedbackManager, Assembly-CSharp
-        m_MethodName: ClosePopup
+      - m_Target: {fileID: 39512868}
+        m_TargetAssemblyTypeName: PuzzleControl2, Assembly-CSharp
+        m_MethodName: CloseMilk
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21563,7 +21551,6 @@ Transform:
   - {fileID: 1708904266}
   - {fileID: 595031277}
   - {fileID: 1535389312}
-  - {fileID: 1961416688}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1147071497
@@ -23621,7 +23608,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1392574835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28436,53 +28423,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924224518}
   m_CullTransparentMesh: 1
---- !u!1 &1961416687
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1961416688}
-  - component: {fileID: 1961416689}
-  m_Layer: 0
-  m_Name: UserFeedbackManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1961416688
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1961416687}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1109869948}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1961416689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1961416687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 802a6b2b0f0ae3a40a0aa064cf517ae7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleControl: {fileID: 39512868}
-  milkCollectedPopup: {fileID: 1392574834}
-  closeButton: {fileID: 953669693}
 --- !u!1 &1978261665
 GameObject:
   m_ObjectHideFlags: 0
