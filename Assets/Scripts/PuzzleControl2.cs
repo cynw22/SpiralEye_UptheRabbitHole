@@ -6,6 +6,9 @@ public class PuzzleControl2 : MonoBehaviour
 {
     public bool gumdrops, milk, flowers, boba, recipes, allItemsCollected = false;
 
+    //User Feedback
+    [SerializeField] GameObject milkCollected;
+
     //Books Popup
     GameObject booksNotTaken;
     GameObject booksTaken;
@@ -26,9 +29,14 @@ public class PuzzleControl2 : MonoBehaviour
     GameObject flowersEnvironment6;
     GameObject flowersEnvironment7;
     GameObject flowersEnvironment8;
+    
 
     void Start()
     {
+        //User Feedback
+        milkCollected.SetActive(false);
+
+        //Environment Assigning Values
         booksNotTaken = GameObject.Find("TallBooks");
         booksTaken = GameObject.Find("TinyBooks (1)");
         booksTaken.GetComponent<SpriteRenderer>().enabled = false;
