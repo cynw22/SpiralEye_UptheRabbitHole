@@ -51,7 +51,12 @@ public class KeyBox : MonoBehaviour
             checks[inputs].SetActive(true);
             inputs++;
             puzzleControl.keyFound = inputs == puzzleControl.numButtons ? true : false;
-            if (puzzleControl.keyFound) { spriteRenderer.sprite = sprite2; complete.SetActive(true); }
+            if (puzzleControl.keyFound) 
+            { 
+                spriteRenderer.sprite = sprite2; 
+                complete.SetActive(true);
+                puzzleControl.CheckAllPuzzlesComplete(); //tag will be used to check if ending dialogue should play
+            }
         }
         // if wrong, reset all checkmarks and reset the input sequence
         else

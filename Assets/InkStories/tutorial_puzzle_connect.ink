@@ -19,5 +19,22 @@ Try looking around the room! There are puzzles to be found here in Wonderland…
 #speaker: Narrator
 Keep an eye on both sisters’ perspectives. Wonderland shows itself in different ways to different people.
 #noskip_end
+
+-> DONE
+
+=== tutorial_puzzle_complete ===
+#noskip_start
+#speaker: Alice
+Woah, look at that! Come on, Con, let’s go, let’s go!
+
+#speaker: Constance
+Woah, hey, slow down!
+
+#speaker: Narrator
+Skipping out through the door, Alice drags her sister along to their next destination…
+#noskip_end
+
+#ending: MeetCat
+
 -> DONE
 

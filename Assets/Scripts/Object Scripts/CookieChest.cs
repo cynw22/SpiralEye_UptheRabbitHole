@@ -42,6 +42,7 @@ public class CookieChest : MonoBehaviour
         if (correctLetters == 5)
         {
             puzzleControl.chestIsOpen = true;
+            puzzleControl.CheckAllPuzzlesComplete(); //tag will be used to check if ending dialogue should play
             spriteRenderer.sprite = openSprite;
             cookies.SetActive(true);
         }

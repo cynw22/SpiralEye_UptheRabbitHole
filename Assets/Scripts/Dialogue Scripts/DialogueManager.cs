@@ -9,15 +9,6 @@ using UnityEngine.SceneManagement;
 #region Helper Classes
 [System.Serializable]
 
-//Changing mood sprites in the inspector
-public class MoodSprite
-{
-    public string moodName;
-    public Sprite sprite;
-}
-
-[System.Serializable]
-
 //Dynamic Textboxes for each character that tracks the moods and typing speed
 public class CharacterDialogueUI
 {
@@ -63,13 +54,6 @@ public class DialogueManager : MonoBehaviour
     public GameObject skipSummaryPanel;
     public TextMeshProUGUI skipSummaryText;
 
-    [Header("Background")]
-    public BackgroundController backgroundController;
-
-    [Header("Controls")]
-    public Button nextButton;
-    public Button skipButton;
-
     [Header("Sound")]
     public SoundFXManager soundFXManager;
     public AudioClip[] typingSounds;
@@ -77,6 +61,7 @@ public class DialogueManager : MonoBehaviour
     private bool isTyping;
     private bool skipLocked;
     private bool isSkipping;
+    private bool isDialoguePlaying;
 
     private string currentLine;
     private Coroutine typingCoroutine;
@@ -98,6 +83,8 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(string knotName)
     {
+        isDialoguePlaying = true;
+
         story.ChoosePathString(knotName);
         ContinueStory();
     }
@@ -113,18 +100,19 @@ public class DialogueManager : MonoBehaviour
         {
             lookup.Add(c.characterName, c);
             c.dialogueBoxRoot.SetActive(false);
+
+            if (c.nextButton != null)
+                c.nextButton.onClick.RemoveAllListeners();
+
+            if (c.skipButton != null)
+                c.skipButton.onClick.RemoveAllListeners();
         }
 
         // Use this to set the correct file for the level
         story = StoryManager.Instance.story;
 
-        if (skipButton != null)
-            skipButton.onClick.AddListener(StartSkip);
-
-        // Start at the knot for this scene
         if (!string.IsNullOrEmpty(startingKnot))
-            story.ChoosePathString(startingKnot);
-        ContinueStory();
+            StartDialogue(startingKnot);
     }
 
     void Update()
@@ -138,36 +126,32 @@ public class DialogueManager : MonoBehaviour
     //Check tags to see if text is allowed to be skipped or not, controls how much of the story should flow and if there are any tags stopping the flow
     void ContinueStory()
     {
-        //Check if there is text to continue
+
+        // Only proceed if the story has content
         if (story.canContinue)
         {
             string text = story.Continue().Trim();
-
-            // Handle tags from the current line
             HandleTags(story.currentTags);
 
             if (!string.IsNullOrEmpty(text))
             {
                 StartTyping(text);
+                RefreshButtons(); // show buttons for currentCharacter
                 return;
             }
         }
-        else
-        {
-            // Story can't continue: still handle the last tags
-            HandleTags(story.currentTags);
-        }
 
-        // If there are choices
         if (story.currentChoices.Count > 0)
         {
-            DisplayChoices();
+            DisplayChoices(); // buttons hidden inside DisplayChoices
             return;
         }
 
         // Otherwise, end of knot
         CloseAllDialogueBoxes();
         choicePanel.SetActive(false);
+
+        isDialoguePlaying = false;
     }
 
     //Master list of all tags currently in the ink file (DOUBLE CHECK THIS LATER MIGHT UPDATE WITH MORE DO NOT FORGET)
@@ -195,11 +179,6 @@ public class DialogueManager : MonoBehaviour
             {
                 skipLocked = false;
                 UpdateSkipButton(); // re-enable skip button
-            }
-            else if (tag == "alice_bg_empty")
-            {
-                if (backgroundController != null)
-                    backgroundController.SetAliceEmpty();
             }
         }
     }
@@ -234,32 +213,62 @@ public class DialogueManager : MonoBehaviour
     //Check for the active character and display they're correct box, destory any remaining boxes in the scene
     void ActivateCharacter(string speaker)
     {
-        foreach (var c in characters)
-            c.dialogueBoxRoot.SetActive(false);
+        CloseAllDialogueBoxes();
+        if (!lookup.ContainsKey(speaker)) return;
 
-        if (lookup.ContainsKey(speaker))
-        {
-            currentCharacter = lookup[speaker];
-            currentCharacter.dialogueBoxRoot.SetActive(true);
-        }
+        currentCharacter = lookup[speaker];
+        currentCharacter.dialogueBoxRoot.SetActive(true);
 
-        // Use button input to move forward instead of enter
+        // Show buttons only if dialogue is active
         if (currentCharacter.nextButton != null)
         {
+            currentCharacter.nextButton.gameObject.SetActive(true);
             currentCharacter.nextButton.onClick.RemoveAllListeners();
             currentCharacter.nextButton.onClick.AddListener(OnNextPressed);
         }
 
         if (currentCharacter.skipButton != null)
         {
+            currentCharacter.skipButton.gameObject.SetActive(true);
             currentCharacter.skipButton.onClick.RemoveAllListeners();
             currentCharacter.skipButton.onClick.AddListener(StartSkip);
-
-            // Make sure the button starts with correct interactable state
-            UpdateSkipButton();
+            UpdateSkipButtonState();
+        }
+    }
+    //Hide UI buttons from view when not in use, make sure the panel is hidden
+    void HideButtons()
+    {
+        foreach (var c in characters)
+        {
+            if (c.nextButton != null)
+                c.nextButton.gameObject.SetActive(false);
+            if (c.skipButton != null)
+                c.skipButton.gameObject.SetActive(false);
         }
     }
 
+    void RefreshButtons()
+    {
+        if (currentCharacter == null) return;
+
+        if (currentCharacter.nextButton != null)
+            currentCharacter.nextButton.gameObject.SetActive(true);
+
+        if (currentCharacter.skipButton != null)
+        {
+            currentCharacter.skipButton.gameObject.SetActive(true);
+            currentCharacter.skipButton.interactable = !skipLocked;
+        }
+    }
+
+    //Checking to see if button needs to be greyed out or not
+    void UpdateSkipButtonState()
+    {
+        if (currentCharacter?.skipButton != null)
+        {
+            currentCharacter.skipButton.interactable = !skipLocked;
+        }
+    }
 
     //Coroutine used to create the type writer effect for the line
     IEnumerator TypeLine(string line)
@@ -310,6 +319,13 @@ public class DialogueManager : MonoBehaviour
     //check and display any player choices
     void DisplayChoices()
     {
+        // Hide all dialogue buttons during choices
+        foreach (var c in characters)
+        {
+            if (c.nextButton != null) c.nextButton.gameObject.SetActive(false);
+            if (c.skipButton != null) c.skipButton.gameObject.SetActive(false);
+        }
+
         // Clear old buttons
         foreach (Transform child in choiceContainer)
             Destroy(child.gameObject);
@@ -352,6 +368,10 @@ public class DialogueManager : MonoBehaviour
         foreach (var c in characters)
         {
             c.dialogueBoxRoot.SetActive(false);
+            if (c.nextButton != null)
+                c.nextButton.gameObject.SetActive(false);
+            if (c.skipButton != null)
+                c.skipButton.gameObject.SetActive(false);
         }
     }
 
@@ -375,5 +395,11 @@ public class DialogueManager : MonoBehaviour
             summary += line + "\n";
 
         skipSummaryText.text = summary;
+    }
+
+    // Trigger dialogue externally (e.g., after door opens)
+    public void TriggerDialogue(string knotName)
+    {
+        StartDialogue(knotName);
     }
 }

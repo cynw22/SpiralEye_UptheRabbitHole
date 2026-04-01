@@ -23,6 +23,7 @@ public class Bookshelf : MonoBehaviour
         if (numFoundBottles == puzzleControl.numSafeBottles)
         {
             puzzleControl.allBottlesFound = true;
+            puzzleControl.CheckAllPuzzlesComplete(); //tag will be used to check if ending dialogue should play
             Debug.Log("all bottles found");
             collected.SetActive(true);
         }

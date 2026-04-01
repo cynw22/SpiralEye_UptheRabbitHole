@@ -21,6 +21,11 @@ public class PuzzleControl1 : MonoBehaviour
     public int numButtons;
     public bool keyFound;
 
+    [Header("Exit Door")]
+    public ExitDoor exitDoor; // assign in inspector
+
+    private bool dialogueTrigger = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -95,5 +100,27 @@ public class PuzzleControl1 : MonoBehaviour
         buttonOrder[2] = 1;
         buttonOrder[3] = 0;
         buttonOrder[4] = 1;
+    }
+
+    public void CheckAllPuzzlesComplete()
+    {
+        if (chestIsOpen && allBottlesFound && keyFound)
+        {
+            OnPuzzleComplete();
+        }
+    }
+
+    //Will be using this code to trigger the secondary knot in the ink file to show end dialogue
+    void OnPuzzleComplete()
+    {
+        if (dialogueTrigger) return;
+
+        dialogueTrigger = true;
+
+        // Unlock door interaction
+        if (exitDoor != null)
+        {
+            exitDoor.puzzleControl.keyFound = true; // mark key as found
+        }
     }
 }
