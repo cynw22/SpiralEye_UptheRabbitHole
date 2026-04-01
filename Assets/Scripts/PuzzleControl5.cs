@@ -98,8 +98,7 @@ public class PuzzleControl5 : MonoBehaviour
     {
         if (numRosesFound >= 11)
         {
-            exitParticleFinished.Play();
-            exitParticleUnfinished.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            SceneManager.LoadScene("GardenParty");
         }
 
         else if (numRosesFound < 11)
@@ -361,6 +360,12 @@ public class PuzzleControl5 : MonoBehaviour
             {
                 rose13P.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
             }
+        }
+
+        if (numRosesFound >= 11)
+        {
+            exitParticleFinished.Play();
+            exitParticleUnfinished.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         }
     }
 }
