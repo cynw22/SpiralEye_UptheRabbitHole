@@ -24,10 +24,9 @@ public class PuzzleControl5 : MonoBehaviour
     public SwitchManager switchManager;
 
     //EXIT BUTTON
-    GameObject exitButton;
-
-    ParticleSystem exitParticleFinished;
-    ParticleSystem exitParticleUnfinished;
+    public GameObject exitButton;
+    public ParticleSystem exitParticleFinished;
+    public ParticleSystem exitParticleUnfinished;
 
     // ALL THE ROSES AND ROSE PARTICLES
     public GameObject rose1;
@@ -76,9 +75,6 @@ public class PuzzleControl5 : MonoBehaviour
         safeRoseLocationIndex = new int[numSafeRoses];
         setSafeRoseLocations();
 
-        exitButton = GameObject.Find("ExitButton");
-        exitButton.GetComponent<Button>().enabled = false;
-
         exitParticleFinished = GameObject.Find("ExitParticleFinished").GetComponent<ParticleSystem>();
         exitParticleUnfinished = GameObject.Find("ExitParticleUnfinished").GetComponent<ParticleSystem>();
 
@@ -102,8 +98,8 @@ public class PuzzleControl5 : MonoBehaviour
     {
         if (numRosesFound >= 11)
         {
-            exitButton.GetComponent<Button>().enabled = true;
             exitParticleFinished.Play();
+            exitParticleUnfinished.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         }
 
         else if (numRosesFound < 11)
