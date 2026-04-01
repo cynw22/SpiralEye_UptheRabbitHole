@@ -6,6 +6,23 @@ public class PuzzleControl2 : MonoBehaviour
 {
     public bool gumdrops, milk, flowers, boba, recipes, allItemsCollected = false;
 
+    GameObject booksNotTaken;
+    GameObject booksTaken;
+
+    void Start()
+    {
+        booksNotTaken = GameObject.Find("TallBooks");
+        booksTaken = GameObject.Find("TinyBooks (1)");
+        booksTaken.GetComponent<SpriteRenderer>().enabled = false;
+    }
+
+    public void books_OnClick()
+    {
+        booksNotTaken.GetComponent<PolygonCollider2D>().enabled = false;
+        booksNotTaken.GetComponent<SpriteRenderer>().enabled = false;
+        booksTaken.GetComponent<SpriteRenderer>().enabled = true;
+    }
+
     // Update is called once per frame
     void Update()
     {
