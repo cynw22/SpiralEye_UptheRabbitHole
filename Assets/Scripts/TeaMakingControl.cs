@@ -123,12 +123,12 @@ public class TeaMakingControl : MonoBehaviour
                 if (submittedTea[i] != specialTea[i]) { break; }
                 correctTea = i == submittedTea.Count - 1 ? true : false;
             }
-            specialTeaPopup.SetActive(true);
-        }
-        else if (desiredTea == 4) {
-            Debug.Log("All Four Teas Found");
             winScreenPopup.SetActive(true);
         }
+        //else if (desiredTea == 4) {
+        //    Debug.Log("All Four Teas Found");
+        //    winScreenPopup.SetActive(true);
+        //}
         else
         {
             Debug.Log("wrong amount of ingredients submitted");
