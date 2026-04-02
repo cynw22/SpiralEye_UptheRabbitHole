@@ -14,12 +14,15 @@ public class BreifcasePuzzle : MonoBehaviour
     public LetterCycler[] letters;
 
     [SerializeField] public GameObject cookies;
+    GameObject breifcase;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         cookies.SetActive(false);
+        breifcase = GameObject.Find("BreifcasePopup");
     }
 
     private void OnMouseDown()
@@ -44,6 +47,9 @@ public class BreifcasePuzzle : MonoBehaviour
             puzzleControl.suitcaseIsOpen = true;
             spriteRenderer.sprite = openSprite;
             cookies.SetActive(true);
+            puzzleControl.escapeRoomsComplete++;
+            breifcase.GetComponent<Collider2D>().enabled = false;
+
         }
     }
 }
