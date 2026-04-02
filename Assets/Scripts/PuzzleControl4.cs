@@ -25,6 +25,8 @@ public class PuzzleControl4 : MonoBehaviour
 
     // PUZZLE #5 - EXIT CONSTRAINT
     public bool allObjectsFound;
+    public int totalEscapeRooms;
+    public int escapeRoomsComplete;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -46,6 +48,8 @@ public class PuzzleControl4 : MonoBehaviour
 
         // PUZZLE #5 - EXIT CONSTRAINT
         allObjectsFound = false;
+        totalEscapeRooms = 4;
+        escapeRoomsComplete = 0;
     }
 
     public void Update()
