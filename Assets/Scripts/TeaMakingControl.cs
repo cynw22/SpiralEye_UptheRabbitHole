@@ -18,9 +18,21 @@ public class TeaMakingControl : MonoBehaviour
 
     public int desiredTea = 0;
 
+    [Header("Tea Popups")]
+    public GameObject floralTeaPopup;
+    public GameObject roundTeaPopup;
+    public GameObject simpleTeaPopup;
+    public GameObject specialTeaPopup;
+    public GameObject wrongTeaPopup; // For when the combination is wrong
+    public GameObject wrongIngredientsPopup;
+    public GameObject winScreenPopup;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //Popups set not active  
+        SetPopupsOff();
+
         floralTea = new List<Ingredients>();
         floralTea.Add(Ingredients.GUMDROPS);
         floralTea.Add(Ingredients.PETALS);
@@ -76,11 +88,13 @@ public class TeaMakingControl : MonoBehaviour
                 if (submittedTea[i] != floralTea[i])
                 {
                     Debug.Log("wrong tea submission");
+                    wrongTeaPopup.SetActive(true);
                     break;
                 }
 
                 correctTea = i == submittedTea.Count - 1 ? true : false;
-                Debug.Log("correct tea submission");
+                Debug.Log("correct tea submission - floral tea");
+                floralTeaPopup.SetActive(true);
             }
         }
         else if (desiredTea == 1 && submittedTea.Count == roundTea.Count)
@@ -90,6 +104,8 @@ public class TeaMakingControl : MonoBehaviour
                 if (submittedTea[i] != roundTea[i]) { break; }
                 correctTea = i == submittedTea.Count - 1 ? true : false;
             }
+            roundTeaPopup.SetActive(true);
+
         }
         else if (desiredTea == 2 && submittedTea.Count == simpleTea.Count)
         {
@@ -98,6 +114,7 @@ public class TeaMakingControl : MonoBehaviour
                 if (submittedTea[i] != simpleTea[i]) { break; }
                 correctTea = i == submittedTea.Count - 1 ? true : false;
             }
+            simpleTeaPopup.SetActive(true);
         }
         else if (desiredTea == 3 && submittedTea.Count == specialTea.Count)
         {
@@ -106,10 +123,17 @@ public class TeaMakingControl : MonoBehaviour
                 if (submittedTea[i] != specialTea[i]) { break; }
                 correctTea = i == submittedTea.Count - 1 ? true : false;
             }
+            specialTeaPopup.SetActive(true);
+        }
+        else if (desiredTea == 4) {
+            Debug.Log("All Four Teas Found");
+            winScreenPopup.SetActive(true);
         }
         else
         {
             Debug.Log("wrong amount of ingredients submitted");
+            wrongIngredientsPopup.SetActive(true);
+
         }
 
         if (correctTea)
@@ -122,4 +146,15 @@ public class TeaMakingControl : MonoBehaviour
             return false;
         }
     }
+
+    public void SetPopupsOff() {
+        floralTeaPopup.SetActive(false);
+        roundTeaPopup.SetActive(false);
+        simpleTeaPopup.SetActive(false);
+        specialTeaPopup.SetActive(false);
+        wrongIngredientsPopup.SetActive(false);
+        wrongTeaPopup.SetActive(false);
+        winScreenPopup.SetActive(false);
+    }
+
 }
