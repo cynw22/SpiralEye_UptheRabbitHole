@@ -16,7 +16,9 @@ public class PuzzleControl4 : MonoBehaviour
     // PUZZLE #3 - NEWSPAPER PUZZLE
     [Header("Newspaper")]
     public int numNews;
+    public int numNewsFound;
     public bool allNewsFound;
+    [SerializeField] public GameObject completePaper;
 
     // PUZZLE #3 - TIMER
     [Header("Timer")]
@@ -39,8 +41,10 @@ public class PuzzleControl4 : MonoBehaviour
         numKeys = 3;
 
         //PUZZLE #3 - Newspaper puzzle
+        completePaper.SetActive(false);
         allNewsFound = false;
-        numNews = 3; //change later
+        numNewsFound = 0;
+        numNews = 5;
 
         // PUZZLE #4 - TIMER
         time = 1800;
