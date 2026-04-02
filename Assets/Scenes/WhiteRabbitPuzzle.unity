@@ -7419,7 +7419,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &285861322
 Transform:
   m_ObjectHideFlags: 0
@@ -8400,7 +8400,7 @@ SpriteRenderer:
   m_Size: {x: 21.51, y: 12.513593}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &361898791
@@ -10108,9 +10108,10 @@ GameObject:
   - component: {fileID: 556201572}
   - component: {fileID: 556201574}
   - component: {fileID: 556201573}
+  - component: {fileID: 556201575}
   m_Layer: 0
   m_Name: IV-Key
-  m_TagString: Untagged
+  m_TagString: Key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10429,6 +10430,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &556201575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556201571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e28ea65978802ee47a50c23c4059ff5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chest: {fileID: 1102049807}
 --- !u!1 &559413692
 GameObject:
   m_ObjectHideFlags: 0
@@ -10812,9 +10826,6 @@ MonoBehaviour:
   choicePrefab: {fileID: 2616949834509399884, guid: 5296a2fc07f21d149af77102434a880d, type: 3}
   skipSummaryPanel: {fileID: 0}
   skipSummaryText: {fileID: 0}
-  backgroundController: {fileID: 0}
-  nextButton: {fileID: 0}
-  skipButton: {fileID: 0}
   soundFXManager: {fileID: 1708904267}
   typingSounds:
   - {fileID: 8300000, guid: 6ac37a403a7864748a4af0674a88028b, type: 3}
@@ -10903,7 +10914,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &643242038
 Transform:
   m_ObjectHideFlags: 0
@@ -10938,7 +10949,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &649937103
 Transform:
   m_ObjectHideFlags: 0
@@ -18358,7 +18369,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &852123095
 Transform:
   m_ObjectHideFlags: 0
@@ -23872,9 +23883,10 @@ GameObject:
   - component: {fileID: 912779258}
   - component: {fileID: 912779260}
   - component: {fileID: 912779259}
+  - component: {fileID: 912779261}
   m_Layer: 0
   m_Name: Triangle-Key
-  m_TagString: Untagged
+  m_TagString: Key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24190,6 +24202,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &912779261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912779257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e28ea65978802ee47a50c23c4059ff5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chest: {fileID: 1102049807}
 --- !u!1 &929297937
 GameObject:
   m_ObjectHideFlags: 0
@@ -25499,16 +25524,16 @@ GameObject:
   m_Component:
   - component: {fileID: 1102049802}
   - component: {fileID: 1102049806}
-  - component: {fileID: 1102049805}
   - component: {fileID: 1102049804}
   - component: {fileID: 1102049803}
+  - component: {fileID: 1102049807}
   m_Layer: 0
   m_Name: ChestPopup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1102049802
 Transform:
   m_ObjectHideFlags: 0
@@ -25588,26 +25613,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 7.239855, y: 3.945178}
   m_EdgeRadius: 0
---- !u!114 &1102049805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1102049801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6feaa797bf8177c439455d3039e63a9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleControl: {fileID: 0}
-  closeSprite: {fileID: -6909500390780079052, guid: eb44e9fec0a2add4b900517e1f7becc2, type: 3}
-  openSprite: {fileID: -5070960038667444045, guid: 085ebc86ef3062e4db7cc9002b6dca8d, type: 3}
-  letters:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  cookies: {fileID: 0}
 --- !u!212 &1102049806
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25663,6 +25668,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1102049807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102049801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a7c110b18bdbfc46aafd7d98ef051e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleControl: {fileID: 39512868}
+  closeSprite: {fileID: -6909500390780079052, guid: eb44e9fec0a2add4b900517e1f7becc2, type: 3}
+  openSprite: {fileID: -5070960038667444045, guid: 085ebc86ef3062e4db7cc9002b6dca8d, type: 3}
+  keys:
+  - {fileID: 1565249851}
+  - {fileID: 1419422846}
+  - {fileID: 1926959329}
+  selectedKeys: []
+  clickedKeys: 0
 --- !u!1 &1108991920
 GameObject:
   m_ObjectHideFlags: 0
@@ -25674,9 +25700,10 @@ GameObject:
   - component: {fileID: 1108991921}
   - component: {fileID: 1108991923}
   - component: {fileID: 1108991922}
+  - component: {fileID: 1108991924}
   m_Layer: 0
   m_Name: XXKey
-  m_TagString: Untagged
+  m_TagString: Key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25994,6 +26021,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1108991924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108991920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e28ea65978802ee47a50c23c4059ff5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chest: {fileID: 1102049807}
 --- !u!1 &1109869947
 GameObject:
   m_ObjectHideFlags: 0
@@ -27836,9 +27876,10 @@ GameObject:
   - component: {fileID: 1328540586}
   - component: {fileID: 1328540588}
   - component: {fileID: 1328540587}
+  - component: {fileID: 1328540589}
   m_Layer: 0
   m_Name: IIIKey
-  m_TagString: Untagged
+  m_TagString: Key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28157,6 +28198,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1328540589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328540585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e28ea65978802ee47a50c23c4059ff5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chest: {fileID: 1102049807}
 --- !u!1 &1329680831
 GameObject:
   m_ObjectHideFlags: 0
@@ -29160,9 +29214,10 @@ GameObject:
   - component: {fileID: 1419422847}
   - component: {fileID: 1419422849}
   - component: {fileID: 1419422848}
+  - component: {fileID: 1419422850}
   m_Layer: 0
   m_Name: Number-Key
-  m_TagString: Untagged
+  m_TagString: Key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29518,6 +29573,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1419422850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419422846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e28ea65978802ee47a50c23c4059ff5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chest: {fileID: 1102049807}
 --- !u!1 &1469530907
 GameObject:
   m_ObjectHideFlags: 0
@@ -31410,9 +31478,10 @@ GameObject:
   - component: {fileID: 1565249852}
   - component: {fileID: 1565249854}
   - component: {fileID: 1565249853}
+  - component: {fileID: 1565249855}
   m_Layer: 0
   m_Name: Bee-Key
-  m_TagString: Untagged
+  m_TagString: Key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31983,6 +32052,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1565249855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565249851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e28ea65978802ee47a50c23c4059ff5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chest: {fileID: 1102049807}
 --- !u!1 &1566603319
 GameObject:
   m_ObjectHideFlags: 0
@@ -35065,9 +35147,10 @@ GameObject:
   - component: {fileID: 1926959330}
   - component: {fileID: 1926959332}
   - component: {fileID: 1926959331}
+  - component: {fileID: 1926959333}
   m_Layer: 0
   m_Name: RubyKey
-  m_TagString: Untagged
+  m_TagString: Key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35386,6 +35469,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1926959333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926959329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e28ea65978802ee47a50c23c4059ff5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chest: {fileID: 1102049807}
 --- !u!1 &1930839850
 GameObject:
   m_ObjectHideFlags: 0
@@ -36426,9 +36522,10 @@ GameObject:
   - component: {fileID: 2004251086}
   - component: {fileID: 2004251088}
   - component: {fileID: 2004251087}
+  - component: {fileID: 2004251089}
   m_Layer: 0
   m_Name: SquareKey
-  m_TagString: Untagged
+  m_TagString: Key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36747,6 +36844,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2004251089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004251085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e28ea65978802ee47a50c23c4059ff5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chest: {fileID: 1102049807}
 --- !u!1 &2012465477
 GameObject:
   m_ObjectHideFlags: 0
