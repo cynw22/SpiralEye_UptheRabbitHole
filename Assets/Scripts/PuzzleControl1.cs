@@ -26,6 +26,9 @@ public class PuzzleControl1 : MonoBehaviour
 
     private bool dialogueTrigger = false;
 
+    //ExplanationPopup after Dialouge
+    ExplanationPopup2 popup;
+
     //Popups change after collection:
     [Header("Change Environment Object")]
     GameObject chestNotSolved;
@@ -70,6 +73,8 @@ public class PuzzleControl1 : MonoBehaviour
         chestNotSolved = GameObject.Find("Chest");
         chestSolved = GameObject.Find("Chest (1)");
         chestSolved.GetComponent<SpriteRenderer>().enabled = false;
+
+        popup.OpenPanel(); // put this in the start for if there is no dialouge - but will have to edit it if there is dialouge.
     }
 
     // PUZZLE #2 - DRINK ME BOTTLES
