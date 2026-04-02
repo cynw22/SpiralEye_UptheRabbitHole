@@ -26125,7 +26125,7 @@ RectTransform:
   m_GameObject: {fileID: 859528974}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0551604, y: 1.1079184, z: 1.0551604}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2038596111}
@@ -26155,11 +26155,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Press Space to Switch Perspectives!
+  m_text: 'Seems like everything is a total mess due to the mystery drink! Feed the
+    glass box in order to get the key!
 
 
-    Click on Objects in the Scene
-    to Interact with Them!'
+    Use Space to change perspectives and
+    escape!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f054b46c0710ea94ea7443ff1dbe58bd, type: 2}
   m_sharedMaterial: {fileID: 3908959653227688014, guid: f054b46c0710ea94ea7443ff1dbe58bd, type: 2}
@@ -26186,8 +26187,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
-  m_fontSizeBase: 70
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -31437,7 +31438,6 @@ GameObject:
   - component: {fileID: 1325384349}
   - component: {fileID: 1325384348}
   - component: {fileID: 1325384346}
-  - component: {fileID: 1325384351}
   - component: {fileID: 1325384352}
   m_Layer: 5
   m_Name: HintSystem
@@ -31575,21 +31575,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325384344}
   m_CullTransparentMesh: 1
---- !u!114 &1325384351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325384344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfa3d79c8a6c24541ac48cdcbbb54b84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  switchManager: {fileID: 1492002331}
-  aliceSprite: {fileID: -3462381851227895847, guid: 200d7cf265628d64181f9d73b7d703ba, type: 3}
-  constanceSprite: {fileID: 3877913044851303507, guid: c85d54e7558f12549a43d7b7ddb42f22, type: 3}
 --- !u!114 &1325384352
 MonoBehaviour:
   m_ObjectHideFlags: 0
