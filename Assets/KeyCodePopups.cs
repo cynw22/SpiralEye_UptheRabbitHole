@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class MissingItemsController : MonoBehaviour
 {
@@ -17,24 +18,34 @@ public class MissingItemsController : MonoBehaviour
 
     void Update()
     {
+        if (puzzleManager.chestIsOpen && puzzleManager.allBottlesFound)
+        {
+            CloseAllPopups();
+            cookiePopupDone = true;
+            drinkPopupDone = true;
+            bothPopupDone = true;
+        }
         // --- COOKIE CHECK ---
         // If Cookie is NOT collected AND we haven't finished with this popup yet
         if (!puzzleManager.chestIsOpen && !cookiePopupDone && puzzleManager.allBottlesFound)
         {
+            CloseAllPopups();
             cookieMissingPopup.SetActive(true);
         }
-
         // --- BOTTLES CHECK ---
-        if (!puzzleManager.allBottlesFound && !drinkPopupDone && puzzleManager.chestIsOpen)
+        else if (!puzzleManager.allBottlesFound && !drinkPopupDone && puzzleManager.chestIsOpen)
         {
+            CloseAllPopups();
             drinkMissingPopup.SetActive(true);
         }
-
         // --- BOTH CHECK ---
-        if (!puzzleManager.chestIsOpen && !bothPopupDone && !puzzleManager.allBottlesFound)
+        else if (!puzzleManager.chestIsOpen && !bothPopupDone && !puzzleManager.allBottlesFound)
         {
+            CloseAllPopups();
             bothMissingPopup.SetActive(true);
         }
+
+
     }
 
     // --- CLOSE FUNCTIONS ---
@@ -56,5 +67,11 @@ public class MissingItemsController : MonoBehaviour
     {
         bothMissingPopup.SetActive(false);
         bothPopupDone = true;
+    }
+
+    public void CloseAllPopups() {
+        cookieMissingPopup.SetActive(false);
+        drinkMissingPopup.SetActive(false);
+        bothMissingPopup.SetActive(false);
     }
 }
