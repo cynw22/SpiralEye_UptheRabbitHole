@@ -720,31 +720,38 @@ MonoBehaviour:
     dialogueBoxRoot: {fileID: 0}
     dialogueText: {fileID: 0}
     characterPfp: {fileID: 0}
-    moods: []
     typingSpeed: 0
+    nextButton: {fileID: 0}
+    skipButton: {fileID: 0}
+    typingSounds: []
+    typingVolume: 0.4
+    soundDelay: 0.05
   - characterName: Constance
     dialogueBoxRoot: {fileID: 0}
     dialogueText: {fileID: 0}
     characterPfp: {fileID: 0}
-    moods: []
     typingSpeed: 0
+    nextButton: {fileID: 0}
+    skipButton: {fileID: 0}
+    typingSounds: []
+    typingVolume: 0.4
+    soundDelay: 0.05
   - characterName: Narrator
     dialogueBoxRoot: {fileID: 0}
     dialogueText: {fileID: 0}
     characterPfp: {fileID: 0}
-    moods: []
     typingSpeed: 0
+    nextButton: {fileID: 0}
+    skipButton: {fileID: 0}
+    typingSounds: []
+    typingVolume: 0.4
+    soundDelay: 0.05
   choicePanel: {fileID: 0}
   choiceContainer: {fileID: 0}
   choicePrefab: {fileID: 2616949834509399884, guid: 5296a2fc07f21d149af77102434a880d, type: 3}
   skipSummaryPanel: {fileID: 0}
   skipSummaryText: {fileID: 0}
-  skipButton: {fileID: 0}
-  backgroundController: {fileID: 0}
   soundFXManager: {fileID: 1834991803}
-  typingSounds:
-  - {fileID: 8300000, guid: 6ac37a403a7864748a4af0674a88028b, type: 3}
-  - {fileID: 8300000, guid: 6ac37a403a7864748a4af0674a88028b, type: 3}
 --- !u!1 &445424009
 GameObject:
   m_ObjectHideFlags: 0
@@ -2034,6 +2041,11 @@ MonoBehaviour:
   buttonOrder: 
   numButtons: 0
   keyFound: 0
+  exitDoor: {fileID: 0}
+  cookiePopup: {fileID: 0}
+  drinkPopup: {fileID: 0}
+  keyPopup: {fileID: 0}
+  doorPopup: {fileID: 0}
 --- !u!1 &1634296724
 GameObject:
   m_ObjectHideFlags: 0
@@ -3101,7 +3113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.85660374, g: 0.85660374, b: 0.85660374, a: 1}
+  m_Color: {r: 0.5621612, g: 0.58771837, b: 0.9559748, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3373,8 +3385,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

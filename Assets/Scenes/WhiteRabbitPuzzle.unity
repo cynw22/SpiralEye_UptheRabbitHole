@@ -13352,6 +13352,9 @@ MonoBehaviour:
     typingSpeed: 0
     nextButton: {fileID: 0}
     skipButton: {fileID: 0}
+    typingSounds: []
+    typingVolume: 0.4
+    soundDelay: 0.05
   - characterName: Constance
     dialogueBoxRoot: {fileID: 417890983}
     dialogueText: {fileID: 728793806}
@@ -13359,6 +13362,9 @@ MonoBehaviour:
     typingSpeed: 0
     nextButton: {fileID: 0}
     skipButton: {fileID: 0}
+    typingSounds: []
+    typingVolume: 0.4
+    soundDelay: 0.05
   - characterName: Narrator
     dialogueBoxRoot: {fileID: 599320096}
     dialogueText: {fileID: 8521945}
@@ -13366,15 +13372,15 @@ MonoBehaviour:
     typingSpeed: 0
     nextButton: {fileID: 0}
     skipButton: {fileID: 0}
+    typingSounds: []
+    typingVolume: 0.4
+    soundDelay: 0.05
   choicePanel: {fileID: 1924215568}
   choiceContainer: {fileID: 582090719}
   choicePrefab: {fileID: 2616949834509399884, guid: 5296a2fc07f21d149af77102434a880d, type: 3}
   skipSummaryPanel: {fileID: 0}
   skipSummaryText: {fileID: 0}
   soundFXManager: {fileID: 1708904267}
-  typingSounds:
-  - {fileID: 8300000, guid: 6ac37a403a7864748a4af0674a88028b, type: 3}
-  - {fileID: 8300000, guid: 6ac37a403a7864748a4af0674a88028b, type: 3}
 --- !u!1 &596321855
 GameObject:
   m_ObjectHideFlags: 0
@@ -42682,8 +42688,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

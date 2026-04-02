@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 //Cutscene Manager: https://docs.unity3d.com/6000.2/Documentation/Manual/scenes-working-with.html and https://discussions.unity.com/t/how-to-make-a-picture-cutscene/206005
 
@@ -10,6 +11,10 @@ public class EndingManager : MonoBehaviour
     public GameObject[] page;
     private int currentPages = 0;
 
+    [Header("UI Buttons")]
+    public Button previousButton;
+    public Button nextButton;
+
     [SerializeField] private AudioClip pageFlipping;
     [SerializeField] private AudioClip backingTrack;
     private SoundFXManager sound;
@@ -18,6 +23,7 @@ public class EndingManager : MonoBehaviour
         ShowEndingPage(0);
         sound = GetComponent<SoundFXManager>();
         sound.PlayLoop(backingTrack);
+        UpdateButtonStates();
     }
 
     public void NextEndingPage()
@@ -34,6 +40,8 @@ public class EndingManager : MonoBehaviour
         sound.PlaySound(pageFlipping);
         currentPages++;
         ShowEndingPage(currentPages);
+        UpdateButtonStates();
+
     }
 
     public void PreviousEndingPage()
@@ -42,6 +50,18 @@ public class EndingManager : MonoBehaviour
         sound.PlaySound(pageFlipping);
         currentPages--;
         ShowEndingPage(currentPages);
+        UpdateButtonStates();
+
+    }
+    private void UpdateButtonStates()
+    {
+        // Previous button greyed out on first page
+        if (previousButton != null)
+            previousButton.interactable = currentPages > 0;
+
+        // Next button always interactable
+        if (nextButton != null)
+            nextButton.interactable = true;
     }
 
     private void ShowEndingPage(int index)

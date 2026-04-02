@@ -5623,6 +5623,11 @@ MonoBehaviour:
   buttonOrder: 
   numButtons: 0
   keyFound: 0
+  exitDoor: {fileID: 0}
+  cookiePopup: {fileID: 0}
+  drinkPopup: {fileID: 0}
+  keyPopup: {fileID: 0}
+  doorPopup: {fileID: 0}
 --- !u!4 &39512867
 Transform:
   m_ObjectHideFlags: 0
@@ -10234,31 +10239,38 @@ MonoBehaviour:
     dialogueBoxRoot: {fileID: 1496066651}
     dialogueText: {fileID: 1014121490}
     characterPfp: {fileID: 1469530909}
-    moods: []
     typingSpeed: 0
+    nextButton: {fileID: 0}
+    skipButton: {fileID: 0}
+    typingSounds: []
+    typingVolume: 0.4
+    soundDelay: 0.05
   - characterName: Constance
     dialogueBoxRoot: {fileID: 417890983}
     dialogueText: {fileID: 728793806}
     characterPfp: {fileID: 1286297694}
-    moods: []
     typingSpeed: 0
+    nextButton: {fileID: 0}
+    skipButton: {fileID: 0}
+    typingSounds: []
+    typingVolume: 0.4
+    soundDelay: 0.05
   - characterName: Narrator
     dialogueBoxRoot: {fileID: 599320096}
     dialogueText: {fileID: 8521945}
     characterPfp: {fileID: 1214062250}
-    moods: []
     typingSpeed: 0
+    nextButton: {fileID: 0}
+    skipButton: {fileID: 0}
+    typingSounds: []
+    typingVolume: 0.4
+    soundDelay: 0.05
   choicePanel: {fileID: 1924215568}
   choiceContainer: {fileID: 582090719}
   choicePrefab: {fileID: 2616949834509399884, guid: 5296a2fc07f21d149af77102434a880d, type: 3}
   skipSummaryPanel: {fileID: 0}
   skipSummaryText: {fileID: 0}
-  skipButton: {fileID: 0}
-  backgroundController: {fileID: 0}
   soundFXManager: {fileID: 1708904267}
-  typingSounds:
-  - {fileID: 8300000, guid: 6ac37a403a7864748a4af0674a88028b, type: 3}
-  - {fileID: 8300000, guid: 6ac37a403a7864748a4af0674a88028b, type: 3}
 --- !u!1 &599320096
 GameObject:
   m_ObjectHideFlags: 0
@@ -10601,8 +10613,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -27568,7 +27580,7 @@ SpriteRenderer:
   m_Size: {x: 21.51, y: 12.513593}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1492002330
@@ -29344,6 +29356,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleControl: {fileID: 0}
+  switchManager: {fileID: 0}
+  sprite1: {fileID: 0}
+  sprite2: {fileID: 0}
+  complete: {fileID: 0}
   sequence: 
   inputs: 0
   checks:
@@ -29628,6 +29644,7 @@ MonoBehaviour:
   - {fileID: 1430207635}
   - {fileID: 877559290}
   numFoundBottles: 1
+  collected: {fileID: 0}
 --- !u!114 &1612151769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33518,6 +33535,7 @@ MonoBehaviour:
   - {fileID: 1367832274}
   - {fileID: 100329662}
   numFoundBottles: 1
+  collected: {fileID: 0}
 --- !u!212 &1978261668
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -33868,6 +33886,9 @@ MonoBehaviour:
   puzzleControl: {fileID: 0}
   switchManager: {fileID: 0}
   animator: {fileID: 0}
+  popup: {fileID: 0}
+  popupBg: {fileID: 0}
+  col: {fileID: 0}
 --- !u!95 &2012337277
 Animator:
   serializedVersion: 7
