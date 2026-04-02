@@ -1,63 +1,60 @@
 using UnityEngine;
 
-public class KeyCodePopups : MonoBehaviour
+public class MissingItemsController : MonoBehaviour
 {
     [Header("References")]
-    public PuzzleControl1 puzzleManager; // The script that has the booleans
-    public GameObject missingCookiePopup; // The UI Panel to turn on
-    public GameObject missingBottlePopup; // The UI Panel to turn on
-    public GameObject missingBothPopup; // The UI Panel to turn on
+    public PuzzleControl1 puzzleManager;
 
-    // This prevents the popup from flicking back on after you close it
-    private bool hasBeenClosed = false;
+    [Header("UI Panels")]
+    public GameObject cookieMissingPopup;
+    public GameObject drinkMissingPopup;
+    public GameObject bothMissingPopup;
+
+    // We need 3 separate flags so each popup can be closed independently
+    private bool cookiePopupDone = false;
+    private bool drinkPopupDone = false;
+    private bool bothPopupDone = false;
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) { 
-            // 1. If the player already clicked 'Close', stop doing anything.
-            if (hasBeenClosed) return;
-
-        // 2. Check the conditions
-        // This triggers if chest is false AND if bottles is false
-        if (!puzzleManager.chestIsOpen && puzzleManager.allBottlesFound)
+        // --- COOKIE CHECK ---
+        // If Cookie is NOT collected AND we haven't finished with this popup yet
+        if (!puzzleManager.chestIsOpen && !cookiePopupDone && puzzleManager.allBottlesFound)
         {
-            ShowCookiePopup();
+            cookieMissingPopup.SetActive(true);
         }
-        if (puzzleManager.chestIsOpen && !puzzleManager.allBottlesFound)
+
+        // --- BOTTLES CHECK ---
+        if (!puzzleManager.allBottlesFound && !drinkPopupDone && puzzleManager.chestIsOpen)
         {
-            ShowBottlePopup();
+            drinkMissingPopup.SetActive(true);
         }
 
-        if (!puzzleManager.chestIsOpen && !puzzleManager.allBottlesFound)
+        // --- BOTH CHECK ---
+        if (!puzzleManager.chestIsOpen && !bothPopupDone && !puzzleManager.allBottlesFound)
         {
-            ShowBothPopup();
+            bothMissingPopup.SetActive(true);
         }
-        }
     }
 
-    void ShowBothPopup()
+    // --- CLOSE FUNCTIONS ---
+    // Link each button to its specific function below
+
+    public void CloseCookiePopup()
     {
-        missingBothPopup.SetActive(true);
+        cookieMissingPopup.SetActive(false);
+        cookiePopupDone = true; // Prevents it from reopening
     }
 
-    void ShowCookiePopup()
+    public void CloseDrinkPopup()
     {
-        missingCookiePopup.SetActive(true);
+        drinkMissingPopup.SetActive(false);
+        drinkPopupDone = true;
     }
-    void ShowBottlePopup()
+
+    public void CloseBothPopup()
     {
-        missingBottlePopup.SetActive(true);
+        bothMissingPopup.SetActive(false);
+        bothPopupDone = true;
     }
-
-    // IMPORTANT: Link your UI Button "On Click()" to this function
-    public void ClosePopup()
-    {
-        missingBothPopup.SetActive(false);
-        missingBottlePopup.SetActive(false);
-        missingCookiePopup.SetActive(false);
-
-        // This is the key: it tells Update() to stop forcing the popup open
-        hasBeenClosed = true;
-    }
-
 }
