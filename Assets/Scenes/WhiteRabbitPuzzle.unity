@@ -20458,10 +20458,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -12.285, y: 13.80125}
-      - {x: -12.285, y: -13.80125}
-      - {x: 12.285, y: -13.80125}
-      - {x: 12.285, y: 13.80125}
+    - - {x: -22.899721, y: 18.976051}
+      - {x: -21.934734, y: -36.441017}
+      - {x: 17.718851, y: -33.73912}
+      - {x: 21.934734, y: 20.916613}
   m_UseDelaunayMesh: 0
 --- !u!212 &766806069
 SpriteRenderer:
@@ -20508,7 +20508,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 1387832148774768541, guid: 87a28038c7df2694794b5793d492920c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -20532,8 +20532,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchManager: {fileID: 1492002331}
   aliceSprite: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
-  alicePoint: {fileID: -832645264602151611, guid: 2c21b4f052e4c8c47a1c8ec25376e734, type: 3}
-  aliceClick: {fileID: -4194668869044252366, guid: 103001f469e807145b439213d5f38296, type: 3}
+  alicePoint: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
+  aliceClick: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
   constanceSprite: {fileID: 2275898209256684654, guid: 3dd30e7ebb3c2504a835ebd951562823, type: 3}
   constancePoint: {fileID: -4833394626526807451, guid: d64a0b472dd3d09418a3cd443deb1168, type: 3}
   constanceClick: {fileID: -3810316324186850591, guid: f2b1e0d1e6f75b3438a18c88c3c7a785, type: 3}
@@ -29706,8 +29706,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchManager: {fileID: 1492002331}
   aliceSprite: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
-  alicePoint: {fileID: -832645264602151611, guid: 2c21b4f052e4c8c47a1c8ec25376e734, type: 3}
-  aliceClick: {fileID: -4194668869044252366, guid: 103001f469e807145b439213d5f38296, type: 3}
+  alicePoint: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
+  aliceClick: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
   constanceSprite: {fileID: 2275898209256684654, guid: 3dd30e7ebb3c2504a835ebd951562823, type: 3}
   constancePoint: {fileID: -4833394626526807451, guid: d64a0b472dd3d09418a3cd443deb1168, type: 3}
   constanceClick: {fileID: -3810316324186850591, guid: f2b1e0d1e6f75b3438a18c88c3c7a785, type: 3}
@@ -32635,7 +32635,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1276823851
 Transform:
   m_ObjectHideFlags: 0
@@ -39984,8 +39984,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchManager: {fileID: 1492002331}
   aliceSprite: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
-  alicePoint: {fileID: -832645264602151611, guid: 2c21b4f052e4c8c47a1c8ec25376e734, type: 3}
-  aliceClick: {fileID: -4194668869044252366, guid: 103001f469e807145b439213d5f38296, type: 3}
+  alicePoint: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
+  aliceClick: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
   constanceSprite: {fileID: 2275898209256684654, guid: 3dd30e7ebb3c2504a835ebd951562823, type: 3}
   constancePoint: {fileID: -4833394626526807451, guid: d64a0b472dd3d09418a3cd443deb1168, type: 3}
   constanceClick: {fileID: -3810316324186850591, guid: f2b1e0d1e6f75b3438a18c88c3c7a785, type: 3}
@@ -41070,10 +41070,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -12.285, y: 13.80125}
-      - {x: -12.285, y: -13.80125}
-      - {x: 12.285, y: -13.80125}
-      - {x: 12.285, y: 13.80125}
+    - - {x: -6.663747, y: 16.550938}
+      - {x: -11.005184, y: 14.817055}
+      - {x: -10.537852, y: -4.024582}
+      - {x: 5.828157, y: -17.67118}
+      - {x: 12.392983, y: -17.04561}
+      - {x: 12.892704, y: 9.829482}
   m_UseDelaunayMesh: 0
 --- !u!212 &1772968340
 SpriteRenderer:
@@ -41120,7 +41122,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 1387832148774768541, guid: 87a28038c7df2694794b5793d492920c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.21568628}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -41144,8 +41146,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchManager: {fileID: 1492002331}
   aliceSprite: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
-  alicePoint: {fileID: -832645264602151611, guid: 2c21b4f052e4c8c47a1c8ec25376e734, type: 3}
-  aliceClick: {fileID: -4194668869044252366, guid: 103001f469e807145b439213d5f38296, type: 3}
+  alicePoint: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
+  aliceClick: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
   constanceSprite: {fileID: 2275898209256684654, guid: 3dd30e7ebb3c2504a835ebd951562823, type: 3}
   constancePoint: {fileID: -4833394626526807451, guid: d64a0b472dd3d09418a3cd443deb1168, type: 3}
   constanceClick: {fileID: -3810316324186850591, guid: f2b1e0d1e6f75b3438a18c88c3c7a785, type: 3}
@@ -41651,7 +41653,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11.9, y: -9}
+  m_AnchoredPosition: {x: 10.05, y: -8.46}
   m_SizeDelta: {x: 401, y: 624.12036}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!60 &1795017394
@@ -41750,7 +41752,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 1387832148774768541, guid: 87a28038c7df2694794b5793d492920c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -41774,8 +41776,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchManager: {fileID: 1492002331}
   aliceSprite: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
-  alicePoint: {fileID: -832645264602151611, guid: 2c21b4f052e4c8c47a1c8ec25376e734, type: 3}
-  aliceClick: {fileID: -4194668869044252366, guid: 103001f469e807145b439213d5f38296, type: 3}
+  alicePoint: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
+  aliceClick: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
   constanceSprite: {fileID: 2275898209256684654, guid: 3dd30e7ebb3c2504a835ebd951562823, type: 3}
   constancePoint: {fileID: -4833394626526807451, guid: d64a0b472dd3d09418a3cd443deb1168, type: 3}
   constanceClick: {fileID: -3810316324186850591, guid: f2b1e0d1e6f75b3438a18c88c3c7a785, type: 3}
@@ -43387,8 +43389,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchManager: {fileID: 1492002331}
   aliceSprite: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
-  alicePoint: {fileID: -832645264602151611, guid: 2c21b4f052e4c8c47a1c8ec25376e734, type: 3}
-  aliceClick: {fileID: -4194668869044252366, guid: 103001f469e807145b439213d5f38296, type: 3}
+  alicePoint: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
+  aliceClick: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
   constanceSprite: {fileID: 2275898209256684654, guid: 3dd30e7ebb3c2504a835ebd951562823, type: 3}
   constancePoint: {fileID: -4833394626526807451, guid: d64a0b472dd3d09418a3cd443deb1168, type: 3}
   constanceClick: {fileID: -3810316324186850591, guid: f2b1e0d1e6f75b3438a18c88c3c7a785, type: 3}
