@@ -45,6 +45,7 @@ public class CookieChest : MonoBehaviour
             puzzleControl.CheckAllPuzzlesComplete(); //tag will be used to check if ending dialogue should play
             spriteRenderer.sprite = openSprite;
             cookies.SetActive(true);
+            puzzleControl.chestChange();
         }
     }
 }

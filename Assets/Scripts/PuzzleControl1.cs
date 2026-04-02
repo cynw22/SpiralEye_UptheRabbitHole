@@ -26,11 +26,18 @@ public class PuzzleControl1 : MonoBehaviour
 
     private bool dialogueTrigger = false;
 
+    //Popups change after collection:
+    [Header("Change Environment Object")]
+    GameObject chestNotSolved;
+    GameObject chestSolved;
+
     //[SerializeField] public GameObject instructionsPopup;
     ////public bool isDialogueDone = false;
     //public bool isInstructionsDone = false;
     //int placeholdervalue = 0;
-   
+
+    //UserFeedback:
+    [Header("UserFeedback")]
     [SerializeField] public GameObject cookiePopup;
 
     [SerializeField] public GameObject drinkPopup;
@@ -58,6 +65,11 @@ public class PuzzleControl1 : MonoBehaviour
         numButtons = 5;
         buttonOrder = new int[numButtons];
         setButtonOrder();
+
+        //Enviornment Assigmning Values
+        chestNotSolved = GameObject.Find("Chest");
+        chestSolved = GameObject.Find("Chest (1)");
+        chestSolved.GetComponent<SpriteRenderer>().enabled = false;
     }
 
     // PUZZLE #2 - DRINK ME BOTTLES
@@ -145,10 +157,18 @@ public class PuzzleControl1 : MonoBehaviour
     //    }
 
     //}
+
+    //Closing the Feedback Panels:
     public void CloseKeyPanel() => keyPopup.SetActive(false);
     public void CloseDrinkPanel() => drinkPopup.SetActive(false);
     public void CloseCookiePanel() => cookiePopup.SetActive(false);
     public void CloseDoorPanel() => doorPopup.SetActive(false);
 
+    //Chest Complete
+    public void chestChange() {
+        chestNotSolved.GetComponent<PolygonCollider2D>().enabled = false;
+        chestNotSolved.GetComponent<SpriteRenderer>().enabled = false;
+        chestSolved.GetComponent<SpriteRenderer>().enabled = true;
+    }
 
 }
