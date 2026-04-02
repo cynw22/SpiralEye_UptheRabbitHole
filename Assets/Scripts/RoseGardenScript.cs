@@ -150,12 +150,6 @@ public class RoseGardenScript : MonoBehaviour
             background_12.SetActive(true);
     }
 
-    public void Background13Active()
-    {
-            background_11.SetActive(false);
-            background_13.SetActive(true);
-    }
-
 
     //public void CheckActive()
     //{
