@@ -25,11 +25,19 @@ public class PuzzleControl1 : MonoBehaviour
     public ExitDoor exitDoor; // assign in inspector
 
     private bool dialogueTrigger = false;
-  
+
     //[SerializeField] public GameObject instructionsPopup;
     ////public bool isDialogueDone = false;
     //public bool isInstructionsDone = false;
     //int placeholdervalue = 0;
+   
+    [SerializeField] public GameObject cookiePopup;
+
+    [SerializeField] public GameObject drinkPopup;
+
+    [SerializeField] public GameObject keyPopup;
+
+    [SerializeField] public GameObject doorPopup;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -130,15 +138,17 @@ public class PuzzleControl1 : MonoBehaviour
     }
 
     ////Called by the DialogueObserver scripts - check if dialogue is complete
-    //public void CheckForPendingPopups()
-    //{
-    //    if (!isInstructionsDone && (placeholdervalue == 0))
+    //   if (!isInstructionsDone && (placeholdervalue == 0))
     //    {
     //        instructionsPopup.SetActive(true);
     //        isInstructionsDone = true;
-    //        placeholdervalue = 2;
     //    }
 
     //}
-    //public void CloseInstructionsPanel() => instructionsPopup.SetActive(false);
+    public void CloseKeyPanel() => keyPopup.SetActive(false);
+    public void CloseDrinkPanel() => drinkPopup.SetActive(false);
+    public void CloseCookiePanel() => cookiePopup.SetActive(false);
+    public void CloseDoorPanel() => doorPopup.SetActive(false);
+
+
 }
