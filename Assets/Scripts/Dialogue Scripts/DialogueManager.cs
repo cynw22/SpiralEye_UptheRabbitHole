@@ -27,6 +27,11 @@ public class CharacterDialogueUI
     [Header("Controls")]
     public Button nextButton;
     public Button skipButton;
+
+    [Header("Sound")]
+    public AudioClip[] typingSounds;
+    [Range(0f, 1f)] public float typingVolume = 0.4f;
+    public float soundDelay = 0.05f; // controls how often sounds play
 }
 #endregion
 
@@ -56,12 +61,12 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Sound")]
     public SoundFXManager soundFXManager;
-    public AudioClip[] typingSounds;
 
     private bool isTyping;
     private bool skipLocked;
     private bool isSkipping;
     private bool isDialoguePlaying;
+    private float soundTimer = 0f;
 
     private string currentLine;
     private Coroutine typingCoroutine;
@@ -276,16 +281,26 @@ public class DialogueManager : MonoBehaviour
         isTyping = true;
         currentCharacter.dialogueText.text = "";
 
+        soundTimer = 0f;
+
         for (int i = 0; i < line.Length; i++)
         {
             currentCharacter.dialogueText.text += line[i];
 
-            if (!char.IsWhiteSpace(line[i]) && !soundFXManager.IsPlaying())
+            soundTimer -= currentCharacter.typingSpeed;
+
+            if (!char.IsWhiteSpace(line[i]) && soundTimer <= 0f && currentCharacter.typingSounds != null && currentCharacter.typingSounds.Length > 0)
             {
-                soundFXManager.PlayRandomSound(typingSounds, 0.4f);
+                soundFXManager.PlayRandomSound
+                (
+                    currentCharacter.typingSounds,
+                    currentCharacter.typingVolume
+                );
+
+                soundTimer = currentCharacter.soundDelay;
             }
-            yield return
-                new WaitForSeconds(currentCharacter.typingSpeed);
+
+            yield return new WaitForSeconds(currentCharacter.typingSpeed);
         }
 
         isTyping = false;
@@ -298,6 +313,10 @@ public class DialogueManager : MonoBehaviour
     {
         if (currentCharacter == null) return;
 
+        // full reset of sound state
+        soundTimer = 0f;
+        soundFXManager.Stop();
+        
         currentLine = line;
 
         if (typingCoroutine != null)
@@ -314,6 +333,8 @@ public class DialogueManager : MonoBehaviour
         isTyping = false;
 
         soundFXManager.Stop(); // stop overlapping sounds
+        soundTimer = 0f; // 
+
     }
 
     //check and display any player choices
