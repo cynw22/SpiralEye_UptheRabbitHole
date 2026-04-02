@@ -25,6 +25,11 @@ public class PuzzleControl1 : MonoBehaviour
     public ExitDoor exitDoor; // assign in inspector
 
     private bool dialogueTrigger = false;
+  
+    //[SerializeField] public GameObject instructionsPopup;
+    ////public bool isDialogueDone = false;
+    //public bool isInstructionsDone = false;
+    //int placeholdervalue = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -123,4 +128,17 @@ public class PuzzleControl1 : MonoBehaviour
             exitDoor.puzzleControl.keyFound = true; // mark key as found
         }
     }
+
+    ////Called by the DialogueObserver scripts - check if dialogue is complete
+    //public void CheckForPendingPopups()
+    //{
+    //    if (!isInstructionsDone && (placeholdervalue == 0))
+    //    {
+    //        instructionsPopup.SetActive(true);
+    //        isInstructionsDone = true;
+    //        placeholdervalue = 2;
+    //    }
+
+    //}
+    //public void CloseInstructionsPanel() => instructionsPopup.SetActive(false);
 }
