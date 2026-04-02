@@ -97,7 +97,6 @@ public class PuzzleControl5 : MonoBehaviour
         {
             panelExit2.SetActive(true);
             exitParticleFinished.Play();
-            sceneManager.Background13Active();
         }
 
         else if (numRosesFound < numRoses)
