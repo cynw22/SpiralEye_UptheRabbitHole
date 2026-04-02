@@ -111,7 +111,11 @@ public class TeaMakingControl : MonoBehaviour
         {
             for (int i = 0; i < submittedTea.Count; i++)
             {
-                if (submittedTea[i] != simpleTea[i]) { break; }
+                if (submittedTea[i] != simpleTea[i])
+                {
+                    Debug.Log("simple tea failed");
+                    break;
+                }
                 correctTea = i == submittedTea.Count - 1 ? true : false;
             }
             simpleTeaPopup.SetActive(true);
