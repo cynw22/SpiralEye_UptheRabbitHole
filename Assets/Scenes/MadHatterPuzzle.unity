@@ -8042,6 +8042,7 @@ GameObject:
   m_Component:
   - component: {fileID: 654687526}
   - component: {fileID: 654687527}
+  - component: {fileID: 654687528}
   m_Layer: 0
   m_Name: RecipePage
   m_TagString: Untagged
@@ -8119,6 +8120,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &654687528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654687525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1fa619ea39384c4fb233b27cd523453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teaControl: {fileID: 39512868}
+  recipe1: {fileID: 6284522203170661645, guid: 9bc325671ff28d24d9ed79e152ca545a, type: 3}
+  recipe2: {fileID: -3014330550446599909, guid: 72e56d1dafef7394b94450cbf62f33b1, type: 3}
+  recipe3: {fileID: 1786434246537071491, guid: 257be57c26dcc8e47acc3b2a96576b17, type: 3}
+  recipe4: {fileID: -7807839795104677306, guid: 6e8d30fdcac7ad44f8ce46e73154cb2a, type: 3}
 --- !u!1 &711318299
 GameObject:
   m_ObjectHideFlags: 0

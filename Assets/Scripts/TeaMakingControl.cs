@@ -27,18 +27,18 @@ public class TeaMakingControl : MonoBehaviour
         floralTea.Add(Ingredients.MILK);
 
         roundTea = new List<Ingredients>();
-        floralTea.Add(Ingredients.BUBBLES);
-        floralTea.Add(Ingredients.MILK);
-        floralTea.Add(Ingredients.GUMDROPS);
+        roundTea.Add(Ingredients.BUBBLES);
+        roundTea.Add(Ingredients.MILK);
+        roundTea.Add(Ingredients.GUMDROPS);
 
         simpleTea = new List<Ingredients>();
-        floralTea.Add(Ingredients.MILK);
-        floralTea.Add(Ingredients.GUMDROPS);
+        simpleTea.Add(Ingredients.MILK);
+        simpleTea.Add(Ingredients.GUMDROPS);
 
         specialTea = new List<Ingredients>();
-        floralTea.Add(Ingredients.PETALS);
-        floralTea.Add(Ingredients.GUMDROPS);
-        floralTea.Add(Ingredients.BUBBLES);
+        specialTea.Add(Ingredients.PETALS);
+        specialTea.Add(Ingredients.GUMDROPS);
+        specialTea.Add(Ingredients.BUBBLES);
     }
 
     // Update is called once per frame
@@ -61,18 +61,24 @@ public class TeaMakingControl : MonoBehaviour
         }
     }
 
-    public void checkTea(List<Ingredients> submittedTea)
+    public bool checkTea(List<Ingredients> submittedTea)
     {
         Debug.Log("checking...");
         bool correctTea = false;
 
+        // check if length of lists match
         if (desiredTea == 0 && submittedTea.Count == floralTea.Count)
         {
+            // check contents of lists against each other
             for (int i = 0; i < submittedTea.Count; i++)
             {
-                if (submittedTea[i] != floralTea[i]) {
+                // break if contents are wrong
+                if (submittedTea[i] != floralTea[i])
+                {
                     Debug.Log("wrong tea submission");
-                    break; }
+                    break;
+                }
+
                 correctTea = i == submittedTea.Count - 1 ? true : false;
                 Debug.Log("correct tea submission");
             }
@@ -109,6 +115,11 @@ public class TeaMakingControl : MonoBehaviour
         if (correctTea)
         {
             desiredTea++;
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }

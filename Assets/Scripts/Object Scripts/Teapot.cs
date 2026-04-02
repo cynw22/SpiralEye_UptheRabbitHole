@@ -46,7 +46,29 @@ public class Teapot : MonoBehaviour
 
     public void SubmitTea()
     {
-        teaControl.checkTea(addedIngredients);
+        bool correctTea = teaControl.checkTea(addedIngredients);
         ClearTeapot();
+
+        if (correctTea)
+        {
+            switch (teaControl.desiredTea - 1)
+            {
+                case 0:
+                    spriteRenderer.sprite = floralBase;
+                    break;
+                case 1:
+                    spriteRenderer.sprite = roundBase;
+                    break;
+                case 2:
+                    spriteRenderer.sprite = simpleBase;
+                    break;
+                case 3:
+                    spriteRenderer.sprite = specialBase;
+                    break;
+                default:
+                    spriteRenderer.sprite = emptyBase;
+                    break;
+            }
+        }
     }
 }
