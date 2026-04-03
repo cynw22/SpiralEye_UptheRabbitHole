@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
-using System.Threading;
 using Unity.VisualScripting;
 
 public enum Ingredients { GUMDROPS, MILK, PETALS, BUBBLES };
@@ -152,8 +151,6 @@ public class TeaMakingControl : MonoBehaviour
         if (timesWrong >= 3)
         {
             loseScreenPopup.SetActive(true);
-            Thread.Sleep(2000);
-            SceneManager.LoadScene("MadHatterLose");
         }
 
         if (correctTea)
@@ -165,6 +162,11 @@ public class TeaMakingControl : MonoBehaviour
         {
             return false;
         }
+    }
+
+    public void OutofTries_OnClick()
+    {
+        SceneManager.LoadScene("MadHatterLose");
     }
 
     public void SetPopupsOff() {
