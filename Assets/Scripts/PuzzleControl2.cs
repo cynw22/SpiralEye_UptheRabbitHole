@@ -1,10 +1,15 @@
+using UnityEditor.SearchService;
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public enum ItemToFind { GUMDROP, MILK, FLOWERS, BOBA, RECIPEBOOK };
 
 public class PuzzleControl2 : MonoBehaviour
 {
     public bool gumdrops, milk, flowers, boba, recipes, allItemsCollected = false;
+    public int numCollected;
 
     //User Feedback
     [SerializeField] public GameObject gumdropsCollectedPopup;
@@ -90,6 +95,8 @@ public class PuzzleControl2 : MonoBehaviour
         flowersPopupDone = false;
         bobaPopupDone = false;
         recipesPopupDone = false;
+
+        numCollected = 0;
     }
 
     public void books_OnClick()
@@ -137,25 +144,35 @@ public class PuzzleControl2 : MonoBehaviour
         {
             gumdropsCollectedPopup.SetActive(true);
             gumdropsPopupDone = true;
+            numCollected++;
         }
         if (flowers && !flowersPopupDone)
         {
             flowersCollectedPopup.SetActive(true);
             flowersPopupDone = true;
+            numCollected++;
         }
         if (boba && !bobaPopupDone)
         {
             bobaCollectedPopup.SetActive(true);
             bobaPopupDone = true;
+            numCollected++;
         }
         if (recipes && !recipesPopupDone)
         {
             recipesCollectedPopup.SetActive(true);
             recipesPopupDone = true;
+            numCollected++;
         }
         if (milk && !milkPopupDone) {
             milkCollectedPopup.SetActive(true);
             milkPopupDone = true;
+            numCollected++;
+        }
+
+        //To change later
+        if (allItemsCollected) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
     }
