@@ -13,6 +13,10 @@ public class PuzzleControl4 : MonoBehaviour
     public int numKeys;
     public bool allKeysFound;
 
+    // PUZZLE ?? - Curiosity killed the cat
+    [Header("Curiosity killed the cat")]
+    public bool catBookFound;
+
     // PUZZLE #3 - NEWSPAPER PUZZLE
     [Header("Newspaper")]
     public int numNews;
@@ -39,6 +43,9 @@ public class PuzzleControl4 : MonoBehaviour
         //  PUZZLE #2 - Keys puzzle
         allKeysFound = false;
         numKeys = 3;
+
+        // PUZZLE ?? - catbook
+        catBookFound = false;
 
         //PUZZLE #3 - Newspaper puzzle
         completePaper.SetActive(false);

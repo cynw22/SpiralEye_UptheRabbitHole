@@ -15,20 +15,12 @@ public class Carpet : MonoBehaviour
         timesClicked = 0;
     }
 
-    private void Update()
+    private void OnMouseDown()
     {
-        if (timesClicked == 1)
+        if (timesClicked == 0)
         {
             spriteRenderer.sprite = sprite2;
         }
-        else if (timesClicked >= 2)
-        {
-            spriteRenderer.sprite = sprite3;
-        }
-    }
-
-    private void OnMouseDown()
-    {
         if (timesClicked == 1)
         {
             puzzleControl.numNewsFound++;
@@ -37,6 +29,8 @@ public class Carpet : MonoBehaviour
                 puzzleControl.allNewsFound = true;
                 puzzleControl.completePaper.SetActive(true);
             }
+
+            spriteRenderer.sprite = sprite3;
         }
         else if (timesClicked >= 20)
         {

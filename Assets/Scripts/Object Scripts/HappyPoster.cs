@@ -15,25 +15,13 @@ public class HappyPoster : MonoBehaviour
         timesClicked = 0;
     }
 
-    private void Update()
+    private void OnMouseDown()
     {
         if (timesClicked == 0)
         {
-            spriteRenderer.sprite = sprite1;
-        }
-        else if (timesClicked == 1)
-        {
             spriteRenderer.sprite = sprite2;
         }
-        else if (timesClicked >= 2)
-        {
-            spriteRenderer.sprite = sprite3;
-        }
-    }
-
-    private void OnMouseDown()
-    {
-        if (timesClicked == 1)
+        else if (timesClicked == 1)
         {
             puzzleControl.numNewsFound++;
             if (puzzleControl.numNewsFound == puzzleControl.numNews)
@@ -41,6 +29,7 @@ public class HappyPoster : MonoBehaviour
                 puzzleControl.allNewsFound = true;
                 puzzleControl.completePaper.SetActive(true);
             }
+            spriteRenderer.sprite = sprite3;
         }
 
         timesClicked++;
