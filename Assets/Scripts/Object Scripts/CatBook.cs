@@ -16,6 +16,10 @@ public class CatBook : MonoBehaviour
     private void OnMouseDown()
     {
         spriteRenderer.sprite = catBook;
+        if (!puzzleControl.catBookFound)
+        {
+            puzzleControl.escapeRoomsComplete++;
+        }
         puzzleControl.catBookFound = true;
     }
 }
