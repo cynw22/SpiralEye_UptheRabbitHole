@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using System.Threading;
 using Unity.VisualScripting;
 
 public enum Ingredients { GUMDROPS, MILK, PETALS, BUBBLES };
@@ -92,9 +93,9 @@ public class TeaMakingControl : MonoBehaviour
                 // break if contents are wrong
                 if (submittedTea[i] != floralTea[i])
                 {
-                    Debug.Log("wrong tea submission");
-                    wrongTeaPopup.SetActive(true);
                     timesWrong++;
+                    Debug.Log("wrong tea submission. Times failed: " + timesWrong);
+                    wrongTeaPopup.SetActive(true);
                     break;
                 }
 
@@ -118,9 +119,9 @@ public class TeaMakingControl : MonoBehaviour
             {
                 if (submittedTea[i] != simpleTea[i])
                 {
-                    Debug.Log("simple tea failed");
-                    wrongTeaPopup.SetActive(true);
                     timesWrong++;
+                    Debug.Log("simple tea failed. Times failed: " + timesWrong);
+                    wrongTeaPopup.SetActive(true);
                     break;
                 }
                 correctTea = i == submittedTea.Count - 1 ? true : false;
@@ -151,6 +152,8 @@ public class TeaMakingControl : MonoBehaviour
         if (timesWrong >= 3)
         {
             loseScreenPopup.SetActive(true);
+            Thread.Sleep(2000);
+            SceneManager.LoadScene("MadHatterLose");
         }
 
         if (correctTea)
