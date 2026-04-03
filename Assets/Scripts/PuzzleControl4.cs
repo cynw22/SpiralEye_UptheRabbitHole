@@ -67,7 +67,7 @@ public class PuzzleControl4 : MonoBehaviour
     {
         time -= Time.deltaTime;
 
-        if ((time <= 1) && (!allObjectsFound))
+        if ((time <= 1) && (escapeRoomsComplete!=totalEscapeRooms))
         {
             SceneManager.LoadScene("WhiteRabbitPuzzle"); //Change Later to ThePoster
         }
