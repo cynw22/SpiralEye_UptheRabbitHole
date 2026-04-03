@@ -128,7 +128,7 @@ public class TeaMakingControl : MonoBehaviour
                 correctTea = i == submittedTea.Count - 1 ? true : false;
                 winScreenPopup.SetActive(true);
                 //To Change Later
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                SceneManager.LoadScene("WhiteRabbitPuzzle"); // switch later
             }
         }
         //else if (desiredTea == 4) {

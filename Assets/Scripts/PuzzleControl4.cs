@@ -104,7 +104,11 @@ public class PuzzleControl4 : MonoBehaviour
 
         if ((time <= 1) && (escapeRoomsComplete!=totalEscapeRooms))
         {
-            SceneManager.LoadScene("WhiteRabbitPuzzle"); //Change Later to ThePoster
+            SceneManager.LoadScene("FindTheRose"); //Change Later to ThePoster
+        }
+
+        if (escapeRoomsComplete == totalEscapeRooms) {
+            SceneManager.LoadScene("FindTheRose"); // change later
         }
     }
 }
