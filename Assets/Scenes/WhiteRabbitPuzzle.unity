@@ -5505,6 +5505,7 @@ MonoBehaviour:
   - {fileID: -171062933042576281, guid: c988a98adcf029a44803a6e96533199d, type: 3}
   numKeys: 0
   allKeysFound: 0
+  catBookFound: 0
   numNews: 0
   numNewsFound: 0
   allNewsFound: 0
@@ -9909,14 +9910,15 @@ GameObject:
   m_Component:
   - component: {fileID: 344302083}
   - component: {fileID: 344302085}
-  - component: {fileID: 344302084}
+  - component: {fileID: 344302087}
+  - component: {fileID: 344302086}
   m_Layer: 0
   m_Name: Underthebedpopup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &344302083
 Transform:
   m_ObjectHideFlags: 0
@@ -9932,22 +9934,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 162349470}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &344302084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 344302082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27bfa1dbd39b02d4583c37d40dcbd6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  switchManager: {fileID: 1492002331}
-  aliceSprite: {fileID: 0}
-  constanceSprite: {fileID: 26824684994925331, guid: d13e3899a0f6daa4ea36ac314e999751, type: 3}
-  spriteRenderer: {fileID: 0}
 --- !u!212 &344302085
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10003,6 +9989,65 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &344302086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344302082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62e11db765a6f7543ac48235aa0cfb57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleControl: {fileID: 0}
+--- !u!61 &344302087
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344302082}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 24.570002, y: 27.6632}
+    newSize: {x: 24.570002, y: 27.6632}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 24.570002, y: 27.6632}
+  m_EdgeRadius: 0
 --- !u!1 &361898788
 GameObject:
   m_ObjectHideFlags: 0
@@ -21568,7 +21613,6 @@ GameObject:
   m_Component:
   - component: {fileID: 766806067}
   - component: {fileID: 766806073}
-  - component: {fileID: 766806072}
   - component: {fileID: 766806071}
   - component: {fileID: 766806070}
   - component: {fileID: 766806069}
@@ -21732,22 +21776,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766806066}
   m_CullTransparentMesh: 1
---- !u!114 &766806072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 766806066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27bfa1dbd39b02d4583c37d40dcbd6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  switchManager: {fileID: 1492002331}
-  aliceSprite: {fileID: 0}
-  constanceSprite: {fileID: 2858405035251085062, guid: 0d783e2fc5d30e44fa7ec598dff7cef4, type: 3}
-  spriteRenderer: {fileID: 0}
 --- !u!114 &766806073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30872,7 +30900,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1014534746}
-  - component: {fileID: 1014534751}
   - component: {fileID: 1014534750}
   - component: {fileID: 1014534749}
   - component: {fileID: 1014534748}
@@ -31037,22 +31064,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014534745}
   m_CullTransparentMesh: 1
---- !u!114 &1014534751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1014534745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27bfa1dbd39b02d4583c37d40dcbd6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  switchManager: {fileID: 1492002331}
-  aliceSprite: {fileID: 0}
-  constanceSprite: {fileID: -5129464838771578278, guid: d6a86fcc82699dc4ebe7f8305a6a41af, type: 3}
-  spriteRenderer: {fileID: 0}
 --- !u!114 &1014534752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41666,7 +41677,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1697151384}
-  - component: {fileID: 1697151389}
   - component: {fileID: 1697151388}
   - component: {fileID: 1697151387}
   - component: {fileID: 1697151386}
@@ -41831,22 +41841,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697151383}
   m_CullTransparentMesh: 1
---- !u!114 &1697151389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697151383}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27bfa1dbd39b02d4583c37d40dcbd6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  switchManager: {fileID: 1492002331}
-  aliceSprite: {fileID: 0}
-  constanceSprite: {fileID: -8094369586837047671, guid: 8bf0a093a864fb24791151a5cf309450, type: 3}
-  spriteRenderer: {fileID: 0}
 --- !u!114 &1697151390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42442,7 +42436,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1721609126}
   - component: {fileID: 1721609128}
-  - component: {fileID: 1721609127}
+  - component: {fileID: 1721609129}
+  - component: {fileID: 1721609130}
   m_Layer: 0
   m_Name: ShelfPopup
   m_TagString: Untagged
@@ -42465,22 +42460,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 990656488}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1721609127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1721609125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27bfa1dbd39b02d4583c37d40dcbd6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  switchManager: {fileID: 1492002331}
-  aliceSprite: {fileID: 6420174205916522439, guid: dc906a24937390a4eaaed20cbb7876a3, type: 3}
-  constanceSprite: {fileID: 0}
-  spriteRenderer: {fileID: 0}
 --- !u!212 &1721609128
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -42536,6 +42515,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1721609129
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721609125}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 6.621668, y: 1.342231}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 24.570002, y: 27.6632}
+    newSize: {x: 21.51, y: 12.513593}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 11.326668, y: 1.8327346}
+  m_EdgeRadius: 0
+--- !u!114 &1721609130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721609125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9ef5de4000d16e4cb6f3bb0cad44960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleControl: {fileID: 39512868}
+  shelf: {fileID: 6420174205916522439, guid: dc906a24937390a4eaaed20cbb7876a3, type: 3}
+  catBook: {fileID: -5113343576311589034, guid: 0c86206095451dd4ea244377e769d078, type: 3}
+  spriteRenderer: {fileID: 0}
 --- !u!1 &1748973629
 GameObject:
   m_ObjectHideFlags: 0
@@ -42843,7 +42884,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1772968338}
   - component: {fileID: 1772968344}
-  - component: {fileID: 1772968343}
   - component: {fileID: 1772968342}
   - component: {fileID: 1772968341}
   - component: {fileID: 1772968340}
@@ -43009,22 +43049,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1772968337}
   m_CullTransparentMesh: 1
---- !u!114 &1772968343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772968337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27bfa1dbd39b02d4583c37d40dcbd6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  switchManager: {fileID: 1492002331}
-  aliceSprite: {fileID: 0}
-  constanceSprite: {fileID: 1387832148774768541, guid: 87a28038c7df2694794b5793d492920c, type: 3}
-  spriteRenderer: {fileID: 0}
 --- !u!114 &1772968344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43474,7 +43498,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1795017393}
-  - component: {fileID: 1795017398}
   - component: {fileID: 1795017397}
   - component: {fileID: 1795017396}
   - component: {fileID: 1795017395}
@@ -43639,22 +43662,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1795017392}
   m_CullTransparentMesh: 1
---- !u!114 &1795017398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1795017392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27bfa1dbd39b02d4583c37d40dcbd6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  switchManager: {fileID: 1492002331}
-  aliceSprite: {fileID: 0}
-  constanceSprite: {fileID: 4360587659504039639, guid: 7619f8cf143d71e43a0f71f4b4ea4165, type: 3}
-  spriteRenderer: {fileID: 0}
 --- !u!114 &1795017399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45285,7 +45292,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1913041165}
-  - component: {fileID: 1913041170}
   - component: {fileID: 1913041169}
   - component: {fileID: 1913041168}
   - component: {fileID: 1913041167}
@@ -45452,22 +45458,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1913041164}
   m_CullTransparentMesh: 1
---- !u!114 &1913041170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1913041164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27bfa1dbd39b02d4583c37d40dcbd6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  switchManager: {fileID: 1492002331}
-  aliceSprite: {fileID: 0}
-  constanceSprite: {fileID: -4849374128995231836, guid: 6b3e50332685431439f86b9d9372d309, type: 3}
-  spriteRenderer: {fileID: 0}
 --- !u!114 &1913041171
 MonoBehaviour:
   m_ObjectHideFlags: 0
