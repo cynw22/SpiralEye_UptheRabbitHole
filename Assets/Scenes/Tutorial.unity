@@ -20459,6 +20459,7 @@ GameObject:
   - component: {fileID: 691373097}
   - component: {fileID: 691373098}
   - component: {fileID: 691373099}
+  - component: {fileID: 691373100}
   m_Layer: 0
   m_Name: Door_BF
   m_TagString: Untagged
@@ -20619,6 +20620,20 @@ MonoBehaviour:
   constanceSprite: {fileID: 2275898209256684654, guid: 3dd30e7ebb3c2504a835ebd951562823, type: 3}
   constancePoint: {fileID: -4833394626526807451, guid: d64a0b472dd3d09418a3cd443deb1168, type: 3}
   constanceClick: {fileID: -3810316324186850591, guid: f2b1e0d1e6f75b3438a18c88c3c7a785, type: 3}
+--- !u!114 &691373100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691373094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda466ca718c22b45a8b8e3d7c90224f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActiveCollider: {fileID: 620643466}
+  HidingCollider: {fileID: 691373094}
 --- !u!1 &710047223
 GameObject:
   m_ObjectHideFlags: 0
@@ -37122,6 +37137,7 @@ GameObject:
   - component: {fileID: 1823390028}
   - component: {fileID: 1823390029}
   - component: {fileID: 1823390030}
+  - component: {fileID: 1823390031}
   m_Layer: 0
   m_Name: Door_MN
   m_TagString: Untagged
@@ -37282,6 +37298,20 @@ MonoBehaviour:
   constanceSprite: {fileID: 2275898209256684654, guid: 3dd30e7ebb3c2504a835ebd951562823, type: 3}
   constancePoint: {fileID: -4833394626526807451, guid: d64a0b472dd3d09418a3cd443deb1168, type: 3}
   constanceClick: {fileID: -3810316324186850591, guid: f2b1e0d1e6f75b3438a18c88c3c7a785, type: 3}
+--- !u!114 &1823390031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823390025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda466ca718c22b45a8b8e3d7c90224f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActiveCollider: {fileID: 620643466}
+  HidingCollider: {fileID: 1823390025}
 --- !u!1 &1848535800
 GameObject:
   m_ObjectHideFlags: 0
@@ -38816,6 +38846,7 @@ GameObject:
   - component: {fileID: 1996366639}
   - component: {fileID: 1996366640}
   - component: {fileID: 1996366641}
+  - component: {fileID: 1996366642}
   m_Layer: 0
   m_Name: Door_BN
   m_TagString: Untagged
@@ -38976,6 +39007,20 @@ MonoBehaviour:
   constanceSprite: {fileID: 2275898209256684654, guid: 3dd30e7ebb3c2504a835ebd951562823, type: 3}
   constancePoint: {fileID: -4833394626526807451, guid: d64a0b472dd3d09418a3cd443deb1168, type: 3}
   constanceClick: {fileID: -3810316324186850591, guid: f2b1e0d1e6f75b3438a18c88c3c7a785, type: 3}
+--- !u!114 &1996366642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996366636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda466ca718c22b45a8b8e3d7c90224f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActiveCollider: {fileID: 620643466}
+  HidingCollider: {fileID: 1996366636}
 --- !u!1 &2002050282
 GameObject:
   m_ObjectHideFlags: 0
@@ -39441,6 +39486,7 @@ GameObject:
   - component: {fileID: 2014813386}
   - component: {fileID: 2014813387}
   - component: {fileID: 2014813388}
+  - component: {fileID: 2014813389}
   m_Layer: 0
   m_Name: Door_MF
   m_TagString: Untagged
@@ -39601,6 +39647,20 @@ MonoBehaviour:
   constanceSprite: {fileID: 2275898209256684654, guid: 3dd30e7ebb3c2504a835ebd951562823, type: 3}
   constancePoint: {fileID: -4833394626526807451, guid: d64a0b472dd3d09418a3cd443deb1168, type: 3}
   constanceClick: {fileID: -3810316324186850591, guid: f2b1e0d1e6f75b3438a18c88c3c7a785, type: 3}
+--- !u!114 &2014813389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014813383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda466ca718c22b45a8b8e3d7c90224f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActiveCollider: {fileID: 620643466}
+  HidingCollider: {fileID: 2014813383}
 --- !u!1 &2019913623
 GameObject:
   m_ObjectHideFlags: 0
@@ -39750,6 +39810,7 @@ GameObject:
   - component: {fileID: 2024072733}
   - component: {fileID: 2024072734}
   - component: {fileID: 2024072735}
+  - component: {fileID: 2024072736}
   m_Layer: 0
   m_Name: Door_T
   m_TagString: Untagged
@@ -39910,6 +39971,20 @@ MonoBehaviour:
   constanceSprite: {fileID: 2275898209256684654, guid: 3dd30e7ebb3c2504a835ebd951562823, type: 3}
   constancePoint: {fileID: -4833394626526807451, guid: d64a0b472dd3d09418a3cd443deb1168, type: 3}
   constanceClick: {fileID: -3810316324186850591, guid: f2b1e0d1e6f75b3438a18c88c3c7a785, type: 3}
+--- !u!114 &2024072736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024072730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda466ca718c22b45a8b8e3d7c90224f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActiveCollider: {fileID: 620643466}
+  HidingCollider: {fileID: 2024072730}
 --- !u!1 &2035440167
 GameObject:
   m_ObjectHideFlags: 0
