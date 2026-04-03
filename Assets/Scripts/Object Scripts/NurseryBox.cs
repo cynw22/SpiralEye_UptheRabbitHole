@@ -36,6 +36,10 @@ public class NurseryBox : MonoBehaviour
 
             if (correctKeys == 3)
             {
+                if (!puzzleControl.allKeysFound)
+                {
+                    puzzleControl.escapeRoomsComplete++;
+                }
                 puzzleControl.allKeysFound = true;
                 spriteRenderer.sprite = openSprite;
             }
