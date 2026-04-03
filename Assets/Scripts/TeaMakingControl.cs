@@ -102,7 +102,7 @@ public class TeaMakingControl : MonoBehaviour
         {
             for (int i = 0; i < submittedTea.Count; i++)
             {
-                if (submittedTea[i] != roundTea[i]) { break; }
+                if (submittedTea[i] != roundTea[i]) { wrongTeaPopup.SetActive(true); break; }
                 correctTea = i == submittedTea.Count - 1 ? true : false;
                 roundTeaPopup.SetActive(true);
             }
@@ -114,6 +114,7 @@ public class TeaMakingControl : MonoBehaviour
                 if (submittedTea[i] != simpleTea[i])
                 {
                     Debug.Log("simple tea failed");
+                    wrongTeaPopup.SetActive(true);
                     break;
                 }
                 correctTea = i == submittedTea.Count - 1 ? true : false;
@@ -124,7 +125,7 @@ public class TeaMakingControl : MonoBehaviour
         {
             for (int i = 0; i < submittedTea.Count; i++)
             {
-                if (submittedTea[i] != specialTea[i]) { break; }
+                if (submittedTea[i] != specialTea[i]) { wrongTeaPopup.SetActive(true); break; }
                 correctTea = i == submittedTea.Count - 1 ? true : false;
                 winScreenPopup.SetActive(true);
                 //To Change Later
