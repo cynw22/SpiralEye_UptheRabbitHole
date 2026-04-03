@@ -1755,6 +1755,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1447998457}
+        m_TargetAssemblyTypeName: ExplanationPopup, Assembly-CSharp
+        m_MethodName: ClosePanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &116185679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25689,6 +25701,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1447998455}
   - component: {fileID: 1447998456}
+  - component: {fileID: 1447998457}
   m_Layer: 0
   m_Name: TutoiralPopupManager
   m_TagString: Untagged
@@ -25724,6 +25737,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toDisplay: {fileID: 1033836421}
+--- !u!114 &1447998457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447998454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1846d23f834820f488915729a065017a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toDisplay: {fileID: 1033836421}
+  AliceDialouge: {fileID: 1496066651}
+  ConstanceDialouge: {fileID: 417890983}
+  NarrativeDialouge: {fileID: 599320096}
+  TutorialDialouge: {fileID: 835867185}
+  ChoiceRoot: {fileID: 1924215568}
 --- !u!1 &1459002539
 GameObject:
   m_ObjectHideFlags: 0
@@ -28024,6 +28055,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1447998456}
         m_TargetAssemblyTypeName: ExplanationPopup2, Assembly-CSharp
+        m_MethodName: ClosePanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1447998457}
+        m_TargetAssemblyTypeName: ExplanationPopup, Assembly-CSharp
         m_MethodName: ClosePanel
         m_Mode: 1
         m_Arguments:

@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public enum Ingredients { GUMDROPS, MILK, PETALS, BUBBLES };
 
@@ -126,7 +127,8 @@ public class TeaMakingControl : MonoBehaviour
                 if (submittedTea[i] != specialTea[i]) { break; }
                 correctTea = i == submittedTea.Count - 1 ? true : false;
                 winScreenPopup.SetActive(true);
-
+                //To Change Later
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
         //else if (desiredTea == 4) {
