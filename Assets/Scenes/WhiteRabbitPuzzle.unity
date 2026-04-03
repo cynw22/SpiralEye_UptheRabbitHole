@@ -9918,7 +9918,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &344302083
 Transform:
   m_ObjectHideFlags: 0
@@ -14940,7 +14940,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &649937103
 Transform:
   m_ObjectHideFlags: 0
@@ -42594,7 +42594,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1748973630
 Transform:
   m_ObjectHideFlags: 0
@@ -46389,13 +46389,15 @@ GameObject:
   m_Component:
   - component: {fileID: 1937189069}
   - component: {fileID: 1937189070}
+  - component: {fileID: 1937189072}
+  - component: {fileID: 1937189071}
   m_Layer: 0
   m_Name: BookPopup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1937189069
 Transform:
   m_ObjectHideFlags: 0
@@ -46466,6 +46468,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1937189071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937189068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e764c950e646f843ac8eab06edf6ee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  page1: {fileID: 761276933666889291, guid: 7ba91f0f27d4d1f47a45ac78b92ce4da, type: 3}
+  page2: {fileID: -7090660797138861337, guid: f0403855ee477154898f5d466a146540, type: 3}
+  page3: {fileID: 2801327494701607751, guid: 346f58828bf93f24397d18496fc705aa, type: 3}
+--- !u!61 &1937189072
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937189068}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.06544542, y: -0.85077524}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 24.57, y: 27.6025}
+    newSize: {x: 21.51, y: 12.513593}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 23.522888, y: 15.822543}
+  m_EdgeRadius: 0
 --- !u!1 &1946183463
 GameObject:
   m_ObjectHideFlags: 0
