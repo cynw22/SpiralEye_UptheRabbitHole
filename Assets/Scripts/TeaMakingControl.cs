@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public enum Ingredients { GUMDROPS, MILK, PETALS, BUBBLES };
 
@@ -19,6 +20,8 @@ public class TeaMakingControl : MonoBehaviour
 
     public int desiredTea = 0;
 
+    int timesWrong = 0;
+
     [Header("Tea Popups")]
     public GameObject floralTeaPopup;
     public GameObject roundTeaPopup;
@@ -27,6 +30,7 @@ public class TeaMakingControl : MonoBehaviour
     public GameObject wrongTeaPopup; // For when the combination is wrong
     public GameObject wrongIngredientsPopup;
     public GameObject winScreenPopup;
+    public GameObject loseScreenPopup;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -90,6 +94,7 @@ public class TeaMakingControl : MonoBehaviour
                 {
                     Debug.Log("wrong tea submission");
                     wrongTeaPopup.SetActive(true);
+                    timesWrong++;
                     break;
                 }
 
@@ -115,6 +120,7 @@ public class TeaMakingControl : MonoBehaviour
                 {
                     Debug.Log("simple tea failed");
                     wrongTeaPopup.SetActive(true);
+                    timesWrong++;
                     break;
                 }
                 correctTea = i == submittedTea.Count - 1 ? true : false;
@@ -140,7 +146,11 @@ public class TeaMakingControl : MonoBehaviour
         {
             Debug.Log("wrong amount of ingredients submitted");
             wrongIngredientsPopup.SetActive(true);
+        }
 
+        if (timesWrong >= 3)
+        {
+            loseScreenPopup.SetActive(true);
         }
 
         if (correctTea)
@@ -162,6 +172,6 @@ public class TeaMakingControl : MonoBehaviour
         wrongIngredientsPopup.SetActive(false);
         wrongTeaPopup.SetActive(false);
         winScreenPopup.SetActive(false);
+        loseScreenPopup.SetActive(false);
     }
-
 }
