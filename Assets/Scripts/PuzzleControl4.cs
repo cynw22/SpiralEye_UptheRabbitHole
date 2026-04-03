@@ -23,6 +23,9 @@ public class PuzzleControl4 : MonoBehaviour
     public int numNewsFound;
     public bool allNewsFound;
     [SerializeField] public GameObject completePaper;
+    //[SerializeField] public GameObject windowstillNewspaperEnvironment;
+    //[SerializeField] public GameObject windowstillNewspaperPopup;
+
 
     // PUZZLE #3 - TIMER
     [Header("Timer")]
@@ -87,6 +90,8 @@ public class PuzzleControl4 : MonoBehaviour
         allNewsFound = false;
         numNewsFound = 0;
         numNews = 5;
+        //windowstillNewspaperEnvironment = GameObject.Find("WindowStill");
+        //windowstillNewspaperPopup = GameObject.Find("NewsClip1");
 
         // PUZZLE #4 - TIMER
         time = 1800;
@@ -110,5 +115,6 @@ public class PuzzleControl4 : MonoBehaviour
         if (escapeRoomsComplete == totalEscapeRooms) {
             SceneManager.LoadScene("FindTheRose"); // change later
         }
+
     }
 }
