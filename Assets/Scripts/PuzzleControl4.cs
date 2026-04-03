@@ -34,6 +34,41 @@ public class PuzzleControl4 : MonoBehaviour
     public int totalEscapeRooms;
     public int escapeRoomsComplete;
 
+    //// User Feedback
+    //[SerializeField] public GameObject breifCasePopup;
+    //[SerializeField] public GameObject bookPopup;
+    //[SerializeField] public GameObject newspaperPopup;
+    //[SerializeField] public GameObject k1Popup;
+    //[SerializeField] public GameObject k2Popup;
+    //[SerializeField] public GameObject k3Popup;
+    //[SerializeField] public GameObject k4Popup;
+    //[SerializeField] public GameObject k5Popup;
+    //[SerializeField] public GameObject k6Popup;
+    //[SerializeField] public GameObject k7Popup;
+    //[SerializeField] public GameObject k8Popup;
+
+    //private bool briefCasePopupDone = false;
+    //private bool bookPopupDone = false;
+    //private bool newspaperPopupDone = false;
+    //private bool k1PopupDone = false;
+    //private bool k2PopupDone = false;
+    //private bool k3PopupDone = false;
+    //private bool k4PopupDone = false;
+    //private bool k5PopupDone = false;
+    //private bool k6PopupDone = false;
+    //private bool k7PopupDone = false;
+    //private bool k8PopupDone = false;
+
+    ////Books Popup
+    //GameObject booksNotTaken;
+    //GameObject booksTaken;
+
+    ////Books Environment
+    //GameObject environmentTall;
+    //GameObject environmentShort;
+    //figma puzzle 3 / puzzle 2
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
