@@ -106,7 +106,7 @@ Alice takes off after the mysterious thing.
     #speaker: Alice
    Oh my god Con you worry way too much, it’s fine!
 
-    I don’t feel sick at all! I promise, okay?
+   Come on it's time for adventure!
     
     #speaker: Narrator
     Alice disappears from view.
@@ -121,10 +121,9 @@ Alice takes off after the mysterious thing.
 
 ===after_choice_2===
 #speaker: Narrator
-The game of cat and mouse is ready to begin. A strange smile that had appeared in the distance materializes once more, a sharp looking feline now attached to that sporting grin.
-
-#noskip_end
+The game of cat and mouse has begun. A strange smile that had appeared in the distance materializes once more, a sharp looking feline now attached to that sporting grin.
 
 #ending: MeetCatPuzzle
+#noskip_end
 -> DONE
 

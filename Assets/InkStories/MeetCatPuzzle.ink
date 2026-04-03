@@ -1,6 +1,5 @@
 === MeetCatPuzzle === 
 #noskip_start
-
 #speaker: Cheshire Cat 
 Well, well, well, hello my dear.
 
