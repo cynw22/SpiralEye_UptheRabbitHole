@@ -10995,6 +10995,7 @@ GameObject:
   - component: {fileID: 429409716}
   - component: {fileID: 429409717}
   - component: {fileID: 429409718}
+  - component: {fileID: 429409719}
   m_Layer: 0
   m_Name: ItemsList
   m_TagString: Untagged
@@ -11080,6 +11081,25 @@ MonoBehaviour:
   switchManager: {fileID: 1492002331}
   isConstancePOV: 1
   isAlicePOV: 1
+--- !u!114 &429409719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429409715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca8bfa6a3668224c8e9f6afb9ee93ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchManager: {fileID: 1492002331}
+  aliceSprite: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
+  alicePoint: {fileID: -832645264602151611, guid: 2c21b4f052e4c8c47a1c8ec25376e734, type: 3}
+  aliceClick: {fileID: -4194668869044252366, guid: 103001f469e807145b439213d5f38296, type: 3}
+  constanceSprite: {fileID: 2275898209256684654, guid: 3dd30e7ebb3c2504a835ebd951562823, type: 3}
+  constancePoint: {fileID: -4833394626526807451, guid: d64a0b472dd3d09418a3cd443deb1168, type: 3}
+  constanceClick: {fileID: -3810316324186850591, guid: f2b1e0d1e6f75b3438a18c88c3c7a785, type: 3}
 --- !u!1 &436525164
 GameObject:
   m_ObjectHideFlags: 0
@@ -35007,6 +35027,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1322957693}
   - component: {fileID: 1322957694}
+  - component: {fileID: 1322957695}
   m_Layer: 0
   m_Name: PosterPopups
   m_TagString: Untagged
@@ -35073,7 +35094,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 8393833209619707723, guid: ee4d79fed2498344dba2380ac8c125d2, type: 3}
+  m_Sprite: {fileID: 4126924223630206823, guid: 940530c21352f324c9c90da9a0c19fbc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -35084,6 +35105,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1322957695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322957692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27bfa1dbd39b02d4583c37d40dcbd6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchManager: {fileID: 1492002331}
+  aliceSprite: {fileID: -1072175029996474816, guid: ca4ac403553a2ba4fb28ada4007b7be9, type: 3}
+  constanceSprite: {fileID: 4126924223630206823, guid: 940530c21352f324c9c90da9a0c19fbc, type: 3}
+  spriteRenderer: {fileID: 0}
 --- !u!1 &1328540585
 GameObject:
   m_ObjectHideFlags: 0
@@ -37589,6 +37626,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1486431930}
   - component: {fileID: 1486431931}
+  - component: {fileID: 1486431932}
   m_Layer: 0
   m_Name: FramePopups
   m_TagString: Untagged
@@ -37666,6 +37704,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1486431932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486431929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27bfa1dbd39b02d4583c37d40dcbd6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchManager: {fileID: 1492002331}
+  aliceSprite: {fileID: 4354356209102967088, guid: 65b54b803787c5549870a7da90f8b89d, type: 3}
+  constanceSprite: {fileID: 6040448458124046447, guid: b82a57ab09e2877449f7f13bf83fb46e, type: 3}
+  spriteRenderer: {fileID: 0}
 --- !u!1 &1492002330
 GameObject:
   m_ObjectHideFlags: 0
