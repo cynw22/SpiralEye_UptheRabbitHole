@@ -185,13 +185,13 @@ The cat gives her a grin, he thinks it's reassuring but Constance appears unsett
     No of course not. You came here for a different purpose. Do you know why?
     
     #speaker: Narrator
-    The Cat's grin makes Constance's blood boil. Gritting her teeth she decides the conversation is over and tugs her sister forward.
+    The Cat's grin makes Constance's blood boil. Gritting her teeth she ends the conversation and tugs her sister forward.
     
     #speaker: Cheshire Cat
     Very well, if you won't speak to me just follow the pathway. It will lead you to someone you might want to listen to.
     
     #speaker: Narrator
-    The Cat's parting words make Constance antsy though she refuses to show it. Without a glance back both sisters trudge down the worn pathway, leaving a slightly disgruntled cat to his own devices.
+    Constance looked at him for a moment, clearly wanting to argue before going against it. She grabbed her sister and walked away, leaving a slightly disgruntled cat to his own devices.
 
     -> after_choice_3 
 
@@ -307,15 +307,12 @@ Hmmmm, yes there is a Queen. One that could potentially help you get out of the 
     Seeing no other choice both girls decide to follow along. Hopefully the cat leads them somewhere safe.
     
     ->after_choice_3
-#noskip_end
 
 ===after_choice_3===
 #speaker: Narrator
-The game of cat and mouse is ready to begin. The girls trudge along the path, the strange grinning Cat zipping between them, chattering away without a care in the world. He doesn't seem bothered by Constance's lack of response.
-
-#speaker: Narrator
-Alice appears to be excited and engages quickly in conversation with their new companion. The more she talks the more agitated Constance appears. She remains silent though for the sake of her sister. 
+With his piece said the girls walk off without waiting for him. He follows along at a sedated pace, to Alice's delight and Constance's annoyance. 
 
 #ending: PartyFight
+#noskip_end
 -> DONE
 

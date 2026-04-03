@@ -22,7 +22,10 @@ time I drank weird tea I just got sick.
 The mention of the unknown bottle seems to tip Constance over the edge. She grabs her sister by the wrist and pulls tightly. When the Cat motions to follow she gives him a glare and tells him to stay put.
 
 #speaker: Narrator
-He listens though he appears annoyed at having been told what to do. The girls walk a distance away before Constance turns to her sister, worry etched across her face.
+He listens though he appears annoyed at having been told what to do. 
+
+#speaker: Narrator
+The girls walk a distance away before Constance turns to her sister, worry etched across her face.
 
 #speaker: Constance
 Alice stop talking to him. Please just stop talking to him. 
@@ -58,7 +61,16 @@ I'm not acting like anything, I'm the only one taking this seriously. I mean do 
 We're lost, need help and someone here has the answers to help us. I don't understand why you don't want to take it?
 
 #speaker: Constance
-Oh I don't know, maybe it's the fact that we fell through a weird rabbit whole and ended up in a whole other dimension. Maybe it's the fact that we're running around in a never ending forest looking for things that don't exist or maybe it's because we're talking to a CAT in the middle of the day about our next steps!
+Oh I don't know, maybe it's the fact that we fell through a weird rabbit whole and ended up in a whole other dimension. 
+
+#speaker: Alice
+Con-
+
+#speaker: Constance
+Maybe it's the fact that we're running around in a never ending forest looking for things that don't exist 
+
+#speaker: Constance
+or maybe it's because we're talking to a CAT in the middle of the day about where we're going!
 
 #speaker: Narrator
 Alice watches in horror as her sister begins to spiral, words tumbling out of her. She appears distraught, tugging at her hair to ground herself.

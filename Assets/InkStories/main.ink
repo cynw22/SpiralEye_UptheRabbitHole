@@ -7,8 +7,8 @@ INCLUDE MeetCatPuzzle.ink
 INCLUDE PartyFight.ink
 INCLUDE ChooseCat.ink
 INCLUDE ChooseConstance.ink
+INCLUDE MadHatter.ink
 
-//INCLUDE MadHatter.ink
 //INCLUDE MadHatterPuzzle.ink
 //INCLUDE WhiteRabbitHouse.ink
 //INCLUDE WhiteRabbitPuzzle.ink

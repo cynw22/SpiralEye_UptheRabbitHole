@@ -40,6 +40,7 @@ public class DialogueManager : MonoBehaviour
 {
     [Header("Ink")]
     private Story story; //the actual inky story instance
+    public TextAsset inkJSON; // Assign the Ink JSON file for this scene in the inspector (TESTING ONLY)
 
     [Header("Ink Start")]
     [Tooltip("Set the starting knot for this scene")]
@@ -97,6 +98,15 @@ public class DialogueManager : MonoBehaviour
     //Start inky file
     void Start()
     {
+        if (inkJSON == null)
+        {
+            Debug.LogError("No Ink JSON assigned to DialogueManager for this scene!");
+            return;
+        }
+
+        // Initialize a fresh Story instance from this scene's Ink file
+        story = new Story(inkJSON.text);
+
         // Setup character lookup
         choicePanel.SetActive(false);
         lookup = new Dictionary<string, CharacterDialogueUI>();
@@ -113,11 +123,18 @@ public class DialogueManager : MonoBehaviour
                 c.skipButton.onClick.RemoveAllListeners();
         }
 
-        // Use this to set the correct file for the level
-        story = StoryManager.Instance.story;
-
         if (!string.IsNullOrEmpty(startingKnot))
             StartDialogue(startingKnot);
+
+        // Start dialogue if starting knot is set
+        if (!string.IsNullOrEmpty(startingKnot))
+        {
+            StartDialogue(startingKnot);
+        }
+        else
+        {
+            Debug.LogWarning("No starting knot defined in DialogueManager for this scene.");
+        }
     }
 
     void Update()
@@ -135,17 +152,19 @@ public class DialogueManager : MonoBehaviour
         // Only proceed if the story has content
         if (story.canContinue)
         {
-            string text = story.Continue().Trim();
-            HandleTags(story.currentTags);
+            string text = story.Continue().Trim();  // Get the next piece of text
+            HandleTags(story.currentTags);         // Activate speaker, skip tags, etc.
 
+            // If there’s text to show
             if (!string.IsNullOrEmpty(text))
             {
-                StartTyping(text);
-                RefreshButtons(); // show buttons for currentCharacter
-                return;
+                StartTyping(text);                  // Show it in dialogue box
+                RefreshButtons();                   // Show next/skip buttons for currentCharacter
+                return;                             // Stop here so only one line shows
             }
         }
 
+        // If there are player choices
         if (story.currentChoices.Count > 0)
         {
             DisplayChoices(); // buttons hidden inside DisplayChoices
@@ -185,6 +204,27 @@ public class DialogueManager : MonoBehaviour
                 skipLocked = false;
                 UpdateSkipButton(); // re-enable skip button
             }
+            else if (tag.StartsWith("rel:"))
+            {
+                // Format: rel:CharacterName+1 or rel:CharacterName-1
+                string data = tag.Substring(4); // remove "rel:"
+                string character = data.Substring(0, data.Length - 2); // get name
+                string op = data.Substring(data.Length - 2); // get +1 or -1
+
+                if (op.StartsWith("+"))
+                {
+                    int val = int.Parse(op.Substring(1));
+                    if (character == "C_Alice") RelationshipTracker.C_Alice += val;
+                    if (character == "C_Cheshire") RelationshipTracker.C_Cheshire += val;
+                    // add more characters when applicable
+                }
+                else if (op.StartsWith("-"))
+                {
+                    int val = int.Parse(op.Substring(1));
+                    if (character == "C_Alice") RelationshipTracker.C_Alice -= val;
+                    if (character == "C_Cheshire") RelationshipTracker.C_Cheshire -= val;
+                }
+            }
         }
     }
 
@@ -218,7 +258,11 @@ public class DialogueManager : MonoBehaviour
     //Check for the active character and display they're correct box, destory any remaining boxes in the scene
     void ActivateCharacter(string speaker)
     {
-        CloseAllDialogueBoxes();
+        foreach (var c in characters)
+        {
+            c.dialogueBoxRoot.SetActive(false);
+        }
+
         if (!lookup.ContainsKey(speaker)) return;
 
         currentCharacter = lookup[speaker];
@@ -316,7 +360,7 @@ public class DialogueManager : MonoBehaviour
         // full reset of sound state
         soundTimer = 0f;
         soundFXManager.Stop();
-        
+
         currentLine = line;
 
         if (typingCoroutine != null)
