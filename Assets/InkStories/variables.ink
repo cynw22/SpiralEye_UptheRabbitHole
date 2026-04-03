@@ -1,5 +1,4 @@
 VAR C_Alice = 0
-VAR A_Constance = 0
 
 VAR C_Cheshire = 0
 VAR A_Cheshire = 0

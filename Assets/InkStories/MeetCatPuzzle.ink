@@ -140,21 +140,59 @@ What a shame… and here I thought you’d be interested in what I wanted to tel
 #speaker: Narrator
 This causes both girls to freeze and turn again. Alice looks shocked and excited while Constance holds a look between relief and suspicion.
 
+#speaker: Constance
+A Queen? There's a ruler here?
+
+#speaker: Cheshire Cat
+Are you curious? Maybe you should stop and talk to me, who knows what secrets you'll uncover.
+
+#speaker: Narrator
+The cat gives her a grin, he thinks it's reassuring but Constance appears unsettled.
+
 #noskip_start
 + [Ignore the Cat]
     ~ C_Alice -= 1
     ~ C_Cheshire -= 1
-
     #speaker: Constance
-    Oh my god Alice no!!! Not again    
+    No thank you. I'm fairly certain we can find our own way back. There's no need to trouble yourself.
+    
     #speaker: Alice
-    Connnnn come quickly, it looks interesting!
+    What? Con he knows about this place, why aren't you asking him about it??
     
     #speaker: Constance
-    ALICE!!!
+    Alice enough, stop questioning my decisions and just follow along for once.
+    
+    #speaker: Alice
+    I'm questioning your decisions because it's dumb. What is wrong with you? You never act like this
+    
+    #speaker: Narrator
+    The question makes Constance pause. She appears deeply unsettled by the Cat. Though she has no way of conveying this to Alice without the creature knowing.
+    #speaker: Alice
+    Connie, please, just talk to me. I don't understand why you're acting like this?
+    
+    #speaker: Constance
+    Alice, I just need you to trust me. Just this once, trust that I know what I'm doing.
 
     #speaker: Narrator
-    Exhausted but amused by her sister's lively attitude Constance shelves her worry to chase after her quickly.
+    Alice appears frustrated and concerned but the look on her sister's face makes her stay silent for once. 
+    
+    #speaker: Cheshire Cat
+    Soooo that it? No questions, no comments, nothing? Where's the fun in that my dear.
+    
+    #speaker: Constance
+    We didn't come here for fun. 
+    
+    #speaker: Cheshire Cat
+    No of course not. You came here for a different purpose. Do you know why?
+    
+    #speaker: Narrator
+    The Cat's grin makes Constance's blood boil. Gritting her teeth she decides the conversation is over and tugs her sister forward.
+    
+    #speaker: Cheshire Cat
+    Very well, if you won't speak to me just follow the pathway. It will lead you to someone you might want to listen to.
+    
+    #speaker: Narrator
+    The Cat's parting words make Constance antsy though she refuses to show it. Without a glance back both sisters trudge down the worn pathway, leaving a slightly disgruntled cat to his own devices.
 
     -> after_choice_3 
 
@@ -162,29 +200,122 @@ This causes both girls to freeze and turn again. Alice looks shocked and excited
     ~ C_Alice += 1
     ~ C_Cheshire += 1
     #speaker: Constance
-    ALICE I SWEAR TO GOD IF YOU LEAD US DOWN ANOTHER RABBIT HOLE I WILL NOT BE RESPONSIBLE FOR THE THINGS I SAY.
+    Queen? You’re  saying a monarch exists here? Wherever we are?
+    
+    #speaker: Cheshire Cat
+    Of course silly? I mean what place wouldn’t have a ruler, especially one as well established as ours…
+    
+    #speaker: Constance
+    So there is someone here. Someone in charge, do you think they can help us?
+    
+    #speaker: Cheshire Cat
+    Oh my so eager. You're never going to get anywhere if you pounce like that. You my dear need to learn to keep your cards closer to your chest.
+    
+    #speaker: Narrator
+    He gives another uneasy grin and Constance tries to keep steady. Alice however seems delighted by the Cat's prescences and happily engages.
+
+    #speaker: Alice
+    So this place, it's called Wonderland right? Is there a reason why? Can you tell me?
+    
+    #speaker: Constance
+    This again? Why do you keep calling it that?
+    
+    #speaker: Cheshire Cat
+    Because that's exactly where we are. Wonderland. Though I'm a little suprised you knew the name so quickly.
+    
+    #speaker: Narrator
+    The Cat stares at Alice with a mix of shock and something else. He's interested. 
+    
+    #speaker: Constance
+    You knew? How in the world did you know that?
     
     #speaker: Alice
-   Oh my god Con you worry way too much, it’s fine!
-
-    I don’t feel sick at all! I promise, okay?
+    The voices told me.
     
     #speaker: Narrator
-    Alice disappears from view.
+    Silence fills the area, the Cat appears a little shocked but Constance looks exhausted. She rolls her eyes and decides to direct her next question to the shifty cat.
+    
+    #speaker: Constance
+    I've learned not to question it, it's just simpler. Beside we've gotten off topic. You told me there's a Queen here. Can we see her?
+    
+    #speaker: Narrator
+    The Cat quickly shifts, his whole demenor changing back to a more aloof and understanding position.
+    
+    #speaker: Cheshire Cat
+Well color me suprised I didn’t expect you to be the impatient one, though I suppose that’s on me, I really need to stop judging a book by its cover. 
+    
+    #speaker: Narrator
+    Constance appears annoyed by the statement but she doesn’t seem to voice is outloud, instead waiting patiently for the Cat to speak once more.
+    
+    #speaker: Cheshire Cat
+Hmmmm, yes there is a Queen. One that could potentially help you get out of the situation you’ve gotten tangled in.
+
+    #speaker: Narrator
+    The girls wait in tense silence as the Cat begins to mull over his words. He's careful for some reason, it make Constance even more uneasy. Perhaps she had made a mistake stopping to chat?
+    
+    #speaker: Cheshire Cat
+    Yes well, there's no use dwelling on the matter, it not like you'll be able to see her.
+    
+    #speaker: Alice
+    What? Why not? Isn't a Queen supposed to listen to people?
+    
+    #speaker: Constance
+    Well no, that's not her only job...
+    
+    #speaker: Cheshire Cat
+    Correct you are! Our Queen has far better things to do than listen to the likes of you two.
+    
+    #speaker: Narrator
+    Both girls appear offended by the statement.
+    
+    #speaker: Cheshire Cat
+    That being said, I suppose everyone deserves a chance to be heard...
+    
+    #speaker: Cheshire Cat
+    Very well, I shall give you both a chance. A chance to meet her.
+    
+    #speaker: Alice
+    Really! That's amazing!! Thank you.
+    
+    #speaker: Constance
+    Don't thank him just yet. What's the catch?
+    
+    #speaker: Cheshire Cat
+    Oh Constance. You wound me. If I had known you'd thought so little of me I wouldn't have stopped to chat.
+    
+    #speaker: Narrator
+    Despite the harsh statement the Cat's grin never disappears from his face.
 
     #speaker: Constance
-    …Why can’t I have one day, just one normal day to myself?
+    I don't have time for your games. Just tell me what you want so we can stop wasting your time.
+    
+    #speaker: Alice
+    Con, lay off! You're being to harsh.
+    
+    #speaker: Constance
+    I don't trust this, why are you being so shifty. Just tell us what you want and we can be on our way.
     
     #speaker: Narrator
-    Frustrated by her sister's carelessness Constance quickly gives chase to her wayward sibling.
+    The cat only grins at this, delighted in the response Constance has given him. Alice appears mortified by her usually calm sister's outburst.
+    
+    #speaker: Cheshire Cat
+    Oh my what a temper. Very well, though I don't particularly  enjoy your attitude I'll help you this once.
+    
+    #speaker: Cheshire Cat
+    Follow me my dear. I'll take you to a man that can help you sort out all your troubles.
 
+    #speaker: Narrator
+    Seeing no other choice both girls decide to follow along. Hopefully the cat leads them somewhere safe.
+    
     ->after_choice_3
+#noskip_end
 
 ===after_choice_3===
 #speaker: Narrator
-The game of cat and mouse is ready to begin. A strange smile that had appeared in the distance materializes once more, a sharp looking feline now attached to that sporting grin.
+The game of cat and mouse is ready to begin. The girls trudge along the path, the strange grinning Cat zipping between them, chattering away without a care in the world. He doesn't seem bothered by Constance's lack of response.
 
-#noskip_end
+#speaker: Narrator
+Alice appears to be excited and engages quickly in conversation with their new companion. The more she talks the more agitated Constance appears. She remains silent though for the sake of her sister. 
 
 #ending: PartyFight
 -> DONE

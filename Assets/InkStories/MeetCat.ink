@@ -1,6 +1,5 @@
 === MeetCat === 
 #noskip_start
-
 #speaker: Narrator 
 The girls wander outside the room, a vast and lush forward stretches on for what seems like forever.
 
