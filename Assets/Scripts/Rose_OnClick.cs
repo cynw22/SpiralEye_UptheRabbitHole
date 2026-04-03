@@ -7,6 +7,6 @@ public class Rose_OnClick : MonoBehaviour
     void OnMouseDown()
     {
         Debug.Log("this works the scene just isn't in yet");
-        SceneManager.LoadScene("GardenParty");
+        SceneManager.LoadScene("TheGate"); // change to GardenParty
     }
 }
