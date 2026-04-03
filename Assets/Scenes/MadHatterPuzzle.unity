@@ -27828,8 +27828,6 @@ GameObject:
   - component: {fileID: 1618481283}
   - component: {fileID: 1618481282}
   - component: {fileID: 1618481281}
-  - component: {fileID: 1618481280}
-  - component: {fileID: 1618481279}
   m_Layer: 5
   m_Name: BackgroundImage
   m_TagString: Untagged
@@ -27856,44 +27854,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.00018310547, y: 0}
   m_SizeDelta: {x: 2978, y: 2419.625}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1618481279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1618481277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca8bfa6a3668224c8e9f6afb9ee93ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  switchManager: {fileID: 0}
-  aliceSprite: {fileID: 0}
-  alicePoint: {fileID: 0}
-  aliceClick: {fileID: 0}
-  constanceSprite: {fileID: 0}
-  constancePoint: {fileID: 0}
-  constanceClick: {fileID: 0}
---- !u!114 &1618481280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1618481277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ca8bfa6a3668224c8e9f6afb9ee93ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  switchManager: {fileID: 0}
-  aliceSprite: {fileID: 0}
-  alicePoint: {fileID: 0}
-  aliceClick: {fileID: 0}
-  constanceSprite: {fileID: 0}
-  constancePoint: {fileID: 0}
-  constanceClick: {fileID: 0}
 --- !u!114 &1618481281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27906,7 +27866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ca8bfa6a3668224c8e9f6afb9ee93ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchManager: {fileID: 0}
+  switchManager: {fileID: 1492002331}
   aliceSprite: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
   alicePoint: {fileID: -832645264602151611, guid: 2c21b4f052e4c8c47a1c8ec25376e734, type: 3}
   aliceClick: {fileID: -4194668869044252366, guid: 103001f469e807145b439213d5f38296, type: 3}
@@ -28002,7 +27962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ca8bfa6a3668224c8e9f6afb9ee93ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchManager: {fileID: 0}
+  switchManager: {fileID: 1492002331}
   aliceSprite: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
   alicePoint: {fileID: -832645264602151611, guid: 2c21b4f052e4c8c47a1c8ec25376e734, type: 3}
   aliceClick: {fileID: -4194668869044252366, guid: 103001f469e807145b439213d5f38296, type: 3}
