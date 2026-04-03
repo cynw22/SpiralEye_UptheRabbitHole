@@ -103,9 +103,8 @@ public class TeaMakingControl : MonoBehaviour
             {
                 if (submittedTea[i] != roundTea[i]) { break; }
                 correctTea = i == submittedTea.Count - 1 ? true : false;
+                roundTeaPopup.SetActive(true);
             }
-            roundTeaPopup.SetActive(true);
-
         }
         else if (desiredTea == 2 && submittedTea.Count == simpleTea.Count)
         {
@@ -117,8 +116,8 @@ public class TeaMakingControl : MonoBehaviour
                     break;
                 }
                 correctTea = i == submittedTea.Count - 1 ? true : false;
+                simpleTeaPopup.SetActive(true);
             }
-            simpleTeaPopup.SetActive(true);
         }
         else if (desiredTea == 3 && submittedTea.Count == specialTea.Count)
         {
@@ -126,8 +125,9 @@ public class TeaMakingControl : MonoBehaviour
             {
                 if (submittedTea[i] != specialTea[i]) { break; }
                 correctTea = i == submittedTea.Count - 1 ? true : false;
+                winScreenPopup.SetActive(true);
+
             }
-            winScreenPopup.SetActive(true);
         }
         //else if (desiredTea == 4) {
         //    Debug.Log("All Four Teas Found");
