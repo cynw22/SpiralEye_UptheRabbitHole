@@ -107,7 +107,10 @@ public class TeaMakingControl : MonoBehaviour
         {
             for (int i = 0; i < submittedTea.Count; i++)
             {
-                if (submittedTea[i] != roundTea[i]) { wrongTeaPopup.SetActive(true); break; }
+                if (submittedTea[i] != roundTea[i]) { 
+                    wrongTeaPopup.SetActive(true);
+                    timesWrong++; 
+                    break; }
                 correctTea = i == submittedTea.Count - 1 ? true : false;
                 roundTeaPopup.SetActive(true);
             }
@@ -131,7 +134,7 @@ public class TeaMakingControl : MonoBehaviour
         {
             for (int i = 0; i < submittedTea.Count; i++)
             {
-                if (submittedTea[i] != specialTea[i]) { wrongTeaPopup.SetActive(true); break; }
+                if (submittedTea[i] != specialTea[i]) { wrongTeaPopup.SetActive(true); timesWrong++; break; }
                 correctTea = i == submittedTea.Count - 1 ? true : false;
                 winScreenPopup.SetActive(true);
                 //To Change Later
@@ -146,6 +149,7 @@ public class TeaMakingControl : MonoBehaviour
         {
             Debug.Log("wrong amount of ingredients submitted");
             wrongIngredientsPopup.SetActive(true);
+            timesWrong++;
         }
 
         if (timesWrong >= 3)
