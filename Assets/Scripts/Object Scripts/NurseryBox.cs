@@ -23,32 +23,20 @@ public class NurseryBox : MonoBehaviour
 
     public void AddKeyToLock(GameObject keyObject)
     {
-        // Safety: Don't do anything if we already have 3 keys
-        if (clickedKeys >= 3) return;
-
-        // Store the key in our attempt array
-        selectedKeys[clickedKeys] = keyObject;
-
-        // Determine which slot to move to based on the current count (0, 1, or 2)
-        Transform targetSlot = visualSlots[clickedKeys];
-
-        if (targetSlot != null)
+        if (clickedKeys < 3)
         {
-            // 1. Parent the key to the specific slot (Slot1, Slot2, or Slot3)
-            keyObject.transform.SetParent(targetSlot);
+            selectedKeys[clickedKeys] = keyObject;
 
-            // 2. Snap to the center of THAT specific slot
+            // 1. Move the key in the Hierarchy to be a child of the Slot
+            keyObject.transform.SetParent(visualSlots[clickedKeys]);
+
+            // 2. FORCE the position to (0,0,0) relative to the Slot
             keyObject.transform.localPosition = Vector3.zero;
-            keyObject.transform.localRotation = Quaternion.identity;
-        }
 
-        // 3. NOW increment the counter so the NEXT key goes to the NEXT slot
-        clickedKeys++;
+            clickedKeys++;
 
-        // If we just added the 3rd key, check the result
-        if (clickedKeys == 3)
-        {
-            Invoke("CheckResult", 0.5f);
+            if (clickedKeys == 3) Invoke("CheckResult", 0.5f);
+            Debug.Log("Key is now a child of: " + keyObject.transform.parent.name);
         }
     }
 

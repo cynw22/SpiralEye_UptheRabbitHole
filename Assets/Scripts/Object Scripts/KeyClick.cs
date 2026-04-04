@@ -16,10 +16,19 @@ public class KeyClick : MonoBehaviour
     {
         originalPosition = transform.position;
         originalParent = transform.parent;
+        InitialVisualSetup();
+    }
 
-        // Ensure only the box look is showing at start
-        if (boxVisual) boxVisual.SetActive(true);
-        if (lockVisual) lockVisual.SetActive(false);
+    // Adding this ensures that even if you reset the puzzle, the visuals stay correct
+    void OnEnable()
+    {
+        InitialVisualSetup();
+    }
+
+    void InitialVisualSetup()
+    {
+        if (boxVisual != null) boxVisual.SetActive(true);
+        if (lockVisual != null) lockVisual.SetActive(false);
     }
 
     private void OnMouseDown()
@@ -33,6 +42,7 @@ public class KeyClick : MonoBehaviour
             lockVisual.SetActive(true);
 
             box.AddKeyToLock(this.gameObject);
+            Debug.Log(gameObject.name + " clicked. Sending to slot: " + box.clickedKeys);
         }
     }
 
