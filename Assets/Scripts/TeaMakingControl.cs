@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public enum Ingredients { GUMDROPS, MILK, PETALS, BUBBLES };
 
@@ -19,6 +20,8 @@ public class TeaMakingControl : MonoBehaviour
 
     public int desiredTea = 0;
 
+    int timesWrong = 0;
+
     [Header("Tea Popups")]
     public GameObject floralTeaPopup;
     public GameObject roundTeaPopup;
@@ -27,6 +30,7 @@ public class TeaMakingControl : MonoBehaviour
     public GameObject wrongTeaPopup; // For when the combination is wrong
     public GameObject wrongIngredientsPopup;
     public GameObject winScreenPopup;
+    public GameObject loseScreenPopup;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -88,7 +92,8 @@ public class TeaMakingControl : MonoBehaviour
                 // break if contents are wrong
                 if (submittedTea[i] != floralTea[i])
                 {
-                    Debug.Log("wrong tea submission");
+                    timesWrong++;
+                    Debug.Log("wrong tea submission. Times failed: " + timesWrong);
                     wrongTeaPopup.SetActive(true);
                     break;
                 }
@@ -113,7 +118,8 @@ public class TeaMakingControl : MonoBehaviour
             {
                 if (submittedTea[i] != simpleTea[i])
                 {
-                    Debug.Log("simple tea failed");
+                    timesWrong++;
+                    Debug.Log("simple tea failed. Times failed: " + timesWrong);
                     wrongTeaPopup.SetActive(true);
                     break;
                 }
@@ -140,7 +146,11 @@ public class TeaMakingControl : MonoBehaviour
         {
             Debug.Log("wrong amount of ingredients submitted");
             wrongIngredientsPopup.SetActive(true);
+        }
 
+        if (timesWrong >= 3)
+        {
+            loseScreenPopup.SetActive(true);
         }
 
         if (correctTea)
@@ -154,6 +164,11 @@ public class TeaMakingControl : MonoBehaviour
         }
     }
 
+    public void OutofTries_OnClick()
+    {
+        SceneManager.LoadScene("MadHatterLose");
+    }
+
     public void SetPopupsOff() {
         floralTeaPopup.SetActive(false);
         roundTeaPopup.SetActive(false);
@@ -162,6 +177,6 @@ public class TeaMakingControl : MonoBehaviour
         wrongIngredientsPopup.SetActive(false);
         wrongTeaPopup.SetActive(false);
         winScreenPopup.SetActive(false);
+        loseScreenPopup.SetActive(false);
     }
-
 }
