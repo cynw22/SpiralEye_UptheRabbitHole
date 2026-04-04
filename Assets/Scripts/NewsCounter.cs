@@ -5,6 +5,7 @@ public class NewsCounter : MonoBehaviour
 {
     [SerializeField] PuzzleControl2 PuzzleControl2;
     [SerializeField] PuzzleControl4 PuzzleControl4;
+    [SerializeField] TeaMakingControl TeaControl;
     public TextMeshProUGUI counterText;
     int amountCollected;
     int totalAmount;
@@ -22,6 +23,11 @@ public class NewsCounter : MonoBehaviour
             amountCollected = 0;
             totalAmount = 5;
         }
+        if (TeaControl != null)
+        {
+            amountCollected = 0;
+            totalAmount = 3;
+        }
 
     }
 
@@ -35,6 +41,9 @@ public class NewsCounter : MonoBehaviour
         {
             amountCollected = PuzzleControl2.numCollected;
         }
+
+        if (TeaControl != null)
+            amountCollected = TeaControl.timesWrong;
 
         counterText.text = amountCollected + "/" + totalAmount.ToString();
     }

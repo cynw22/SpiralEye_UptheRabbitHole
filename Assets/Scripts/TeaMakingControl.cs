@@ -20,7 +20,7 @@ public class TeaMakingControl : MonoBehaviour
 
     public int desiredTea = 0;
 
-    int timesWrong = 0;
+    public int timesWrong = 0;
 
     [Header("Tea Popups")]
     public GameObject floralTeaPopup;
