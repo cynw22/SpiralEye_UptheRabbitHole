@@ -15,7 +15,9 @@ public class BreifcasePuzzle : MonoBehaviour
 
     [SerializeField] public GameObject cookies;
     GameObject breifcase;
-    
+    [SerializeField] public GameObject nonCookies;
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -47,8 +49,10 @@ public class BreifcasePuzzle : MonoBehaviour
             puzzleControl.suitcaseIsOpen = true;
             spriteRenderer.sprite = openSprite;
             cookies.SetActive(true);
+            nonCookies.SetActive(false);
             puzzleControl.escapeRoomsComplete++;
             breifcase.GetComponent<Collider2D>().enabled = false;
+
 
         }
     }
