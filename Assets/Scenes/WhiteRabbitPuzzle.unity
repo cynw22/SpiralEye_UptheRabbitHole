@@ -7331,6 +7331,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1804413311}
+        m_TargetAssemblyTypeName: ExplanationPopup2, Assembly-CSharp
+        m_MethodName: ClosePanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &160949509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8104,8 +8116,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Placeholder \n4 Escape Rooms\n2 in Each Perspective\n1 Secret room\nCan
-    you find all the objects before time is up?"
+  m_text: "Somethings off... \nno need to dwell though, \nhelp the White Rabbit find
+    his 4 items before he is late for the meeting with the Red Queen.\n\nTo Find
+    these items, everything you need is contained in their respective rooms.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f054b46c0710ea94ea7443ff1dbe58bd, type: 2}
   m_sharedMaterial: {fileID: 3908959653227688014, guid: f054b46c0710ea94ea7443ff1dbe58bd, type: 2}
@@ -11775,7 +11788,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &436525165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22926,53 +22939,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 750497403}
   m_CullTransparentMesh: 1
---- !u!1 &761264985
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 761264986}
-  - component: {fileID: 761264987}
-  m_Layer: 0
-  m_Name: KeyManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &761264986
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 761264985}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1109869948}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &761264987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 761264985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bb3a585a8f387c42be7f7580de07108, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  box: {fileID: 1102049807}
-  boxVisual: {fileID: 0}
-  lockVisual: {fileID: 0}
 --- !u!1 &761869168
 GameObject:
   m_ObjectHideFlags: 0
@@ -33657,7 +33623,6 @@ Transform:
   - {fileID: 595031277}
   - {fileID: 1535389312}
   - {fileID: 1804413309}
-  - {fileID: 761264986}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1121371876
@@ -35564,6 +35529,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1804413310}
         m_TargetAssemblyTypeName: ExplanationPopup, Assembly-CSharp
+        m_MethodName: ClosePanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1804413311}
+        m_TargetAssemblyTypeName: ExplanationPopup2, Assembly-CSharp
         m_MethodName: ClosePanel
         m_Mode: 1
         m_Arguments:
@@ -45131,6 +45108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1804413309}
   - component: {fileID: 1804413310}
+  - component: {fileID: 1804413311}
   m_Layer: 0
   m_Name: TutoiralPopupManager
   m_TagString: Untagged
@@ -45160,7 +45138,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1804413308}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1846d23f834820f488915729a065017a, type: 3}
   m_Name: 
@@ -45172,6 +45150,19 @@ MonoBehaviour:
   TutorialDialouge: {fileID: 1924215568}
   ChoiceRoot: {fileID: 835867185}
   DialogueOverall: {fileID: 1287999509}
+--- !u!114 &1804413311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804413308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f929473db2c0433449a698741a6e0a56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toDisplay: {fileID: 436525164}
 --- !u!1 &1812769832
 GameObject:
   m_ObjectHideFlags: 0
