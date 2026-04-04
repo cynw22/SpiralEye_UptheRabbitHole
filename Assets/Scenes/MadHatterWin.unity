@@ -5931,6 +5931,7 @@ MonoBehaviour:
   NarrativeDialouge: {fileID: 599320096}
   TutorialDialouge: {fileID: 835867185}
   ChoiceRoot: {fileID: 1924215568}
+  DialogueOverall: {fileID: 1287999509}
 --- !u!1 &100329660
 GameObject:
   m_ObjectHideFlags: 0
@@ -22809,9 +22810,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 62952514}
-        m_TargetAssemblyTypeName: ExplanationPopup2, Assembly-CSharp
-        m_MethodName: ClosePanel
+      - m_Target: {fileID: 2012465479}
+        m_TargetAssemblyTypeName: EventManagerScript, Assembly-CSharp
+        m_MethodName: WhiteRabbitHouseInside
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22821,9 +22822,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 62952515}
-        m_TargetAssemblyTypeName: ExplanationPopup, Assembly-CSharp
-        m_MethodName: ClosePanel
+      - m_Target: {fileID: 2012465479}
+        m_TargetAssemblyTypeName: EventManagerScript, Assembly-CSharp
+        m_MethodName: WhiteRabbitHouseInside
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25301,6 +25302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PuzzleControl2: {fileID: 39512868}
   PuzzleControl4: {fileID: 0}
+  TeaControl: {fileID: 0}
   counterText: {fileID: 1416476334}
 --- !u!114 &1416476334
 MonoBehaviour:
@@ -30148,9 +30150,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 62952514}
-        m_TargetAssemblyTypeName: ExplanationPopup2, Assembly-CSharp
-        m_MethodName: ClosePanel
+      - m_Target: {fileID: 2012465479}
+        m_TargetAssemblyTypeName: EventManagerScript, Assembly-CSharp
+        m_MethodName: WhiteRabbitHouseInside
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -30160,9 +30162,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 62952515}
-        m_TargetAssemblyTypeName: ExplanationPopup, Assembly-CSharp
-        m_MethodName: ClosePanel
+      - m_Target: {fileID: 2012465479}
+        m_TargetAssemblyTypeName: EventManagerScript, Assembly-CSharp
+        m_MethodName: WhiteRabbitHouseInside
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -32056,11 +32058,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Impress the Mad Hatter by brewing some tea!
-
-
-    Collect March Hare''s
-    recipe book and use the pinned ingredient list to find everyhing you need.'
+  m_text: You Won! This is just a place holder for dialouge, lets go to the next
+    puzzle!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f054b46c0710ea94ea7443ff1dbe58bd, type: 2}
   m_sharedMaterial: {fileID: 3908959653227688014, guid: f054b46c0710ea94ea7443ff1dbe58bd, type: 2}

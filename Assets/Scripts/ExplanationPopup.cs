@@ -8,14 +8,20 @@ public class ExplanationPopup : MonoBehaviour
     [SerializeField] public GameObject NarrativeDialouge;
     [SerializeField] public GameObject TutorialDialouge;
     [SerializeField] public GameObject ChoiceRoot;
+    [SerializeField] public GameObject DialogueOverall;
+
 
     // States: 0 = Waiting for dialogue, 1 = Popup is Open, 2 = Finished Forever
     private int popupState = 0;
 
     void Start()
     {
-        toDisplay.SetActive(false);
+        if (DialogueOverall.activeSelf)
+            toDisplay.SetActive(false);
+        if (!DialogueOverall.activeSelf)
+            toDisplay.SetActive(!false);
         popupState = 0;
+
     }
 
     void Update()
@@ -23,17 +29,27 @@ public class ExplanationPopup : MonoBehaviour
         // If we have already closed the popup (State 2), stop running logic entirely.
         if (popupState == 2) return;
 
-        // Check if ANY dialogue is currently open
-        bool anyDialogueOpen = AliceDialouge.activeSelf ||
-                               ConstanceDialouge.activeSelf ||
-                               NarrativeDialouge.activeSelf ||
-                               TutorialDialouge.activeSelf ||
-                               ChoiceRoot.activeSelf;
 
-        // LOGIC: If we are waiting (State 0) AND no dialogues are open, OPEN it.
-        if (popupState == 0 && !anyDialogueOpen)
+        if (DialogueOverall.activeSelf)
         {
-            OpenPanel();
+            // Check if ANY dialogue is currently open
+            bool anyDialogueOpen = AliceDialouge.activeSelf ||
+                                   ConstanceDialouge.activeSelf ||
+                                   NarrativeDialouge.activeSelf ||
+                                   TutorialDialouge.activeSelf ||
+                                   ChoiceRoot.activeSelf;
+
+            // LOGIC: If we are waiting (State 0) AND no dialogues are open, OPEN it.
+            if (popupState == 0 && !anyDialogueOpen)
+            {
+                OpenPanel();
+            }
+        }
+        else if (!DialogueOverall.activeSelf) {
+            if (popupState == 0)
+            {
+                OpenPanel();
+            }
         }
     }
 

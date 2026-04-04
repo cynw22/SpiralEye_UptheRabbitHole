@@ -5931,6 +5931,7 @@ MonoBehaviour:
   NarrativeDialouge: {fileID: 599320096}
   TutorialDialouge: {fileID: 835867185}
   ChoiceRoot: {fileID: 1924215568}
+  DialogueOverall: {fileID: 1287999509}
 --- !u!1 &100329660
 GameObject:
   m_ObjectHideFlags: 0
@@ -25301,6 +25302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PuzzleControl2: {fileID: 39512868}
   PuzzleControl4: {fileID: 0}
+  TeaControl: {fileID: 0}
   counterText: {fileID: 1416476334}
 --- !u!114 &1416476334
 MonoBehaviour:
@@ -32056,11 +32058,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Impress the Mad Hatter by brewing some tea!
+  m_text: 'You lost!
+
+    Impress the Mad Hatter by brewing some tea!
 
 
-    Collect March Hare''s
-    recipe book and use the pinned ingredient list to find everyhing you need.'
+    Collect
+    March Hare''s recipe book and use the pinned ingredient list to find everyhing
+    you need.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f054b46c0710ea94ea7443ff1dbe58bd, type: 2}
   m_sharedMaterial: {fileID: 3908959653227688014, guid: f054b46c0710ea94ea7443ff1dbe58bd, type: 2}

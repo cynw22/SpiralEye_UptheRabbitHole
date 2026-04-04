@@ -7188,7 +7188,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1804413310}
-        m_TargetAssemblyTypeName: ExplanationPopup2, Assembly-CSharp
+        m_TargetAssemblyTypeName: ExplanationPopup, Assembly-CSharp
         m_MethodName: ClosePanel
         m_Mode: 1
         m_Arguments:
@@ -35191,7 +35191,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1804413310}
-        m_TargetAssemblyTypeName: ExplanationPopup2, Assembly-CSharp
+        m_TargetAssemblyTypeName: ExplanationPopup, Assembly-CSharp
         m_MethodName: ClosePanel
         m_Mode: 1
         m_Arguments:
@@ -44729,10 +44729,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1804413308}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f929473db2c0433449a698741a6e0a56, type: 3}
+  m_Script: {fileID: 11500000, guid: 1846d23f834820f488915729a065017a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   toDisplay: {fileID: 436525164}
+  AliceDialouge: {fileID: 1496066651}
+  ConstanceDialouge: {fileID: 417890983}
+  NarrativeDialouge: {fileID: 599320096}
+  TutorialDialouge: {fileID: 1924215568}
+  ChoiceRoot: {fileID: 835867185}
+  DialogueOverall: {fileID: 1287999509}
 --- !u!1 &1812769832
 GameObject:
   m_ObjectHideFlags: 0
