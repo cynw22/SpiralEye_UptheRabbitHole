@@ -172,7 +172,7 @@ public class PuzzleControl2 : MonoBehaviour
 
         //To change later
         if (allItemsCollected) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene("MadHatterPuzzle");
         }
 
     }
