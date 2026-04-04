@@ -42,6 +42,7 @@ public class PuzzleControl5 : MonoBehaviour
     public GameObject rose8;
     public GameObject rose9;
     public GameObject rose10;
+    public GameObject rose11;
 
     public ParticleSystem rose1P;
     public ParticleSystem rose2P;
@@ -53,6 +54,7 @@ public class PuzzleControl5 : MonoBehaviour
     public ParticleSystem rose8P;
     public ParticleSystem rose9P;
     public ParticleSystem rose10P;
+    public ParticleSystem rose11P;
     
 
     // PUZZLE #3 - TIMER
@@ -159,7 +161,10 @@ public class PuzzleControl5 : MonoBehaviour
         {
             rose10P.Play();
         }
-
+        if (rose11.GetComponent<Button>().enabled == false)
+        {
+            rose11P.Play();
+        }
     }
 
     // PUZZLE #2 - DRINK ME BOTTLES
@@ -315,6 +320,16 @@ public class PuzzleControl5 : MonoBehaviour
             else if (rose10.GetComponent<Button>().enabled == false && switchManager.sisterPOV == true)
             {
                 rose10P.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            }
+
+            if (rose11.GetComponent<Button>().enabled == false && switchManager.sisterPOV == false)
+            {
+                rose11P.Play();
+            }
+
+            else if (rose11.GetComponent<Button>().enabled == false && switchManager.sisterPOV == true)
+            {
+                rose11P.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
             }
         }
 
