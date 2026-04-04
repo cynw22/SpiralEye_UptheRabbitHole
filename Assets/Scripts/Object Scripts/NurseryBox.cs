@@ -27,16 +27,15 @@ public class NurseryBox : MonoBehaviour
         {
             selectedKeys[clickedKeys] = keyObject;
 
-            // 1. Move the key in the Hierarchy to be a child of the Slot
-            keyObject.transform.SetParent(visualSlots[clickedKeys]);
+            KeyClick keyScript = keyObject.GetComponent<KeyClick>();
 
-            // 2. FORCE the position to (0,0,0) relative to the Slot
-            keyObject.transform.localPosition = Vector3.zero;
+            // 1. Move the key in the Hierarchy to be a child of the Slot
+            keyScript.lockVisual.transform.SetParent(visualSlots[clickedKeys]);
+            keyScript.lockVisual.transform.localPosition = Vector3.zero;
 
             clickedKeys++;
 
             if (clickedKeys == 3) Invoke("CheckResult", 0.5f);
-            Debug.Log("Key is now a child of: " + keyObject.transform.parent.name);
         }
     }
 
