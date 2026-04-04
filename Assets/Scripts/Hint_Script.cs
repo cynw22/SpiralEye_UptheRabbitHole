@@ -12,6 +12,7 @@ public class Hint_Script : MonoBehaviour
     [SerializeField] GameObject a_hintMenu;
     [SerializeField] GameObject c_hintMenu;
     [SerializeField] bool isAlice;
+    [SerializeField] SwitchManager switchMan;
 
     //public void OpenAliceHint() {
     //    a_hintMenu.SetActive(true);
@@ -33,6 +34,11 @@ public class Hint_Script : MonoBehaviour
     //}
 
     public void CheckActive() {
+        if (switchMan)
+        {
+            isAlice = !switchMan.sisterPOV;
+        }
+        
         if (isAlice == true)
         {
             c_hintMenu.SetActive(false);
@@ -65,10 +71,12 @@ public class Hint_Script : MonoBehaviour
             c_hintMenu.SetActive(false);
             a_hintMenu.SetActive(false);
 
+            if (!switchMan) { 
             if (isAlice == false)
                 isAlice = true;
             else if (isAlice == true)
                 isAlice = false;
+            }
         }
 
 
