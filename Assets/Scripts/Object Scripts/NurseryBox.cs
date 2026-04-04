@@ -3,56 +3,87 @@ using UnityEngine;
 public class NurseryBox : MonoBehaviour
 {
     public PuzzleControl4 puzzleControl;
-    private SpriteRenderer spriteRenderer;
-    public Sprite closeSprite;
     public Sprite openSprite;
+    private SpriteRenderer spriteRenderer;
 
-    public GameObject[] keys;
+    [Header("The Password")]
+    public GameObject[] correctOrder = new GameObject[3];
 
-    public GameObject[] selectedKeys;
+    [Header("The Current Attempt")]
+    public GameObject[] selectedKeys = new GameObject[3];
+    public int clickedKeys = 0;
 
-    public int clickedKeys;
+    [Header("Lock Locations")]
+    public Transform[] visualSlots; // The 3 keyhole/lock positions
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        selectedKeys = new GameObject[3];
-        clickedKeys = 0;
     }
 
-    public void checkKey()
+    public void AddKeyToLock(GameObject keyObject)
     {
-        int correctKeys = 0;
-        if (clickedKeys == 3) {
-            for (int i = 0; i < puzzleControl.numKeys; i++)
-            {
-                if (keys[i] == selectedKeys[i])
-                {
-                    correctKeys++;
-                    Debug.Log("correct keys: " + correctKeys);
-                }
-            }
+        // Safety: Don't do anything if we already have 3 keys
+        if (clickedKeys >= 3) return;
 
-            if (correctKeys == 3)
-            {
-                if (!puzzleControl.allKeysFound)
-                {
-                    puzzleControl.escapeRoomsComplete++;
-                }
-                puzzleControl.allKeysFound = true;
-                spriteRenderer.sprite = openSprite;
-            }
+        // Store the key in our attempt array
+        selectedKeys[clickedKeys] = keyObject;
 
-            else if (correctKeys < 3)
+        // Determine which slot to move to based on the current count (0, 1, or 2)
+        Transform targetSlot = visualSlots[clickedKeys];
+
+        if (targetSlot != null)
+        {
+            // 1. Parent the key to the specific slot (Slot1, Slot2, or Slot3)
+            keyObject.transform.SetParent(targetSlot);
+
+            // 2. Snap to the center of THAT specific slot
+            keyObject.transform.localPosition = Vector3.zero;
+            keyObject.transform.localRotation = Quaternion.identity;
+        }
+
+        // 3. NOW increment the counter so the NEXT key goes to the NEXT slot
+        clickedKeys++;
+
+        // If we just added the 3rd key, check the result
+        if (clickedKeys == 3)
+        {
+            Invoke("CheckResult", 0.5f);
+        }
+    }
+
+    void CheckResult()
+    {
+        int score = 0;
+        for (int i = 0; i < 3; i++)
+        {
+            if (selectedKeys[i] == correctOrder[i]) score++;
+        }
+
+        if (score == 3)
+        {
+            spriteRenderer.sprite = openSprite;
+            puzzleControl.allKeysFound = true;
+            puzzleControl.escapeRoomsComplete++;
+            Debug.Log("Box Unlocked!");
+        }
+        else
+        {
+            ResetPuzzle();
+        }
+    }
+
+    public void ResetPuzzle()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            if (selectedKeys[i] != null)
             {
-                Debug.Log("Incorrect Combination");
-                for (int i = 0; i < puzzleControl.numKeys; i++)
-                {
-                    selectedKeys[i] = null;
-                }
-                clickedKeys = 0;
+                // Tell the key to go back to its original spot in the box
+                selectedKeys[i].GetComponent<KeyClick>().ReturnToBox();
+                selectedKeys[i] = null;
             }
         }
+        clickedKeys = 0;
     }
 }
