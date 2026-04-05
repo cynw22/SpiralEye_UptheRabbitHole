@@ -8,6 +8,9 @@ using UnityEngine.InputSystem;
 
 public class WhiteRabbitRoomScript : MonoBehaviour
 {
+    [SerializeField] public SwitchManager switchMan;
+
+
     //Lobby
     [SerializeField] public GameObject background_0;
  
@@ -31,11 +34,13 @@ public class WhiteRabbitRoomScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        isAlice = !switchMan.sisterPOV;
         SetBackgroundZeroActive();
     }
 
     public void SetBackgroundZeroActive()
     {
+        switchMan.allowSwitching = true;
         background_0.SetActive(true);
         background_1.SetActive(false);
         background_2.SetActive(false);
@@ -48,6 +53,7 @@ public class WhiteRabbitRoomScript : MonoBehaviour
     {
         background_0.SetActive(false);
         background_3.SetActive(false);
+        switchMan.allowSwitching = false;
 
         if (!isAlice)
         {
@@ -64,6 +70,7 @@ public class WhiteRabbitRoomScript : MonoBehaviour
     {
         background_0.SetActive(false);
         background_3.SetActive(false);
+        switchMan.allowSwitching = false;
 
         if (!isAlice)
         {
@@ -78,8 +85,9 @@ public class WhiteRabbitRoomScript : MonoBehaviour
     }
     public void SetBackgroundThreeActive()
     {
-        if (isAlice) { 
-        background_0.SetActive(false);
+        if (isAlice) {
+            switchMan.allowSwitching = false;
+            background_0.SetActive(false);
         background_1.SetActive(false);
         background_2.SetActive(false);
         background_3.SetActive(true);
@@ -91,13 +99,14 @@ public class WhiteRabbitRoomScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (isAlice == false)
-                isAlice = true;
-            else if (isAlice == true)
-                isAlice = false;
-        }
+        isAlice = !switchMan.sisterPOV;
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    if (isAlice == false)
+        //        isAlice = true;
+        //    else if (isAlice == true)
+        //        isAlice = false;
+        //}
     }
 
 }
