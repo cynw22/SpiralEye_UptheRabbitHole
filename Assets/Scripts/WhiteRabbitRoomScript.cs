@@ -41,7 +41,7 @@ public class WhiteRabbitRoomScript : MonoBehaviour
     public void SetBackgroundZeroActive()
     {
         switchMan.allowSwitching = true;
-        CheckEnd();
+        //CheckEnd();
         background_0.SetActive(true);
         background_1.SetActive(false);
         background_2.SetActive(false);

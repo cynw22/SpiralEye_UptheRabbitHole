@@ -113,7 +113,8 @@ public class PuzzleControl4 : MonoBehaviour
         }
 
         if (escapeRoomsComplete == totalEscapeRooms) {
-            allObjectsFound = true; // Aki check event manager - white rabbit code for where the load scene is for win condition
+            allObjectsFound = true; // Aki check event manager - white rabbit code for where the load scene is for win condition - nvm its reverted
+            SceneManager.LoadScene("ThePoster");
         }
 
     }
