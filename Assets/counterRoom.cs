@@ -18,7 +18,8 @@ public class counterRoom : MonoBehaviour
     private void OnMouseDown()
     {
         if (checkCount == 0) { 
-            puzzleControl.escapeRoomsComplete++;
+            if (puzzleControl)
+                puzzleControl.escapeRoomsComplete++;
             checkCount = 2;
             Debug.Log("Clicked on click count =2 ");
             if (SwitchTo) {
