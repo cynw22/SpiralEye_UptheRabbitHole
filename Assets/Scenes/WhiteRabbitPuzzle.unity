@@ -47583,6 +47583,7 @@ GameObject:
   - component: {fileID: 946555447}
   - component: {fileID: 946555449}
   - component: {fileID: 946555448}
+  - component: {fileID: 946555450}
   m_Layer: 0
   m_Name: LocketCollider
   m_TagString: Untagged
@@ -47675,6 +47676,19 @@ PolygonCollider2D:
       - {x: 8.656031, y: -3.5168521}
       - {x: 4.543084, y: 0.75111276}
   m_UseDelaunayMesh: 0
+--- !u!114 &946555450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946555446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11fc3a7c0e7f222449d65a446bad7ac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleControl: {fileID: 39512868}
 --- !u!1 &958455880
 GameObject:
   m_ObjectHideFlags: 0
