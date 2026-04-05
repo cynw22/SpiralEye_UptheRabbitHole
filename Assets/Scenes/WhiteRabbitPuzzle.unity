@@ -47689,6 +47689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleControl: {fileID: 39512868}
+  SwitchTo: {fileID: 0}
 --- !u!1 &958455880
 GameObject:
   m_ObjectHideFlags: 0
@@ -89291,6 +89292,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2106984055}
   - component: {fileID: 2106984056}
+  - component: {fileID: 2106984058}
+  - component: {fileID: 2106984057}
   m_Layer: 0
   m_Name: Ch4_Office_Con_Winner_0
   m_TagString: Untagged
@@ -89368,6 +89371,73 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &2106984057
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106984054}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 24.57, y: 27.6025}
+    newSize: {x: 24.57, y: 27.6025}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -7.7382054, y: 14.111259}
+      - {x: -6.97308, y: 4.4716606}
+      - {x: -5.3614726, y: -3.5709562}
+      - {x: -1.2212946, y: -3.1218076}
+      - {x: 0.2979946, y: 1.0791721}
+      - {x: -2.3887472, y: 14.007924}
+  m_UseDelaunayMesh: 0
+--- !u!114 &2106984058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106984054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11fc3a7c0e7f222449d65a446bad7ac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleControl: {fileID: 39512868}
+  SwitchTo: {fileID: -6304848312817803544, guid: e7c30cad3c17796408ea36d9517a58dc, type: 3}
 --- !u!1 &2109930121
 GameObject:
   m_ObjectHideFlags: 0
