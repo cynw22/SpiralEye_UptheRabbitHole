@@ -7481,6 +7481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1082977587}
+  isReverse: 0
 --- !u!114 &213948175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7927,12 +7928,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toDisplay: {fileID: 1648520109}
+  DialogueOverall: {fileID: 1287999509}
   AliceDialouge: {fileID: 1496066651}
   ConstanceDialouge: {fileID: 599320096}
   NarrativeDialouge: {fileID: 599320096}
   TutorialDialouge: {fileID: 1924215568}
   ChoiceRoot: {fileID: 835867185}
-  DialogueOverall: {fileID: 1287999509}
 --- !u!114 &225726277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71467,7 +71468,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1102217802
 Transform:
   m_ObjectHideFlags: 0
@@ -71606,7 +71607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.31284004, g: 0.083011724, b: 0.335849, a: 1}
+  m_Color: {r: 1, g: 0.8392157, b: 0.58431375, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -80533,7 +80534,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1538219638
 Transform:
   m_ObjectHideFlags: 0
@@ -81637,7 +81638,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1648520110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81699,7 +81700,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1648520113
 RectTransform:
@@ -82480,7 +82481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.83921576, b: 0.58431375, a: 1}
+  m_Color: {r: 0.3137255, g: 0.08235294, b: 0.3372549, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
