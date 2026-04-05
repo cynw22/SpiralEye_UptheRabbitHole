@@ -15093,7 +15093,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 285861321}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6feaa797bf8177c439455d3039e63a9e, type: 3}
   m_Name: 
@@ -54669,6 +54669,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzleControl: {fileID: 39512868}
   openSprite: {fileID: -5070960038667444045, guid: 085ebc86ef3062e4db7cc9002b6dca8d, type: 3}
+  boxClosed: {fileID: 285861321}
+  boxOpen: {fileID: 2121908117}
   correctOrder:
   - {fileID: 1565249851}
   - {fileID: 1419422846}
@@ -61537,7 +61539,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1276823851
 Transform:
   m_ObjectHideFlags: 0
@@ -88983,7 +88985,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2121908118}
   - component: {fileID: 2121908122}
-  - component: {fileID: 2121908121}
   - component: {fileID: 2121908120}
   - component: {fileID: 2121908119}
   m_Layer: 0
@@ -89023,7 +89024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   switchManager: {fileID: 1492002331}
-  aliceSprite: {fileID: -6909500390780079052, guid: eb44e9fec0a2add4b900517e1f7becc2, type: 3}
+  aliceSprite: {fileID: -5070960038667444045, guid: 085ebc86ef3062e4db7cc9002b6dca8d, type: 3}
   constanceSprite: {fileID: 0}
   spriteRenderer: {fileID: 0}
 --- !u!61 &2121908120
@@ -89072,26 +89073,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 7.239855, y: 3.945178}
   m_EdgeRadius: 0
---- !u!114 &2121908121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121908117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6feaa797bf8177c439455d3039e63a9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleControl: {fileID: 0}
-  closeSprite: {fileID: -6909500390780079052, guid: eb44e9fec0a2add4b900517e1f7becc2, type: 3}
-  openSprite: {fileID: -5070960038667444045, guid: 085ebc86ef3062e4db7cc9002b6dca8d, type: 3}
-  letters:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  cookies: {fileID: 0}
 --- !u!212 &2121908122
 SpriteRenderer:
   m_ObjectHideFlags: 0
