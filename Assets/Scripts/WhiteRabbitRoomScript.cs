@@ -9,7 +9,7 @@ using UnityEngine.InputSystem;
 public class WhiteRabbitRoomScript : MonoBehaviour
 {
     [SerializeField] public SwitchManager switchMan;
-
+    [SerializeField] public PuzzleControl4 puzzleMan;
 
     //Lobby
     [SerializeField] public GameObject background_0;
@@ -41,6 +41,7 @@ public class WhiteRabbitRoomScript : MonoBehaviour
     public void SetBackgroundZeroActive()
     {
         switchMan.allowSwitching = true;
+        CheckEnd();
         background_0.SetActive(true);
         background_1.SetActive(false);
         background_2.SetActive(false);
@@ -108,6 +109,10 @@ public class WhiteRabbitRoomScript : MonoBehaviour
         //        isAlice = false;
         //}
     }
-
+    public void CheckEnd() { 
+        if (puzzleMan.allObjectsFound == true){
+            SceneManager.LoadScene("ThePoster");
+        }
+    }
 }
 

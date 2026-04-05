@@ -109,11 +109,11 @@ public class PuzzleControl4 : MonoBehaviour
 
         if ((time <= 1) && (escapeRoomsComplete!=totalEscapeRooms))
         {
-            SceneManager.LoadScene("FindTheRose"); //Change Later to ThePoster
+            SceneManager.LoadScene("ThePoster"); 
         }
 
         if (escapeRoomsComplete == totalEscapeRooms) {
-            SceneManager.LoadScene("FindTheRose"); // change later
+            allObjectsFound = true; // Aki check event manager - white rabbit code for where the load scene is for win condition
         }
 
     }

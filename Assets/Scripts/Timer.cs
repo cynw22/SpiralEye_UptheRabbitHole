@@ -19,12 +19,13 @@ public class Timer : MonoBehaviour
     {
         seconds = 0;
         minutes = 0;
-        if (PuzzleControl5) { 
-        isCollected = PuzzleControl5.allObjectsFound;
-        time = PuzzleControl5.time;
-        LevelNumber = PuzzleControl5.levelNumber;
+        if (PuzzleControl5)
+        {
+            isCollected = PuzzleControl5.allObjectsFound;
+            time = PuzzleControl5.time;
+            LevelNumber = PuzzleControl5.levelNumber;
         }
-        if (PuzzleControl4)
+        else if (PuzzleControl4)
         {
             isCollected = PuzzleControl4.allObjectsFound;
             time = PuzzleControl4.time;
@@ -58,6 +59,9 @@ public class Timer : MonoBehaviour
 
         if (time <= 1) {
             timeLeft.text = "0:00";
+            if (LevelNumber == -1) {
+                SceneManager.LoadScene("FindTheRose");//Remove later, this is for the poster
+            }
         }
     }
 }
