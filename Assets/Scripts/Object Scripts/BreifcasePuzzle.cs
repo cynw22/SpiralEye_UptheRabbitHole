@@ -50,7 +50,7 @@ public class BreifcasePuzzle : MonoBehaviour
             spriteRenderer.sprite = openSprite;
             cookies.SetActive(true);
             nonCookies.SetActive(false);
-            puzzleControl.escapeRoomsComplete++;
+            //puzzleControl.escapeRoomsComplete++;
             breifcase.GetComponent<Collider2D>().enabled = false;
 
 

@@ -33,6 +33,7 @@ public class PuzzleControl1 : MonoBehaviour
     [Header("Change Environment Object")]
     GameObject chestNotSolved;
     GameObject chestSolved;
+    GameObject keyNotSolved;
 
     //[SerializeField] public GameObject instructionsPopup;
     ////public bool isDialogueDone = false;
@@ -73,6 +74,10 @@ public class PuzzleControl1 : MonoBehaviour
         chestNotSolved = GameObject.Find("Chest");
         chestSolved = GameObject.Find("Chest (1)");
         chestSolved.GetComponent<SpriteRenderer>().enabled = false;
+
+        keyNotSolved = GameObject.Find("Key");
+        keyNotSolved.GetComponent<SpriteRenderer>().enabled = true;
+
 
         popup.OpenPanel(); // put this in the start for if there is no dialouge - but will have to edit it if there is dialouge.
     }
@@ -137,6 +142,8 @@ public class PuzzleControl1 : MonoBehaviour
         if (chestIsOpen && allBottlesFound && keyFound)
         {
             OnPuzzleComplete();
+            Debug.Log("Key marked as found");
+            keyNotSolved.GetComponent<SpriteRenderer>().enabled = false;
         }
     }
 
