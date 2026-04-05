@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
+using UnityEngine.InputSystem;
+using UnityEngine.Windows;
 
 public enum Ingredients { GUMDROPS, MILK, PETALS, BUBBLES };
 
@@ -62,6 +64,9 @@ public class TeaMakingControl : MonoBehaviour
     void Update()
     {
         setEnvironment();
+        if (UnityEngine.Input.GetKeyDown(KeyCode.Space)) {
+            SetPopupsOff();        
+        }
     }
 
     void setEnvironment()
@@ -170,7 +175,7 @@ public class TeaMakingControl : MonoBehaviour
 
     public void OutofTries_OnClick()
     {
-        SceneManager.LoadScene("MadHatterLose");
+        SceneManager.LoadScene("MadHatterLose"); //Aki
     }
 
     public void SetPopupsOff() {
@@ -181,6 +186,14 @@ public class TeaMakingControl : MonoBehaviour
         wrongIngredientsPopup.SetActive(false);
         wrongTeaPopup.SetActive(false);
         winScreenPopup.SetActive(false);
-        loseScreenPopup.SetActive(false);
+        SetLoseOff();
     }
+
+    public void SetLoseOff() {
+        if (timesWrong < 3)
+            loseScreenPopup.SetActive(false);
+        else
+            SceneManager.LoadScene("MadHatterLose"); //Aki
+    }
+
 }
