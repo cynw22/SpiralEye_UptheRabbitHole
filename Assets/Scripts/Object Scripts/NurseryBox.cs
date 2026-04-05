@@ -5,9 +5,6 @@ public class NurseryBox : MonoBehaviour
     public PuzzleControl4 puzzleControl;
     public Sprite openSprite;
     private SpriteRenderer spriteRenderer;
-    [SerializeField]public GameObject boxClosed;
-    [SerializeField]public GameObject boxOpen;
-
 
     [Header("The Password")]
     public GameObject[] correctOrder = new GameObject[3];
@@ -54,12 +51,9 @@ public class NurseryBox : MonoBehaviour
         {
             spriteRenderer.sprite = openSprite;
             puzzleControl.allKeysFound = true;
-            //puzzleControl.escapeRoomsComplete++;
+            puzzleControl.escapeRoomsComplete++;
             Debug.Log("Box Unlocked!");
-            //chestClosed
-            boxOpen.SetActive(true); 
-            boxClosed.SetActive(false);
-}
+        }
         else
         {
             ResetPuzzle();
