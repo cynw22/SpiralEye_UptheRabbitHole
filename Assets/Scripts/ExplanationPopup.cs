@@ -2,68 +2,70 @@ using UnityEngine;
 
 public class ExplanationPopup : MonoBehaviour
 {
-    [SerializeField] public GameObject toDisplay;
-    [SerializeField] public GameObject AliceDialouge;
-    [SerializeField] public GameObject ConstanceDialouge;
-    [SerializeField] public GameObject NarrativeDialouge;
-    [SerializeField] public GameObject TutorialDialouge;
-    [SerializeField] public GameObject ChoiceRoot;
-    [SerializeField] public GameObject DialogueOverall;
+    [Header("UI References")]
+    [SerializeField] private GameObject toDisplay;
+    [SerializeField] private GameObject DialogueOverall;
 
+    [Header("Specific Dialogue Roots")]
+    [SerializeField] private GameObject AliceDialouge;
+    [SerializeField] private GameObject ConstanceDialouge;
+    [SerializeField] private GameObject NarrativeDialouge;
+    [SerializeField] private GameObject TutorialDialouge;
+    [SerializeField] private GameObject ChoiceRoot;
 
-    // States: 0 = Waiting for dialogue, 1 = Popup is Open, 2 = Finished Forever
     private int popupState = 0;
+    private float startupDelay = 0.5f; // Wait half a second
+    private float timer = 0f;
 
     void Start()
     {
-        if (DialogueOverall.activeSelf)
-            toDisplay.SetActive(false);
-        if (!DialogueOverall.activeSelf)
-            toDisplay.SetActive(!false);
+        // Start hidden to prevent the "flicker"
+        toDisplay.SetActive(false);
         popupState = 0;
-
     }
 
     void Update()
     {
-        // If we have already closed the popup (State 2), stop running logic entirely.
-        if (popupState == 2) return;
+        if (popupState != 0) return;
 
-
-        if (DialogueOverall.activeSelf)
+        // 1. Wait for the startup delay to pass
+        if (timer < startupDelay)
         {
-            // Check if ANY dialogue is currently open
-            bool anyDialogueOpen = AliceDialouge.activeSelf ||
-                                   ConstanceDialouge.activeSelf ||
-                                   NarrativeDialouge.activeSelf ||
-                                   TutorialDialouge.activeSelf ||
-                                   ChoiceRoot.activeSelf;
+            timer += Time.deltaTime;
+            return;
+        }
 
-            // LOGIC: If we are waiting (State 0) AND no dialogues are open, OPEN it.
-            if (popupState == 0 && !anyDialogueOpen)
-            {
-                OpenPanel();
-            }
+        // 2. Once the timer is done, check if dialogue is active
+        // If Dialogue is NOT active, then show the popup
+        if (!IsDialogueActive())
+        {
+            OpenPanel();
         }
-        else if (!DialogueOverall.activeSelf) {
-            if (popupState == 0)
-            {
-                OpenPanel();
-            }
-        }
+    }
+
+    private bool IsDialogueActive()
+    {
+        // If the main container is off, treat dialogue as inactive
+        if (DialogueOverall == null || !DialogueOverall.activeInHierarchy) return false;
+
+        // Check if any specific dialogue window is active
+        return AliceDialouge.activeInHierarchy ||
+               ConstanceDialouge.activeInHierarchy ||
+               NarrativeDialouge.activeInHierarchy ||
+               TutorialDialouge.activeInHierarchy ||
+               ChoiceRoot.activeInHierarchy;
     }
 
     public void OpenPanel()
     {
         toDisplay.SetActive(true);
-        popupState = 1; // Move to "Open" state so Update() stops calling this
+        popupState = 1;
     }
 
-    // IMPORTANT: Link your Button's "On Click()" to THIS function
     public void ClosePanel()
     {
         toDisplay.SetActive(false);
-        popupState = 2; // Move to "Finished" state so it never opens again
+        popupState = 2;
         Debug.Log("Popup closed and state set to 2.");
     }
 }
