@@ -67,11 +67,46 @@ public class EventManagerScript : MonoBehaviour
         SceneManager.LoadScene("PartyFight"); // change it when it gets changed
     }
     // Level 2 
+
+    public void MadHatterTalk()
+    {
+
+        SceneManager.LoadScene("MadHatterTalking");
+    }
+
     public void MadHatterLevel()
     {
 
         SceneManager.LoadScene("MadHatter");
     }
+
+    public void teaMiniGame()
+    {
+        SceneManager.LoadScene("MadHatterPuzzle");
+    }
+
+    //WhiteRabbit
+    public void WhiteRabbitHouseOutside()
+    {
+        SceneManager.LoadScene("WhiteRabbitHouse");
+    }
+
+    public void WhiteRabbitHouseInside()
+    {
+        SceneManager.LoadScene("WhiteRabbitPuzzle");
+    }
+
+    public void ThePoster()
+    {
+        SceneManager.LoadScene("ThePoster");
+    }
+
+    public void TheGate()
+    {
+        SceneManager.LoadScene("TheGate");
+    }
+
+
     public void QueenLevel()
     {
 
@@ -83,25 +118,7 @@ public class EventManagerScript : MonoBehaviour
 
    
 
-    public void teaMiniGame()
-    {
-        SceneManager.LoadScene("MadHatterPuzzle"); 
-    }
-
-    public void WhiteRabbitHouseOutside()
-    {
-        SceneManager.LoadScene("WhiteRabbitHouse");
-    }
-
-    public void WhiteRabbitHouseInside()
-    {
-        SceneManager.LoadScene("WhiteRabbitPuzzle");
-    }
-
-    public void TheGate() {
-        SceneManager.LoadScene("TheGate");
-    }
-
+    
     //Endings
     public void BadEndOne() {
         SceneManager.LoadScene("Bad End One");
