@@ -10,14 +10,8 @@ public class Pause_Script : MonoBehaviour
 {
 
     [SerializeField] GameObject pauseMenu;
-    [SerializeField] bool isReverse;
-
+    
     void Start() {
-        if (!isReverse)
-        {
-            Time.timeScale = 0.0f;
-        }
-        else
             Time.timeScale = 1.0f;
 
     }
@@ -45,9 +39,6 @@ public class Pause_Script : MonoBehaviour
 
     void Update()
     {
-        
-        if (!isReverse)
-        {
             if ((Input.GetKeyDown(KeyCode.Escape) || (Input.GetKeyDown(KeyCode.P))))
             {
                 if (pauseMenu.active)
@@ -65,7 +56,7 @@ public class Pause_Script : MonoBehaviour
                 else
                     Pause();
             }
-        }
+        
     }
 
 }
