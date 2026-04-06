@@ -1286,51 +1286,6 @@ Transform:
   - {fileID: 1160138591}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &423517162
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 423517163}
-  - component: {fileID: 423517164}
-  m_Layer: 0
-  m_Name: StoryManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &423517163
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 423517162}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1109869948}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &423517164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 423517162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cc2adfb3d84c6249a3f598e9a14f98f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inkJSON: {fileID: 4900000, guid: 385a8f544e272ea44b5d8ceb846a6921, type: 3}
 --- !u!1 &474564014
 GameObject:
   m_ObjectHideFlags: 0
@@ -2237,6 +2192,8 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 6ac37a403a7864748a4af0674a88028b, type: 3}
     typingVolume: 0.4
     soundDelay: 0.05
+    backgroundImage: {fileID: 0}
+    backgrounds: []
   - characterName: Constance
     dialogueBoxRoot: {fileID: 1560025618}
     dialogueText: {fileID: 1856616538}
@@ -2248,6 +2205,8 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 015a822d240641a45a3d077a5b352ad0, type: 3}
     typingVolume: 0.4
     soundDelay: 0.05
+    backgroundImage: {fileID: 0}
+    backgrounds: []
   - characterName: Narrator
     dialogueBoxRoot: {fileID: 1907525582}
     dialogueText: {fileID: 1014701229}
@@ -2259,6 +2218,8 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 86757d0b2857af145ae15fc5c88f2cb8, type: 3}
     typingVolume: 0.4
     soundDelay: 0.05
+    backgroundImage: {fileID: 0}
+    backgrounds: []
   - characterName: Tutorial
     dialogueBoxRoot: {fileID: 1358310926}
     dialogueText: {fileID: 1843820870}
@@ -2270,12 +2231,17 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 2a4f248dc5c049f48861a8c0647cbe0e, type: 3}
     typingVolume: 0.4
     soundDelay: 0.05
+    backgroundImage: {fileID: 0}
+    backgrounds: []
   choicePanel: {fileID: 765500780}
   choiceContainer: {fileID: 1889506051}
   choicePrefab: {fileID: 2616949834509399884, guid: 5296a2fc07f21d149af77102434a880d, type: 3}
   skipSummaryPanel: {fileID: 0}
   skipSummaryText: {fileID: 0}
   soundFXManager: {fileID: 1708904267}
+  backgroundImage: {fileID: 559925069}
+  backgrounds: []
+  puzzleControl: {fileID: 0}
 --- !u!1 &601209086
 GameObject:
   m_ObjectHideFlags: 0
@@ -8732,7 +8698,6 @@ Transform:
   - {fileID: 1708904266}
   - {fileID: 595031277}
   - {fileID: 1535389312}
-  - {fileID: 423517163}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1155399548

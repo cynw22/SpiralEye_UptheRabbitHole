@@ -9,7 +9,7 @@ The girls look around at the chaotic scene around them. It's a mess.
 #speaker: Narrator
 Cluttered tables, random items, food scattered across the floor. It's terrible.
 
-#speaker: Constance.
+#speaker: Constance
 What is this mess?  
 
 #speaker: Alice
@@ -82,7 +82,7 @@ Constance simply stares back confused. What should they do here?
 #speaker: Alice
 Uhhhh Hi? How are you doing?
 
-#speaker: Constance.
+#speaker: Constance
 Alice???
 
 #speaker: Narrator
@@ -262,7 +262,7 @@ Yes we need a way to get back home and we were told she could help us.
 I see... well yes, she does have a way to uhh "help" I suppose.
 
 #speaker: Constance
-Do you know here well? COuld you help us get to her?
+Do you know here well? Could you help us get to her?
 
 #speaker: Mad Hatter
 I mean, I know her as well as anyone else here, she's our queen afterall
@@ -328,7 +328,7 @@ More like he sent us down a path. He didn't tell us where exactly we were suppos
 He wanted me to help you?
 
 #speaker: Alice
-I mean if you have a way to help us can you? I don't mind it here but I know Con want's to get home.
+I mean if you have a way to help us can you? I don't mind I like it here but I know Con want's to get home.
 
 #speaker: Constance
 ALICE!?
@@ -377,6 +377,7 @@ Okayyy, so what do you want us to do?
 
 #speaker: Mad Hatter
 I need help collecting ingredients to make tea, we're running out of time so be quick about it.
+
 #speaker: Constance 
 What's in it for us? Why are we helping you make tea, we have no interest in sitting down to chat.
 
@@ -438,7 +439,7 @@ I uhh, whatever is fine, there's a list somewhere here. He wrote it down so I wo
 A list?
 
 #speaker: Mad Hatter
-Yes a list of ingredients. Go find this and come back to me, I need to prepare.
+Yes a list of ingredients. Go find it and come back to me, I need to prepare.
 
 #speaker: Narrator
 With his piece said he turns away from the girls.

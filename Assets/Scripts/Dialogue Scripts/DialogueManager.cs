@@ -12,270 +12,227 @@ using UnityEngine.SceneManagement;
 //Dynamic Textboxes for each character that tracks the moods and typing speed
 public class CharacterDialogueUI
 {
-    public string characterName;
+public string characterName;
 
-    [Header("Dialogue Box")]
-    public GameObject dialogueBoxRoot;
-    public TextMeshProUGUI dialogueText;
+[Header("Dialogue Box")]
+public GameObject dialogueBoxRoot;
+public TextMeshProUGUI dialogueText;
 
-    [Header("Border Character (Circled Image)")] //Do NOT confuse this with the mood sprite, this is the character PFP
-    public Image characterPfp;
+[Header("Border Character (Circled Image)")] //Do NOT confuse this with the mood sprite, this is the character PFP
+public Image characterPfp;
 
-    [Header("Typing")]
-    public float typingSpeed = 0.02f;
+[Header("Typing")]
+public float typingSpeed = 0.02f;
 
-    [Header("Controls")]
-    public Button nextButton;
-    public Button skipButton;
+[Header("Controls")]
+public Button nextButton;
+public Button skipButton;
 
-    [Header("Sound")]
-    public AudioClip[] typingSounds;
-    [Range(0f, 1f)] public float typingVolume = 0.4f;
-    public float soundDelay = 0.05f; // controls how often sounds play
-
-    [Header("Background")]
-    public Image backgroundImage;
-    public Sprite[] backgrounds;
-    private Dictionary<string, Sprite> backgroundLookup;
+[Header("Sound")]
+public AudioClip[] typingSounds;
+[Range(0f, 1f)] public float typingVolume = 0.4f;
+public float soundDelay = 0.05f; // controls how often sounds play
 }
 #endregion
 
 //Actual dialogue manager code below, including all inspector set up items
 public class DialogueManager : MonoBehaviour
 {
-    [Header("Ink")]
-    private Story story; //the actual inky story instance
-    public TextAsset inkJSON; // Assign the Ink JSON file for this scene in the inspector (TESTING ONLY)
+[Header("Ink")]
+private Story story; //the actual inky story instance
+public TextAsset inkJSON; // Assign the Ink JSON file for this scene in the inspector (TESTING ONLY)
 
-    [Header("Ink Start")]
-    [Tooltip("Set the starting knot for this scene")]
-    public string startingKnot; // inspector-defined per scene
+[Header("Ink Start")]
+[Tooltip("Set the starting knot for this scene")]
+public string startingKnot; // inspector-defined per scene
 
-    [Header("Characters")]
-    public List<CharacterDialogueUI> characters; //dictionary of all character that have speaking lines in the scene dialouge
-    private Dictionary<string, CharacterDialogueUI> lookup; //allow for set up of one character that can be reused again 
-    private CharacterDialogueUI currentCharacter; //current speaking character
+[Header("Characters")]
+public List<CharacterDialogueUI> characters; //dictionary of all character that have speaking lines in the scene dialouge
+private Dictionary<string, CharacterDialogueUI> lookup; //allow for set up of one character that can be reused again 
+private CharacterDialogueUI currentCharacter; //current speaking character
 
-    [Header("Choices")]
-    public GameObject choicePanel;
-    public Transform choiceContainer;
-    public Button choicePrefab;
+[Header("Choices")]
+public GameObject choicePanel;
+public Transform choiceContainer;
+public Button choicePrefab;
 
-    [Header("Skip UI")]
-    public GameObject skipSummaryPanel;
-    public TextMeshProUGUI skipSummaryText;
+[Header("Skip UI")]
+public GameObject skipSummaryPanel;
+public TextMeshProUGUI skipSummaryText;
 
-    [Header("Sound")]
-    public SoundFXManager soundFXManager;
+[Header("Sound")]
+public SoundFXManager soundFXManager;
 
-    [Header("Background")]
-    public Image backgroundImage;
-    public Sprite[] backgrounds;
-    private Dictionary<string, Sprite> backgroundLookup;
+private bool isTyping;
+private bool skipLocked;
+private bool isSkipping;
+private bool isDialoguePlaying;
+private float soundTimer = 0f;
 
-    [Header("Puzzle References")]
-    public PuzzleControl4 puzzleControl;
+private string currentLine;
+private Coroutine typingCoroutine;
+private List<string> skippedLines = new List<string>();
 
-    private bool isTyping;
-    private bool skipLocked;
-    private bool isSkipping;
-    private bool isDialoguePlaying;
-    private float soundTimer = 0f;
+public static DialogueManager Instance { get; private set; }
 
-    private string currentLine;
-    private Coroutine typingCoroutine;
-    private List<string> skippedLines = new List<string>();
-
-    public static DialogueManager Instance { get; private set; }
-
-    void Awake()
+void Awake()
+{
+    if (Instance != null && Instance != this)
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject); // prevent duplicates
-            return;
-        }
-
-        Instance = this;
-        DontDestroyOnLoad(gameObject); //make sure it doesn't destory the relationship tracker
+        Destroy(gameObject); // prevent duplicates
+        return;
     }
 
-    public void StartDialogue(string knotName)
-    {
-        isDialoguePlaying = true;
+    Instance = this;
+    DontDestroyOnLoad(gameObject); //make sure it doesn't destory the relationship tracker
+}
 
-        story.ChoosePathString(knotName);
-        ContinueStory();
+public void StartDialogue(string knotName)
+{
+    isDialoguePlaying = true;
+
+    story.ChoosePathString(knotName);
+    ContinueStory();
+}
+
+//Start inky file
+void Start()
+{
+    if (inkJSON == null)
+    {
+        Debug.LogError("No Ink JSON assigned to DialogueManager for this scene!");
+        return;
     }
 
-    //Start inky file
-    void Start()
+    // Initialize a fresh Story instance from this scene's Ink file
+    story = new Story(inkJSON.text);
+
+    // Setup character lookup
+    choicePanel.SetActive(false);
+    lookup = new Dictionary<string, CharacterDialogueUI>();
+
+    foreach (var c in characters)
     {
-        if (inkJSON == null)
-        {
-            Debug.LogError("No Ink JSON assigned to DialogueManager for this scene!");
-            return;
-        }
+        lookup.Add(c.characterName, c);
+        c.dialogueBoxRoot.SetActive(false);
 
-        // Initialize a fresh Story instance from this scene's Ink file
-        story = new Story(inkJSON.text);
+        if (c.nextButton != null)
+            c.nextButton.onClick.RemoveAllListeners();
 
-        if (puzzleControl != null)
-        {
-            story.variablesState["allKeysFound"] = puzzleControl.allKeysFound;
-            story.variablesState["puzzleWon"] = PuzzleControl4.puzzleWon;
-        }
-
-        // Setup character lookup
-        choicePanel.SetActive(false);
-        lookup = new Dictionary<string, CharacterDialogueUI>();
-
-        foreach (var c in characters)
-        {
-            lookup.Add(c.characterName, c);
-            c.dialogueBoxRoot.SetActive(false);
-
-            if (c.nextButton != null)
-                c.nextButton.onClick.RemoveAllListeners();
-
-            if (c.skipButton != null)
-                c.skipButton.onClick.RemoveAllListeners();
-        }
-
-        backgroundLookup = new Dictionary<string, Sprite>();
-
-        foreach (var bg in backgrounds)
-        {
-            backgroundLookup.Add(bg.name, bg);
-        }
-
-        // Start dialogue if starting knot is set
-        if (!string.IsNullOrEmpty(startingKnot))
-        {
-            StartDialogue(startingKnot);
-        }
-        else
-        {
-            Debug.LogWarning("No starting knot defined in DialogueManager for this scene.");
-        }
+        if (c.skipButton != null)
+            c.skipButton.onClick.RemoveAllListeners();
     }
 
-    void Update()
+    if (!string.IsNullOrEmpty(startingKnot))
+        StartDialogue(startingKnot);
+
+    // Start dialogue if starting knot is set
+    if (!string.IsNullOrEmpty(startingKnot))
     {
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            OnNextPressed();
-        }
+        StartDialogue(startingKnot);
     }
-
-    //Check tags to see if text is allowed to be skipped or not, controls how much of the story should flow and if there are any tags stopping the flow
-    void ContinueStory()
+    else
     {
+        Debug.LogWarning("No starting knot defined in DialogueManager for this scene.");
+    }
+}
 
-        // Only proceed if the story has content
-        if (story.canContinue)
+void Update()
+{
+    if (Input.GetKeyDown(KeyCode.Return))
+    {
+        OnNextPressed();
+    }
+}
+
+//Check tags to see if text is allowed to be skipped or not, controls how much of the story should flow and if there are any tags stopping the flow
+void ContinueStory()
+{
+
+    // Only proceed if the story has content
+    if (story.canContinue)
+    {
+        string text = story.Continue().Trim();  // Get the next piece of text
+        HandleTags(story.currentTags);         // Activate speaker, skip tags, etc.
+
+        // If there’s text to show
+        if (!string.IsNullOrEmpty(text))
         {
-            string text = story.Continue().Trim(); // Get the next piece of text
-            // Track skipped lines
-            if (isSkipping && !string.IsNullOrEmpty(text))
-            {
-                skippedLines.Add(text);
-            }
-            HandleTags(story.currentTags);         // Activate speaker, skip tags, etc.
-
-            // If there’s text to show
-            if (!string.IsNullOrEmpty(text))
-            {
-                StartTyping(text);                  // Show it in dialogue box
-                RefreshButtons();                   // Show next/skip buttons for currentCharacter
-                return;                             // Stop here so only one line shows
-            }
-        }
-
-        // If there are player choices
-        if (story.currentChoices.Count > 0)
-        {
-            DisplayChoices(); // buttons hidden inside DisplayChoices
-            return;
-        }
-
-        // Otherwise, end of knot
-        CloseAllDialogueBoxes();
-        choicePanel.SetActive(false);
-
-        isDialoguePlaying = false;
-
-        if (isSkipping)
-        {
-            isSkipping = false;
-            ShowSkipSummary();
+            StartTyping(text);                  // Show it in dialogue box
+            RefreshButtons();                   // Show next/skip buttons for currentCharacter
+            return;                             // Stop here so only one line shows
         }
     }
 
-    //Master list of all tags currently in the ink file (DOUBLE CHECK THIS LATER MIGHT UPDATE WITH MORE DO NOT FORGET)
-    void HandleTags(List<string> tags)
+    // If there are player choices
+    if (story.currentChoices.Count > 0)
     {
-        foreach (string tag in tags)
+        DisplayChoices(); // buttons hidden inside DisplayChoices
+        return;
+    }
+
+    // Otherwise, end of knot
+    CloseAllDialogueBoxes();
+    choicePanel.SetActive(false);
+
+    isDialoguePlaying = false;
+}
+
+//Master list of all tags currently in the ink file (DOUBLE CHECK THIS LATER MIGHT UPDATE WITH MORE DO NOT FORGET)
+void HandleTags(List<string> tags)
+{
+    foreach (string tag in tags)
+    {
+        if (tag.StartsWith("speaker:"))
         {
-            if (tag.StartsWith("speaker:"))
-            {
-                string speaker = tag.Split(':')[1].Trim();
-                ActivateCharacter(speaker);
-            }
-            else if (tag.StartsWith("ending:"))
-            {
-                // Extract the name from the tag
-                string sceneName = tag.Split(':')[1].Trim();
-                SceneManager.LoadScene(sceneName);
-            }
-            else if (tag == "noskip_start")
-            {
-                skipLocked = true;
-                UpdateSkipButton(); // grey out skip button
-            }
-            else if (tag == "noskip_end")
-            {
-                skipLocked = false;
-                UpdateSkipButton(); // re-enable skip button
-            }
-            else if (tag.StartsWith("rel:"))
-            {
-                // Format: rel:CharacterName+1 or rel:CharacterName-1
-                string data = tag.Substring(4); // remove "rel:"
-                string character = data.Substring(0, data.Length - 2); // get name
-                string op = data.Substring(data.Length - 2); // get +1 or -1
+            string speaker = tag.Split(':')[1].Trim();
+            ActivateCharacter(speaker);
+        }
+        else if (tag.StartsWith("ending:"))
+        {
+            // Extract the name from the tag
+            string sceneName = tag.Split(':')[1].Trim();
+            SceneManager.LoadScene(sceneName);
+        }
+        else if (tag == "noskip_start")
+        {
+            skipLocked = true;
+            UpdateSkipButton(); // grey out skip button
+        }
+        else if (tag == "noskip_end")
+        {
+            skipLocked = false;
+            UpdateSkipButton(); // re-enable skip button
+        }
+        else if (tag.StartsWith("rel:"))
+        {
+            // Format: rel:CharacterName+1 or rel:CharacterName-1
+            string data = tag.Substring(4); // remove "rel:"
+            string character = data.Substring(0, data.Length - 2); // get name
+            string op = data.Substring(data.Length - 2); // get +1 or -1
 
-                if (op.StartsWith("+"))
-                {
-                    int val = int.Parse(op.Substring(1));
-                    if (character == "C_Alice") RelationshipTracker.C_Alice += val;
-                    if (character == "A_Cheshire") RelationshipTracker.A_Cheshire += val;
-                    if (character == "A_MadMarch") RelationshipTracker.A_MadMarch += val;
-                    if (character == "A_WhiteRabbit") RelationshipTracker.A_WhiteRabbit += val;
-                    if (character == "C_RedQueen") RelationshipTracker.C_RedQueen += val;
-                }
-                else if (op.StartsWith("-"))
-                {
-                    int val = int.Parse(op.Substring(1));
-                    if (character == "C_Alice") RelationshipTracker.C_Alice -= val;
-                    if (character == "A_Cheshire") RelationshipTracker.A_Cheshire -= val;
-                    if (character == "A_MadMarch") RelationshipTracker.A_MadMarch -= val;
-                    if (character == "A_WhiteRabbit") RelationshipTracker.A_WhiteRabbit -= val;
-                    if (character == "C_RedQueen") RelationshipTracker.C_RedQueen -= val;
+            if (op.StartsWith("+"))
+            {
+                int val = int.Parse(op.Substring(1));
+                if (character == "C_Alice") RelationshipTracker.C_Alice += val;
+                if (character == "A_Cheshire") RelationshipTracker.A_Cheshire += val;
+                if (character == "A_MadMarch") RelationshipTracker.A_MadMarch += val;
+                if (character == "A_WhiteRabbit") RelationshipTracker.A_WhiteRabbit += val;
+                if (character == "C_RedQueen") RelationshipTracker.C_RedQueen += val;
+            }
+            else if (op.StartsWith("-"))
+            {
+                int val = int.Parse(op.Substring(1));
+                if (character == "C_Alice") RelationshipTracker.C_Alice -= val;
+                if (character == "A_Cheshire") RelationshipTracker.A_Cheshire -= val;
+                if (character == "A_MadMarch") RelationshipTracker.A_MadMarch -= val;
+                if (character == "A_WhiteRabbit") RelationshipTracker.A_WhiteRabbit -= val;
+                if (character == "C_RedQueen") RelationshipTracker.C_RedQueen -= val;
 
-                }
-                else if (tag.StartsWith("bg:"))
-                {
-                    string bgName = tag.Split(':')[1].Trim();
-
-                    if (backgroundLookup.ContainsKey(bgName))
-                    {
-                        backgroundImage.sprite = backgroundLookup[bgName];
-                    }
-                }
             }
         }
     }
+}
 
     // Updates the skip button so it greys out if skipping is not allowed
     private void UpdateSkipButton()
@@ -535,3 +492,4 @@ public class DialogueManager : MonoBehaviour
         StartDialogue(knotName);
     }
 }
+
