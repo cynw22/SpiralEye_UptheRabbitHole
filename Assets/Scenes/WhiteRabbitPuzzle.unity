@@ -21667,8 +21667,6 @@ GameObject:
   m_Component:
   - component: {fileID: 344302083}
   - component: {fileID: 344302085}
-  - component: {fileID: 344302087}
-  - component: {fileID: 344302086}
   m_Layer: 0
   m_Name: Underthebedpopup
   m_TagString: Untagged
@@ -21746,65 +21744,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &344302086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 344302082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62e11db765a6f7543ac48235aa0cfb57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleControl: {fileID: 39512868}
---- !u!61 &344302087
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 344302082}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 24.570002, y: 27.6632}
-    newSize: {x: 24.570002, y: 27.6632}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 24.570002, y: 27.6632}
-  m_EdgeRadius: 0
 --- !u!1 &361898788
 GameObject:
   m_ObjectHideFlags: 0
@@ -22837,7 +22776,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 2107194675}
-  isReverse: 1
 --- !u!1 &456740555
 GameObject:
   m_ObjectHideFlags: 0
@@ -23094,7 +23032,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &463198241
 Transform:
   m_ObjectHideFlags: 0
@@ -32395,7 +32333,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &649937103
 Transform:
   m_ObjectHideFlags: 0
@@ -40760,7 +40698,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1377919556}
-  isReverse: 0
 --- !u!114 &840044810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40905,7 +40842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &852123095
 Transform:
   m_ObjectHideFlags: 0
@@ -46333,6 +46270,7 @@ GameObject:
   - component: {fileID: 887667998}
   - component: {fileID: 887667997}
   - component: {fileID: 887667996}
+  - component: {fileID: 887667999}
   m_Layer: 0
   m_Name: Drawer4
   m_TagString: Untagged
@@ -46471,6 +46409,25 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 11.64679, y: 2.667177}
   m_EdgeRadius: 0
+--- !u!114 &887667999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887667994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca8bfa6a3668224c8e9f6afb9ee93ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchManager: {fileID: 1492002331}
+  aliceSprite: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
+  alicePoint: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
+  aliceClick: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
+  constanceSprite: {fileID: 2275898209256684654, guid: 3dd30e7ebb3c2504a835ebd951562823, type: 3}
+  constancePoint: {fileID: -4833394626526807451, guid: d64a0b472dd3d09418a3cd443deb1168, type: 3}
+  constanceClick: {fileID: -3810316324186850591, guid: f2b1e0d1e6f75b3438a18c88c3c7a785, type: 3}
 --- !u!1 &894248102
 GameObject:
   m_ObjectHideFlags: 0
@@ -54198,6 +54155,7 @@ GameObject:
   - component: {fileID: 1014534748}
   - component: {fileID: 1014534747}
   - component: {fileID: 1014534752}
+  - component: {fileID: 1014534753}
   m_Layer: 0
   m_Name: End
   m_TagString: Untagged
@@ -54374,6 +54332,19 @@ MonoBehaviour:
   switchManager: {fileID: 1492002331}
   isConstancePOV: 1
   isAlicePOV: 0
+--- !u!114 &1014534753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014534745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62e11db765a6f7543ac48235aa0cfb57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleControl: {fileID: 39512868}
 --- !u!1 &1032482582
 GameObject:
   m_ObjectHideFlags: 0
@@ -64020,6 +63991,7 @@ GameObject:
   - component: {fileID: 1345034890}
   - component: {fileID: 1345034889}
   - component: {fileID: 1345034888}
+  - component: {fileID: 1345034891}
   m_Layer: 0
   m_Name: Drawer2
   m_TagString: Untagged
@@ -64086,7 +64058,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 2165265712021016076, guid: ba4c5dbc0b8945041abd264243277340, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -64158,6 +64130,25 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 11.64679, y: 2.5905445}
   m_EdgeRadius: 0
+--- !u!114 &1345034891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345034886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca8bfa6a3668224c8e9f6afb9ee93ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchManager: {fileID: 1492002331}
+  aliceSprite: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
+  alicePoint: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
+  aliceClick: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
+  constanceSprite: {fileID: 2275898209256684654, guid: 3dd30e7ebb3c2504a835ebd951562823, type: 3}
+  constancePoint: {fileID: -4833394626526807451, guid: d64a0b472dd3d09418a3cd443deb1168, type: 3}
+  constanceClick: {fileID: -3810316324186850591, guid: f2b1e0d1e6f75b3438a18c88c3c7a785, type: 3}
 --- !u!1 &1374190722
 GameObject:
   m_ObjectHideFlags: 0
@@ -73826,6 +73817,7 @@ GameObject:
   - component: {fileID: 1594383321}
   - component: {fileID: 1594383320}
   - component: {fileID: 1594383322}
+  - component: {fileID: 1594383323}
   m_Layer: 0
   m_Name: Drawer1
   m_TagString: Untagged
@@ -73952,7 +73944,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 5488765261598904309, guid: 3557f0e63e15437458504697073542df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -73964,6 +73956,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1594383323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594383318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca8bfa6a3668224c8e9f6afb9ee93ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchManager: {fileID: 1492002331}
+  aliceSprite: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
+  alicePoint: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
+  aliceClick: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
+  constanceSprite: {fileID: 2275898209256684654, guid: 3dd30e7ebb3c2504a835ebd951562823, type: 3}
+  constancePoint: {fileID: -4833394626526807451, guid: d64a0b472dd3d09418a3cd443deb1168, type: 3}
+  constanceClick: {fileID: -3810316324186850591, guid: f2b1e0d1e6f75b3438a18c88c3c7a785, type: 3}
 --- !u!1 &1596691975
 GameObject:
   m_ObjectHideFlags: 0
@@ -73976,6 +73987,7 @@ GameObject:
   - component: {fileID: 1596691979}
   - component: {fileID: 1596691978}
   - component: {fileID: 1596691977}
+  - component: {fileID: 1596691980}
   m_Layer: 0
   m_Name: Drawer3
   m_TagString: Untagged
@@ -74114,6 +74126,25 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 11.64679, y: 2.8587565}
   m_EdgeRadius: 0
+--- !u!114 &1596691980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596691975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca8bfa6a3668224c8e9f6afb9ee93ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchManager: {fileID: 1492002331}
+  aliceSprite: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
+  alicePoint: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
+  aliceClick: {fileID: -4893535861223689238, guid: ecb3923cbcef68f48aa238df476ae660, type: 3}
+  constanceSprite: {fileID: 2275898209256684654, guid: 3dd30e7ebb3c2504a835ebd951562823, type: 3}
+  constancePoint: {fileID: -4833394626526807451, guid: d64a0b472dd3d09418a3cd443deb1168, type: 3}
+  constanceClick: {fileID: -3810316324186850591, guid: f2b1e0d1e6f75b3438a18c88c3c7a785, type: 3}
 --- !u!1 &1602228115
 GameObject:
   m_ObjectHideFlags: 0
@@ -76457,7 +76488,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1721609126
 Transform:
   m_ObjectHideFlags: 0
@@ -77282,7 +77313,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1766095245
 Transform:
   m_ObjectHideFlags: 0
@@ -77830,7 +77861,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1783993346
 Transform:
   m_ObjectHideFlags: 0
