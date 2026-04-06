@@ -151,7 +151,7 @@ The cat gives her a grin, he thinks it's reassuring but Constance appears unsett
 #noskip_start
 + [Ignore the Cat]
     ~ C_Alice -= 1
-    ~ C_Cheshire -= 1
+    ~ A_Cheshire -= 1
     #speaker: Constance
     No thank you. I'm fairly certain we can find our own way back. There's no need to trouble yourself.
     
@@ -197,7 +197,7 @@ The cat gives her a grin, he thinks it's reassuring but Constance appears unsett
 
 + [Stop and Listen to the Cat]
     ~ C_Alice += 1
-    ~ C_Cheshire += 1
+    ~ A_Cheshire += 1
     #speaker: Constance
     Queen? You’re  saying a monarch exists here? Wherever we are?
     

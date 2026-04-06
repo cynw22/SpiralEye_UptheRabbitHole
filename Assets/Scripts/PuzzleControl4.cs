@@ -37,6 +37,8 @@ public class PuzzleControl4 : MonoBehaviour
     public int totalEscapeRooms;
     public int escapeRoomsComplete;
 
+    public static bool puzzleWon = false; // true if the player solved the puzzle
+
     //// User Feedback
     //[SerializeField] public GameObject breifCasePopup;
     //[SerializeField] public GameObject bookPopup;
@@ -101,7 +103,8 @@ public class PuzzleControl4 : MonoBehaviour
         allObjectsFound = false;
         totalEscapeRooms = 4;
         escapeRoomsComplete = 0;
-    }
+}
+
 
     public void Update()
     {
@@ -114,6 +117,7 @@ public class PuzzleControl4 : MonoBehaviour
 
         if (escapeRoomsComplete == totalEscapeRooms) {
             allObjectsFound = true; // Aki check event manager - white rabbit code for where the load scene is for win condition - nvm its reverted
+            puzzleWon = true;
             SceneManager.LoadScene("ThePoster");
         }
 

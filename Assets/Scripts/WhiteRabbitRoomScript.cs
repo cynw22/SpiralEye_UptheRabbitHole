@@ -94,6 +94,8 @@ public class WhiteRabbitRoomScript : MonoBehaviour
         background_3.SetActive(true);
         background_4.SetActive(false);
         background_5.SetActive(false);
+
+
         }
     }
 

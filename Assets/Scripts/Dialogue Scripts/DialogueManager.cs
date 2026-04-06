@@ -32,6 +32,11 @@ public class CharacterDialogueUI
     public AudioClip[] typingSounds;
     [Range(0f, 1f)] public float typingVolume = 0.4f;
     public float soundDelay = 0.05f; // controls how often sounds play
+
+    [Header("Background")]
+    public Image backgroundImage;
+    public Sprite[] backgrounds;
+    private Dictionary<string, Sprite> backgroundLookup;
 }
 #endregion
 
@@ -62,6 +67,14 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Sound")]
     public SoundFXManager soundFXManager;
+
+    [Header("Background")]
+    public Image backgroundImage;
+    public Sprite[] backgrounds;
+    private Dictionary<string, Sprite> backgroundLookup;
+
+    [Header("Puzzle References")]
+    public PuzzleControl4 puzzleControl;
 
     private bool isTyping;
     private bool skipLocked;
@@ -107,6 +120,12 @@ public class DialogueManager : MonoBehaviour
         // Initialize a fresh Story instance from this scene's Ink file
         story = new Story(inkJSON.text);
 
+        if (puzzleControl != null)
+        {
+            story.variablesState["allKeysFound"] = puzzleControl.allKeysFound;
+            story.variablesState["puzzleWon"] = PuzzleControl4.puzzleWon;
+        }
+
         // Setup character lookup
         choicePanel.SetActive(false);
         lookup = new Dictionary<string, CharacterDialogueUI>();
@@ -123,8 +142,12 @@ public class DialogueManager : MonoBehaviour
                 c.skipButton.onClick.RemoveAllListeners();
         }
 
-        if (!string.IsNullOrEmpty(startingKnot))
-            StartDialogue(startingKnot);
+        backgroundLookup = new Dictionary<string, Sprite>();
+
+        foreach (var bg in backgrounds)
+        {
+            backgroundLookup.Add(bg.name, bg);
+        }
 
         // Start dialogue if starting knot is set
         if (!string.IsNullOrEmpty(startingKnot))
@@ -152,7 +175,12 @@ public class DialogueManager : MonoBehaviour
         // Only proceed if the story has content
         if (story.canContinue)
         {
-            string text = story.Continue().Trim();  // Get the next piece of text
+            string text = story.Continue().Trim(); // Get the next piece of text
+            // Track skipped lines
+            if (isSkipping && !string.IsNullOrEmpty(text))
+            {
+                skippedLines.Add(text);
+            }
             HandleTags(story.currentTags);         // Activate speaker, skip tags, etc.
 
             // If there’s text to show
@@ -176,6 +204,12 @@ public class DialogueManager : MonoBehaviour
         choicePanel.SetActive(false);
 
         isDialoguePlaying = false;
+
+        if (isSkipping)
+        {
+            isSkipping = false;
+            ShowSkipSummary();
+        }
     }
 
     //Master list of all tags currently in the ink file (DOUBLE CHECK THIS LATER MIGHT UPDATE WITH MORE DO NOT FORGET)
@@ -215,14 +249,29 @@ public class DialogueManager : MonoBehaviour
                 {
                     int val = int.Parse(op.Substring(1));
                     if (character == "C_Alice") RelationshipTracker.C_Alice += val;
-                    if (character == "C_Cheshire") RelationshipTracker.C_Cheshire += val;
-                    // add more characters when applicable
+                    if (character == "A_Cheshire") RelationshipTracker.A_Cheshire += val;
+                    if (character == "A_MadMarch") RelationshipTracker.A_MadMarch += val;
+                    if (character == "A_WhiteRabbit") RelationshipTracker.A_WhiteRabbit += val;
+                    if (character == "C_RedQueen") RelationshipTracker.C_RedQueen += val;
                 }
                 else if (op.StartsWith("-"))
                 {
                     int val = int.Parse(op.Substring(1));
                     if (character == "C_Alice") RelationshipTracker.C_Alice -= val;
-                    if (character == "C_Cheshire") RelationshipTracker.C_Cheshire -= val;
+                    if (character == "A_Cheshire") RelationshipTracker.A_Cheshire -= val;
+                    if (character == "A_MadMarch") RelationshipTracker.A_MadMarch -= val;
+                    if (character == "A_WhiteRabbit") RelationshipTracker.A_WhiteRabbit -= val;
+                    if (character == "C_RedQueen") RelationshipTracker.C_RedQueen -= val;
+
+                }
+                else if (tag.StartsWith("bg:"))
+                {
+                    string bgName = tag.Split(':')[1].Trim();
+
+                    if (backgroundLookup.ContainsKey(bgName))
+                    {
+                        backgroundImage.sprite = backgroundLookup[bgName];
+                    }
                 }
             }
         }
@@ -447,7 +496,25 @@ public class DialogueManager : MonoBehaviour
 
         isSkipping = true;
         skippedLines.Clear();
-        ContinueStory();
+        StartCoroutine(SkipAll());
+    }
+
+    IEnumerator SkipAll()
+    {
+        while (story.canContinue)
+        {
+            string text = story.Continue().Trim();
+
+            if (!string.IsNullOrEmpty(text))
+            {
+                skippedLines.Add(text);
+            }
+
+            yield return null;
+        }
+
+        isSkipping = false;
+        ShowSkipSummary();
     }
 
     //Actual skip panel controls
