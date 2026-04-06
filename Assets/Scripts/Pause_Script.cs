@@ -13,12 +13,12 @@ public class Pause_Script : MonoBehaviour
     [SerializeField] bool isReverse;
 
     void Start() {
-        if (isReverse)
+        if (!isReverse)
         {
-            Time.timeScale = 1.0f;
+            Time.timeScale = 0.0f;
         }
         else
-            Time.timeScale = 0.0f;
+            Time.timeScale = 1.0f;
 
     }
 
@@ -46,7 +46,7 @@ public class Pause_Script : MonoBehaviour
     void Update()
     {
         
-        if (isReverse)
+        if (!isReverse)
         {
             if ((Input.GetKeyDown(KeyCode.Escape) || (Input.GetKeyDown(KeyCode.P))))
             {
