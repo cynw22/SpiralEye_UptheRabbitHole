@@ -6576,6 +6576,7 @@ GameObject:
   - component: {fileID: 1180970248}
   - component: {fileID: 1180970247}
   - component: {fileID: 1180970246}
+  - component: {fileID: 1180970250}
   m_Layer: 5
   m_Name: 5.2. FindTheRose
   m_TagString: Untagged
@@ -6716,6 +6717,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180970244}
   m_CullTransparentMesh: 1
+--- !u!114 &1180970250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180970244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa3d79c8a6c24541ac48cdcbbb54b84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchManager: {fileID: 626575101}
+  aliceSprite: {fileID: 6307183744262351619, guid: 7c4f3c83c7eb4f04d9f1b75f1649bb7c, type: 3}
+  constanceSprite: {fileID: -3166921054106919335, guid: a97ce60c7ef3f1546a001a6e347ae0cc, type: 3}
 --- !u!1 &1194887416
 GameObject:
   m_ObjectHideFlags: 0
