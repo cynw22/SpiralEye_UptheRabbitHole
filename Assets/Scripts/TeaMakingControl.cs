@@ -34,6 +34,8 @@ public class TeaMakingControl : MonoBehaviour
     public GameObject winScreenPopup;
     public GameObject loseScreenPopup;
 
+    public static bool hatterWon = false; // true if the player solved the puzzle
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -142,6 +144,7 @@ public class TeaMakingControl : MonoBehaviour
                 if (submittedTea[i] != specialTea[i]) { wrongTeaPopup.SetActive(true); timesWrong++; break; }
                 correctTea = i == submittedTea.Count - 1 ? true : false;
                 winScreenPopup.SetActive(true);
+                hatterWon = true;
                 //To Change Later
                 SceneManager.LoadScene("WhiteRabbitPuzzle"); // switch later
             }
