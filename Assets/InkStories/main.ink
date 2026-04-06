@@ -23,9 +23,5 @@ INCLUDE GardenPartyPuzzle.ink
 INCLUDE QueenCourt.ink
 INCLUDE GoodEnding.ink
 
-
-
-
-
 //INCLUDE endings.ink
 //UNCOMMENT LATER

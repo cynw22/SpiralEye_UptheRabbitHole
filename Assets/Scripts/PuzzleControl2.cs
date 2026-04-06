@@ -45,7 +45,6 @@ public class PuzzleControl2 : MonoBehaviour
     GameObject flowersEnvironment7;
     GameObject flowersEnvironment8;
 
-
     void Start()
     {
         //User Feedback

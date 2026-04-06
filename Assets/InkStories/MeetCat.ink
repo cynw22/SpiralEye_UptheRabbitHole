@@ -1,48 +1,43 @@
 === MeetCat === 
 #noskip_start
 #speaker: Narrator 
-The girls wander outside the room, a vast and lush forward stretches on for what seems like forever.
+The girls wander outside the room; a vast and lush forest stretches on for what seems like forever.
 
 #speaker: Narrator
 Realizing there’s nowhere else to go, the girls tread carefully down the pathway. They walk until their feet feel sore and everything starts to ache.
-#noskip_end
 
 #speaker: Alice
 Con, I’m done, no more please.
-
-#speaker: Constance 
-What? 
 
 #speaker: Alice
 I cannot walk a single step further, my feet hurt and my head’s starting to spin.
 
 #speaker: Narrator
-Constance feels like her sister looks like a wilted flower, she wisely chooses not to voice this aloud in hopes of keeping Alice calm.
+Constance notices her sister looks too tired to continue, but she wisely chooses not to voice this aloud in hopes of keeping Alice calm.
 
 #speaker: Constance
-I don’t like it but I suppose we can take a quick break. 
+I suppose we can take a quick break. 
 
 #speaker: Alice
 Yes!!!
 
-#speaker: Constance
-But only a small one, five minutes that’s it.
+#noskip_end
+#speaker: Narrator
+Alice smiles gratefully and happily parks herself down on the path. Silence fills the area around them.
 
 #speaker: Narrator
-Alice nods and happily parks herself down on the path, much to Constance’s disgust. Silence fills the area around them.
-
-#speaker: Narrator
-It’s unsettling, Constance wonders why she can’t hear the wildlife here despite it being midday.
+It’s unsettling and Constance wonders why she can’t hear the wildlife here despite it being midday.
 
 #speaker: Alice
-Maybe it’s cause of the heat? All the creatures went into hibernation?
+Maybe it’s cause of the heat? Maybe all the creatures went into hibernation?
 
 #speaker: Narrator
 Constance looks at her sister in confusion.
 
 #speaker: Constance
-What where did this come from?
+Pardon?
 
+#noskip_start
 #speaker: Alice
 The animals, you said that it was weird you couldn’t hear the wildlife right?
 
@@ -50,7 +45,7 @@ The animals, you said that it was weird you couldn’t hear the wildlife right?
 Alice I didn’t say that out loud???
 
 #speaker: Alice
-Really? Oh... it must have been the voices.
+Ohhh.. must have been the voices.
 
 #speaker: Constance
 The voices…
@@ -59,54 +54,51 @@ The voices…
 yeahhh it sounds pretty nice though, so don’t worry about it.
 
 #speaker: Constance
-Yeah no thank you, I’ll worry however I please. Knowing you whatever this is will be plenty of trouble.
+I always worry about you…
 
 #speaker: Narrator
-Constance lets out a little sigh, something that makes Alice giggle softly. 
-
-#speaker: Narrator
-Oh but look here something sits in the distance, just beyond the tree?
+Oh, but look there! Something’s sitting in the distance. There, just beyond the tree!
 
 #speaker: Alice
 What? Where?
 
 #speaker: Narrator
-A cheeky grin beacons you forward.
+A cheeky grin sits across the screen, is it calling out to someone?
 
 #speaker: Alice
-Con look! There’s something over there.
+Con, look! There’s something over there.
 
 #speaker: Constance
 Okay hang on, let’s think this through before we jump head first-
 
 #speaker: Narrator
-Alice takes off after the mysterious thing.
+Alice takes off running after the mysterious thing.
 
-#noskip_start
+
 + [Call out to Alice gently]
     ~ C_Alice += 1
     #speaker: Constance
-    Oh my god Alice no!!! Not again    
+    Oh my gosh Alice! No!!! Not again!    
     #speaker: Alice
-    Connnnn come quickly, it looks interesting!
+    Connnnn, come quickly, it looks interesting!
     
     #speaker: Constance
     ALICE!!!
 
     #speaker: Narrator
-    Exhausted but amused by her sister's lively attitude Constance shelves her worry to chase after her quickly.
+    Exhausted, but amused by her sister's lively attitude, Constance shelves her worry to chase after Alice quickly.
 
     -> after_choice_2 
 
 + [Yell at Alice for running]
     ~ C_Alice -= 1
     #speaker: Constance
-    ALICE I SWEAR TO GOD IF YOU LEAD US DOWN ANOTHER RABBIT HOLE I WILL NOT BE RESPONSIBLE FOR THE THINGS I SAY.
+    ALICE I SWEAR, IF YOU LEAD US DOWN ANOTHER RABBIT HOLE, I WILL NOT BE RESPONSIBLE FOR THE THINGS I SAY.
     
     #speaker: Alice
-   Oh my god Con you worry way too much, it’s fine!
+   Oh my gosh Con you worry way too much! It’s fine!
 
-   Come on it's time for adventure!
+   Come on, it's time for adventure!
     
     #speaker: Narrator
     Alice disappears from view.
@@ -115,15 +107,14 @@ Alice takes off after the mysterious thing.
     …Why can’t I have one day, just one normal day to myself?
     
     #speaker: Narrator
-    Frustrated by her sister's carelessness Constance quickly gives chase to her wayward sibling.
+    Frustrated by her sister's carelessness, Constance quickly gives chase to her wayward sibling.
 
-    ->after_choice_2
+    -> after_choice_2
 
 ===after_choice_2===
 #speaker: Narrator
-The game of cat and mouse has begun. A strange smile that had appeared in the distance materializes once more, a sharp looking feline now attached to that sporting grin.
+The game of cat and mouse has begun. The strange smile sitting in the distance materializes once more, a sharp looking feline now attached to its grin.
 
 #ending: MeetCatPuzzle
 #noskip_end
 -> DONE
-
