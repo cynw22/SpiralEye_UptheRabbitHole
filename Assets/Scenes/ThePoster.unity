@@ -12689,6 +12689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1377919556}
+  isReverse: 0
 --- !u!114 &840044810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18165,7 +18166,6 @@ Transform:
   - {fileID: 1708904266}
   - {fileID: 595031277}
   - {fileID: 1535389312}
-  - {fileID: 1804413309}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1147071497
@@ -21742,71 +21742,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1804413308
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1804413309}
-  - component: {fileID: 1804413310}
-  - component: {fileID: 1804413311}
-  m_Layer: 0
-  m_Name: TutoiralPopupManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1804413309
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1804413308}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1109869948}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1804413310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1804413308}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1846d23f834820f488915729a065017a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toDisplay: {fileID: 0}
-  DialogueOverall: {fileID: 1287999509}
-  AliceDialouge: {fileID: 1496066651}
-  ConstanceDialouge: {fileID: 417890983}
-  NarrativeDialouge: {fileID: 599320096}
-  TutorialDialouge: {fileID: 1924215568}
-  ChoiceRoot: {fileID: 835867185}
---- !u!114 &1804413311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1804413308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f929473db2c0433449a698741a6e0a56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toDisplay: {fileID: 0}
 --- !u!1 &1821356734
 GameObject:
   m_ObjectHideFlags: 0
