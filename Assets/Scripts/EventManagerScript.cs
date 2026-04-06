@@ -18,7 +18,11 @@ public class EventManagerScript : MonoBehaviour
         SceneManager.LoadScene("CreditsScene");
     
     }
-    
+
+    public void Controls()
+    {
+        SceneManager.LoadScene("Controls");
+    }
     public void ExitGame()
     {
         Application.Quit();
@@ -29,41 +33,55 @@ public class EventManagerScript : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
+    public void LevelSelection()
+    {
+        SceneManager.LoadScene("Levels");
+    }
 
+    // Tutorial:
+    
+    public void TutDrinkMe()
+    {
+        SceneManager.LoadScene("TalkingTutorial");
+    }
+    
+    public void TutorialLevel()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
+
+    public void CatLevel() {
+
+            SceneManager.LoadScene("MeetCat");
+    }
+
+    public void CatChoice()
+    {
+
+        SceneManager.LoadScene("MeetCatPuzzle"); // change it when it gets changed
+    }
+
+    public void CatEnd()
+    {
+
+        SceneManager.LoadScene("PartyFight"); // change it when it gets changed
+    }
+    // Level 2 
+    public void MadHatterLevel()
+    {
+
+        SceneManager.LoadScene("MadHatter");
+    }
     public void QueenLevel()
     {
 
         SceneManager.LoadScene("FindTheRose");
     }
 
-    public void CatLevel() {
-
-        SceneManager.LoadScene("MeetCat");
-    }
-
-    public void MadHatterLevel()
-    {
-
-        SceneManager.LoadScene("MadHatter");
-    }
-
-    public void TutorialLevel() {
-        SceneManager.LoadScene("Tutorial");
-    }
-
-    public void LevelSelection() {
-        SceneManager.LoadScene("Levels");
-    }
-
-    public void Controls()
-    {
-        SceneManager.LoadScene("Controls");
-    }
 
 
-    public void tutDrinkMe() {
-        SceneManager.LoadScene("TalkingTutorial");
-    }
+
+   
 
     public void teaMiniGame()
     {
