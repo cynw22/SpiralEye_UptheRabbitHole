@@ -26,7 +26,9 @@ Hold on, not you. You need to present an ID to get in.
 #speaker: Narrator
 The girls are confused at first but quickly realize they need to do something before they get locked out.
 
-* {hatterWon} [Present the Queen’s invitation]
+//{hatterWon} 
+
++ [Present the Queen’s invitation]
     #speaker: Alice
     We have an invitation.
     
@@ -38,10 +40,12 @@ The girls are confused at first but quickly realize they need to do something be
     
     #speaker: Narrator
     The girls excitedly rush in. The White Rabbit is long gone so they rush to catch up.
+    
     #ending: QueenCastle
     -> DONE
 
-* {puzzleWon} [Ask the White Rabbit for help]
+//{puzzleWon} 
++ [Ask the White Rabbit for help]
     #speaker: Alice
     Wait Mr.Rabbit, can you help us?
     
@@ -74,10 +78,13 @@ The girls are confused at first but quickly realize they need to do something be
     
     #speaker: Narrator
     Constance grabs her sister and bolts through the door, the White Rabbit is nowhere to be seen.
+    
     #ending: QueenCastle
     -> DONE
 
-* {not hatterWon and not puzzleWon} [Stand there awkwardly]
+ //{not hatterWon and not puzzleWon} 
+
++ [Stand there awkwardly]
     #speaker: Narrator
     The guard stares at you expectantly. You have nothing to offer.
     
@@ -107,7 +114,7 @@ The girls are confused at first but quickly realize they need to do something be
      #ending: Bad End Three
     -> DONE
     
-* [Leave the Castle]
++ [Leave the Castle]
     #speaker: Alice
     Are you sure this is a good idea?
     

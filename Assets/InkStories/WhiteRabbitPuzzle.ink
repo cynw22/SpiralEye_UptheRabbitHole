@@ -243,8 +243,9 @@ What should I ask him?
     The White Rabbit's face goes cold. He does not answer the question. This topic has come to a close.
 
     -> Alice_choices
+    
+//{allKeysFound:
 
-{allKeysFound:
     * [Ask about the locket]
      ~ A_WhiteRabbit += 1
         #speaker: Alice
@@ -331,9 +332,9 @@ What should I ask him?
         #speaker: Narrator
         The White Rabbit holds her hand in silence. Their eyes never leave the locket.
     -> Alice_choices
-}
 
-{askedQueen and askedWonderland and askedCat:
+
+{askedQueen and askedWonderland and askedCat and allKeysFound:
     -> continue_story
 }
 
