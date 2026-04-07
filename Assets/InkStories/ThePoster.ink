@@ -45,7 +45,7 @@ What. Is. That.
 Uhhh not sure, we just saw it now. Con says it wasn't here when we came in.
 
 #speaker: White Rabbit
-That rat, that no good conniving snake! Of course, of course he would come here just to ruin my day?
+That rat, that no good conniving snake! Of course, he would come here just to ruin my day?
 
 #speaker: Narrator
 Both Alice and Constance are shocked by the outburst in question.
