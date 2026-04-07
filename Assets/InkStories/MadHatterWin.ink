@@ -116,7 +116,7 @@ You are most welcome my dear Alice! I hope victory shall find you first!
 #speaker: Narrator
 With that in mind the girls make their way down the worn path, hopeful they'll make it home.
 
-#ending: WhiteRabbitTalk
+#ending: WhiteRabbitHouse
 
 -> DONE
 

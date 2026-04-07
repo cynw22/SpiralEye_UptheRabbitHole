@@ -50,7 +50,7 @@ Pushing the memory out of her mind she runs after her sister instead.
 ~ C_Alice -= 5
 ~ A_MadMarch -= 15
 
-#ending: WhiteRabbitTalk
+#ending: WhiteRabbitHouse
 -> DONE
 
 
