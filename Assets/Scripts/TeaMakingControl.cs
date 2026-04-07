@@ -145,8 +145,7 @@ public class TeaMakingControl : MonoBehaviour
                 correctTea = i == submittedTea.Count - 1 ? true : false;
                 winScreenPopup.SetActive(true);
                 hatterWon = true;
-                //To Change Later
-                SceneManager.LoadScene("WhiteRabbitPuzzle"); // switch later
+                Invoke("CompletePuzzle_OnClick", 3);
             }
         }
         //else if (desiredTea == 4) {
@@ -181,6 +180,10 @@ public class TeaMakingControl : MonoBehaviour
         SceneManager.LoadScene("MadHatterLose"); //Aki
     }
 
+    public void CompletePuzzle_OnClick() {
+        SceneManager.LoadScene("MadHatterWin");
+    }
+
     public void SetPopupsOff() {
         floralTeaPopup.SetActive(false);
         roundTeaPopup.SetActive(false);
@@ -196,7 +199,7 @@ public class TeaMakingControl : MonoBehaviour
         if (timesWrong < 3)
             loseScreenPopup.SetActive(false);
         else
-            SceneManager.LoadScene("MadHatterLose"); //Aki
+            Invoke("OutofTries_OnClick", 3); //Aki
     }
 
 }
