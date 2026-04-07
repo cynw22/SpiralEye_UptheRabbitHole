@@ -10,6 +10,7 @@ public class WhiteRabbitRoomScript : MonoBehaviour
 {
     [SerializeField] public SwitchManager switchMan;
     [SerializeField] public PuzzleControl4 puzzleMan;
+    [SerializeField] public GameObject Dialouge;
 
     //Lobby
     [SerializeField] public GameObject background_0;
@@ -36,6 +37,7 @@ public class WhiteRabbitRoomScript : MonoBehaviour
     {
         isAlice = !switchMan.sisterPOV;
         SetBackgroundZeroActive();
+        Dialouge.SetActive(false);
     }
 
     public void SetBackgroundZeroActive()
@@ -48,6 +50,7 @@ public class WhiteRabbitRoomScript : MonoBehaviour
         background_3.SetActive(false);
         background_4.SetActive(false);
         background_5.SetActive(false);
+        Dialouge.SetActive(false);
     }
 
     public void SetBackgroundOneActive()
@@ -94,7 +97,7 @@ public class WhiteRabbitRoomScript : MonoBehaviour
         background_3.SetActive(true);
         background_4.SetActive(false);
         background_5.SetActive(false);
-
+            Dialouge.SetActive(true);
 
         }
     }
