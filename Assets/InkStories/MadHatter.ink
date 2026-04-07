@@ -8,7 +8,7 @@ The girls look at the chaotic scene around them; it's a mess.
 #speaker: Narrator
 There are cluttered tables, random items, and food scattered across the floor. It's gross and sticky.
 
-#speaker: Constance.
+#speaker: Constance
 What is this mess?  
 
 #speaker: Alice
