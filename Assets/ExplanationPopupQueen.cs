@@ -1,12 +1,16 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using Ink.Runtime;
 
 public class ExplanationPopupQueen : MonoBehaviour
 {
     [Header("UI References")]
     [SerializeField] private GameObject toDisplay;
-    [SerializeField] private GameObject DialogueOverall;
+    [SerializeField] public TextAsset inkJSONFile;
+    private Story madHatterWinStory;
 
-    static bool QueenInvite = true; // checks if QueenInvite is ture or false - true = open popup, false = close popup
+    //static bool QueenInvite = false; // checks if QueenInvite is ture or false - true = open popup, false = close popup
 
     private int popupState = 0;
     private float startupDelay = 0.5f; // Wait half a second
@@ -14,7 +18,11 @@ public class ExplanationPopupQueen : MonoBehaviour
 
     void Start()
     {
-        QueenInvite = true;
+        madHatterWinStory = new Story(inkJSONFile.text);
+
+        //QueenData data = JsonUtility.FromJson<QueenData>(inkJSONFile.text);
+        //QueenInvite = data.QueenInvite;
+
         // Start hidden to prevent the "flicker"
         toDisplay.SetActive(false);
         popupState = 0;
@@ -22,19 +30,23 @@ public class ExplanationPopupQueen : MonoBehaviour
 
     void Update()
     {
+
+        // 1. Accessing a Boolean
+        bool queenInvite = (bool)madHatterWinStory.variablesState["QueenInvite"];
+
         if (popupState != 0) return;
 
         // 1. Wait for the startup delay to pass
-        if (timer < startupDelay)
-        {
-            timer += Time.deltaTime;
-            return;
-        }
+        //if (timer < startupDelay)
+        //{
+        //    timer += Time.deltaTime;
+        //    return;
+        //}
 
-        if (QueenInvite) {
+        if (queenInvite) {
             OpenPanel();
         }
-        if (!QueenInvite)
+        if (!queenInvite)
         {
             ClosePanel();
         }
