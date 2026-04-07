@@ -87,16 +87,16 @@ Alice can tell the topic is sensitive, should she push?
     
     #speaker: White Rabbit
     ... that is not what I meant. This conversation is leading nowhere, perhaps it's time you leave.
-    -> DONE
+    -> Alice_choices
     
 + [Leave it Alone]
     ~ A_WhiteRabbit += 1
     #speaker: Alice 
     Alice decides to leave the conversation alone, the mood seems to lighten.
     
-    -> DONE
-
-
+    -> Alice_choices
+    
+=== Alice_choices ===
 #speaker: Alice
 I have more questions though. I thought you would answer them.
 
@@ -109,13 +109,10 @@ Fine, ask your questions but please be quick about it. I don't have all day.
 #speaker: Alice
 Okay got it!
 
--> Alice_choices
-
-=== Alice_choices ===
 #speaker: Alice
 What should I ask him?
 
-+ {not askedQueen} [Ask about his relationship with the Queen]
+* {not askedQueen} [Ask about his relationship with the Queen]
     ~ askedQueen = true
      ~ A_WhiteRabbit += 1
     #speaker: Alice
@@ -159,7 +156,7 @@ What should I ask him?
 
     -> Alice_choices
 
-+ {not askedWonderland} [Ask about Wonderland]
+* {not askedWonderland} [Ask about Wonderland]
     ~ askedWonderland = true
      ~ A_WhiteRabbit += 1
     #speaker: Alice
@@ -215,7 +212,7 @@ What should I ask him?
     
     -> Alice_choices
     
-+ {not askedCat} [Ask about Cheshire Cat]
+* {not askedCat} [Ask about Cheshire Cat]
     ~ askedCat = true
      ~ A_WhiteRabbit -= 1
     #speaker: Alice
@@ -248,7 +245,7 @@ What should I ask him?
     -> Alice_choices
 
 {allKeysFound:
-    + [Ask about the locket]
+    * [Ask about the locket]
      ~ A_WhiteRabbit += 1
         #speaker: Alice
         What about this? Do you recognize them?
