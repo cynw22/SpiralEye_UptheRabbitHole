@@ -1,7 +1,6 @@
 === WhiteRabbitPuzzle === 
-#noskip_start
 #speaker: Narrator
-Alice sees the White Rabbit sitting in the chair by himself. He looks hagard.
+Alice sees the White Rabbit sitting in the chair by himself. He looks haggard.
 
 #speaker: Alice
 Hello. How are you doing?
@@ -31,7 +30,7 @@ Now that's quite the impolite question young lady.
 Oops, sorry. I didn't mean it like that.
 
 #speaker: Narrator
-Alice looks down embarresed as the White Rabbit chuckles.
+Alice looks down embarrassed as the White Rabbit chuckles.
 
 #speaker: White Rabbit
 Well it's not like I'm offended by the question. Still you should be careful, you never know who you'll meet.
@@ -46,7 +45,7 @@ Your sister's right, one of these days it's going to get you in trouble.
 Ehhh I'll deal with it if I ever get to that point.
 
 #speaker: White Rabbit
-Oh my, you're quite the free spirit. I suppose it's refreshing to see someone as optmistic as you down here.
+Oh my, you're quite the free spirit. I suppose it's refreshing to see someone as optimistic as you down here.
 
 #speaker: Alice
 Oh? Are people usually negative here?
@@ -55,7 +54,7 @@ Oh? Are people usually negative here?
 Something like that...
 
 #speaker: Narrator
-Alice can tell the topic is sensetive, should she push?
+Alice can tell the topic is sensitive, should she push?
 
 + [Ask the Rabbit for Clarification]
     ~ A_WhiteRabbit -= 1
@@ -75,7 +74,7 @@ Alice can tell the topic is sensetive, should she push?
     Because that's how it works down here. Nothing is free, everything comes with a price.
     
     #speaker: Alice
-    Even this? Do you want something from me, for sitting down and talking to you.
+    Even this? Do you want something from me, for sitting down and talking to you?
     
     #speaker: Narrator
     Alice can feel herself getting upset at the thought. She liked the old man.
@@ -84,7 +83,7 @@ Alice can tell the topic is sensetive, should she push?
     I wouldn't want your things, I doubt a little girl such as yourself even has anything to offer.
     
     #speaker: Alice
-    HEY! I'm plenty smart, Con say's I'm old enough to do school work on my own.
+    HEY! I'm plenty smart, Con says I'm old enough to do school work on my own.
     
     #speaker: White Rabbit
     ... that is not what I meant. This conversation is leading nowhere, perhaps it's time you leave.
@@ -105,7 +104,7 @@ I have more questions though. I thought you would answer them.
 The White Rabbit stays silent for a moment before deciding.
 
 #speaker: White Rabbit
-Fine, ask your questions but please be quick about it I don't have all day.
+Fine, ask your questions but please be quick about it. I don't have all day.
 
 #speaker: Alice
 Okay got it!
@@ -132,7 +131,7 @@ What should I ask him?
     What else is there? She is our Queen, we watch over her as she watches us.
     
     #speaker: Alice
-    But why? Everyone we've talked to either talks about her like she's a god or a nusiance.
+    But why? Everyone we've talked to either talks about her like she's a god or a nuisance.
     
     #speaker: Alice
     So which is it?
@@ -150,7 +149,7 @@ What should I ask him?
     She is as powerful as the whispers and she rules these lands.
     
     #speaker: Alice
-    If she rules these lands then why does everyone hold a sense of sadness to them.
+    If she rules these lands then why does everyone hold a sense of sadness for them.
     
     #speaker: White Rabbit
     That is something I cannot answer. Please do not ask me again...
@@ -170,7 +169,7 @@ What should I ask him?
     This is Wonderland... a place of wonder and joy.
     
     #speaker: Alice
-    Everyone says that, it's this amazing place filled with possibilites. 
+    Everyone says that, it's this amazing place filled with possibilities. 
     
     #speaker: White Rabbit
     And they would be correct.
@@ -185,7 +184,7 @@ What should I ask him?
     Everywhere we go it feels like people are missing parts of themselves, like important bits have been taken.
     
     #speaker: White Rabbit
-    ... why, would you think that?
+    ... why would you think that?
     
     #speaker: Alice
     I don't know... just a feeling?
@@ -197,13 +196,13 @@ What should I ask him?
     What's that supposed to mean?
     
     #speaker: White Rabbit
-    It means not everything is a complicated picutre you need to put back together, sometimes simpilicty is beauty.
+    It means not everything is a complicated picture you need to put back together, sometimes simplicity is beauty.
     
     #speaker: Alice
     And that's what this place is, simple?
     
     #speaker: White Rabbit
-    This place holds beauty in it's rules, it keeps order and maintain's this paradise.
+    This place holds beauty in its rules, it keeps order and maintains this paradise.
     
     #speaker: Alice
     I don't understand?
@@ -217,13 +216,13 @@ What should I ask him?
     -> Alice_choices
     
 + {not askedCat} [Ask about Cheshire Cat]
-    ~ askedWonderland = false
+    ~ askedCat = true
      ~ A_WhiteRabbit -= 1
     #speaker: Alice
-    What about the cat? What's your relationship with him?
+    What about The Cheshire Cat? What's your relationship with him?
 
     #speaker: White Rabbit
-    That mangy scoundrel, I don't ever want to to talk about him again. 
+    That mangy scoundrel, I don't ever want to talk about him again. 
     
     #speaker: Alice
     Really? You hate him?
@@ -238,10 +237,10 @@ What should I ask him?
     Make no mistake, that thing doesn't care, he only does what he pleases.
     
     #speaker: White Rabbit
-    It doesn't matter who he hurts, it's all ag game to him in the end.
+    It doesn't matter who he hurts, it's all a game to him in the end.
     
     #speaker: Alice
-    And has he hurt you? Is that why you're angry.
+    And has he hurt you? Is that why you're angry?
     
     #speaker: Narrator
     The White Rabbit's face goes cold. He does not answer the question. This topic has come to a close.
@@ -309,13 +308,13 @@ What should I ask him?
         There's always an option, you just have to look for it.
         
         #speaker: White Rabbit
-        Spoken like a true child, oen that still believes the good in this world.
+        Spoken like a true child, one that still believes the good in this world.
         
         #speaker: White Rabbit
         The world is not as kind to you when you grow to understand it.
         
         #speaker: Alice
-        Is that why you chose to lock it away. Lock them up along with a piece of your heart?
+        Is that why you chose to lock it away? Lock them up along with a piece of your heart?
         
         #speaker: Alice
         The reason you chose to serve her, even if it kills you inside.
@@ -323,8 +322,8 @@ What should I ask him?
         #speaker: White Rabbit
         Yes, I pushed it away, locked it somewhere I could never touch so this pain would no longer hurt me.
         
-        #speaker: White Raabbit
-        I chose this path, beacause it was all I had left, all I had to numb the hurt.
+        #speaker: White Rabbit
+        I chose this path, because it was all I had left, all I had to numb the hurt.
         
         #speaker: White Rabbit
         And I hoped I could keep this piece locked away in the only place that has meaning here.
@@ -379,5 +378,5 @@ I will be here, as long as I have time, I will sit here.
 #speaker: Narrator
 Alice nods realizing the conversation is over. 
 
-#noskip_end
 -> DONE
+

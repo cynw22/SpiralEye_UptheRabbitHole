@@ -1,63 +1,56 @@
 === MadHatter === 
-#noskip_start
 #speaker: Alice 
 What the- where are we?
 
 #speaker: Narrator
-The girls look around at the chaotic scene around them. It's a mess.
+The girls look at the chaotic scene around them; it's a mess.
 
 #speaker: Narrator
-Cluttered tables, random items, food scattered across the floor. It's terrible.
+There are cluttered tables, random items, and food scattered across the floor. It's gross and sticky.
 
-#speaker: Constance
+#speaker: Constance.
 What is this mess?  
 
 #speaker: Alice
-No idea but I think he might know.
+No idea, but I think he might know.
 
 #speaker: Narrator
-Alice points to a man seated in towards the back of the party. He appears to be in a heated argument with nothing?
+Alice points to a man seated towards the back of the party. He appears to be in a heated argument with…nothing?
 
 #speaker: Constance
 Are you sure we should talk to him?
 
 #speaker: Alice
-Might as well, it's not like there's anyone else here.
+Might as well. It's not like there's anyone else here.
 
 #speaker: Narrator
-With that both girls set off towards the table. As they near the man in question he’s arguing passionately about something.
+With that, both girls set off towards the table. As they near the man in question, he’s arguing passionately about something.
 
 #speaker: Mad Hatter
-I'm telling you it's not use, it only tastes good with a bit of sweetness
+I'm telling you, it's no use. It only tastes good with a bit of bubbles.
 
 #speaker: Mad Hatter
-What do you mean you want it black? Why would anyone drink it like that?
+What do you mean you want it plain? Why would anyone drink it like that?
 
 #speaker: Narrator
-The girls watch in silence as the man argues with the air. He doesn't seem to notice either girls
+The girls watch in silence as the man argues with the air. He doesn't seem to notice either of them.
 
 #speaker: Alice
 Should we ask him now?
 
 #speaker: Constance
-I think we should wait, what if he's doing something important?
+I think we should wait. What if he's doing something important?
 
 #speaker: Alice
-Con he's speaking to the air. Not sure how important that could be.
+Con, he's speaking to the air. Not sure how important that could be.
 
 #speaker: Narrator
-Both girls watch in silence as the man continues his argument
-
-#speaker: Constance
-I think he's talking about tea? The arguement appears to be about tea preferences?
-
-#speaker: Alice
-Okayyy? Why does that matter?
+Both girls watch as the man continues his silent argument.
 
 #speaker: Narrator
-Constance simply stares back confused. What should they do here?
+They stare at each other confused. What should they do here?
 
-+ [Interupt the Mad Hatter]
++ [Interrupt the Mad Hatter]
     ~ C_Alice -= 1
     ~ A_MadMarch += 1
     
@@ -68,10 +61,10 @@ Constance simply stares back confused. What should they do here?
     ~ A_MadMarch += 1
     
     #speaker: Narrator
-    The girls decide to wait it out, but the man keeps going, clearly he's on a role.
+    The girls decide to wait it out, but the man keeps going. Clearly he's on a roll.
     
     #speaker: Narrator
-    Alice is starting to get impatient, her sister can tell she's at her wits end.
+    Alice starts to get impatient. Constance can tell Alice is at her wits end.
     
     #speaker: Constance
     I suppose we should just ask him now, I don't think you have the patience to wait.
@@ -82,20 +75,18 @@ Constance simply stares back confused. What should they do here?
 #speaker: Alice
 Uhhhh Hi? How are you doing?
 
-#speaker: Constance
-Alice???
-
 #speaker: Narrator
-The Mad Hatter pauses his conversation. He looks at both girls quizzicly.
+The Mad Hatter pauses his conversation. He looks at both girls, perplexed.
 
 #speaker: Alice
 Mad Hatter huh, that's a fun name!
 
+
 #speaker: Constance
-I'm sorry about my sister, we didn't mean to interuprt-
+I'm sorry about this. We didn't mean to interrupt your conversation.
 
 #speaker: Mad Hatter
-It is a funny name, though I quite like it. It's important to me.
+Some think it’s a funny name, I quite like it. It's important to me.
 
 #speaker: Alice
 Of course it's important to you, it's your name, it makes you... well, uhhh you!
@@ -104,16 +95,19 @@ Of course it's important to you, it's your name, it makes you... well, uhhh you!
 The Mad Hatter gives her a funny look, it appears both sad and amused by her statement
 
 #speaker: Mad Hatter
-Yes, well I suppose you're right. In that case let me hear yours. After all names are important.
+Yes, well I suppose you're right. In that case let me hear yours. After all, names are important.
 
 #speaker: Alice
-Well I'm Alice! And this is my sister, it's nice to meet you.
+You’re absolutely right! I'm Alice! And this is my sister. It's nice to meet you.
 
 #speaker: Narrator
-Constance levels her sister a glare for sharing their information, but she can't do anything about it now.
+Constance levels her sister a glare, but she can't do anything about it now.
 
 #speaker: Constance
 I'm Constance, it's a pleasure to meet you.
+
+#speaker: Narrator
+Mad Hatter seemingly breaks out of his mind fog.
 
 #speaker: Mad Hatter
 The pleasure's all mine! It's not everyday you see a new face around here.
@@ -125,49 +119,43 @@ You're the second person to say that today. Where even is here?
 It's Wonderland silly, I've told you this.
 
 #speaker: Constance
-And I've told you that name means nothing to me. I have no idea what you're talking about.
+Riiiiiggghttt….”Wonderland.”
 
 #speaker: Mad Hatter
-You're sister speaks the truth, this place is Wonderland, a place filled with endless joy and wonder.
+Your sister speaks the truth. This place is Wonderland, a place filled with endless joy and wonder.
 
 #speaker: Narrator
-A grin stretches across his face, though his eyes don't hold it.
+He smiles, though his eyes don't hold it.
 
 #speaker: Mad Hatter
 A place filled with warmth, a place filled with true happiness, a place called home!
 
 #speaker: Narrator
-He's shouting now, rambling, his sentences seem to turn to nonsense.
+He's shouting now, rambling, and his sentences seem to turn to nonsense.
 
 #speaker: Mad Hatter
-Is that not the case my friend! This place is a miracle!
+Is that not the case my friend? This place is a miracle!
 
 #speaker: Narrator
-To the girls only silence fills the area but the Hatter seems satisfied with the answer he recieves.
+To the girls, only silence fills the area, but the Hatter seems satisfied with the answer he receives.
 
 #speaker: Mad Hatter
-Of course it's alright. When have we ever gotten trouble from him. He leaves us alone at this point.
+Of course, it's alright. When have we ever gotten trouble from him? He leaves us alone at this point.
 
 #speaker: Mad Hatter
 There is nothing left for us, she watches as she pleases and we let her, she is our guard.
 
-#speaker: Mad Hatter
-You're wrong, there's nothing more to it. Why won't you trust me on this?
-
-#speaker: Narrator
-The girls watch as the man works himself up again, seemingly angry with the air.
-
 #speaker: Alice
-Uhhh Mr.Mad Hatter? Are you okay.
+Uhhh Mr. Mad Hatter? We want to ask for directions. Would you know… uh…
 
 #speaker: Narrator
-The question makes the man pause, clearly his mind is elsewhere.
+The question stops the man’s rant. Clearly his mind is elsewhere.
 
 #speaker: Mad Hatter
 ...Who are you again?
 
 #speaker: Narrator
-Both girls look equally shocked, he's already forgetten them?
+Both girls look equally shocked. He's already forgotten them?
 
 #speaker: Alice
 Uhhh I'm Alice? And this is my sister- 
@@ -179,96 +167,91 @@ Yes of course, how could I have forgotten, are you here for a cup of tea?
 What?
 
 #speaker: Mad Hatter
-We have the finest tea here, no one else can compete, we're truely the best!
+We have the finest tea here. No one else can compete. We're truly the best!
 
 #speaker: Constance
 We didn't come here for tea, we came-
 
 #speaker: Mad Hatter
-You don't look like you're from around here? Are you you new?
+You don't look like you're from around here? Are you new?
 
 #speaker: Alice
 Yeah we came from a rabbit hole.
 
 #speaker: Mad Hatter
-A rabbit hole! Truely facisnating, what might this hole look like?
+A rabbit hole! Truly fascinating. What might this hole look like?
 
 #speaker: Alice
-Well it was big and round, and covered in pretty flowers-
+Well, it was big and round, and covered in pretty flowers-
 
 #speaker: Mad Hatter
-Flowers, yes of course how could I forget, we need to gather some quickly. The time is ticking.
+Flowers, yes of course, they’re important, though I can’t remember why…
+
 #speaker: Constance
-Gather the flowers?
+Do you gather the flowers?
 
 #speaker: Mad Hatter
-Yes the flowers, quickly time is running out my friends. 
+Yes of course you gather  flowers. You gather them for… For tea time! Oh my friends, the hour is upon us. 
+
+#speaker: Constance
+For tea?
 
 #speaker: Mad Hatter
-Of course I know which ones to pick, it's the pink ones, or no were they purple?
+Yes of course, 6pm sharp! You can’t be late.
+
+#speaker: Mad Hatter
+Was it the red ones, or the purple ones?
 
 #speaker: Narrator
-The Mad Hatter quickly grew frustrated unable to remember what he needed.
+The Mad Hatter quickly grows frustrated, unable to remember what he needed.
 
 #speaker: Narrator
-He begins to quickly mumble to himself, missing ingrdients is all he says.
+He begins to mumble to himself. ‘Missing ingredients,’ is all he says.
 
 #speaker: Alice
-Ingrdeitns? Are you making something?
+Ingredients? Are you making something?
 
 #speaker: Mad Hatter
-Yes I must make something, he needs it, we've planned this for ages.
+Yes I must make something, he needs it. We've planned this for ages…or was it yesterday.
 
 #speaker: Alice
-Who's he? Is it a friend of yours.
+Who's he? A friend of yours?
 
 #speaker: Narrator
 Something washes over the Mad Hatter's face. A wave of sorrow and guilt. It's quickly replaced by a mask of indifference.
 
 #speaker: Mad Hatter
-Yes, my friend needs it. I promised him I would make it.
-
-#speaker: Constance
-Make what, a tea?
+Yes, my friend needs it. I promised him I would make tea.
 
 #speaker: Alice
-Ohhh we could help you make a tea. Con's makes the best teas at home.
+Ohhh we could help you make tea. Constance makes the best teas at home.
 
 #speaker: Constance
-Maybe another time Alice, we don't have time for this right now.
+Maybe another time Alice. We need to keep moving.
 
 #speaker: Mad Hatter
-Are you in a hurry, time is ticking, I suppose that means we're all in a hurry!
-
-#speaker: Narrator
-He laughes and Alice chuckles along with him. Constance appears unfaced.
+Are you in a hurry?  Relax, sit down, it’s tea time after all.
 
 #speaker: Constance
-Yes we're in a hurry, we were told to meet someone who could help us get to the Queen here.
+Yes, we’re in a hurry. We were told someone here can help us find a Queen. Someone who might, in turn, help us leave this place.
 
 #speaker: Narrator 
 At this the Mad Hatter freezes, the joy on his face slipping slightly.
 
 #speaker: Mad Hatter
-The Queen you say, that's an interesting goal you have there. Any particular reason why?
-
-#speaker: Narrator
-He appears nervous but Constance ignores it.
-
-#speaker: Constance
-Yes we need a way to get back home and we were told she could help us.
+The Queen you say… well! That's an interesting goal you have there. 
 
 #speaker: Mad Hatter
-I see... well yes, she does have a way to uhh "help" I suppose.
+She does have a way to uhh "help,” I suppose.
 
 #speaker: Constance
-Do you know here well? Could you help us get to her?
+Do you know her well? Could you help us get to her?
 
 #speaker: Mad Hatter
-I mean, I know her as well as anyone else here, she's our queen afterall
+I mean, I know her as well as anyone else here. She's our Queen, after all.
 
 #speaker: Narrator
-Something about his tone feels off, maybe you should ask him about it?
+Something about The Mad Hatter’s tone feels off. 
 
 #speaker: Alice
 Uhhh nahh he seems fine!
@@ -289,133 +272,79 @@ You hear him? You can really hear it?
 He appears rattled by this new revelation.
 
 #speaker: Alice
-Yeah, I mean it's not hard, you gotta learn to tune it out sometimes it can be annoying.
+Yeah, I mean it's not hard. You gotta learn to tune it out sometimes, though, because it can be annoying.
 
 #speaker: Narrator
-The Mad Hatter looks perplexed, he has no idea what to say here.
+The Mad Hatter looks terrified by this new information. He backs away from the girls, his expression reminding them of a deer trapped in headlights.
 
 #speaker: Alice
-Maybe you could say you wanna help us?
+So Mr. Hatter, can you help us?
 
 #speaker: Mad Hatter
-Help you. Help you with what?
+Help you? Help you with what?
 
 #speaker: Constance
-Oh for goodness sake! Help us get to the Queen, do you know her or not?
-
-#speaker: Mad Hatter
-Of course I know her, everyone knows her. Why do you want to meet her?
-
-#speaker: Constance
-Because she knows the way home!
-
-#speaker: Mad Hatter
-Who told you that?
+Oh for goodness sake! Help us get to the Queen to go back home.
 
 #speaker: Alice
-Oh I can answer that one, the Cheshire  Cat told us.
+Yeah…I mean, well. I’m pretty content here, but Con wants to leave.
+
+#speaker: Constance
+I’m sorry, what? You want to stay?
+
+#speaker: Alice
+It’s been fun so far! Better than reading, that’s for sure. 
+#speaker: Alice
+But knowing you, you're probably stressing about all the math tests and clarinet lessons you’re missing.
+
+#speaker: Constance
+This place could be covered in gold for all I care, I would still want to go home. Plus, it's only been like… a day. My math test is next week. 
+
+#speaker: Mad Hatter
+These “math tests” sound strange. Perhaps they’re some creature you dispose of? Our Queen might know, yes she always knows what to do. But she can’t help you. She won’t help either of you.. 
+
+#speaker: Alice
+ What? But why? The Cheshire Cat told us she could help. 
 
 #speaker: Narrator
-At his name the Mad Hatter blanches, he looks pale and shaky.
+At The Cat's name, the Mad Hatter pales.
 
 #speaker: Mad Hatter
 He- he sent you here? To me?
 
 #speaker: Constance
-More like he sent us down a path. He didn't tell us where exactly we were supposed to go or who to meet.
-
-#speaker: Mad Hatter
-He wanted me to help you?
-
-#speaker: Alice
-I mean if you have a way to help us can you? I don't mind I like it here but I know Con want's to get home.
-
-#speaker: Constance
-ALICE!?
-
-#speaker: Alice
-What? I know you, you're probably stressing all about that math test we have. 
-
-#speaker: Alice
-I mean come on, live a little this place is amazing!
-
-#speaker: Constance
-This place could be covered in gold for all I care, I want to go home.
-
-#speaker: Mad Hatter
-He sent you here. To me? Why? What does he want?
+Something like that. He’s not the most straight forward if you know what I mean. 
 
 #speaker: Narrator
-The girls turn to him once more, realizing the man is unravelling quickly.
+A wounded noise is pulled from the Ma Hatter’s mouth. The man is unravelling quickly.
 
 #speaker: Narrator
-He gestures wildly at the air, throwing accusations and questions sometimes nodding along like he's recieing an answer.
+He gestures wildly at the air, throwing accusations and questions sometimes nodding along like he's receiving an answer.
 
 #speaker: Narrator
 Eventually whatever he was talking to manages to calm him down enough to turn back to the girls.
 
 #speaker: Mad Hatter
-He wants me to help you. I don't want to help him, but he sent you here. Maybe there was a reason.
+He wants me to help you. I don't want to help, but you were sent here. Maybe there was a reason. A chance to earn your place.
 
 #speaker: Constance
-You don't want to help him, why?
+What do we have to do?
 
-#speaker: Alice
-You want to help us yayyyy!
 
 #speaker: Mad Hatter
-I don't want to but I will give you a chance. A chance to earn your ticket in.
-
-#speaker: Constance
-What's that supposed to mean?
-
-#speaker: Mad Hatter
-It means, I need help, with something, it's important.
-
-#speaker: Alice
-Okayyy, so what do you want us to do?
-
-#speaker: Mad Hatter
-I need help collecting ingredients to make tea, we're running out of time so be quick about it.
+Tea. I need help making my teas.I keep forgetting which ingredients to collect, I think the list is somewhere he was always better at keeping our notes organized.
 
 #speaker: Constance 
-What's in it for us? Why are we helping you make tea, we have no interest in sitting down to chat.
-
-#speaker: Narrator
-The Mad Hatter appears hurt by this but doesn't say anything for a moment.
+So we need to grab ingredients to make tea for a ticket? What’s the ticket for? 
 
 #speaker: Mad Hatter
-If you help me I will give it to you, a ticket, a ticket to the Queen's Party.
+It’s a ticket to the Queen's Party today. If you help me I’ll give them to you.
 
 #speaker: Alice
-A party? Like a birthday party?
-
-#speaker: Mad Hatter
-She sends them out often, we're having one today.
-
-#speaker: Constance
-So if we help you make tea, you'll give us the invite to her party?
-
-#speaker: Mad Hatter
-Yes, yes you can have it, just help me please.
+Really? That’s awesome! What do we do first?
 
 #speaker: Narrator
-The Mad Hatter looks more frazzled with each sentence
-
-#speaker: Alice
-Welp, sounds easy enough, Let's do it!
-
-#speaker: Constance
-Hang on, we don't even know what we're looking for. 
-
-#speaker: Alice
-Oh yeah, uhh what kinda tea do you want us to make you mister?
-
-#speaker: Narrator
-The Mad Hatter appears trapped deep in thought.
-
-#speaker: Constance
-Helloo? Mad Hatter? Are you there?
+The Mad Hatter begins to space off once more. He snaps back after a second.
 
 #speaker: Mad Hatter
 Huh? What's happening? Who are you?
@@ -433,24 +362,23 @@ I did?
 Yes you did, you wanted us to make it, so tell us what type you want.
 
 #speaker: Mad Hatter
-I uhh, whatever is fine, there's a list somewhere here. He wrote it down so I wouldn't forget.
+I uhh, whatever is fine, there's a list and a recipe book somewhere here. He wrote it down so I wouldn't forget but now I can’t remember where I put it. 
 
 #speaker: Alice
-A list?
+Do you want us to get it for-
 
 #speaker: Mad Hatter
-Yes a list of ingredients. Go find it and come back to me, I need to prepare.
+Yes, yes just do whatever you must do. I must go now there’s something I must do. At least I think I do… Come back when you’ve found everything.
 
 #speaker: Narrator
-With his piece said he turns away from the girls.
+And with that he turns away from the girls.
 
 #speaker: Alice
-Well you heard the man. Off we go to find a list and make some tea.
+Well you heard the man. Off we go to find a list and make some tea. I think I saw the list!
 
 #speaker: Constance
-For the love of god, this better be worth it...
+I’ll grab the recipe book. For the love of god, this better be worth it...
 
 #ending: MadHatter
-#noskip_end
--> DONE
 
+-> DONE

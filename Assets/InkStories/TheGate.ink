@@ -1,16 +1,15 @@
 === TheGate === 
-#noskip_start
 #speaker: Narrator
-The girls watch as the White Rabbit quickly disappers out of view. The forest gives way to a towering castle.
+The girls watch as the White Rabbit quickly disappears out of view. The forest gives way to a towering castle.
 
 #speaker: Alice
 Oh my god, it's huge!
 
 #speaker: Constance
-We need to hurry, wee're going to lose the Rabbit.
+We need to hurry, we're going to lose the Rabbit.
 
 #speaker: Narrator
-They reach the Gate two guards stand strong, checking people's IDs. 
+They reach the Gate and two guards stand strong, checking people's IDs. 
 
 #speaker: White Rabbit
 White Rabbit reporting for duty!
@@ -22,10 +21,10 @@ Ahh, hello sir, the Queen is waiting for you.
 Hang on we're coming!
 
 #speaker: Card
-Hold on not you. You need to present ID to get in.
+Hold on, not you. You need to present an ID to get in.
 
 #speaker: Narrator
-The girls are confused at first but quickly realize they need to do something before they got locked out.
+The girls are confused at first but quickly realize they need to do something before they get locked out.
 
 + {hatterWon} [Present the Queen’s invitation]
     #speaker: Alice
@@ -38,7 +37,7 @@ The girls are confused at first but quickly realize they need to do something be
     ...Very well. You may enter.
     
     #speaker: Narrator
-    The girls excietly rush in. The White Rabbit is long gone so they rush to catch up.
+    The girls excitedly rush in. The White Rabbit is long gone so they rush to catch up.
     #ending: QueenCastle
     -> DONE
 
@@ -53,10 +52,10 @@ The girls are confused at first but quickly realize they need to do something be
     They're with you sir?
     
     #speaker: White Rabbit
-    Yes both girls are with me. Let them in once you check them.
+    Yes, both girls are with me. Let them in once you check them.
     
     #speaker: Narrator 
-    With that the White Rabbit disappers through the large gate.
+    With that the White Rabbit disappears through the large gate.
     
     #speaker: Card
     Alright girls you got any weapons or harmful objects on you?
@@ -98,7 +97,7 @@ The girls are confused at first but quickly realize they need to do something be
     Ever stands silently staring at each other. Eventually Constance breaks and grabs her sister.
     
     #speaker: Constance
-    Come on let's just go?
+    Come on, let's just go?
     
     #speaker: Alice
     Go where?
@@ -119,6 +118,6 @@ The girls are confused at first but quickly realize they need to do something be
     Maybe there's another way inside. Let's take a look.
 
 #ending: Bad End Three
-#noskip_end
 
 -> DONE
+

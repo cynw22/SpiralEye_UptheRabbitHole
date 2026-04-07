@@ -1,5 +1,4 @@
 === tutorial_puzzle_chapter === 
-#noskip_start
 #speaker: Alice
 Oh come on, let’s just focus on all the cool things in here! Stop worrying so much and take a look around!
 
@@ -32,7 +31,6 @@ Woah, hey, slow down!
 
 #speaker: Narrator
 Skipping out through the door, Alice drags her sister along to their next destination…
-#noskip_end
 
 #ending: MeetCat
 

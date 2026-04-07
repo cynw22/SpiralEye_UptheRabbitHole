@@ -1,13 +1,12 @@
 === WhiteRabbitHouse === 
-#noskip_start
 #speaker: Narrator
 The girls continue down the path forward. Alice rushing in front and Constance trailing behind.
 
 #speaker: Constance
-Alice wait up, you're moving to quickly.
+Alice, wait up, you're moving too quickly.
 
 #speaker: Alice
-Orrr you're just moving to slow!
+Orrr you're just moving too slow!
 
 #speaker: Narrator
 The girls fall into a quiet stretch, the sounds of labored breathing fill the air around them.
@@ -16,9 +15,9 @@ The girls fall into a quiet stretch, the sounds of labored breathing fill the ai
 Suddenly Alice spots movement to the right and freezes.
 
 #speaker: Alice
-Con did you see that?
+Con, did you see that?
 
-#speaker: Con
+#speaker: Constance
 See what?
 
 #speaker: Alice
@@ -43,7 +42,7 @@ TO LATE FOR THAT!
 And with that Alice takes off rushing after the rabbit. Constance curses under her breath and follows.
 
 #speaker: Narrator
-Both girls give chase for awhile before finally the pathway clears and a large hosue comes into view.
+Both girls give chase for a while before finally the pathway clears and a large house comes into view.
 
 #speaker: Alice
 Woahhhh what is that thing?
@@ -58,7 +57,7 @@ The rabbit!
 Alice quickly runs forward to meet the rabbit in question, Constance following close.
 
 #speaker: Alice 
-Hi!!! How are you! My name's Alice what's yours?
+Hi!!! How are you? My name's Alice. What's yours?
 
 #speaker: White Rabbit
 ...
@@ -82,25 +81,19 @@ I'm Alice! And this here is sister Constance.
 Hello. It's nice to meet you.
 
 #speaker: White Rabbit
-I see... it's lovely to meet the both of you. Now if you'll excuse me I have places to be.
+I see... It's lovely to meet the both of you. Now if you'll excuse me I have places to be.
 
 #speaker: Alice
 Wait but what? What's your name!
 
 #speaker: Constance
-Alice don't bother the man he's clearly busy.
+Alice don't bother the man, he's clearly busy.
 
 #speaker: Narrator
 The rabbit is already leaving and Alice runs after him ignoring her sister's warning.
 
 #speaker: Alice
-Wait, mister wait! I just want to talk to you.
-
-#speaker: Constance
-Alice!!
-
-#speaker: Alice
-Please just five minutes. I just want to know more about you. I saw you before.
+Please just five minutes! I just want to know more about you. I saw you before, 
 
 #speaker: Alice
 Near the rabbit hole. You dropped a watch on your way down!
@@ -113,9 +106,6 @@ No, that's not possible you couldn't have been there.
 
 #speaker: Alice
 Sure I could have! I saw you before, when we were sitting under the oak tree.
-
-#speaker: Narrator
-Alice continues, despite the Rabbit's look of shock and horror
 
 #speaker: Alice
 You kept fishing out that watch and looking at it before running.
@@ -154,10 +144,10 @@ No, the queen didn't tell us anything we haven't met her.
 What my sister means is that we met someone who told us to go see her.
 
 #speaker: White Rabbit
-And they told you, that the Queen, our Queen would help you get home.
+And they told you, that the Queen, our Queen, would help you get home.
 
 #speaker: Narrator
-The White Rabbit looks extremly conflicted by this but says nothing.
+The White Rabbit looks extremely conflicted by this but says nothing.
 
 #speaker: Alice
 Yeah something like that, I can't remember what he said exactly but he told us about her.
@@ -172,7 +162,7 @@ I- I'm not so sure. I don't think the Queen will want to meet today.
 Is it cause she's busy?
 
 #speaker: White Rabbit
-Yes she's extremly busy she has things to do- OH MY!
+Yes she's extremely busy she has things to do- OH MY!
 
 #speaker: Narrator
 The girls watch as the White Rabbit remembers something and begins to rush towards his home.
@@ -214,10 +204,10 @@ Why? What's in it for you?
 Nothing. We were hoping you could help us locate the Queen in exchange for our help.
 
 #speaker: Narrator
-The White Rabbit appears deep in thought for a moment. Eventually his face settles into something netural
+The White Rabbit appears deep in thought for a moment. Eventually his face settles into something neutral
 
 #speaker: White Rabbit
-Very well, I may need your help. I only have a half hour before i have to leave.
+Very well, I may need your help. I only have a half hour before I have to leave.
 
 #speaker: Constance
 Great, what do you need from us?
@@ -229,13 +219,13 @@ I am trusting you with my home, please do not go around snooping, only grab what
 Of course! We'll be careful, we promise!
 
 #speaker: Narrator
-Constance eye's her sister but says nothing aloud to hopefully ease the White Rabbit
+Constance eyes her sister but says nothing aloud to hopefully ease the White Rabbit
 
 #speaker: White Rabbit
-...Very well. The list in in the lobby, please gather my items. I will pack the remainder of my tools that lie in my study. 
+...Very well. The list is in the lobby, please gather my items. I will pack the remainder of my tools in my study. 
 
 #speaker: White Rabbit
-We will meet in the lobby in a a half hour. Please try not to be late.
+We will meet in the lobby in a half hour. Try not to be late.
 
 #speaker: Narrator
 With that the White Rabbit shuffles away, leaving the two girls to themselves.
@@ -244,7 +234,7 @@ With that the White Rabbit shuffles away, leaving the two girls to themselves.
 Soooo, what now?
 
 #speaker: Constance
-We divide and concquer. There's too many rooms to search together.
+We divide and conquer. There's too many rooms to search together.
 
 #speaker: Alice
 Okay I like the sound of that. You take two items and I take two.
@@ -259,5 +249,6 @@ Alright see you in a bit sis!
 See you in a bit Alice...
 
 #ending: WhiteRabbitPuzzle
-#noskip_end
+
 -> DONE
+

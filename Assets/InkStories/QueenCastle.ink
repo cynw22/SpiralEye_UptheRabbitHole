@@ -1,16 +1,15 @@
 === QueenCastle === 
-#noskip_start
 #speaker: Alice
 Woahhhh, this place is huge!!
 
 #speaker: Constance
-Stay close. we don't want to get lost here.
+Stay close. We don't want to get lost here.
 
 #speaker: Narrator
 As the girls approach the opening of what appears to be a very large maze they see a card panicking.
 
 #speaker: Card
-Oh no, no no no. This can't be happening not again.
+Oh no, no no no. This can't be happening… not again.
 
 #speaker: Alice
 What's happening?
@@ -40,7 +39,7 @@ The roses, they were to plant red roses to honor our Queen today, but some fool 
 And this is bad because?
 
 #speaker: Card
-The Red Queen cannot have WHITE roses in her garden. It's blasephmous.
+The Red Queen cannot have WHITE roses in her garden. It's blasphemous.
 
 #speaker: Alice
 Righttt... sounds uhhhh concerning.
@@ -51,11 +50,11 @@ It is! If we don't do something the whole party will end in ruins.
 #speaker: Alice
 Fine. If it makes you feel better we can take a look and grab the white ones off the hedges.
 
-#speaker: Constanceq
+#speaker: Constance
 We will?
 
 #speaker: Alice
-Yeah let's do it. We have to go through the maze to get in anyway.
+Yeah, let's do it. We have to go through the maze to get in anyway.
 
 #speaker: Card
 You would do that. For me? Oh thank you! Thank you!!!
@@ -70,6 +69,5 @@ Of course, of course. I wish you luck!
 With that the girls quickly took off into the maze.
 
 #ending:FindTheRose
-#noskip_end
-
 -> DONE
+

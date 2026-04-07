@@ -19,3 +19,7 @@ VAR QueenInvite = false
 VAR hatterWon = false
 VAR puzzleWon = false 
 VAR RoseWon = false
+
+VAR askedRabbit = false
+VAR askedQWonderland = false
+VAR askedQCat = false

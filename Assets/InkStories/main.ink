@@ -22,6 +22,10 @@ INCLUDE GardenPartyTalk.ink
 INCLUDE GardenPartyPuzzle.ink
 INCLUDE QueenCourt.ink
 INCLUDE GoodEnding.ink
+INCLUDE GoodEnding_V2.ink
+INCLUDE GoodEnding_V3.ink
+
+
 
 //INCLUDE endings.ink
 //UNCOMMENT LATER

@@ -1,5 +1,4 @@
 === FindTheRose === 
-#noskip_start
 
 {RoseWon: 
     #speaker: Narrator
@@ -27,10 +26,10 @@
     At this the card looks scared. He's shaking as the Queen approaches them.
     
     #speaker: Queen
-    Seven, what is going on here? Why are people congregatting at the maze?
+    Seven, what is going on here? Why are people congregating at the maze?
     
     #speaker: Card
-    Nothing your majesty. These girls were just leaving.
+    Nothing, your majesty. These girls were just leaving.
     
     #speaker: Narrator
     He says grabbing both girls arms and pulling them forward. The Queen's eyes drift towards the maze.
@@ -54,16 +53,16 @@
     But my Queen-
     
     #speaker: Queen
-    But nothing. You dare sit there and decieve me. Plant roses that oppose me in my own garden!
+    But nothing. You dare sit there and deceive me. Plant roses that oppose me in my own garden!
     
     #speaker: Card
-    Please my Queen, if you would just here me out.
+    Please my Queen, if you would just hear me out.
     
     #speaker: Queen
     I have no time for the likes of you! Guards drag him away. Lock him with the others.
     
     #speaker: Narrator
-    The card begs and pleads to no avil, it's dragged away looking shaken and scared.
+    The card begs and pleads to no avail, it's dragged away looking shaken and scared.
     
     #speaker: Queen
     And you two. What do you have to do with this?
@@ -78,7 +77,7 @@
     Yes, we would like to discuss and urgent matter with you, if you could lend us some of your time-
     
     #speaker: Queen
-    If you wish to use my time why must you insult me in the same breath.
+    If you wish to use my time, why must you insult me in the same breath.
     
     #speaker: Narrator
     The girls look at each other puzzled.
@@ -102,10 +101,10 @@
     We will show everyone what happens when you choose to defy me.
     
     #speaker: Narrator
-    Both girls are helpess as the guards descend and drag them off to court.
+    Both girls are helpless as the guards descend and drag them off to court.
 
     #ending: Queen's Court
 }
-#noskip_end
 
 -> DONE
+

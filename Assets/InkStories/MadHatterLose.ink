@@ -1,7 +1,6 @@
 === MadHatterLose === 
-#noskip_start
 #speaker: Mad Hatter
-You call yourselves tea makers. How shameful.
+You call yourselves tea makers? How shameful.
 
 #speaker: Constance
 We did no such thing. You asked for our help!
@@ -13,13 +12,13 @@ Well some help you were! You couldn't even make a decent tea.
 Hey! We tried our best, it's not our fault your instructions suck!
 
 #speaker: Mad Hatter
-A true tea artist would be able to tell what the cilent wants from their soul.
+A true tea artist would be able to tell what the client wants from their soul.
 
 #speaker: Constance
-That doesn't even make sense. Don't try to justify you're poor instructions with nonsense.
+That doesn't even make sense. Don't try to justify your poor instructions with nonsense.
 
 #speaker: Mad Hatter
-How dare you! Nonsense, I'll have you know even the most basic of tea makers can dechiper what I needed.
+How dare you! Nonsense, I'll have you know even the most basic of tea makers can decipher what I needed.
 
 #speaker: Mad Hatter
 But it doesn't matter now, it's too late and tea time is ruined.
@@ -43,14 +42,15 @@ Don't tell me what to do!
 Alice storms off, and Constance follows after her,
 
 #speaker: Narrator
-She turns to look at the Mad Hatter once more but he disappers from view just as quickly as he came.
+She turns to look at the Mad Hatter once more but he disappears from view just as quickly as he came.
 
 #speaker: Narrator
-She turns and runs after her sister instead.
+Pushing the memory out of her mind she runs after her sister instead.
 
 ~ C_Alice -= 5
 ~ A_MadMarch -= 15
 
 #ending: WhiteRabbitTalk
-#noskip_end
 -> DONE
+
+

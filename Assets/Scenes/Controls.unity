@@ -1405,6 +1405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378b98fa6fe42794d9c59f05c1f4a16e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inkJSON: {fileID: 0}
   startingKnot: 
   characters:
   - characterName: Alice
@@ -1440,8 +1441,6 @@ MonoBehaviour:
   choicePanel: {fileID: 0}
   choiceContainer: {fileID: 0}
   choicePrefab: {fileID: 2616949834509399884, guid: 5296a2fc07f21d149af77102434a880d, type: 3}
-  skipSummaryPanel: {fileID: 0}
-  skipSummaryText: {fileID: 0}
   soundFXManager: {fileID: 962274516}
 --- !u!1 &962274515
 GameObject:
@@ -1874,7 +1873,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 140.33572, y: 82.3454}
+  m_AnchoredPosition: {x: 140.33572, y: 128}
   m_SizeDelta: {x: 1998.7603, y: 656.6062}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1167947096
@@ -1897,10 +1896,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Press P / Escape / Pause to move between the levels.\nPress Space to Change
-    Perspectives\nPress H for any hints \nHints are Different between Alice and Constance's
-    Perspectives\nPress Enter to Continue Dialouge\nSome Levels have a timer on the
-    top left corner!\nCutscenes and Endings can be read using the \nUI Arrow Keys\n"
+  m_text: "Press P / Escape / Pause to move between the levels.\n\nPress Space to
+    Change Perspectives\n\nPress H for any hints \n\nHints are Different between
+    Alice and Constance's Perspectives\n\nPress Enter to Continue Dialouge\n\nSome
+    Levels have a timer on the top left corner!\n\nCutscenes and Endings can be read
+    using the\n \nUI Arrow Keys\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f054b46c0710ea94ea7443ff1dbe58bd, type: 2}
   m_sharedMaterial: {fileID: 3908959653227688014, guid: f054b46c0710ea94ea7443ff1dbe58bd, type: 2}
@@ -1927,8 +1927,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 90
+  m_fontSizeBase: 90
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1965,7 +1965,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0.00012234929, y: 0, z: -223.24475, w: -1221.0902}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

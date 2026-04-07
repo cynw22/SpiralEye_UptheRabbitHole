@@ -1,5 +1,4 @@
 === chapter_tutorial_V2 === 
-#noskip_start
 //Show Alice drinking the bottle by having it disapper and sound or something
 
 + [Scold Alice]
@@ -47,8 +46,6 @@ Alright, enough of that! Let’s go explore!
 
 #speaker: Constance
 Don’t think I don’t know what you’re doing.
-
-#noskip_end
 
 #ending: Tutorial
 -> DONE

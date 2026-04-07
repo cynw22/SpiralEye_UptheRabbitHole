@@ -1,5 +1,4 @@
 === chapter_tutorial === 
-#noskip_start
 //Have Constance character slowly open her eyes, write the tags here when you figure out how to do that lol
 
 #speaker: Constance
@@ -93,7 +92,6 @@ Wonder– what? Hey, wait, stop–!
 
 #speaker: Narrator
 Alice gulps down the ‘Drink Me’ labelled bottle, looking entirely too self-satisfied.
-#noskip_end
 
 #ending: TutorialTalk2
 -> DONE

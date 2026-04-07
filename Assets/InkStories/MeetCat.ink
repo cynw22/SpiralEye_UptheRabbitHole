@@ -1,5 +1,4 @@
 === MeetCat === 
-#noskip_start
 #speaker: Narrator 
 The girls wander outside the room; a vast and lush forest stretches on for what seems like forever.
 
@@ -21,7 +20,6 @@ I suppose we can take a quick break.
 #speaker: Alice
 Yes!!!
 
-#noskip_end
 #speaker: Narrator
 Alice smiles gratefully and happily parks herself down on the path. Silence fills the area around them.
 
@@ -37,7 +35,6 @@ Constance looks at her sister in confusion.
 #speaker: Constance
 Pardon?
 
-#noskip_start
 #speaker: Alice
 The animals, you said that it was weird you couldn’t hear the wildlife right?
 
@@ -57,13 +54,13 @@ yeahhh it sounds pretty nice though, so don’t worry about it.
 I always worry about you…
 
 #speaker: Narrator
-Oh, but look there! Something’s sitting in the distance. There, just beyond the tree!
+Alice spots something in the distance, just beyond the tree.
 
 #speaker: Alice
-What? Where?
+What is that?
 
 #speaker: Narrator
-A cheeky grin sits across the screen, is it calling out to someone?
+A handsome grin materialized out of thin air.
 
 #speaker: Alice
 Con, look! There’s something over there.
@@ -116,5 +113,7 @@ Alice takes off running after the mysterious thing.
 The game of cat and mouse has begun. The strange smile sitting in the distance materializes once more, a sharp looking feline now attached to its grin.
 
 #ending: MeetCatPuzzle
-#noskip_end
+
 -> DONE
+
+
