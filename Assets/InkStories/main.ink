@@ -17,7 +17,7 @@ INCLUDE WhiteRabbitWin.ink
 INCLUDE WhiteRabbitLose.ink
 INCLUDE TheGate.ink
 INCLUDE QueenCastle.ink
-INCLUDE FindTheRose.ink
+INCLUDE FindTheRoseTalk.ink
 INCLUDE GardenPartyTalk.ink
 INCLUDE GardenPartyPuzzle.ink
 INCLUDE QueenCourt.ink
