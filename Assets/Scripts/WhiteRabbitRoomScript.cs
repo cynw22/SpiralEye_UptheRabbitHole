@@ -35,6 +35,7 @@ public class WhiteRabbitRoomScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Time.timeScale = 1.0f;
         isAlice = !switchMan.sisterPOV;
         SetBackgroundZeroActive();
         Dialouge.SetActive(false);
@@ -51,6 +52,7 @@ public class WhiteRabbitRoomScript : MonoBehaviour
         background_4.SetActive(false);
         background_5.SetActive(false);
         Dialouge.SetActive(false);
+        Time.timeScale = 1.0f;
     }
 
     public void SetBackgroundOneActive()
@@ -98,7 +100,7 @@ public class WhiteRabbitRoomScript : MonoBehaviour
         background_4.SetActive(false);
         background_5.SetActive(false);
             Dialouge.SetActive(true);
-
+            Time.timeScale = 0f;
         }
     }
 
