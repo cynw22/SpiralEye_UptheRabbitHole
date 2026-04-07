@@ -3,6 +3,7 @@ using UnityEngine;
 public class NewspaperClip : MonoBehaviour
 {
     [SerializeField] public PuzzleControl4 puzzleControl;
+
     //GameObject windowstillEnvironment;
 
     private void Start()
@@ -14,10 +15,9 @@ public class NewspaperClip : MonoBehaviour
     {
         puzzleControl.numNewsFound++;
 
-        if (puzzleControl.numNewsFound == puzzleControl.numNews)
+        if (puzzleControl.numNewsFound == puzzleControl.numNews && !puzzleControl.allNewsFound)
         {
-            puzzleControl.allNewsFound = true;
-            puzzleControl.completePaper.SetActive(true);
+            puzzleControl.CompleteNewspaper();
         }
 
         //if (windowstillEnvironment != null)

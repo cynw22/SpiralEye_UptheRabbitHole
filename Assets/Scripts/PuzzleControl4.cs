@@ -23,6 +23,7 @@ public class PuzzleControl4 : MonoBehaviour
     public int numNewsFound;
     public bool allNewsFound;
     [SerializeField] public GameObject completePaper;
+    public Popup newspaperPopup;
     //[SerializeField] public GameObject windowstillNewspaperEnvironment;
     //[SerializeField] public GameObject windowstillNewspaperPopup;
 
@@ -89,6 +90,7 @@ public class PuzzleControl4 : MonoBehaviour
 
         //PUZZLE #3 - Newspaper puzzle
         completePaper.SetActive(false);
+        newspaperPopup = completePaper.GetComponent<Popup>();
         allNewsFound = false;
         numNewsFound = 0;
         numNews = 5;
@@ -120,6 +122,14 @@ public class PuzzleControl4 : MonoBehaviour
             puzzleWon = true;
             SceneManager.LoadScene("ThePoster");
         }
+    }
 
+    public void CompleteNewspaper()
+    {
+        Debug.Log("CompleteNewspaper()");
+        allNewsFound = true;
+        completePaper.SetActive(true);
+        escapeRoomsComplete++;
+        newspaperPopup.ShowPopup();
     }
 }
