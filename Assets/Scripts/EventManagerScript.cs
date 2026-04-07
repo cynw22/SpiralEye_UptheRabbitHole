@@ -145,5 +145,19 @@ public class EventManagerScript : MonoBehaviour
         SceneManager.LoadScene("Bad End Queen");
     }
 
+    public void GoodEnd1() {
+        SceneManager.LoadScene("GoodCut1");
+    }
+
+    //ChangeLater
+    public void GoodEnd2()
+    {
+        SceneManager.LoadScene("GoodCut3");
+    }
+
+    public void GoodEnd3()
+    {
+        SceneManager.LoadScene("GoodCut3");
+    }
 
 }
