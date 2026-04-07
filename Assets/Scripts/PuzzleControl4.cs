@@ -128,7 +128,6 @@ public class PuzzleControl4 : MonoBehaviour
     {
         Debug.Log("CompleteNewspaper()");
         allNewsFound = true;
-        completePaper.SetActive(true);
         escapeRoomsComplete++;
         newspaperPopup.ShowPopup();
     }

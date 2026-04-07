@@ -17,6 +17,7 @@ public class BreifcasePuzzle : MonoBehaviour
     GameObject breifcase;
     [SerializeField] public GameObject nonCookies;
 
+    public Collider2D col;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,6 +26,7 @@ public class BreifcasePuzzle : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         cookies.SetActive(false);
         breifcase = GameObject.Find("BreifcasePopup");
+        col = GetComponent<Collider2D>();
     }
 
     private void OnMouseDown()
@@ -51,7 +53,7 @@ public class BreifcasePuzzle : MonoBehaviour
             cookies.SetActive(true);
             nonCookies.SetActive(false);
             //puzzleControl.escapeRoomsComplete++;
-            breifcase.GetComponent<Collider2D>().enabled = false;
+            col.enabled = false;
 
 
         }
