@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using static Unity.Collections.AllocatorManager;
 
 public enum ItemToFind { GUMDROP, MILK, FLOWERS, BOBA, RECIPEBOOK };
 
@@ -17,12 +18,14 @@ public class PuzzleControl2 : MonoBehaviour
     [SerializeField] public GameObject flowersCollectedPopup;
     [SerializeField] public GameObject bobaCollectedPopup;
     [SerializeField] public GameObject recipesCollectedPopup;
+    [SerializeField] public GameObject allObjectsCollectedPopup;
 
     private bool milkPopupDone = false;
     private bool gumdropsPopupDone = false;
     private bool flowersPopupDone = false;
     private bool bobaPopupDone = false;
     private bool recipesPopupDone = false;
+    private bool allObjColPopupDone = false;
 
     //Books Popup
     GameObject booksNotTaken;
@@ -88,12 +91,14 @@ public class PuzzleControl2 : MonoBehaviour
         bobaCollectedPopup.SetActive(false);
         recipesCollectedPopup.SetActive(false);
         milkCollectedPopup.SetActive(false);
+        allObjectsCollectedPopup.SetActive(false);
 
         milkPopupDone = false;
         gumdropsPopupDone = false;
         flowersPopupDone = false;
         bobaPopupDone = false;
         recipesPopupDone = false;
+        allObjColPopupDone = false;
 
         numCollected = 0;
     }
@@ -170,11 +175,15 @@ public class PuzzleControl2 : MonoBehaviour
         }
 
         //To change later
-        if (allItemsCollected) {
-            SceneManager.LoadScene("MadHatterPuzzle");
+        if (allItemsCollected)
+        {
+            allObjectsCollectedPopup.SetActive(true);
+            allObjColPopupDone = true;
         }
 
     }
+
+    public void SwitchScenes() => SceneManager.LoadScene("MadHatterPuzzle");
 
     public void CloseGumdrop() => gumdropsCollectedPopup.SetActive(false);
     public void CloseMilk() => milkCollectedPopup.SetActive(false);
