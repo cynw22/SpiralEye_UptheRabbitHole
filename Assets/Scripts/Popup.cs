@@ -35,11 +35,23 @@ public class Popup : MonoBehaviour
 
     private void OnMouseDown()
     {
+        ShowPopup();
+    }
+
+    public void ShowPopup()
+    {
+        GameObject[] popups;
+        popups = GameObject.FindGameObjectsWithTag("Popup");
+        for (int i = 0; i < popups.Length; i++)
+        {
+            popups[i].SetActive(false);
+        }
+
         if (!popupObj.activeSelf && (switchManager.sisterPOV == isConstancePOV || switchManager.sisterPOV != isAlicePOV))
         {
             popupObj.SetActive(true);
             popupBg.SetActive(true);
-            Debug.Log("Popup up");
+            Debug.Log(gameObject.name + "Popup up");
         }
     }
 }

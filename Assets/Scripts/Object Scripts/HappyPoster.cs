@@ -24,10 +24,9 @@ public class HappyPoster : MonoBehaviour
         else if (timesClicked == 1)
         {
             puzzleControl.numNewsFound++;
-            if (puzzleControl.numNewsFound == puzzleControl.numNews)
+            if (puzzleControl.numNewsFound == puzzleControl.numNews && !puzzleControl.allNewsFound)
             {
-                puzzleControl.allNewsFound = true;
-                puzzleControl.completePaper.SetActive(true);
+                puzzleControl.CompleteNewspaper();
             }
             spriteRenderer.sprite = sprite3;
         }

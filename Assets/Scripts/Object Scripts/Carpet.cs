@@ -7,12 +7,22 @@ public class Carpet : MonoBehaviour
     [SerializeField] public Sprite sprite1, sprite2, sprite3;
     int timesClicked;
 
+    public Collider2D col;
+    [SerializeField] public GameObject popupBG;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = sprite1;
         timesClicked = 0;
+
+        col = GetComponent<Collider2D>();
+    }
+
+    private void Update()
+    {
+        col.enabled = (popupBG.activeSelf ? false : true);
     }
 
     private void OnMouseDown()
@@ -24,10 +34,9 @@ public class Carpet : MonoBehaviour
         if (timesClicked == 1)
         {
             puzzleControl.numNewsFound++;
-            if (puzzleControl.numNewsFound == puzzleControl.numNews)
+            if (puzzleControl.numNewsFound == puzzleControl.numNews && !puzzleControl.allNewsFound)
             {
-                puzzleControl.allNewsFound = true;
-                puzzleControl.completePaper.SetActive(true);
+                puzzleControl.CompleteNewspaper();
             }
 
             spriteRenderer.sprite = sprite3;
