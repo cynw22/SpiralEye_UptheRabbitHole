@@ -114,10 +114,12 @@ public class TeaMakingControl : MonoBehaviour
         {
             for (int i = 0; i < submittedTea.Count; i++)
             {
-                if (submittedTea[i] != roundTea[i]) { 
+                if (submittedTea[i] != roundTea[i])
+                { 
                     wrongTeaPopup.SetActive(true);
                     timesWrong++; 
-                    break; }
+                    break;
+                }
                 correctTea = i == submittedTea.Count - 1 ? true : false;
                 roundTeaPopup.SetActive(true);
             }
@@ -141,19 +143,22 @@ public class TeaMakingControl : MonoBehaviour
         {
             for (int i = 0; i < submittedTea.Count; i++)
             {
-                if (submittedTea[i] != specialTea[i]) { wrongTeaPopup.SetActive(true); timesWrong++; break; }
+                if (submittedTea[i] != specialTea[i])
+                {
+                    wrongTeaPopup.SetActive(true);
+                    timesWrong++;
+                    break;
+                }
                 correctTea = i == submittedTea.Count - 1 ? true : false;
-                winScreenPopup.SetActive(true);
-                hatterWon = true;
-                Invoke("CompletePuzzle_OnClick", 3);
 
-                hatterWon = false;
+                if (correctTea)
+                {
+                    hatterWon = true;
+                    winScreenPopup.SetActive(true);
+                    Invoke("CompletePuzzle_OnClick", 3);
+                }
             }
         }
-        //else if (desiredTea == 4) {
-        //    Debug.Log("All Four Teas Found");
-        //    winScreenPopup.SetActive(true);
-        //}
         else
         {
             Debug.Log("wrong amount of ingredients submitted");
