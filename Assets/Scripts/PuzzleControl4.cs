@@ -24,9 +24,10 @@ public class PuzzleControl4 : MonoBehaviour
     public bool allNewsFound;
     [SerializeField] public GameObject completePaper;
     public Popup newspaperPopup;
-    //[SerializeField] public GameObject windowstillNewspaperEnvironment;
-    //[SerializeField] public GameObject windowstillNewspaperPopup;
-
+    [Header("Newspaper - Remove Env")]
+    [SerializeField] public GameObject windowNewPop;
+    [SerializeField] public Renderer windowNewEnv;
+    private int windowVal = 0;
 
     // PUZZLE #3 - TIMER
     [Header("Timer")]
@@ -94,8 +95,8 @@ public class PuzzleControl4 : MonoBehaviour
         allNewsFound = false;
         numNewsFound = 0;
         numNews = 5;
-        //windowstillNewspaperEnvironment = GameObject.Find("WindowStill");
-        //windowstillNewspaperPopup = GameObject.Find("NewsClip1");
+        //windowNewEnv = windowNewEnv.GetComponent<SpriteRenderer>();
+        //windowNewPop = GameObject.Find("NewsClip1");
 
         // PUZZLE #4 - TIMER
         time = 1800;
@@ -105,7 +106,9 @@ public class PuzzleControl4 : MonoBehaviour
         allObjectsFound = false;
         totalEscapeRooms = 4;
         escapeRoomsComplete = 0;
-}
+
+        windowVal = 0;
+    }
 
 
     public void Update()
@@ -124,6 +127,17 @@ public class PuzzleControl4 : MonoBehaviour
         }
 
         if (allNewsFound) { newspaperPopup.CheckBackground(); }
+        if (!windowNewPop.activeSelf && (windowVal == 0)) { windowVal = 1;}
+        //if (windowNewPop.activeSelf && (windowVal == 1)) { windowVal = 2; }
+        //if (!windowNewPop.activeSelf && (windowVal == 2)) { RemoveWindow(); windowVal = 3; }
+        //Debug.Log("Window Val = " + windowVal);
+        if (windowVal == 1) { RemoveWindow(); windowVal = 3; }
+    }
+
+    public void RemoveWindow(){
+        Color tmp = windowNewEnv.GetComponent<SpriteRenderer>().color;
+        tmp.a = 0f;
+        windowNewEnv.GetComponent<SpriteRenderer>().color = tmp;
     }
 
     public void CompleteNewspaper()
