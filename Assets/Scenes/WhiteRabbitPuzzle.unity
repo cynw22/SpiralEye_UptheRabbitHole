@@ -22813,6 +22813,7 @@ GameObject:
   - component: {fileID: 429409717}
   - component: {fileID: 429409718}
   - component: {fileID: 429409719}
+  - component: {fileID: 429409720}
   m_Layer: 0
   m_Name: ItemsList
   m_TagString: Untagged
@@ -22917,6 +22918,20 @@ MonoBehaviour:
   constanceSprite: {fileID: 2275898209256684654, guid: 3dd30e7ebb3c2504a835ebd951562823, type: 3}
   constancePoint: {fileID: -4833394626526807451, guid: d64a0b472dd3d09418a3cd443deb1168, type: 3}
   constanceClick: {fileID: -3810316324186850591, guid: f2b1e0d1e6f75b3438a18c88c3c7a785, type: 3}
+--- !u!114 &429409720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429409715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda466ca718c22b45a8b8e3d7c90224f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActiveCollider: {fileID: 436525164}
+  HidingCollider: {fileID: 429409715}
 --- !u!1 &436525164
 GameObject:
   m_ObjectHideFlags: 0
@@ -22936,7 +22951,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &436525165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25577,6 +25592,7 @@ GameObject:
   - component: {fileID: 539853749}
   - component: {fileID: 539853750}
   - component: {fileID: 539853751}
+  - component: {fileID: 539853752}
   m_Layer: 0
   m_Name: PosterCat
   m_TagString: Untagged
@@ -25764,6 +25780,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.528589, y: 5.1953793}
   m_EdgeRadius: 0
+--- !u!114 &539853752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539853741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda466ca718c22b45a8b8e3d7c90224f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActiveCollider: {fileID: 436525164}
+  HidingCollider: {fileID: 539853741}
 --- !u!1 &540330589
 GameObject:
   m_ObjectHideFlags: 0
@@ -25915,6 +25945,7 @@ GameObject:
   - component: {fileID: 540933684}
   - component: {fileID: 540933683}
   - component: {fileID: 540933686}
+  - component: {fileID: 540933687}
   m_Layer: 5
   m_Name: SecretRoomButton
   m_TagString: Untagged
@@ -26054,6 +26085,20 @@ MonoBehaviour:
   constanceSprite: {fileID: 2275898209256684654, guid: 3dd30e7ebb3c2504a835ebd951562823, type: 3}
   constancePoint: {fileID: 2275898209256684654, guid: 3dd30e7ebb3c2504a835ebd951562823, type: 3}
   constanceClick: {fileID: 2275898209256684654, guid: 3dd30e7ebb3c2504a835ebd951562823, type: 3}
+--- !u!114 &540933687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540933681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda466ca718c22b45a8b8e3d7c90224f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActiveCollider: {fileID: 436525164}
+  HidingCollider: {fileID: 540933681}
 --- !u!1 &541906733
 GameObject:
   m_ObjectHideFlags: 0
@@ -39953,6 +39998,7 @@ GameObject:
   - component: {fileID: 750497408}
   - component: {fileID: 750497407}
   - component: {fileID: 750497406}
+  - component: {fileID: 750497410}
   m_Layer: 5
   m_Name: SecretStairsButton
   m_TagString: Untagged
@@ -40092,6 +40138,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 750497403}
   m_CullTransparentMesh: 1
+--- !u!114 &750497410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750497403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda466ca718c22b45a8b8e3d7c90224f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActiveCollider: {fileID: 436525164}
+  HidingCollider: {fileID: 750497403}
 --- !u!1 &761869168
 GameObject:
   m_ObjectHideFlags: 0
@@ -54889,6 +54949,7 @@ GameObject:
   - component: {fileID: 1008504115}
   - component: {fileID: 1008504114}
   - component: {fileID: 1008504117}
+  - component: {fileID: 1008504118}
   m_Layer: 5
   m_Name: NurseryButton
   m_TagString: Untagged
@@ -55028,6 +55089,20 @@ MonoBehaviour:
   constanceSprite: {fileID: 2275898209256684654, guid: 3dd30e7ebb3c2504a835ebd951562823, type: 3}
   constancePoint: {fileID: -4833394626526807451, guid: d64a0b472dd3d09418a3cd443deb1168, type: 3}
   constanceClick: {fileID: -3810316324186850591, guid: f2b1e0d1e6f75b3438a18c88c3c7a785, type: 3}
+--- !u!114 &1008504118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008504112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda466ca718c22b45a8b8e3d7c90224f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActiveCollider: {fileID: 436525164}
+  HidingCollider: {fileID: 1008504112}
 --- !u!1 &1014534745
 GameObject:
   m_ObjectHideFlags: 0
@@ -56568,6 +56643,7 @@ GameObject:
   - component: {fileID: 1133122097}
   - component: {fileID: 1133122100}
   - component: {fileID: 1133122101}
+  - component: {fileID: 1133122102}
   m_Layer: 5
   m_Name: OfficeDoor
   m_TagString: Untagged
@@ -56726,6 +56802,20 @@ MonoBehaviour:
   constanceSprite: {fileID: 0}
   constancePoint: {fileID: 0}
   constanceClick: {fileID: 0}
+--- !u!114 &1133122102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133122095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda466ca718c22b45a8b8e3d7c90224f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActiveCollider: {fileID: 436525164}
+  HidingCollider: {fileID: 1133122095}
 --- !u!1 &1142992388
 GameObject:
   m_ObjectHideFlags: 0
@@ -77048,6 +77138,7 @@ GameObject:
   - component: {fileID: 1703544455}
   - component: {fileID: 1703544454}
   - component: {fileID: 1703544453}
+  - component: {fileID: 1703544459}
   m_Layer: 0
   m_Name: Frames
   m_TagString: Untagged
@@ -77249,6 +77340,20 @@ MonoBehaviour:
   switchManager: {fileID: 1492002331}
   isConstancePOV: 1
   isAlicePOV: 1
+--- !u!114 &1703544459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703544451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda466ca718c22b45a8b8e3d7c90224f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActiveCollider: {fileID: 436525164}
+  HidingCollider: {fileID: 1703544451}
 --- !u!1 &1706296935
 GameObject:
   m_ObjectHideFlags: 0
@@ -79094,6 +79199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1778618264}
+  - component: {fileID: 1778618265}
   m_Layer: 0
   m_Name: Portraits
   m_TagString: Untagged
@@ -79124,6 +79230,20 @@ Transform:
   - {fileID: 336038686}
   m_Father: {fileID: 1783993346}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1778618265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778618263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda466ca718c22b45a8b8e3d7c90224f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActiveCollider: {fileID: 436525164}
+  HidingCollider: {fileID: 0}
 --- !u!1 &1782492117
 GameObject:
   m_ObjectHideFlags: 0
