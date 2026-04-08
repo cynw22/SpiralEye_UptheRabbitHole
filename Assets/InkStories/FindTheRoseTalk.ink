@@ -4,7 +4,7 @@
     #speaker: Narrator
     Alice and Constance make their way out of the maze. All the white roses sit in their hands. 
     
-    #speaker: ALice
+    #speaker: Alice
     Hopefully this should stop the card from getting in trouble.
     
     #speaker: Constance

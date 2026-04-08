@@ -17,9 +17,8 @@ Hmm, what are you talking about?
 #speaker: Narrator
 It gives me the creeps.
 
-#speaker: Alice.
+#speaker: Alice
 Okay weirdo.
-
 
 #speaker: Queen
 This here is my most prized possession. The garden mirror. You two are the first who will hear this story from me.

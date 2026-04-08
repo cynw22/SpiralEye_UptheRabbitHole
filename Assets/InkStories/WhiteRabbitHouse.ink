@@ -36,7 +36,7 @@ Alice looks delighted while Constance feels annoyed.
 Alice please don't go chasing the rabbit again...
 
 #speaker: Alice
-TO LATE FOR THAT!
+TOO LATE FOR THAT!
 
 #speaker: Narrator
 And with that Alice takes off rushing after the rabbit. Constance curses under her breath and follows.

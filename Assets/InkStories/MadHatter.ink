@@ -316,7 +316,7 @@ He- he sent you here? To me?
 Something like that. He’s not the most straight forward if you know what I mean. 
 
 #speaker: Narrator
-A wounded noise is pulled from the Ma Hatter’s mouth. The man is unravelling quickly.
+A wounded noise is pulled from the Mad Hatter’s mouth. The man is unravelling quickly.
 
 #speaker: Narrator
 He gestures wildly at the air, throwing accusations and questions sometimes nodding along like he's receiving an answer.

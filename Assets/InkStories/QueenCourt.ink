@@ -375,6 +375,7 @@ SILENCE. Only the accused can speak in defence of their crimes.
     -> Queen_Choice_4
     
 + {A_MadMarch >= 0} [Have the Mad Hatter vouch for you]
+    ~ C_Alice += 1
     #speaker: Constance
     You think we broke in here just to ruin your silly little party! We have more important things to do.
     
@@ -597,6 +598,7 @@ The questions pertaining to a certain banned individual were particularly harmin
     -> Final_Check
     
 + {A_WhiteRabbit >= 0} [Have the White Rabbit vouch for you]
+    ~ C_Alice += 1
     #speaker: Alice
     So the entire basis of your claim is that I got all this secret information on the Red Queen and used it as a way to do what?
     
