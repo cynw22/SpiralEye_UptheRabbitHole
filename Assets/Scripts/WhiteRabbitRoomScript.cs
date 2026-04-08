@@ -5,12 +5,18 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Net.NetworkInformation;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class WhiteRabbitRoomScript : MonoBehaviour
 {
     [SerializeField] public SwitchManager switchMan;
     [SerializeField] public PuzzleControl4 puzzleMan;
     [SerializeField] public GameObject Dialouge;
+    [SerializeField] public GameObject SpaceBar;
+    //[SerializeField] public Sprite noSpace;
+    [SerializeField] public Sprite yesSpace;
+    [SerializeField] private Sprite noSpace;
+    [SerializeField] private Image srSpaceBar;
 
     //Lobby
     [SerializeField] public GameObject background_0;
@@ -39,6 +45,14 @@ public class WhiteRabbitRoomScript : MonoBehaviour
         isAlice = !switchMan.sisterPOV;
         SetBackgroundZeroActive();
         Dialouge.SetActive(false);
+        srSpaceBar = SpaceBar.GetComponent<Image>();
+        if (srSpaceBar == null)
+        {
+            Debug.LogError("No SpriteRenderer found on SpaceBarUI");
+            enabled = false;
+            return;
+        }
+        noSpace = srSpaceBar.sprite;
     }
 
     public void SetBackgroundZeroActive()
@@ -53,6 +67,7 @@ public class WhiteRabbitRoomScript : MonoBehaviour
         background_5.SetActive(false);
         Dialouge.SetActive(false);
         Time.timeScale = 1.0f;
+        RevertSprite();
     }
 
     public void SetBackgroundOneActive()
@@ -70,6 +85,7 @@ public class WhiteRabbitRoomScript : MonoBehaviour
             background_4.SetActive(true);
             background_5.SetActive(false);
         }
+        ChangeSprite();
     }
 
     public void SetBackgroundTwoActive()
@@ -88,6 +104,7 @@ public class WhiteRabbitRoomScript : MonoBehaviour
             background_4.SetActive(false);
             background_5.SetActive(true);
         }
+        ChangeSprite();
     }
     public void SetBackgroundThreeActive()
     {
@@ -102,6 +119,7 @@ public class WhiteRabbitRoomScript : MonoBehaviour
             Dialouge.SetActive(true);
             Time.timeScale = 0f;
         }
+        ChangeSprite();
     }
 
     // Update is called once per frame
@@ -123,6 +141,32 @@ public class WhiteRabbitRoomScript : MonoBehaviour
         if (puzzleMan.time <= 0) {
             SceneManager.LoadScene("ThePoster");
         }
+
     }
+
+    public void ChangeSprite()
+    {
+        if (yesSpace != null)
+        {
+            srSpaceBar.sprite = yesSpace;
+            Color tempColor = srSpaceBar.color;
+            tempColor.a = 1.0f; // Set alpha to 100%
+            srSpaceBar.color = tempColor;
+        }
+        else
+        {
+            Debug.LogWarning("yesSpace is not assigned.");
+        }
+    }
+
+    // Call this method to revert to the original sprite
+    public void RevertSprite()
+    {
+        srSpaceBar.sprite = noSpace;
+        Color tempColor = srSpaceBar.color;
+        tempColor.a = 0.0f; // Set alpha to 0%
+        srSpaceBar.color = tempColor;
+    }
+
 }
 
