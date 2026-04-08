@@ -55,7 +55,10 @@ public class PuzzleControl5 : MonoBehaviour
     public ParticleSystem rose9P;
     public ParticleSystem rose10P;
     public ParticleSystem rose11P;
-    
+
+    public static bool RoseWon = false; // true if the player solved the puzzle
+
+
 
     // PUZZLE #3 - TIMER
     [Header("Timer")]
@@ -99,12 +102,14 @@ public class PuzzleControl5 : MonoBehaviour
         {
             panelExit2.SetActive(true);
             exitParticleFinished.Play();
+            RoseWon = true;
         }
 
         else if (numRosesFound < numRoses)
         {
             panelExit.SetActive(true);
             exitParticleUnfinished.Play();
+            RoseWon = false;
             sceneManager.Background12Active();
         }
     }

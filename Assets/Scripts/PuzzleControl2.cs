@@ -48,6 +48,8 @@ public class PuzzleControl2 : MonoBehaviour
     GameObject flowersEnvironment7;
     GameObject flowersEnvironment8;
 
+    public static bool hatterWon = false; // true if the player solved the puzzle
+
     void Start()
     {
         //User Feedback

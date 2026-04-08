@@ -12,7 +12,7 @@ VAR C_RedQueen = 0
 VAR askedQueen = false
 VAR askedWonderland = false
 VAR askedCat = false
-VAR allKeysFound = false
+VAR askedPhotos = false
 
 VAR QueenInvite = false
 

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static Unity.Collections.AllocatorManager;
 
 public class PuzzleControl4 : MonoBehaviour
 {
@@ -35,15 +36,19 @@ public class PuzzleControl4 : MonoBehaviour
     public int levelNumber;
 
     // PUZZLE #5 - EXIT CONSTRAINT
+    [Header("Exit Constraint")]
     public bool allObjectsFound;
     public int totalEscapeRooms;
     public int escapeRoomsComplete;
 
     public static bool puzzleWon = false; // true if the player solved the puzzle
-
+    [Header("User Feedback")]
     //// User Feedback
-    //[SerializeField] public GameObject breifCasePopup;
-    //[SerializeField] public GameObject bookPopup;
+    [SerializeField] public GameObject winPopup;
+    [SerializeField] public GameObject losePopup;
+    private bool isWinDone;
+    private bool isLoseDone;
+
     //[SerializeField] public GameObject newspaperPopup;
     //[SerializeField] public GameObject k1Popup;
     //[SerializeField] public GameObject k2Popup;
@@ -106,8 +111,15 @@ public class PuzzleControl4 : MonoBehaviour
         allObjectsFound = false;
         totalEscapeRooms = 4;
         escapeRoomsComplete = 0;
+        winPopup.SetActive(false);
+        losePopup.SetActive(false);
 
         windowVal = 0;
+        
+
+        isWinDone = false;
+        isLoseDone = false;
+
     }
 
 
@@ -115,15 +127,22 @@ public class PuzzleControl4 : MonoBehaviour
     {
         time -= Time.deltaTime;
 
-        if ((time <= 1) && (escapeRoomsComplete != totalEscapeRooms))
+        if ((time <= 1) && (escapeRoomsComplete != totalEscapeRooms) && (!isLoseDone))
         {
-            SceneManager.LoadScene("ThePoster");
+            Debug.Log("You lost");
+            //Add Lose here, door unlock
+            //Invoke(nameof(MovetoPoster), 2f);
+            losePopup.SetActive(true);
+            isLoseDone=true;
         }
 
-        if (escapeRoomsComplete == totalEscapeRooms) {
+        if ((escapeRoomsComplete == totalEscapeRooms) && !isWinDone) {
             allObjectsFound = true; // Aki check event manager - white rabbit code for where the load scene is for win condition - nvm its reverted
             puzzleWon = true;
-            SceneManager.LoadScene("ThePoster");
+            //SceneManager.LoadScene("ThePoster");
+            Debug.Log("You collected all the elements - go back to lobby");
+            winPopup.SetActive(true);
+            isWinDone=true;
         }
 
         if (allNewsFound) { newspaperPopup.CheckBackground(); }
@@ -146,5 +165,14 @@ public class PuzzleControl4 : MonoBehaviour
         allNewsFound = true;
         escapeRoomsComplete++;
         newspaperPopup.ShowPopup();
+    }
+
+    public void MovetoPoster() {
+        SceneManager.LoadScene("ThePoster");
+    }
+
+    public void ClosePopup() {
+        losePopup.SetActive(false);
+        winPopup.SetActive(false);
     }
 }

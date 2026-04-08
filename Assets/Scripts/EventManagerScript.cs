@@ -113,6 +113,12 @@ public class EventManagerScript : MonoBehaviour
         SceneManager.LoadScene("FindTheRose");
     }
 
+    public void RoseLevel()
+    {
+
+        SceneManager.LoadScene("FindTheRoseTalk");
+    }
+
 
     public void GardenPartyTalk()
     {
