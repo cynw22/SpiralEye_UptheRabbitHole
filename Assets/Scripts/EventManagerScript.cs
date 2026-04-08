@@ -114,11 +114,22 @@ public class EventManagerScript : MonoBehaviour
     }
 
 
+    public void GardenPartyTalk()
+    {
+
+        SceneManager.LoadScene("GardenPartyTalk");
+    }
+
+    public void QueensCourt()
+    {
+
+        SceneManager.LoadScene("QueensCourt");
+    }
 
 
-   
 
-    
+
+
     //Endings
     public void BadEndOne() {
         SceneManager.LoadScene("Bad End One");

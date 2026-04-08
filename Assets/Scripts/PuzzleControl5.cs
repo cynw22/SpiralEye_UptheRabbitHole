@@ -208,7 +208,7 @@ public class PuzzleControl5 : MonoBehaviour
 
         if ((time <= 1) && (!allObjectsFound))
         {    
-                SceneManager.LoadScene("The Gate"); //Change Later to Queens Court
+                SceneManager.LoadScene("QueensCourt"); //Change Later to QueensCourt
         }
 
         if (numRosesFound == numRoses)

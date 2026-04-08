@@ -7481,7 +7481,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1082977587}
-  isReverse: 0
 --- !u!114 &213948175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16423,7 +16422,6 @@ MonoBehaviour:
     characterPfp: {fileID: 1469530909}
     typingSpeed: 0
     nextButton: {fileID: 0}
-    skipButton: {fileID: 0}
     typingSounds: []
     typingVolume: 0.4
     soundDelay: 0.05
@@ -16433,7 +16431,6 @@ MonoBehaviour:
     characterPfp: {fileID: 1286297694}
     typingSpeed: 0
     nextButton: {fileID: 0}
-    skipButton: {fileID: 0}
     typingSounds: []
     typingVolume: 0.4
     soundDelay: 0.05
@@ -16443,15 +16440,12 @@ MonoBehaviour:
     characterPfp: {fileID: 1214062250}
     typingSpeed: 0
     nextButton: {fileID: 0}
-    skipButton: {fileID: 0}
     typingSounds: []
     typingVolume: 0.4
     soundDelay: 0.05
   choicePanel: {fileID: 1924215568}
   choiceContainer: {fileID: 582090719}
   choicePrefab: {fileID: 2616949834509399884, guid: 5296a2fc07f21d149af77102434a880d, type: 3}
-  skipSummaryPanel: {fileID: 0}
-  skipSummaryText: {fileID: 0}
   soundFXManager: {fileID: 1708904267}
 --- !u!1 &595729440
 GameObject:
@@ -32482,7 +32476,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2012465479}
         m_TargetAssemblyTypeName: EventManagerScript, Assembly-CSharp
-        m_MethodName: MenuButton
+        m_MethodName: QueensCourt
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -80586,7 +80580,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1538219638
 Transform:
   m_ObjectHideFlags: 0
@@ -81691,7 +81685,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1648520110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81788,7 +81782,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 537502993}
-  isReverse: 1
 --- !u!1 &1648937920
 GameObject:
   m_ObjectHideFlags: 0
@@ -89224,7 +89217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1877603194
 MonoBehaviour:
   m_ObjectHideFlags: 0
