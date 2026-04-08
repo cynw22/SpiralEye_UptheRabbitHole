@@ -44,7 +44,7 @@ public class WhiteRabbitRoomScript : MonoBehaviour
     public void SetBackgroundZeroActive()
     {
         switchMan.allowSwitching = true;
-        //CheckEnd();
+        CheckEnd();
         background_0.SetActive(true);
         background_1.SetActive(false);
         background_2.SetActive(false);
@@ -118,6 +118,9 @@ public class WhiteRabbitRoomScript : MonoBehaviour
     }
     public void CheckEnd() { 
         if (puzzleMan.allObjectsFound == true){
+            SceneManager.LoadScene("ThePoster"); 
+        }
+        if (puzzleMan.time <= 0) {
             SceneManager.LoadScene("ThePoster");
         }
     }
