@@ -146,6 +146,8 @@ public class TeaMakingControl : MonoBehaviour
                 winScreenPopup.SetActive(true);
                 hatterWon = true;
                 Invoke("CompletePuzzle_OnClick", 3);
+
+                hatterWon = false;
             }
         }
         //else if (desiredTea == 4) {

@@ -103,102 +103,103 @@ Can I ask you about some of them?
 
 #speaker: Queen
 Well ask. Hurry up, The Queen doesn’t have all day.
+
 -> Alice_Queen_Choices
 
 === Alice_Queen_Choices ===
-#speaker: Alice
-What should I ask her?
-
-+ {not askedRabbit} [Ask about their relationship with the Rabbit]
-     ~ askedRabbit = true
-     ~ C_RedQueen -= 1
- #speaker: Alice		
-What is your connection to Mr. Rabbit?
-
-#speaker: Queen
-Oh, he’s just around. Helping run errands. He looks old, but is as energetic as a rabbit! I guess he is a rabbit. I've never realized that before. HA HA!
-
-#speaker: Alice
-It seems like he waits on you, hand and foot.
-
-#speaker: Queen
-He is my right-hand man after all.
-
-#speaker: Narrator
-Alice appears shocked by this information.
-
-#speaker: Alice
-You’re that close to each other?
-
-#speaker: Queen
-Of course, this party was organized by him. Though every detail was hand picked by your’s truly!
-
-#speaker: Narrator
-Alice feels sick, she tries hard to swallow down the bile and focus on the woman in front of her.
-#speaker: Narrator
-Why does this cut deeper than the others? 
-
-    -> Alice_Queen_Choices
-
-+ {not askedQWonderland} [Ask about Wonderland]
-    ~ askedQWonderland = true
-     ~ C_RedQueen += 1
-
-#speaker: Alice
-What are your thoughts on Wonderland?
-
-#speaker: Queen
-Ah what a wonderful place. My sweet, sweet home. Did you know I was born to be Queen? Truly a heroic feat. And I did it myself. 
-
-#speaker: Alice
-You were born by yourself?
-
-#speaker: Queen
-Out of all the Queens, I am the best one. Queen of Spades does nothing all day but whine and cry. Clearly, she’s dealt a hand of misery. 
-
-#speaker: Queen
-My kingdom has celebrations all the time! I mean, look at the garden party. I am a great Ruler-. 
-
-#speaker: Alice
-Well I was hoping to hear your thoughts on the people of Wonderland.
-
-#speaker: Queen
-Oh! Well yes! I mean, this party is for them after all. Mostly…
-
-#speaker: Alice
-That’s it? Anything else?
-
-#speaker: Queen
-What else is there to say?
-
-    -> Alice_Queen_Choices
-    
-+ {not askedQCat} [Ask about Cheshire Cat]
-    ~ askedQCat = true
-     ~ C_RedQueen -= 1
-#speaker: Alice
-What about the Cheshire Cat?
-
-#speaker: Queen
-We do not SPEAK THAT NAME IN THIS KINGDOM.
-
-#speaker: Alice
-Oh what? Why would - 
-
-#speaker: Queen
-I do not want to participate in this conversation. If we keep talking about this, I will throw you in the dungeon! OFF WITH - 
-
-#speaker: Alice
-I’m sorry!...Your brilliance.
-
-#speaker: Queen
-Good. Fine. See, I am a very forgiving person. HA HA!
-
-    -> Alice_Queen_Choices
 
 {askedRabbit and askedQWonderland and askedQCat:
     -> continue_story_2
 }
+
+#speaker: Alice
+What should I ask her?
+
+* {not askedRabbit} [Ask about their relationship with the Rabbit]
+     ~ askedRabbit = true
+     ~ C_RedQueen -= 1
+     #speaker: Alice		
+    What is your connection to Mr. Rabbit?
+    
+    #speaker: Queen
+    Oh, he’s just around. Helping run errands. He looks old, but is as energetic as a rabbit! I guess he is a rabbit. I've never realized that before. HA HA!
+    
+    #speaker: Alice
+    It seems like he waits on you, hand and foot.
+    
+    #speaker: Queen
+    He is my right-hand man after all.
+    
+    #speaker: Narrator
+    Alice appears shocked by this information.
+    
+    #speaker: Alice
+    You’re that close to each other?
+    
+    #speaker: Queen
+    Of course, this party was organized by him. Though every detail was hand picked by your’s truly!
+    
+    #speaker: Narrator
+    Alice feels sick, she tries hard to swallow down the bile and focus on the woman in front of her.
+    #speaker: Narrator
+    Why does this cut deeper than the others? 
+
+    -> Alice_Queen_Choices
+
+* {not askedQWonderland} [Ask about Wonderland]
+    ~ askedQWonderland = true
+     ~ C_RedQueen += 1
+    #speaker: Alice
+    What are your thoughts on Wonderland?
+    
+    #speaker: Queen
+    Ah what a wonderful place. My sweet, sweet home. Did you know I was born to be Queen? Truly a heroic feat. And I did it myself. 
+    
+    #speaker: Alice
+    You were born by yourself?
+    
+    #speaker: Queen
+    Out of all the Queens, I am the best one. Queen of Spades does nothing all day but whine and cry. Clearly, she’s dealt a hand of misery. 
+    
+    #speaker: Queen
+    My kingdom has celebrations all the time! I mean, look at the garden party. I am a great Ruler-. 
+    
+    #speaker: Alice
+    Well I was hoping to hear your thoughts on the people of Wonderland.
+    
+    #speaker: Queen
+    Oh! Well yes! I mean, this party is for them after all. Mostly…
+    
+    #speaker: Alice
+    That’s it? Anything else?
+    
+    #speaker: Queen
+    What else is there to say?
+
+    -> Alice_Queen_Choices
+    
+* {not askedQCat} [Ask about Cheshire Cat]
+    ~ askedQCat = true
+     ~ C_RedQueen -= 1
+    #speaker: Alice
+    What about the Cheshire Cat?
+    
+    #speaker: Queen
+    We do not SPEAK THAT NAME IN THIS KINGDOM.
+    
+    #speaker: Alice
+    Oh what? Why would - 
+    
+    #speaker: Queen
+    I do not want to participate in this conversation. If we keep talking about this, I will throw you in the dungeon! OFF WITH - 
+    
+    #speaker: Alice
+    I’m sorry!...Your brilliance.
+    
+    #speaker: Queen
+    Good. Fine. See, I am a very forgiving person. HA HA!
+
+-> Alice_Queen_Choices
 
 === continue_story_2 ===
 #speaker: Constance

@@ -114,6 +114,15 @@ public class DialogueManager : MonoBehaviour
         // Initialize a fresh Story instance from this scene's Ink file
         story = new Story(inkJSON.text);
 
+        story.variablesState["puzzleWon"] = PuzzleControl4.puzzleWon;
+        story.variablesState["hatterWon"] = PuzzleControl2.hatterWon;
+        story.variablesState["RoseWon"] = PuzzleControl5.RoseWon;
+
+        story.variablesState["C_Alice"] = RelationshipTracker.C_Alice;
+        story.variablesState["A_MadMarch"] = RelationshipTracker.A_MadMarch;
+        story.variablesState["A_WhiteRabbit"] = RelationshipTracker.A_WhiteRabbit;
+
+
         // Setup character lookup
         choicePanel.SetActive(false);
         lookup = new Dictionary<string, CharacterDialogueUI>();

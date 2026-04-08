@@ -97,17 +97,16 @@ Alice can tell the topic is sensitive, should she push?
     -> Alice_choices
     
 === Alice_choices ===
+
+{askedQueen and askedWonderland and askedCat and askedPhotos:
+    -> continue_story
+}
+
 #speaker: Alice
 I have more questions though. I thought you would answer them.
 
-#speaker: Narrator
-The White Rabbit stays silent for a moment before deciding.
-
 #speaker: White Rabbit
 Fine, ask your questions but please be quick about it. I don't have all day.
-
-#speaker: Alice
-Okay got it!
 
 #speaker: Alice
 What should I ask him?
@@ -214,7 +213,7 @@ What should I ask him?
     
 * {not askedCat} [Ask about Cheshire Cat]
     ~ askedCat = true
-     ~ A_WhiteRabbit -= 1
+    ~ A_WhiteRabbit -= 1
     #speaker: Alice
     What about The Cheshire Cat? What's your relationship with him?
 
@@ -243,100 +242,95 @@ What should I ask him?
     The White Rabbit's face goes cold. He does not answer the question. This topic has come to a close.
 
     -> Alice_choices
-    
-//{allKeysFound:
 
-    * [Ask about the locket]
+* {not askedPhotos} [Ask about Photos]
      ~ A_WhiteRabbit += 1
-        #speaker: Alice
-        What about this? Do you recognize them?
+     
+    #speaker: Alice
+    What about the photos lining the walls. Who are they?
 
-        #speaker: White Rabbit
-        W-where did you get those...?
-        
-        #speaker: Narrator
-        The White Rabbit stares at the locket shining in Alice's palm.
-        
-        #speaker: Alice
-        I found it, it was inside a room. A baby room?
-        
-        #speaker: White Rabbit
-        ...
-        
-        #speaker: Alice
-        I didn't mean to snoop, I just saw it was on the list and thought you might want it.
-        
-        #speaker: White Rabbit
-        So, you figured it out. I didn't think you would to be honest.
-        
-        #speaker: Alice
-        Who are they?
-        
-        #speaker: White Rabbit
-        ... my family.
-        
-        #speaker: Alice
-        Family?
-        
-        #speaker: White Rabbit
-        Yes, they're the most precious people in my life. At least they were until that thing took them away.
-        
-        #speaker: Alice
-        Is that why you're angry?
-        
-        #speaker: White Rabbit
-        Yes. I feel angry, and hurt and pained.
-        
-        #speaker: Narrator
-        They sit in the silence, Alice doesn't know how to fix this.
-        
-        #speaker: Alice
-        Is this why you work for her?
-        
-        #speaker: White Rabbit
-        ...yes. She promised, she said she would help me get them back.
-        
-        #speaker: Alice
-        And you believed her?
-        
-        #speaker: White Rabbit
-        What choice did I have? It's the only option left.
-        
-        #speaker: Alice
-        There's always an option, you just have to look for it.
-        
-        #speaker: White Rabbit
-        Spoken like a true child, one that still believes the good in this world.
-        
-        #speaker: White Rabbit
-        The world is not as kind to you when you grow to understand it.
-        
-        #speaker: Alice
-        Is that why you chose to lock it away? Lock them up along with a piece of your heart?
-        
-        #speaker: Alice
-        The reason you chose to serve her, even if it kills you inside.
-        
-        #speaker: White Rabbit
-        Yes, I pushed it away, locked it somewhere I could never touch so this pain would no longer hurt me.
-        
-        #speaker: White Rabbit
-        I chose this path, because it was all I had left, all I had to numb the hurt.
-        
-        #speaker: White Rabbit
-        And I hoped I could keep this piece locked away in the only place that has meaning here.
-        
-        #speaker: Narrator
-        The white rabbit gazes sadly at the locket in her palm. It feels heavy, like she shouldn't have it.
-        
-        #speaker: Narrator
-        The White Rabbit holds her hand in silence. Their eyes never leave the locket.
+    #speaker: White Rabbit
+    I- I don't know what you're talking about.
+    
+    #speaker: Narrator
+    The White Rabbit turns his head away, he can't look at her right now.
+    
+    #speaker: Alice
+    I saw them on my way up, it's just they looked so happy.
+    
+    #speaker: White Rabbit
+    ...
+    
+    #speaker: Alice
+    I didn't mean to snoop, it's just they were there and I couldn't help myself.
+    
+    #speaker: White Rabbit
+    So, you figured it out. I didn't think you would to be honest.
+    
+    #speaker: Alice
+    Who are they?
+    
+    #speaker: White Rabbit
+    ... my family.
+    
+    #speaker: Alice
+    Family?
+    
+    #speaker: White Rabbit
+    Yes, they're the most precious people in my life. At least they were until that thing took them away.
+    
+    #speaker: Alice
+    Is that why you're angry?
+    
+    #speaker: White Rabbit
+    Yes. I feel angry, and hurt and pained.
+    
+    #speaker: Narrator
+    They sit in the silence, Alice doesn't know how to fix this.
+    
+    #speaker: Alice
+    Is this why you work for her?
+    
+    #speaker: White Rabbit
+    ...yes. She promised, she said she would help me get them back.
+    
+    #speaker: Alice
+    And you believed her?
+    
+    #speaker: White Rabbit
+    What choice did I have? It's the only option left.
+    
+    #speaker: Alice
+    There's always an option, you just have to look for it.
+    
+    #speaker: White Rabbit
+    Spoken like a true child, one that still believes the good in this world.
+    
+    #speaker: White Rabbit
+    The world stops being kind to you when you grow to understand it.
+    
+    #speaker: Alice
+    Is that why you chose to lock it away? Lock them up along with a piece of your heart?
+    
+    #speaker: Alice
+    The reason you chose to serve her, even if it kills you inside.
+    
+    #speaker: White Rabbit
+    Yes, I pushed it away, locked it somewhere I could never touch so this pain would no longer hurt me.
+    
+    #speaker: White Rabbit
+    I chose this path, because it was all I had left, all I had to numb the hurt.
+    
+    #speaker: White Rabbit
+    And I hoped I could keep this piece locked away in the only place that has meaning here.
+    
+    #speaker: Narrator
+    The white rabbit gazes sadly at Alice. It feels heavy, like he looking through her at someone else.
+    
+    #speaker: Narrator
+    The White Rabbit gives her a soft smile, urging her to continue.
+    
     -> Alice_choices
-
-
-{askedQueen and askedWonderland and askedCat and allKeysFound:
-    -> continue_story
-}
 
 === continue_story ===
 
