@@ -123,7 +123,7 @@ public class EventManagerScript : MonoBehaviour
     public void QueensCourt()
     {
 
-        SceneManager.LoadScene("QueensCourt");
+        SceneManager.LoadScene("QueenCourt");
     }
 
 
