@@ -112,9 +112,9 @@ public class PuzzleControl4 : MonoBehaviour
     {
         time -= Time.deltaTime;
 
-        if ((time <= 1) && (escapeRoomsComplete!=totalEscapeRooms))
+        if ((time <= 1) && (escapeRoomsComplete != totalEscapeRooms))
         {
-            SceneManager.LoadScene("ThePoster"); 
+            SceneManager.LoadScene("ThePoster");
         }
 
         if (escapeRoomsComplete == totalEscapeRooms) {
@@ -122,6 +122,8 @@ public class PuzzleControl4 : MonoBehaviour
             puzzleWon = true;
             SceneManager.LoadScene("ThePoster");
         }
+
+        if (allNewsFound) { newspaperPopup.CheckBackground(); }
     }
 
     public void CompleteNewspaper()

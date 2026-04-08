@@ -24,13 +24,13 @@ public class Popup : MonoBehaviour
     {
         if (!popupBg.activeSelf)
         {
-            popupObj.SetActive(false);
             col.enabled = true;
         }
         else
         {
             col.enabled = false;
         }
+        CheckBackground();
     }
 
     private void OnMouseDown()
@@ -54,4 +54,12 @@ public class Popup : MonoBehaviour
             Debug.Log(gameObject.name + "Popup up");
         }
     }
+
+    public void CheckBackground()
+    {
+        if (!popupBg.activeSelf)
+        {
+            popupObj.SetActive(false);
+        }
+    }    
 }
