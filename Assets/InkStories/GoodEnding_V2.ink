@@ -135,4 +135,6 @@ They're going to eat you alive.
 #speaker: Queen
 Then that shall be my fate. If this is what is meant to be then I will accept it gratefully.
 
+#ending: GoodCut1
+
 -> DONE

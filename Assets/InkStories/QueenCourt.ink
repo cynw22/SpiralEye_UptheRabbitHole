@@ -269,7 +269,8 @@ I. Fine. I acknowledge that some of what you said has merit, and for that reason
 #speaker: Queen
 In the case of Alice and Constance I decree you're NOT Guilty.
 
-#ending: Good_Ending
+#ending: GoodEnding
+
 -> DONE
 
 === Bad_End_Time ===

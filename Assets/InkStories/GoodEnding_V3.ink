@@ -38,4 +38,5 @@ Ready to go now?
 #speaker: Alice
 Yeah. But before we go, we need to tell Mr. White Rabbit and everyone about this. Those who want a new life should know about the mirror. It’s their chance at freedom. 
 
+#ending: GoodCut2
 -> DONE

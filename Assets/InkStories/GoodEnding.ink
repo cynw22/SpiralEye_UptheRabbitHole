@@ -53,4 +53,5 @@ The slightest smile crosses over The Red Queen's face.
 #speaker: Queen
 It’s in my personal garden room. Follow me.
 
+#ending: GoodEnding_V2
 -> DONE
