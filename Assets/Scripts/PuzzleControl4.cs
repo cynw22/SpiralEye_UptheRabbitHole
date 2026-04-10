@@ -49,6 +49,13 @@ public class PuzzleControl4 : MonoBehaviour
     private bool isWinDone;
     private bool isLoseDone;
 
+    [Header("BackButtons")]
+    [SerializeField] public GameObject Back1;
+    [SerializeField] public GameObject Back2;
+    [SerializeField] public GameObject Back3;
+    [SerializeField] public GameObject Back4;
+    [SerializeField] public GameObject Back5;
+
     //[SerializeField] public GameObject newspaperPopup;
     //[SerializeField] public GameObject k1Popup;
     //[SerializeField] public GameObject k2Popup;
@@ -116,10 +123,10 @@ public class PuzzleControl4 : MonoBehaviour
 
         windowVal = 0;
         
-
         isWinDone = false;
         isLoseDone = false;
 
+        CloseBack();
     }
 
 
@@ -145,7 +152,7 @@ public class PuzzleControl4 : MonoBehaviour
             isWinDone=true;
         }
 
-        if (allNewsFound) { newspaperPopup.CheckBackground(); }
+        if (allNewsFound) { newspaperPopup.CheckBackground(); Back1.SetActive(true); }
         if (!windowNewPop.activeSelf && (windowVal == 0)) { windowVal = 1;}
         //if (windowNewPop.activeSelf && (windowVal == 1)) { windowVal = 2; }
         //if (!windowNewPop.activeSelf && (windowVal == 2)) { RemoveWindow(); windowVal = 3; }
@@ -174,5 +181,13 @@ public class PuzzleControl4 : MonoBehaviour
     public void ClosePopup() {
         losePopup.SetActive(false);
         winPopup.SetActive(false);
+    }
+
+    public void CloseBack() { 
+        Back1.SetActive(false);
+        Back2.SetActive(false);
+        Back3.SetActive(false);
+        Back4.SetActive(false);
+        Back5.SetActive(false);
     }
 }

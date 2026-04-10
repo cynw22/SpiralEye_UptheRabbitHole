@@ -37,6 +37,7 @@ public class WhiteRabbitRoomScript : MonoBehaviour
 
 
     [SerializeField] bool isAlice;
+    public int id;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -59,6 +60,7 @@ public class WhiteRabbitRoomScript : MonoBehaviour
 
     public void SetBackgroundZeroActive()
     {
+        id = 0;
         switchMan.allowSwitching = true;
         CheckEnd();
         background_0.SetActive(true);
@@ -70,6 +72,7 @@ public class WhiteRabbitRoomScript : MonoBehaviour
         Dialouge.SetActive(false);
         Time.timeScale = 1.0f;
         RevertSprite();
+        
     }
 
     public void SetBackgroundOneActive()
@@ -80,10 +83,12 @@ public class WhiteRabbitRoomScript : MonoBehaviour
 
         if (!isAlice)
         {
+            id = 1;
             background_1.SetActive(true);
             background_2.SetActive(false);
         }
         else {
+            id = 4;
             background_4.SetActive(true);
             background_5.SetActive(false);
         }
@@ -92,17 +97,20 @@ public class WhiteRabbitRoomScript : MonoBehaviour
 
     public void SetBackgroundTwoActive()
     {
+        
         background_0.SetActive(false);
         background_3.SetActive(false);
         switchMan.allowSwitching = false;
 
         if (!isAlice)
         {
+            id = 2;
             background_1.SetActive(false);
             background_2.SetActive(true);
         }
         else
         {
+            id = 5;
             background_4.SetActive(false);
             background_5.SetActive(true);
         }
@@ -110,6 +118,7 @@ public class WhiteRabbitRoomScript : MonoBehaviour
     }
     public void SetBackgroundThreeActive()
     {
+        id = 3;
         if (isAlice) {
             switchMan.allowSwitching = false;
             background_0.SetActive(false);
@@ -120,6 +129,7 @@ public class WhiteRabbitRoomScript : MonoBehaviour
         background_5.SetActive(false);
             Dialouge.SetActive(true);
             Time.timeScale = 0f;
+            puzzleMan.Back3.SetActive(true);
         }
         ChangeSprite();
     }
@@ -159,7 +169,7 @@ public class WhiteRabbitRoomScript : MonoBehaviour
         {
             Debug.LogWarning("yesSpace is not assigned.");
         }
-        BackButton.gameObject.SetActive(true);
+        //BackButton.gameObject.SetActive(true);
 
     }
 

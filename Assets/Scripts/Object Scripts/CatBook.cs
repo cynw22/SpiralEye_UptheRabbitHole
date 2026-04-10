@@ -19,6 +19,7 @@ public class CatBook : MonoBehaviour
         if (!puzzleControl.catBookFound)
         {
             puzzleControl.escapeRoomsComplete++;
+            puzzleControl.Back5.SetActive(true);
         }
         puzzleControl.catBookFound = true;
     }

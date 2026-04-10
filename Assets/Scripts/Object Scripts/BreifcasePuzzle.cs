@@ -54,6 +54,7 @@ public class BreifcasePuzzle : MonoBehaviour
             nonCookies.SetActive(false);
             //puzzleControl.escapeRoomsComplete++;
             col.enabled = false;
+            puzzleControl.Back2.SetActive(true);
 
 
         }

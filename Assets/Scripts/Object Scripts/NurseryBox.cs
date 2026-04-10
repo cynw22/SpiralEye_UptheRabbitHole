@@ -59,7 +59,8 @@ public class NurseryBox : MonoBehaviour
             //chestClosed
             boxOpen.SetActive(true); 
             boxClosed.SetActive(false);
-}
+            puzzleControl.Back4.SetActive(true); // this is turning off the popup background and idk why
+        }
         else
         {
             ResetPuzzle();
