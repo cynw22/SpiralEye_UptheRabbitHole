@@ -101,11 +101,16 @@ public class EventManagerScript : MonoBehaviour
         SceneManager.LoadScene("ThePoster");
     }
 
+    //Chapter 5
     public void TheGate()
     {
         SceneManager.LoadScene("TheGate");
     }
 
+    public void QueenCastle()
+    {
+        SceneManager.LoadScene("QueenCastle");
+    }
 
     public void QueenLevel()
     {
@@ -125,15 +130,17 @@ public class EventManagerScript : MonoBehaviour
 
         SceneManager.LoadScene("GardenPartyTalk");
     }
+    public void GardenPartyPuzzle()
+    {
+
+        SceneManager.LoadScene("GardenPartyPuzzle");
+    }
 
     public void QueensCourt()
     {
 
         SceneManager.LoadScene("QueenCourt");
     }
-
-
-
 
 
     //Endings
