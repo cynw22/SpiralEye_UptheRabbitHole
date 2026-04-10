@@ -17,7 +17,8 @@ public class WhiteRabbitRoomScript : MonoBehaviour
     [SerializeField] public Sprite yesSpace;
     [SerializeField] private Sprite noSpace;
     [SerializeField] private Image srSpaceBar;
-
+    [SerializeField] public GameObject BackButton;
+    
     //Lobby
     [SerializeField] public GameObject background_0;
  
@@ -48,11 +49,12 @@ public class WhiteRabbitRoomScript : MonoBehaviour
         srSpaceBar = SpaceBar.GetComponent<Image>();
         if (srSpaceBar == null)
         {
-            Debug.LogError("No SpriteRenderer found on SpaceBarUI");
+            Debug.LogError("No Image found on SpaceBarUI");
             enabled = false;
             return;
         }
         noSpace = srSpaceBar.sprite;
+        
     }
 
     public void SetBackgroundZeroActive()
@@ -157,6 +159,8 @@ public class WhiteRabbitRoomScript : MonoBehaviour
         {
             Debug.LogWarning("yesSpace is not assigned.");
         }
+        BackButton.gameObject.SetActive(true);
+
     }
 
     // Call this method to revert to the original sprite
@@ -166,6 +170,7 @@ public class WhiteRabbitRoomScript : MonoBehaviour
         Color tempColor = srSpaceBar.color;
         tempColor.a = 0.0f; // Set alpha to 0%
         srSpaceBar.color = tempColor;
+        BackButton.gameObject.SetActive(false);
     }
 
 }
