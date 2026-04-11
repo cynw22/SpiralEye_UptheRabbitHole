@@ -91,7 +91,7 @@ Alice can tell the topic is sensitive, should she push?
     
 + [Leave it Alone]
     ~ A_WhiteRabbit += 1
-    #speaker: Alice 
+    #speaker: Narrator 
     Alice decides to leave the conversation alone, the mood seems to lighten.
     
     -> Alice_choices

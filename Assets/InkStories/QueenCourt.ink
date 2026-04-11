@@ -361,7 +361,7 @@ SILENCE. Only the accused can speak in defence of their crimes.
     A kingdom cannot prosphere without a head to lead it.
     
     #speaker: Constance
-    You're wrong. A kingdom cannot be built by anyone. Anyone can claim a crown, the people build a community and form a place worth protecting.
+    You're wrong. A kingdom cannot be built by one person. Anyone can claim a crown, the people build a community and form a place worth protecting.
     
     #speaker: Constance
     But you can't see that. You never will. Doing that would require any amount of empathy, something you sorely lack.
@@ -429,6 +429,9 @@ SILENCE. Only the accused can speak in defence of their crimes.
     
     #speaker: Mad Hatter
     I owe these girls a debt of gratitude, after all I was able to reunite with an old friend thanks to them.
+    
+    #speaker: Narrator
+    The Mad Hatter smiles down at the March Hare sitting beside him, both seem happier than usual.
     
     #speaker: Queen
     ... I see. Very well you are dismissed.
@@ -515,7 +518,7 @@ The questions pertaining to a certain banned individual were particularly harmin
     Why do you apologize? The strong don't do that.
     
     #speaker: Alice
-    That's something a weak person would say. To be strong means you have to acknowledge when you make mistakes and hurt people.
+    Yeah no it doesn't work like that. That's something a weak person would say. To be strong means acknowledgeing when you make mistakes and hurt people.
     
     #speaker: Alice
     And when you do realize that you have to take the first step to mend that bridge by apologizing for what you did.
@@ -545,7 +548,7 @@ The questions pertaining to a certain banned individual were particularly harmin
     Oh my! What a surprise, the stone cold Queen really does have a heart buried deep down there.
     
     #speaker: Narrator
-    I guess a couple snot-nosed brats was all it took to bring that house of cards down. How strange…
+    I guess a couple snot-nosed brats was all it took to bring that house of cards down. How tragic…
 
     -> Final_Check
     
@@ -572,13 +575,13 @@ The questions pertaining to a certain banned individual were particularly harmin
     What?
     
     #speaker: Alice
-    What is the big bad Queen really that surprised by someone standing up for themselves. Wow it must not happen around here if you're that shocked.
+    What? Is the big bad Queen really that surprised by someone standing up for themselves. Wow it must not happen around here if you're that shocked.
     
     #speaker: Queen
     Such insolence.
     
     #speaker: Alice
-    I don't even know what that means. Does it mean we can go now, cause I'm getting bored.
+    I don't even know what that means. Pleaes tell me it means we can go now, cause I'm getting bored.
     
     #speaker: Constance
     ALICE!
@@ -636,10 +639,10 @@ The questions pertaining to a certain banned individual were particularly harmin
     They all turn to look at Alice, who's currently preoccupied with something moving in the stands.
     
     #speaker: Queen
-    ...perhaps I overestimated the intelligence of this creature 
+    ...perhaps I overestimated the intelligence of this creature. 
     
     #speaker: Mad Hatter
-    Oh I highly doubt that my dear.
+    Well that's just harsh my dear.
     
     #speaker: Queen
     No one asked you... AND STOP LISTENING TO MY CONVERSATIONS. It's creepy and weird.
@@ -691,7 +694,7 @@ I, after much thought and deliberation have come to a conclusion.
 The Queen is shaken up, the feeling fills the air. This has never happened before.
 
 #speaker: Queen
-You girls are strange. You care very little for propriety or basic kingdom rules, yet you speak with such conviction and power,
+You girls are strange. You care very little for propriety or basic rules, yet you speak with such conviction and power.
 
 #speaker: Queen
 I don't know what I am supposed to do with the fire you have lit inside me.
@@ -712,7 +715,7 @@ Come now Queenie, was that a question or a statement. You need to deliver the ve
 I. Fine. I acknowledge that some of what you said has merit, and for that reason-
 
 #speaker: Queen
-In the case of Alice and Constance I decree you're NOT Guilty.
+In the case of Alice and Constance the final verdict stands as: NOT Guilty.
 
 #ending: GoodEnding
 
@@ -744,7 +747,7 @@ The Queen is angry, angrier than anyone has ever seen. She storms off after givi
 What just happened?
 
 #speaker: Narrator
-The girls stand shell shocked as guards flank them, dragging them away.
+The girls stand shell shocked as rush over ready to flank them.
 
 #speaker: Narrator
 Suddenly a soft grin appears in the corner of the room.
