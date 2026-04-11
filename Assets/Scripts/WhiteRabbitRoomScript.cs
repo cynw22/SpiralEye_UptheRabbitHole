@@ -13,10 +13,14 @@ public class WhiteRabbitRoomScript : MonoBehaviour
     [SerializeField] public PuzzleControl4 puzzleMan;
     [SerializeField] public GameObject Dialouge;
     [SerializeField] public GameObject SpaceBar;
+    [SerializeField] public GameObject SpaceBar2;
     //[SerializeField] public Sprite noSpace;
     [SerializeField] public Sprite yesSpace;
     [SerializeField] private Sprite noSpace;
     [SerializeField] private Image srSpaceBar;
+    [SerializeField] private Image srSpaceBar2;
+
+
     [SerializeField] public GameObject BackButton;
     
     //Lobby
@@ -82,12 +86,13 @@ public class WhiteRabbitRoomScript : MonoBehaviour
         {
             background_1.SetActive(true);
             background_2.SetActive(false);
+            ChangeSpriteAlice();
         }
         else {
             background_4.SetActive(true);
             background_5.SetActive(false);
+            ChangeSpriteConstance();
         }
-        ChangeSprite();
     }
 
     public void SetBackgroundTwoActive()
@@ -100,13 +105,15 @@ public class WhiteRabbitRoomScript : MonoBehaviour
         {
             background_1.SetActive(false);
             background_2.SetActive(true);
+            ChangeSpriteAlice();
         }
         else
         {
             background_4.SetActive(false);
             background_5.SetActive(true);
+            ChangeSpriteConstance();
         }
-        ChangeSprite();
+
     }
     public void SetBackgroundThreeActive()
     {
@@ -121,7 +128,7 @@ public class WhiteRabbitRoomScript : MonoBehaviour
             Dialouge.SetActive(true);
             Time.timeScale = 0f;
         }
-        ChangeSprite();
+        ChangeSpriteConstance();
     }
 
     // Update is called once per frame
@@ -146,7 +153,7 @@ public class WhiteRabbitRoomScript : MonoBehaviour
 
     }
 
-    public void ChangeSprite()
+    public void ChangeSpriteAlice()
     {
         if (yesSpace != null)
         {
@@ -163,6 +170,23 @@ public class WhiteRabbitRoomScript : MonoBehaviour
 
     }
 
+    public void ChangeSpriteConstance()
+    {
+        if (yesSpace != null)
+        {
+            srSpaceBar2.sprite = yesSpace;
+            Color tempColor = srSpaceBar2.color;
+            tempColor.a = 1.0f; // Set alpha to 100%
+            srSpaceBar2.color = tempColor;
+        }
+        else
+        {
+            Debug.LogWarning("yesSpace is not assigned.");
+        }
+        BackButton.gameObject.SetActive(true);
+
+    }
+
     // Call this method to revert to the original sprite
     public void RevertSprite()
     {
@@ -170,6 +194,7 @@ public class WhiteRabbitRoomScript : MonoBehaviour
         Color tempColor = srSpaceBar.color;
         tempColor.a = 0.0f; // Set alpha to 0%
         srSpaceBar.color = tempColor;
+        srSpaceBar2.color = tempColor;
         BackButton.gameObject.SetActive(false);
     }
 
