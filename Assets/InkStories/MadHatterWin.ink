@@ -77,6 +77,7 @@ Oh my how silly of me, I almost forgot!
 #speaker: Narrator
 He produces an invitation from his pocket and hands it to Constance.
 
+~ hatterWon = true
 #speaker: Constance
 The invite! To the party!
 

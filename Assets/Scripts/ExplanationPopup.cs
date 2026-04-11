@@ -13,6 +13,13 @@ public class ExplanationPopup : MonoBehaviour
     [SerializeField] private GameObject TutorialDialouge;
     [SerializeField] private GameObject ChoiceRoot;
 
+    [Header("Sound")]
+    public SoundFXManager soundFXManager;
+
+    public AudioClip openSound;
+    public AudioClip closeSound;
+    [Range(0f, 1f)] public float volume = 1f;
+
     private int popupState = 0;
     private float startupDelay = 0.5f; // Wait half a second
     private float timer = 0f;
@@ -59,12 +66,20 @@ public class ExplanationPopup : MonoBehaviour
     public void OpenPanel()
     {
         toDisplay.SetActive(true);
+        if (soundFXManager != null && openSound != null)
+        {
+            soundFXManager.PlaySound(openSound, volume);
+        }
         popupState = 1;
     }
 
     public void ClosePanel()
     {
         toDisplay.SetActive(false);
+        if (soundFXManager != null && closeSound != null)
+        {
+            soundFXManager.PlaySound(closeSound, volume);
+        }
         popupState = 2;
         Debug.Log("Popup closed and state set to 2.");
     }

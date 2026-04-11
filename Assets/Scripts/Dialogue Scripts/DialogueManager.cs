@@ -6,6 +6,37 @@ using TMPro;
 using Ink.Runtime;
 using UnityEngine.SceneManagement;
 
+/* Link to All Resources Used for Code
+ * Ink System: https://www.youtube.com/watch?v=vY0Sk93YUhA and https://www.youtube.com/watch?v=l8yI_97vjZs and https://www.youtube.com/watch?v=KSRpcftVyKg
+https://www.youtube.com/watch?v=tVrxeUIEV9E
+https://www.youtube.com/watch?v=l8yI_97vjZs
+https://www.youtube.com/watch?v=vY0Sk93YUhA
+An 8 part series that breaks down every step: https://www.youtube.com/watch?v=1sWESo4xRO0&list=PLlXuD3kyVEr6gV8jjx98eUfRkYbb3u1v6
+
+Documentation
+https://wildwinter.medium.com/an-ink-unity-storylet-framework-3b2cc0910b3
+https://github.com/inkle/ink/blob/master/Documentation/WritingWithInk.md
+
+Unity Debugging
+https://discussions.unity.com/t/coding-a-skip-button/746071
+https://www.youtube.com/watch?v=W3076AYmphY
+https://www.youtube.com/watch?v=Tf0_Gb_aKKE
+https://stackoverflow.com/questions/17047602/proper-way-to-initialize-a-c-sharp-dictionary-with-values
+https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer
+https://www.youtube.com/watch?v=JHLxWUujI0w
+https://stackoverflow.com/questions/44390454/what-is-the-use-of-region-and-endregion-in-c
+
+Typing Code
+https://www.youtube.com/watch?v=UR_Rh0c4gbY
+https://www.youtube.com/watch?v=3ZuKhB-hQUI
+https://www.youtube.com/watch?v=Xw506Rfd9Q4
+
+Relationship Tracker
+https://www.youtube.com/watch?v=LMk4Z1Avp-U
+https://www.youtube.com/watch?v=tVrxeUIEV9E
+ * https://www.youtube.com/watch?v=dwxu4Q-GJU0
+ */
+
 #region Helper Classes
 [System.Serializable]
 
