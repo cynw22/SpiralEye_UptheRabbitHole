@@ -47,7 +47,7 @@ public class PuzzleControl4 : MonoBehaviour
     [SerializeField] public GameObject winPopup;
     [SerializeField] public GameObject losePopup;
     private bool isWinDone;
-    private bool isLoseDone;
+    public bool isLoseDone;
 
     //[SerializeField] public GameObject newspaperPopup;
     //[SerializeField] public GameObject k1Popup;

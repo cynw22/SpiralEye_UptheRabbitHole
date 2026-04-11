@@ -57,7 +57,8 @@ public class Timer : MonoBehaviour
         {
             if (LevelNumber == 4) // 4 = White Rabbit House, Check if all the objects collected
             {
-                SceneManager.LoadScene("ThePoster");
+                toDisplay.SetActive(true);
+                PuzzleControl4.isLoseDone = true;
             }
             if ((LevelNumber == 5) && (isCollected == false))
             { // 5 = FindTheRose, Check if all the Roses Collected
@@ -78,10 +79,10 @@ public class Timer : MonoBehaviour
             if (time <= 1)
             {
                 timeLeft.text = "0:00";
-                if (LevelNumber == -1)
-                {
-                    SceneManager.LoadScene("ThePoster");//Remove later, this is for the poster
-                }
+                //if (LevelNumber == -1)
+                //{
+                //    SceneManager.LoadScene("ThePoster");//Remove later, this is for the poster
+                //}
             }
         
     }
