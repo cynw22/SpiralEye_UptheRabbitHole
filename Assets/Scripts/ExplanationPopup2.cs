@@ -3,6 +3,14 @@ using UnityEngine;
 public class ExplanationPopup2 : MonoBehaviour
 {
     [SerializeField] public GameObject toDisplay;
+
+    [Header("Sound")]
+    public SoundFXManager soundFXManager;
+
+    public AudioClip openSound;
+    public AudioClip closeSound;
+    [Range(0f, 1f)] public float volume = 1f;
+
     // States: 0 = Waiting for dialogue, 1 = Popup is Open, 2 = Finished Forever
     private int popupState = 0;
 
@@ -31,6 +39,12 @@ public class ExplanationPopup2 : MonoBehaviour
     public void OpenPanel()
     {
         toDisplay.SetActive(true);
+
+        if (soundFXManager != null && openSound != null)
+        {
+            soundFXManager.PlaySound(openSound, volume);
+        }
+
         popupState = 1; // Move to "Open" state so Update() stops calling this
     }
 
@@ -38,6 +52,10 @@ public class ExplanationPopup2 : MonoBehaviour
     public void ClosePanel()
     {
         toDisplay.SetActive(false);
+        if (soundFXManager != null && closeSound != null)
+        {
+            soundFXManager.PlaySound(closeSound, volume);
+        }
         popupState = 2; // Move to "Finished" state so it never opens again
         Debug.Log("Popup closed and state set to 2.");
     }
