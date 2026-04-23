@@ -979,7 +979,6 @@ GameObject:
   - component: {fileID: 221937776}
   - component: {fileID: 221937775}
   - component: {fileID: 221937774}
-  - component: {fileID: 221937773}
   - component: {fileID: 221937777}
   m_Layer: 5
   m_Name: x button
@@ -1007,19 +1006,6 @@ RectTransform:
   m_AnchoredPosition: {x: 722, y: 371}
   m_SizeDelta: {x: 755, y: 747}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &221937773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 221937771}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 827a0635358b24345ae261154e50f8ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controlsPanel: {fileID: 354714822}
 --- !u!114 &221937774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1351,7 +1337,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &327412954
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4339,7 +4325,7 @@ RectTransform:
   m_Father: {fileID: 1945812313}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4765,9 +4751,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1397558708}
-        m_TargetAssemblyTypeName: EventManagerScript, Assembly-CSharp
-        m_MethodName: Controls
+      - m_Target: {fileID: 1183774399}
+        m_TargetAssemblyTypeName: ControlsCode, Assembly-CSharp
+        m_MethodName: SetActive
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4841,7 +4827,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1183774393}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 827a0635358b24345ae261154e50f8ae, type: 3}
   m_Name: 
@@ -4864,7 +4850,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1205076997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6902,7 +6888,7 @@ RectTransform:
   m_Father: {fileID: 482576164}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
